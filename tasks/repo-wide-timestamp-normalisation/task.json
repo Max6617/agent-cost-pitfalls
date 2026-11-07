@@ -1,0 +1,6 @@
+{
+  "prompt": "The audit log, the session records and the report export disagree about the same event: each renders its own timestamp in its own way, sessions do not use the shared format at all, and a client can send a local-time string that gets silently converted. Make every module render and read timestamps the one way the service documents, so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

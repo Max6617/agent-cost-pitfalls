@@ -1,0 +1,6 @@
+{
+  "prompt": "Settings are ignored across the app: the HTTP client, the cache and the logger each keep their own hard-coded values, so changing a setting on the settings page has no effect and the worker and the client disagree about the same limit, while an unknown key silently returns a default instead of being reported. Make every module read its defaults from the shared table so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,10 @@
+{
+  "name": "notification-templates",
+  "version": "2.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Mustache-style template engine for the notification service",
+  "scripts": {
+    "test": "node --test"
+  }
+}

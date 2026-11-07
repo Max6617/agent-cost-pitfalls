@@ -1,0 +1,57 @@
+{
+ "generated": "2026-10-01T23:08:13.002Z",
+ "models": [
+  {
+   "model": "deepseek-flash",
+   "label": "DeepSeek V4.1 Flash",
+   "tier": "cheap",
+   "runs": 94,
+   "excluded": 0,
+   "analysed": 94,
+   "solved": 30,
+   "arms": 10,
+   "armsSolved": 10,
+   "costPerRun": 0.045881541127659596,
+   "solveRate": 0.3191489361702128
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "label": "Claude Sonnet 5.5",
+   "tier": "frontier",
+   "runs": 80,
+   "excluded": 50,
+   "analysed": 30,
+   "solved": 1,
+   "arms": 10,
+   "armsSolved": 1,
+   "costPerRun": 1.3045988666666666,
+   "solveRate": 0.03333333333333333
+  },
+  {
+   "model": "claude-haiku-4.5",
+   "label": "Claude Haiku 4.5",
+   "tier": "budget",
+   "runs": 66,
+   "excluded": 60,
+   "analysed": 6,
+   "solved": 0,
+   "arms": 6,
+   "armsSolved": 0,
+   "costPerRun": 1.9630775166666663,
+   "solveRate": 0
+  },
+  {
+   "model": "gpt-6-luna",
+   "label": "gpt-6-luna",
+   "tier": "cheap",
+   "runs": 60,
+   "excluded": 3,
+   "analysed": 57,
+   "solved": 1,
+   "arms": 10,
+   "armsSolved": 1,
+   "costPerRun": 0.031964620526315796,
+   "solveRate": 0.017543859649122806
+  }
+ ]
+}

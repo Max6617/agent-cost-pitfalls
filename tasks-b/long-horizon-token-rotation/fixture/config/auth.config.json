@@ -1,0 +1,5 @@
+{
+  "absoluteTtlMs": 2592000000,
+  "idleTtlMs": 604800000,
+  "accessTtlMs": 900000
+}

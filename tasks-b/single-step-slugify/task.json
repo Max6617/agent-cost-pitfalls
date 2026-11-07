@@ -1,0 +1,6 @@
+{
+  "prompt": "Editors keep filing tickets about the slugs coming out of this library. Accented titles come out mangled - whole letters go missing - long titles get chopped mid-word or left with a dangling hyphen, little words disappear from the front of titles where the style guide says they belong, and we have now had duplicate URLs twice when a numbered variant of a slug was already in use. The agreed behaviour is written down in docs/, and the cases under test/ are the reproductions we managed to capture, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-slugify",
+  "setup": ""
+}

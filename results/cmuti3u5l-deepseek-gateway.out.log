@@ -1,0 +1,9 @@
+measure-gateway listening on http://127.0.0.1:8805
+  base URL   : http://127.0.0.1:8805/v1
+  upstream   : https://api.deepseek.com
+  log        : C:\Users\user\betterharness\results\cmuti3u5l-deepseek-gateway.jsonl
+  enforced   : model=deepseek-flash effort=high temperature=-
+  upstream key: sk-...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8805/__stats

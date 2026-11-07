@@ -1,0 +1,8 @@
+{
+  "$comment": "Operational settings shared by the billing job and the invoice renderer. The pricing rules themselves are in docs/billing-rules.md.",
+  "roundingDp": 2,
+  "minCharge": 25,
+  "defaultCurrency": "USD",
+  "batchSize": 250,
+  "retry": { "attempts": 5, "backoffMs": 250 }
+}

@@ -1,0 +1,68 @@
+{
+  "matrixId": "cmv45au5r-anthropic",
+  "startedAt": "2026-10-11T18:22:34.391Z",
+  "gateway": "http://127.0.0.1:8791",
+  "gatewayStats": {
+    "enforcedModel": "claude-haiku-4.5",
+    "enforcedEffort": null,
+    "upstreamKeyMasked": "sk-...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "claude-haiku-4.5",
+  "requestedModel": "claude-haiku-4.5",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\rerun-b1-haiku-full",
+  "tasks": 31,
+  "seeds": 2,
+  "jobs": 4,
+  "arms": [
+    "dsh:native",
+    "dsh:ptc"
+  ],
+  "plannedRuns": 124,
+  "harnesses": [
+    "dsh"
+  ],
+  "harnessVersions": {
+    "dsh": {
+      "harness": "dsh",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\user\\dsh-app\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "probedVersion": "0.1.7-rc.2",
+      "raw": "0.1.7-rc.2",
+      "error": null,
+      "versionSource": "probe",
+      "versionEvidence": null,
+      "declaredVersion": null,
+      "probedAt": "2026-10-11T18:22:34.388Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks",
+    "--seeds",
+    "2",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\rerun-b1-haiku-full",
+    "--gateway",
+    "http://127.0.0.1:8791",
+    "--model",
+    "claude-haiku-4.5",
+    "--matrix-id",
+    "cmv45au5r-anthropic",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "dsh",
+    "--arms",
+    "dsh:native,dsh:ptc",
+    "--counterbalance"
+  ]
+}

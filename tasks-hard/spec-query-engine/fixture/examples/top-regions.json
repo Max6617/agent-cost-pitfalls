@@ -1,0 +1,15 @@
+{
+  "where": { "field": "units", "op": "gte", "value": 2 },
+  "group": {
+    "by": ["region"],
+    "aggregates": {
+      "orders": { "op": "count" },
+      "units": { "op": "sum", "field": "units" },
+      "amount": { "op": "avg", "field": "amount" }
+    }
+  },
+  "having": { "field": "orders", "op": "gte", "value": 2 },
+  "select": ["region", "orders", "units", { "field": "amount", "as": "average" }],
+  "order": [{ "field": "units", "dir": "desc" }, { "field": "region" }],
+  "limit": 25
+}

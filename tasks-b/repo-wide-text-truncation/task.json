@@ -1,0 +1,6 @@
+{
+  "prompt": "Users keep filing reports about shortened text: SMS messages containing emoji come out garbled or cut too early, push titles end in three dots and run past the length the gateway allows, and email subjects are clipped well short of the agreed limit. The convention for shortening text is pinned in docs/ and it applies to every surface, so audit them all rather than just the ones in these reports. The tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-text-truncation",
+  "setup": ""
+}

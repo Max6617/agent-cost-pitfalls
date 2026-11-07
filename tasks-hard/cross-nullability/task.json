@@ -1,0 +1,6 @@
+{
+  "prompt": "Support keeps reopening the same class of ticket. A customer asks us to take their phone number off the account, and two screens later the old number is back; a profile update that only mentions a name wipes the fields it never mentioned; a search for customers with no phone number returns rows that have one; and the billing export's blank cells mean different things depending on which row you look at. Make the domain layer behave the way docs/field-policy.md says it does. The tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-nullability",
+  "setup": ""
+}

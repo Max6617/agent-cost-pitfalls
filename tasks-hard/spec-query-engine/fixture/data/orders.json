@@ -1,0 +1,16 @@
+[
+  { "order": "o-1001", "region": "north", "channel": "web", "units": 3, "amount": 41.5, "refunded": null },
+  { "order": "o-1002", "region": "south", "channel": "web", "units": 1, "amount": 12.25 },
+  { "order": "o-1003", "region": "north", "channel": "store", "units": 7, "amount": 96, "refunded": 12 },
+  { "order": "o-1004", "region": "east", "channel": "partner", "units": 2, "amount": 30.75 },
+  { "order": "o-1005", "region": "south", "channel": "store", "units": 4, "amount": 55, "refunded": null },
+  { "order": "o-1006", "region": "west", "channel": "web", "units": 9, "amount": 130.2 },
+  { "order": "o-1007", "region": "north", "channel": "web", "units": 1, "amount": 9.99, "refunded": 9.99 },
+  { "order": "o-1008", "region": "east", "channel": "store", "units": 5, "amount": 61 },
+  { "order": "o-1009", "region": "west", "channel": "partner", "units": 2, "amount": 24.5, "refunded": null },
+  { "order": "o-1010", "region": "south", "channel": "web", "units": 6, "amount": 78.4 },
+  { "order": "o-1011", "region": "north", "channel": "partner", "units": 3, "amount": 39 },
+  { "order": "o-1012", "region": "east", "channel": "web", "units": 8, "amount": 104.8, "refunded": 4 },
+  { "order": "o-1013", "region": "west", "channel": "store", "units": 1, "amount": 15 },
+  { "order": "o-1014", "region": "south", "channel": "partner", "units": 2, "amount": 22.5, "refunded": null }
+]

@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "id": { "type": "string", "minLength": 1, "required": true, "nullable": false },
+    "name": { "type": "string", "minLength": 1, "nullable": false },
+    "email": { "type": "string", "pattern": "^[^@\\s]+@[^@\\s]+$" },
+    "phone": { "type": "string", "minLength": 1 },
+    "marketingOptIn": { "type": "boolean" },
+    "tags": { "type": "array" },
+    "address": { "type": "object" },
+    "notes": { "type": "string" },
+    "creditLimit": { "type": "number" }
+  },
+  "order": {
+    "id": { "type": "string", "minLength": 1, "required": true, "nullable": false },
+    "currency": { "type": "string", "enum": ["EUR", "GBP", "USD"], "nullable": false },
+    "status": { "type": "string", "enum": ["draft", "placed", "cancelled"] },
+    "contact": { "type": "object" },
+    "shipping": { "type": "object" }
+  }
+}

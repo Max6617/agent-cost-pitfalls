@@ -1,0 +1,6 @@
+{
+  "prompt": "After the worker restarts, runs the tier owed are simply gone: a job that should have coalesced its backlog replays every missed slot, and one that was still in flight never picks up the slot waiting behind it. The nightly job fires at the wrong absolute time on the day the published offset changes, a pool configured for one job at a time happily starts four, a failed run never gets its third attempt, and the plan we print no longer agrees with the runs that turn up in the history. Make the tier behave the way docs/scheduling-rules.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-job-scheduler-catchup",
+  "setup": ""
+}

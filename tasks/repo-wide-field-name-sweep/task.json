@@ -1,0 +1,6 @@
+{
+  "prompt": "Clients cannot read half the API: the cart, invoice, customer and search endpoints all emit storage-style field names while the documented convention is camelCase, and the nested shapes are inconsistent between endpoints. Bring every payload onto the one convention so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

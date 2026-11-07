@@ -1,0 +1,6 @@
+{
+  "prompt": "Members have started disputing their bills, and they are right: returns a few days late are being charged for more days than the loan was actually out past due, and none of the amounts line up with the rate table in docs/. The desk has also seen renewals sail through on titles that have people waiting, and when a copy finally comes back it is offered to the wrong person in the queue. The reproductions we managed to write are under test/ but they are not the whole acceptance criteria - docs/loan-rules.md is the contract.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-library-loans",
+  "setup": ""
+}

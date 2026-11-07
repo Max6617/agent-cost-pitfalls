@@ -1,0 +1,6 @@
+{
+  "prompt": "Search has been misbehaving since the last index release and we cannot ship it like this. Identical queries come back in a different order, phrase searches match documents that never contain the phrase, anything accented is unfindable, paging repeats or skips hits while the count next to the pager disagrees with the hits themselves, and a document we deleted is still ranking. Make the index behave the way docs/ranking-rules.md and docs/query-syntax.md say it should; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-search-ranking",
+  "setup": ""
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Deployment profiles with duration fields are being rejected or silently misread: PT1.5H comes out as one hour, P5H is accepted as five hours when the notation does not allow it, and a profile with a bad duration is converted half way before it fails. Make the duration parser follow the notation so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

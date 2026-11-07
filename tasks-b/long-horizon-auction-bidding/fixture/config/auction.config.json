@@ -1,0 +1,9 @@
+{
+  "increments": [
+    { "min": 0, "increment": 100 },
+    { "min": 2500, "increment": 250 },
+    { "min": 10000, "increment": 500 },
+    { "min": 50000, "increment": 1000 }
+  ],
+  "softClose": { "window": 10, "extension": 30 }
+}

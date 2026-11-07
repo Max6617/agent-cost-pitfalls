@@ -1,0 +1,6 @@
+{
+  "prompt": "The configuration our ingest agent actually runs with is wrong: a value set in the config file overrides the same value passed on the command line, watch directories listed in the file are ignored when the environment sets any, and keys nested inside secrets still show up in the logs. Fix the layered configuration behaviour so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

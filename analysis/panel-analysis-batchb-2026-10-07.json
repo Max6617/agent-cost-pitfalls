@@ -1,0 +1,1006 @@
+{
+ "generated": "2026-10-07T08:30:07.952Z",
+ "meta": {
+  "batchb-deepseek": {
+   "id": "batchb-deepseek",
+   "model": "deepseek-flash",
+   "runs": "results/batchb-ds-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 808,
+   "dup": 0,
+   "excluded": 8,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-glm-flash": {
+   "id": "batchb-glm-flash",
+   "model": "glm-5.3-flash",
+   "runs": "results/batchb-glm-flash/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 800,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-qwen": {
+   "id": "batchb-qwen",
+   "model": "qwen3.8-flash",
+   "runs": "results/batchb-qwen-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 0,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 0,
+   "contested": 0,
+   "terseRows": 0,
+   "terseReal": null
+  },
+  "batchb-luna": {
+   "id": "batchb-luna",
+   "model": "gpt-6-luna",
+   "runs": "results/batchb-luna-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 0,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 0,
+   "contested": 0,
+   "terseRows": 0,
+   "terseReal": null
+  },
+  "batchb-haiku": {
+   "id": "batchb-haiku",
+   "model": "claude-haiku-4.5",
+   "runs": "results/batchb-haiku-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 0,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 0,
+   "contested": 0,
+   "terseRows": 0,
+   "terseReal": null
+  },
+  "batchb-sonnet": {
+   "id": "batchb-sonnet",
+   "model": "claude-sonnet-5.5",
+   "runs": "results/batchb-sonnet-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 0,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 0,
+   "contested": 0,
+   "terseRows": 0,
+   "terseReal": null
+  }
+ },
+ "sections": {
+  "A1": {
+   "rankTables": {
+    "deepseek-flash": [
+     {
+      "rank": 1,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.01160898375,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:native-terse",
+      "billed": 0.012206542749999999,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 3,
+      "arm": "opencode",
+      "billed": 0.013242321500000001,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 4,
+      "arm": "goose",
+      "billed": 0.013353738250000002,
+      "solveRate": 0.9375
+     },
+     {
+      "rank": 5,
+      "arm": "cline",
+      "billed": 0.019191078125000007,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.020175936624999998,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.020257886749999992,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 8,
+      "arm": "openhands",
+      "billed": 0.022461933374999996,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 9,
+      "arm": "dsh:native-opt",
+      "billed": 0.025143385874999997,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 10,
+      "arm": "dsh:native",
+      "billed": 0.025786867874999998,
+      "solveRate": 0.925
+     }
+    ],
+    "glm-5.3-flash": [
+     {
+      "rank": 1,
+      "arm": "dsh:native-terse",
+      "billed": 0.009561287,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.011225148999999997,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 3,
+      "arm": "opencode",
+      "billed": 0.016591085499999998,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 4,
+      "arm": "goose",
+      "billed": 0.01763052187500001,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.022534091999999988,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.022548378375,
+      "solveRate": 0.925
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:native-opt",
+      "billed": 0.024227844249999998,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 8,
+      "arm": "cline",
+      "billed": 0.024525848500000003,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 9,
+      "arm": "dsh:native",
+      "billed": 0.025092431249999998,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 10,
+      "arm": "openhands",
+      "billed": 0.030703484625,
+      "solveRate": 0.85
+     }
+    ]
+   },
+   "correlations": [
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "rho": 0.8545454545454545,
+     "n": 10
+    }
+   ]
+  },
+  "A1b": {
+   "correlations": [
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "rho": 0.7380952380952381,
+     "n": 8
+    }
+   ],
+   "cleanArms": [
+    "dsh:native",
+    "dsh:native-opt",
+    "dsh:ptc",
+    "dsh:ptc-opt",
+    "opencode",
+    "goose",
+    "cline",
+    "openhands"
+   ],
+   "cheapest": [
+    {
+     "model": "deepseek-flash",
+     "arm": "opencode",
+     "billed": 0.013242321500000001
+    },
+    {
+     "model": "glm-5.3-flash",
+     "arm": "opencode",
+     "billed": 0.016591085499999998
+    }
+   ],
+   "medianRho": 0.7380952380952381,
+   "permutationP": 0.02389880505974701,
+   "rankVarianceExplained": 0.5447845804988662
+  },
+  "A1c": {
+   "overallConcordance": 0.7857142857142857,
+   "perPair": [
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "concordance": 0.7857142857142857
+    }
+   ]
+  },
+  "A2": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "ratio": 4,
+    "tasks": 40,
+    "native": 0.025786867874999998,
+    "ptc": 0.020175936624999998,
+    "absDiff": -0.005610931250000001,
+    "relDiffPct": -21.758870744592134,
+    "ciLo": -0.009879198624999998,
+    "ciHi": -0.0024276733749999994,
+    "ciLoPct": -38.310967709954966,
+    "ciHiPct": -9.414378616154442,
+    "excludesZero": true
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "native": 0.025092431249999998,
+    "ptc": 0.022548378375,
+    "absDiff": -0.002544052875,
+    "relDiffPct": -10.138726094945465,
+    "ciLo": -0.005364544624999998,
+    "ciHi": 0.000010171500000000135,
+    "ciLoPct": -21.379134494988396,
+    "ciHiPct": 0.04053612780148649,
+    "excludesZero": false
+   }
+  ],
+  "A3": {
+   "pearson": -1.0000000000000002,
+   "atFive": [],
+   "ratioRange": [
+    3.3333333333333335,
+    4
+   ]
+  },
+  "A4": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 4,
+    "tasks": 40,
+    "base": 0.025786867874999998,
+    "terse": 0.012206542749999999,
+    "relPct": -52.66372477196401,
+    "ciLoPct": -71.33448152434838,
+    "ciHiPct": -38.693850095976416,
+    "outBase": 32138.9375,
+    "outTerse": 13691,
+    "outChangePct": -57.40058301553995,
+    "solveBase": 0.925,
+    "solveTerse": 0.975
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 4,
+    "tasks": 40,
+    "base": 0.020175936624999998,
+    "terse": 0.01160898375,
+    "relPct": -42.46124001194915,
+    "ciLoPct": -49.4952145747038,
+    "ciHiPct": -35.776744887549924,
+    "outBase": 26787.375,
+    "outTerse": 14834.9625,
+    "outChangePct": -44.619573586437646,
+    "solveBase": 0.9625,
+    "solveTerse": 0.9625
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "base": 0.025092431249999998,
+    "terse": 0.009561287,
+    "relPct": -61.89573300116146,
+    "ciLoPct": -77.79230988228773,
+    "ciHiPct": -49.091788385392114,
+    "outBase": 12982.5,
+    "outTerse": 4089.925,
+    "outChangePct": -68.49663007895244,
+    "solveBase": 0.9,
+    "solveTerse": 0.9
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "base": 0.022548378375,
+    "terse": 0.011225148999999997,
+    "relPct": -50.21748875544137,
+    "ciLoPct": -60.11181447100407,
+    "ciHiPct": -41.13275562770931,
+    "outBase": 14867.7,
+    "outTerse": 6277.5875,
+    "outChangePct": -57.777009893931144,
+    "solveBase": 0.925,
+    "solveTerse": 0.9
+   }
+  ],
+  "A5": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.01160898375,
+    "perSolved": 0.012061281818181818,
+    "solveRate": 0.9625,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native-terse",
+    "perRun": 0.012206542749999999,
+    "perSolved": 0.012519531025641024,
+    "solveRate": 0.975,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "opencode",
+    "perRun": 0.013242321500000001,
+    "perSolved": 0.013758256103896105,
+    "solveRate": 0.9625,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "goose",
+    "perRun": 0.013353738250000002,
+    "perSolved": 0.014243987466666668,
+    "solveRate": 0.9375,
+    "rankRun": 4,
+    "rankSolved": 4,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "cline",
+    "perRun": 0.019191078125000007,
+    "perSolved": 0.02020113486842106,
+    "solveRate": 0.95,
+    "rankRun": 5,
+    "rankSolved": 5,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc",
+    "perRun": 0.020175936624999998,
+    "perSolved": 0.020962012077922077,
+    "solveRate": 0.9625,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.020257886749999992,
+    "perSolved": 0.021047155064935055,
+    "solveRate": 0.9625,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "openhands",
+    "perRun": 0.022461933374999996,
+    "perSolved": 0.023644140394736838,
+    "solveRate": 0.95,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native-opt",
+    "perRun": 0.025143385874999997,
+    "perSolved": 0.025788088076923073,
+    "solveRate": 0.975,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native",
+    "perRun": 0.025786867874999998,
+    "perSolved": 0.027877694999999997,
+    "solveRate": 0.925,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native-terse",
+    "perRun": 0.009561287,
+    "perSolved": 0.010623652222222222,
+    "solveRate": 0.9,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.011225148999999997,
+    "perSolved": 0.012472387777777774,
+    "solveRate": 0.9,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "opencode",
+    "perRun": 0.016591085499999998,
+    "perSolved": 0.018182011506849314,
+    "solveRate": 0.9125,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "goose",
+    "perRun": 0.01763052187500001,
+    "perSolved": 0.01932111986301371,
+    "solveRate": 0.9125,
+    "rankRun": 4,
+    "rankSolved": 4,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.022534091999999988,
+    "perSolved": 0.023412043636363622,
+    "solveRate": 0.9625,
+    "rankRun": 5,
+    "rankSolved": 5,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc",
+    "perRun": 0.022548378375,
+    "perSolved": 0.02437662527027027,
+    "solveRate": 0.925,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native-opt",
+    "perRun": 0.024227844249999998,
+    "perSolved": 0.02655106219178082,
+    "solveRate": 0.9125,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "cline",
+    "perRun": 0.024525848500000003,
+    "perSolved": 0.02725094277777778,
+    "solveRate": 0.9,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native",
+    "perRun": 0.025092431249999998,
+    "perSolved": 0.027880479166666663,
+    "solveRate": 0.9,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "openhands",
+    "perRun": 0.030703484625,
+    "perSolved": 0.03612174661764706,
+    "solveRate": 0.85,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   }
+  ],
+  "A6": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "provider": "DeepSeek",
+    "overall": 0.9488240238775428,
+    "best": 0.9624357747433605,
+    "worst": 0.9313330171143113,
+    "bestArm": "dsh:native-opt",
+    "worstArm": "dsh:native-terse",
+    "spread": 0.031102757629049238,
+    "automatic": "yes"
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "provider": "z.ai",
+    "overall": 0.8938417473285315,
+    "best": 0.9298361437499905,
+    "worst": 0.8337788251062891,
+    "bestArm": "dsh:native",
+    "worstArm": "cline",
+    "spread": 0.09605731864370137,
+    "automatic": "yes"
+   }
+  ],
+  "A7": {
+   "placebo": [],
+   "noiseFloorPct": null,
+   "shamDatasets": []
+  },
+  "A1d": {
+   "dshOnly": {
+    "concordance": 0.8333333333333334,
+    "comparisons": 6
+   },
+   "externalOnly": {
+    "concordance": 1,
+    "comparisons": 6
+   },
+   "noAnthropic": {
+    "concordance": 0.7857142857142857,
+    "comparisons": 28
+   },
+   "ceilingModels": {
+    "concordance": null,
+    "comparisons": 0
+   },
+   "ceilingModelList": [
+    "deepseek-flash"
+   ]
+  },
+  "A2b": [
+   {
+    "id": "cost:deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "model": "deepseek-flash",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 4,
+    "rel": -21.758870744592134,
+    "tasks": 40,
+    "p": 0.00010499947500262499,
+    "se": 0.00002291161824412171,
+    "iters": 200000,
+    "holmThreshold": 0.008333333333333333,
+    "holmPasses": true
+   },
+   {
+    "id": "cost:glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "model": "glm-5.3-flash",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 3.3333333333333335,
+    "rel": -10.138726094945465,
+    "tasks": 40,
+    "p": 0.07178964105179474,
+    "se": 0.0005772169803871383,
+    "iters": 200000,
+    "holmThreshold": 0.01,
+    "holmPasses": false
+   }
+  ],
+  "A4solve": [
+   {
+    "id": "solve:deepseek-flash:dsh:native->dsh:native-terse",
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 74,
+    "terseSolved": 78,
+    "b": 0,
+    "c": 4,
+    "p": 0.125,
+    "holmThreshold": 0.0125,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:deepseek-flash:dsh:ptc->dsh:ptc-terse",
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 77,
+    "terseSolved": 77,
+    "b": 1,
+    "c": 1,
+    "p": 1,
+    "holmThreshold": 0.025,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:glm-5.3-flash:dsh:native->dsh:native-terse",
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 72,
+    "terseSolved": 72,
+    "b": 7,
+    "c": 7,
+    "p": 1,
+    "holmThreshold": 0.05,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:glm-5.3-flash:dsh:ptc->dsh:ptc-terse",
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 74,
+    "terseSolved": 72,
+    "b": 6,
+    "c": 4,
+    "p": 0.75390625,
+    "holmThreshold": 0.016666666666666666,
+    "holmPasses": false
+   }
+  ],
+  "family": {
+   "alpha": 0.05,
+   "m": 6,
+   "rows": [
+    {
+     "id": "cost:deepseek-flash",
+     "label": "DeepSeek V4.1 Flash dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.00010499947500262499,
+     "se": 0.00002291161824412171,
+     "rank": 1,
+     "threshold": 0.008333333333333333,
+     "passes": true,
+     "mcSe": 0.00002291161824412171,
+     "resolvable": true
+    },
+    {
+     "id": "cost:glm-5.3-flash",
+     "label": "GLM-5.3-Flash dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.07178964105179474,
+     "se": 0.0005772169803871383,
+     "rank": 2,
+     "threshold": 0.01,
+     "passes": false,
+     "mcSe": 0.0005772169803871383,
+     "resolvable": true
+    },
+    {
+     "id": "solve:deepseek-flash:dsh:native->dsh:native-terse",
+     "label": "DeepSeek V4.1 Flash dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 0.125,
+     "se": null,
+     "rank": 3,
+     "threshold": 0.0125,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:glm-5.3-flash:dsh:ptc->dsh:ptc-terse",
+     "label": "GLM-5.3-Flash dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 0.75390625,
+     "se": null,
+     "rank": 4,
+     "threshold": 0.016666666666666666,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:deepseek-flash:dsh:ptc->dsh:ptc-terse",
+     "label": "DeepSeek V4.1 Flash dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 5,
+     "threshold": 0.025,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:glm-5.3-flash:dsh:native->dsh:native-terse",
+     "label": "GLM-5.3-Flash dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 6,
+     "threshold": 0.05,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    }
+   ],
+   "survivors": 1,
+   "unresolvable": 0
+  },
+  "A8": {
+   "pairs": 18,
+   "ties": 11,
+   "details": [
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc-terse",
+     "lower": "dsh:native-terse",
+     "relPct": 5.147384240244106,
+     "ciLoPct": -0.38254317480632155,
+     "ciHiPct": 10.918625844402621,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:native-terse",
+     "lower": "opencode",
+     "relPct": 8.485439089622675,
+     "ciLoPct": 1.414325526365767,
+     "ciHiPct": 16.00888691435583,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 0.8413687131822086,
+     "ciLoPct": -4.850990440007067,
+     "ciHiPct": 6.804561231956193,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "goose",
+     "lower": "cline",
+     "relPct": 43.71315182098918,
+     "ciLoPct": 32.44519657257771,
+     "ciHiPct": 55.034299103473884,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "cline",
+     "lower": "dsh:ptc",
+     "relPct": 5.131856030105086,
+     "ciLoPct": -3.0007381359664973,
+     "ciHiPct": 13.629160034488674,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc",
+     "lower": "dsh:ptc-opt",
+     "relPct": 0.4061775496382626,
+     "ciLoPct": -6.984517131432062,
+     "ciHiPct": 7.850167773809609,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc-opt",
+     "lower": "openhands",
+     "relPct": 10.879943462019824,
+     "ciLoPct": 3.318584057145048,
+     "ciHiPct": 18.21521314408573,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "openhands",
+     "lower": "dsh:native-opt",
+     "relPct": 11.937763571965903,
+     "ciLoPct": -0.17316630474601705,
+     "ciHiPct": 25.797295710303036,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:native",
+     "relPct": 2.5592495903259125,
+     "ciLoPct": -10.291981011885099,
+     "ciHiPct": 16.732028537902714,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:ptc-terse",
+     "relPct": 17.40207149937029,
+     "ciLoPct": 7.144227811590641,
+     "ciHiPct": 28.390375166021066,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc-terse",
+     "lower": "opencode",
+     "relPct": 47.80280867541271,
+     "ciLoPct": 32.57676022830524,
+     "ciHiPct": 67.77929295192433,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 6.2650293436195685,
+     "ciLoPct": -4.400137049501674,
+     "ciHiPct": 17.707079051578628,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "goose",
+     "lower": "dsh:ptc-opt",
+     "relPct": 27.81296072666582,
+     "ciLoPct": 14.334504065836104,
+     "ciHiPct": 39.7691588468648,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc-opt",
+     "lower": "dsh:ptc",
+     "relPct": 0.0633989379293049,
+     "ciLoPct": -7.017603038986442,
+     "ciHiPct": 7.754052171261215,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc",
+     "lower": "dsh:native-opt",
+     "relPct": 7.448277863130357,
+     "ciLoPct": -0.7518234667729154,
+     "ciHiPct": 16.80426774814576,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native-opt",
+     "lower": "cline",
+     "relPct": 1.2300072879988255,
+     "ciLoPct": -10.846041327015712,
+     "ciHiPct": 13.138312439828404,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "cline",
+     "lower": "dsh:native",
+     "relPct": 2.3101453554195914,
+     "ciLoPct": -9.906223020174,
+     "ciHiPct": 15.770660289286223,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native",
+     "lower": "openhands",
+     "relPct": 22.361537306194677,
+     "ciLoPct": 7.067175883963022,
+     "ciHiPct": 36.44489012996697,
+     "distinct": true
+    }
+   ]
+  }
+ }
+}

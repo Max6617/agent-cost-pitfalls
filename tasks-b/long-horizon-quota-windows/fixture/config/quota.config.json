@@ -1,0 +1,5 @@
+{
+  "dailyLimit": 1000,
+  "hourlyLimit": 60,
+  "borrowLimit": 100
+}

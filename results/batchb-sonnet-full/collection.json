@@ -1,0 +1,46 @@
+{
+  "matrixId": "cmuynvgov-anthropic-sonnet",
+  "provider": "anthropic-sonnet",
+  "plan": "batchb",
+  "tasksDir": "tasks-b",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 800,
+  "harnesses": [
+    "dsh",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "gateway": "http://127.0.0.1:8788",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8788",
+    "--upstream",
+    "https://api.anthropic.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmuynvgov-anthropic-sonnet-gateway.jsonl",
+    "--force-model",
+    "claude-sonnet-5.5",
+    "--max-tokens-ceiling",
+    "32768",
+    "--native-messages",
+    "--auto-cache",
+    "--workspace-id",
+    "wrkspc_REDACTED"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "claude-sonnet-5.5",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": true
+  },
+  "cacheMode": "STATIC breakpoints PLUS the top-level field, identical to the Haiku condition",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-07T22:45:32.710Z"
+}

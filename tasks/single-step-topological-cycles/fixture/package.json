@@ -1,0 +1,8 @@
+{
+  "name": "single-step-topological-cycles",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Migration planner: ordering steps that depend on each other.",
+  "scripts": { "test": "node --test" }
+}

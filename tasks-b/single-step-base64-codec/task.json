@@ -1,0 +1,6 @@
+{
+  "prompt": "People are hitting edge-case corruption in the base64 codec: url-safe text decodes to the wrong bytes, inputs that come in without padding come back garbled, and single trailing bytes vanish from encoded output altogether. Worse, a dangling single character that should be rejected outright is being silently decoded into a byte. The behaviour we agreed on is written down in docs/codec-spec.md — make the implementation match it. The tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-base64-codec",
+  "setup": ""
+}

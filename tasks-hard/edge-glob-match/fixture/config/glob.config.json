@@ -1,0 +1,21 @@
+{
+  "note": "The defaults the backup tool ships a job with. The option names are the ones the selector reads; keep them in sync with docs/selection.md.",
+  "defaults": {
+    "dot": false,
+    "nocase": false
+  },
+  "jobs": {
+    "nightly-home": {
+      "patterns": ["**", "!**/*.tmp", "!**/.cache/**"],
+      "options": { "dot": true }
+    },
+    "source-snapshot": {
+      "patterns": ["{src,test,config}/**", "!**/*.log"],
+      "options": { "nocase": true }
+    },
+    "mail-spool": {
+      "patterns": ["var/spool/", "var/spool/**"],
+      "options": {}
+    }
+  }
+}

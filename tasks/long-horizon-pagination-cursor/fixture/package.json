@@ -1,0 +1,8 @@
+{
+  "name": "long-horizon-pagination-cursor",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "List API: cursor pagination over a changing store.",
+  "scripts": { "test": "node --test" }
+}

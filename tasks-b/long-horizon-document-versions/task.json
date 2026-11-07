@@ -1,0 +1,6 @@
+{
+  "prompt": "People are losing trust in the document versioning service. An author tweaked a page object after it was published and watched the published copy change with it, and when two editors publish at the same time the second one silently replaces the first instead of losing cleanly. A revert was supposed to hand you a fresh draft on the old content, but right now it rewrites the published history, and saving against an out-of-date base version doesn't raise the conflict the rules promise. The rules in docs/ are the contract - make the service match them, and treat the tests under test/ as the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-document-versions",
+  "setup": ""
+}

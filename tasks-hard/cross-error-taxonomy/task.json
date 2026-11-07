@@ -1,0 +1,6 @@
+{
+  "prompt": "The API's failures have stopped being useful. Clients cannot tell a record that is missing from one the service refused, because nearly everything comes back as a 500 with no code on it; the queue keeps retrying work that will never succeed; a store or a cache that is down looks the same as a record that does not exist; and when an error does surface, what actually went wrong underneath has been replaced by a generic message with nothing in it that support can tie back to the request. Bring the service in line with docs/error-policy.md - the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-error-taxonomy",
+  "setup": ""
+}

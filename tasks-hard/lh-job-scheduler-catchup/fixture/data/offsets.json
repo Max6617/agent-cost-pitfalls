@@ -1,0 +1,25 @@
+{
+  "note": "Published UTC offsets, ops-maintained. From the `from` instant onwards the local clock reads UTC + offsetMinutes. This file is the only authority for local time; the host timezone is never consulted.",
+  "zones": {
+    "UTC": [
+      { "from": "1970-01-01T00:00:00.000Z", "offsetMinutes": 0 }
+    ],
+    "Europe/Berlin": [
+      { "from": "1970-01-01T00:00:00.000Z", "offsetMinutes": 60 },
+      { "from": "2024-03-31T01:00:00.000Z", "offsetMinutes": 120 },
+      { "from": "2024-10-27T01:00:00.000Z", "offsetMinutes": 60 },
+      { "from": "2025-03-30T01:00:00.000Z", "offsetMinutes": 120 },
+      { "from": "2025-10-26T01:00:00.000Z", "offsetMinutes": 60 }
+    ],
+    "America/New_York": [
+      { "from": "1970-01-01T00:00:00.000Z", "offsetMinutes": -300 },
+      { "from": "2024-03-10T07:00:00.000Z", "offsetMinutes": -240 },
+      { "from": "2024-11-03T06:00:00.000Z", "offsetMinutes": -300 },
+      { "from": "2025-03-09T07:00:00.000Z", "offsetMinutes": -240 },
+      { "from": "2025-11-02T06:00:00.000Z", "offsetMinutes": -300 }
+    ],
+    "Asia/Kolkata": [
+      { "from": "1970-01-01T00:00:00.000Z", "offsetMinutes": 330 }
+    ]
+  }
+}

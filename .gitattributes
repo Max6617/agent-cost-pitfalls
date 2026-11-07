@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+
+# 199 MB of decoded DSH session transcript. It is the single largest surviving artefact and
+# the reason 223 of the 102,000 destroyed gateway records still exist. Too large for plain
+# git as text, so it is tracked gzip-compressed (38 MB, secrets redacted - see
+# HISTORY.md). TRACKED is the point; gzip is only how.
+recovered/sessions-text.txt.gz binary

@@ -1,0 +1,5 @@
+measure-gateway: no usable upstream key.
+  DEEPSEEK_API_KEY is: (none)
+  Harnesses send synthetic keys (exp-<harness>-<runId>); the gateway replaces
+  them with this one. A synthetic key is never forwarded to the provider.
+  Set a real key and restart:  $env:DEEPSEEK_API_KEY = "sk-..."

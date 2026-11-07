@@ -1,0 +1,6 @@
+{
+  "prompt": "The wrapping library is misbehaving in ways the docs say it cannot. Output that fills the available width exactly gets broken onto a second row anyway, continuation rows with a hanging indent overrun the right margin, and words longer than the width are being chopped into pieces even though we agreed they must overflow whole. Where the input has extra spaces or tabs the breaks land in the wrong places too. Make the library behave the way docs/ says it should - the reproductions under test/ are what we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-word-wrap",
+  "setup": ""
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "The warehouse is angry with us. Customers who cancel an order after it went out get refunded in full and the order vanishes from the board instead of waiting for the goods to come back; the shelf count drifts negative on busy days because we ship units we do not have; and every damaged return goes straight back on the shelf. Replaying a redelivered import ships some orders a second time whenever the redelivery re-stamps the timestamps, and the end-of-day reconciliation comes out different depending on the order the events happened to arrive in. The behaviour everyone signed off is in docs/, and the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-order-fulfilment",
+  "setup": ""
+}

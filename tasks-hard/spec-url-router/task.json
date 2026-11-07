@@ -1,0 +1,6 @@
+{
+  "prompt": "Requests are landing on the wrong handler: when two patterns could both serve a path, the router picks one that the routing spec under docs/ would not. A parameter carrying an escaped slash swallows the segment boundary, an escaped character comes back decoded twice, and adding or dropping a trailing slash decides which route wins. Make the router behave the way docs/routing-spec.md says it does; the reproductions under test/ are the ones we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-url-router",
+  "setup": ""
+}

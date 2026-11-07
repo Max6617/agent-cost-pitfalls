@@ -1,0 +1,6 @@
+{
+  "prompt": "Support keeps filing versions of the same ticket: the same row shows up in a different place depending on which screen you open. The board stacks low-numbered work above the urgent cards, the account directory floats half-finished profiles to the top, and two search hits that look identical swap places between refreshes. Something is also reordering data behind the caller's back - batches come back from a read in a different order than we handed them over, which has already mangled an audit export once. docs/listing-order.md is the order everyone agreed to; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-sort-tiebreak",
+  "setup": ""
+}

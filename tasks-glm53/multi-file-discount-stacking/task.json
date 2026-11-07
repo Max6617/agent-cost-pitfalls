@@ -1,0 +1,6 @@
+{
+  "prompt": "Checkout totals are wrong whenever more than one offer applies: a multi-buy on five units discounts two units instead of one, the loyalty discount is taken off the gross rather than off the amount left after the line promotions, and the coupon lands in the wrong place in the chain so a percentage and a fixed coupon give the same answer. Fix the stacking so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

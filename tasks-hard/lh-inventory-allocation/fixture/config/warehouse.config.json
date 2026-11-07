@@ -1,0 +1,16 @@
+{
+  "site": "north",
+  "channels": ["web", "trade", "default"],
+  "picking": {
+    "packSize": 6,
+    "reservePacks": true
+  },
+  "holds": {
+    "defaultTtlMs": 7200000,
+    "warnAfterMs": 3600000
+  },
+  "atp": {
+    "cacheMs": 30000,
+    "showNegative": true
+  }
+}

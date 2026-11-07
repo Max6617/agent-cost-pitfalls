@@ -1,0 +1,1062 @@
+{
+  "plan": "PRE-REGISTRATION-HARD.md (HARD-PREREG v1.0, commit 8ec47c4)",
+  "dir": "C:\\Users\\user\\betterharness\\results\\hardpilot-ds-full",
+  "flow": {
+    "records": 241,
+    "cells": 240,
+    "absentCells": 0,
+    "excludedRecords": 1,
+    "excludedCostUsd": 0.011397618,
+    "byCause": {
+      "interrupted": 1
+    },
+    "usageJoinedRecords": 241,
+    "usageJoinedCells": 240,
+    "scoredCells": 240,
+    "arms": 10,
+    "tasks": 24,
+    "retriedCells": 1,
+    "retriedCellKeys": [
+      "lh-inventory-allocation|dsh:ptc-terse|1"
+    ],
+    "gatewayFiles": 21,
+    "gatewayProbes": 561,
+    "gatewayBadStatus": 1682,
+    "solveCells": 178
+  },
+  "position": {
+    "byArm": [
+      {
+        "arm": "cline",
+        "n": 24,
+        "position0": 1,
+        "share0": 0.041666666666666664
+      },
+      {
+        "arm": "dsh:native",
+        "n": 24,
+        "position0": 2,
+        "share0": 0.08333333333333333
+      },
+      {
+        "arm": "dsh:native-opt",
+        "n": 24,
+        "position0": 5,
+        "share0": 0.20833333333333334
+      },
+      {
+        "arm": "dsh:native-terse",
+        "n": 24,
+        "position0": 6,
+        "share0": 0.25
+      },
+      {
+        "arm": "dsh:ptc",
+        "n": 24,
+        "position0": 1,
+        "share0": 0.041666666666666664
+      },
+      {
+        "arm": "dsh:ptc-opt",
+        "n": 24,
+        "position0": 2,
+        "share0": 0.08333333333333333
+      },
+      {
+        "arm": "dsh:ptc-terse",
+        "n": 24,
+        "position0": 3,
+        "share0": 0.125
+      },
+      {
+        "arm": "goose",
+        "n": 24,
+        "position0": 1,
+        "share0": 0.041666666666666664
+      },
+      {
+        "arm": "opencode",
+        "n": 24,
+        "position0": 2,
+        "share0": 0.08333333333333333
+      },
+      {
+        "arm": "openhands",
+        "n": 24,
+        "position0": 1,
+        "share0": 0.041666666666666664
+      }
+    ],
+    "uniformShare0": 0.1,
+    "maxAbsDeviationPp": 15,
+    "rule": "adjust if maxAbsDeviationPp > 25"
+  },
+  "arms": [
+    {
+      "arm": "cline",
+      "n": 24,
+      "solved": 17,
+      "solveRate": 0.7083333333333334,
+      "solveCi": [
+        0.5083193634129031,
+        0.8508553966583573
+      ],
+      "meanScore": 0.9558333333333334,
+      "meanPassRate": 0.9558333333333334,
+      "meanCost": 0.045682543250000006,
+      "medianCost": 0.041063403,
+      "meanCostSolved": 0.043371006705882356,
+      "costPerSolved": 0.06449300223529413,
+      "medianSteps": 26
+    },
+    {
+      "arm": "dsh:native",
+      "n": 24,
+      "solved": 18,
+      "solveRate": 0.75,
+      "solveCi": [
+        0.5510017468789357,
+        0.8800079652065768
+      ],
+      "meanScore": 0.9558333333333334,
+      "meanPassRate": 0.9558333333333334,
+      "meanCost": 0.05338212174999998,
+      "medianCost": 0.052236440999999995,
+      "meanCostSolved": 0.054064768333333325,
+      "costPerSolved": 0.0711761623333333,
+      "medianSteps": 38
+    },
+    {
+      "arm": "dsh:native-opt",
+      "n": 24,
+      "solved": 19,
+      "solveRate": 0.7916666666666666,
+      "solveCi": [
+        0.5952915551476453,
+        0.9075531089521192
+      ],
+      "meanScore": 0.9625,
+      "meanPassRate": 0.9625,
+      "meanCost": 0.05830391275,
+      "medianCost": 0.05458101,
+      "meanCostSolved": 0.05588045399999999,
+      "costPerSolved": 0.07364704768421053,
+      "medianSteps": 36
+    },
+    {
+      "arm": "dsh:native-terse",
+      "n": 24,
+      "solved": 17,
+      "solveRate": 0.7083333333333334,
+      "solveCi": [
+        0.5083193634129031,
+        0.8508553966583573
+      ],
+      "meanScore": 0.9591666666666668,
+      "meanPassRate": 0.9591666666666668,
+      "meanCost": 0.033653952375,
+      "medianCost": 0.0341528415,
+      "meanCostSolved": 0.03252364747058823,
+      "costPerSolved": 0.047511462176470586,
+      "medianSteps": 29.5
+    },
+    {
+      "arm": "dsh:ptc",
+      "n": 24,
+      "solved": 18,
+      "solveRate": 0.75,
+      "solveCi": [
+        0.5510017468789357,
+        0.8800079652065768
+      ],
+      "meanScore": 0.9575694444444446,
+      "meanPassRate": 0.9575694444444446,
+      "meanCost": 0.0484134335,
+      "medianCost": 0.0499704,
+      "meanCostSolved": 0.048378457666666666,
+      "costPerSolved": 0.06455124466666667,
+      "medianSteps": 22.5
+    },
+    {
+      "arm": "dsh:ptc-opt",
+      "n": 24,
+      "solved": 18,
+      "solveRate": 0.75,
+      "solveCi": [
+        0.5510017468789357,
+        0.8800079652065768
+      ],
+      "meanScore": 0.9609722222222222,
+      "meanPassRate": 0.9609722222222222,
+      "meanCost": 0.04547066999999999,
+      "medianCost": 0.042718491,
+      "meanCostSolved": 0.04683846599999999,
+      "costPerSolved": 0.06062755999999999,
+      "medianSteps": 24.5
+    },
+    {
+      "arm": "dsh:ptc-terse",
+      "n": 24,
+      "solved": 19,
+      "solveRate": 0.7916666666666666,
+      "solveCi": [
+        0.5952915551476453,
+        0.9075531089521192
+      ],
+      "meanScore": 0.9643055555555556,
+      "meanPassRate": 0.9643055555555556,
+      "meanCost": 0.03450868525,
+      "medianCost": 0.031878369,
+      "meanCostSolved": 0.034139359263157885,
+      "costPerSolved": 0.04358991821052632,
+      "medianSteps": 22
+    },
+    {
+      "arm": "goose",
+      "n": 24,
+      "solved": 19,
+      "solveRate": 0.7916666666666666,
+      "solveCi": [
+        0.5952915551476453,
+        0.9075531089521192
+      ],
+      "meanScore": 0.9747222222222223,
+      "meanPassRate": 0.9747222222222223,
+      "meanCost": 0.031850771,
+      "medianCost": 0.029619669,
+      "meanCostSolved": 0.029853138947368425,
+      "costPerSolved": 0.040232552842105265,
+      "medianSteps": 28.5
+    },
+    {
+      "arm": "opencode",
+      "n": 24,
+      "solved": 16,
+      "solveRate": 0.6666666666666666,
+      "solveCi": [
+        0.46705959494080457,
+        0.8202802131162036
+      ],
+      "meanScore": 0.9226388888888889,
+      "meanPassRate": 0.9226388888888889,
+      "meanCost": 0.03261234275,
+      "medianCost": 0.032001552,
+      "meanCostSolved": 0.03252099675,
+      "costPerSolved": 0.048918514125,
+      "medianSteps": 30
+    },
+    {
+      "arm": "openhands",
+      "n": 24,
+      "solved": 17,
+      "solveRate": 0.7083333333333334,
+      "solveCi": [
+        0.5083193634129031,
+        0.8508553966583573
+      ],
+      "meanScore": 0.9627083333333334,
+      "meanPassRate": 0.9627083333333334,
+      "meanCost": 0.06477524124999999,
+      "medianCost": 0.060151419000000005,
+      "meanCostSolved": 0.05589170152941175,
+      "costPerSolved": 0.0914473994117647,
+      "medianSteps": 48
+    }
+  ],
+  "tasks": [
+    {
+      "task": "spec-diff-patch",
+      "nArms": 10,
+      "solves": 9,
+      "spread": 100,
+      "scoreMean": 1,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "lh-migration-planner",
+      "nArms": 10,
+      "solves": 9,
+      "spread": 100,
+      "scoreMean": 0.9960000000000001,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "edge-json-schema",
+      "nArms": 10,
+      "solves": 8,
+      "spread": 100,
+      "scoreMean": 0.9875,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "lh-ledger-replay",
+      "nArms": 10,
+      "solves": 3,
+      "spread": 100,
+      "scoreMean": 0.9319999999999998,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "edge-number-format",
+      "nArms": 10,
+      "solves": 8,
+      "spread": 100,
+      "scoreMean": 0.9119999999999999,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "cross-nullability",
+      "nArms": 10,
+      "solves": 1,
+      "spread": 100,
+      "scoreMean": 0.7541666666666667,
+      "cls": "DISCRIMINATING"
+    },
+    {
+      "task": "cross-cancellation",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "cross-degraded-mode",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "cross-units-normalisation",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "edge-cron-parser",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "edge-deep-merge",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "edge-glob-match",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "edge-template-engine",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "lh-inventory-allocation",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "lh-permission-resolution",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "spec-csv-dialect",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "spec-money-allocation",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "spec-query-engine",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "spec-timezone-offsets",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "spec-url-router",
+      "nArms": 10,
+      "solves": 10,
+      "spread": 0,
+      "scoreMean": 1,
+      "cls": "TOO EASY"
+    },
+    {
+      "task": "lh-search-ranking",
+      "nArms": 10,
+      "solves": 0,
+      "spread": 0,
+      "scoreMean": 0.9600000000000002,
+      "cls": "THRESHOLD"
+    },
+    {
+      "task": "cross-trace-context",
+      "nArms": 10,
+      "solves": 0,
+      "spread": 0,
+      "scoreMean": 0.8400000000000001,
+      "cls": "THRESHOLD"
+    },
+    {
+      "task": "lh-job-scheduler-catchup",
+      "nArms": 10,
+      "solves": 0,
+      "spread": 0,
+      "scoreMean": 0.8333333333333333,
+      "cls": "THRESHOLD"
+    },
+    {
+      "task": "cross-error-taxonomy",
+      "nArms": 10,
+      "solves": 0,
+      "spread": 0,
+      "scoreMean": 0.7679999999999999,
+      "cls": "THRESHOLD"
+    }
+  ],
+  "confirmatory": [
+    {
+      "id": "HH1",
+      "observedPp": 12.5,
+      "p": 0.6469176541172942,
+      "se": 0.003379461517081317,
+      "iters": 20000,
+      "floorPp": 10,
+      "criticalPp95": 16.666666666666668
+    },
+    {
+      "id": "HH2",
+      "estimatePct": -9.307775875356624,
+      "ci95": [
+        -17.048940186534345,
+        -0.6455363461809777
+      ],
+      "ci90": [
+        -15.862227606123,
+        -1.9635554748593733
+      ],
+      "marginPp": 10,
+      "verdict": "INCONCLUSIVE",
+      "p": 0.4296,
+      "tost": {
+        "pBelow": 0.4296,
+        "pAbove": 0
+      },
+      "tasks": 24,
+      "guard": {
+        "n": 0,
+        "p": 1,
+        "method": "exact-binomial"
+      },
+      "meanD": -0.00496868825
+    },
+    {
+      "id": "HH3",
+      "estimatePct": -32.787224358903465,
+      "ci95": [
+        -36.900614778174834,
+        -28.754966956300166
+      ],
+      "floorPct": -10,
+      "verdict": "REPLICATED",
+      "wilcoxon": {
+        "n": 24,
+        "W": 0,
+        "p": 5.960464477539063e-8,
+        "method": "exact-DP"
+      },
+      "tasks": 24,
+      "guard": {
+        "native": {
+          "n": 1,
+          "n01": 0,
+          "n10": 1,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "ptc": {
+          "n": 1,
+          "n01": 1,
+          "n10": 0,
+          "p": 1,
+          "method": "exact-binomial"
+        }
+      }
+    },
+    {
+      "id": "HH4",
+      "estimate": 16.291666666666668,
+      "ci95": [
+        11.666666666666666,
+        21.125
+      ],
+      "verdict": "GENERALISES",
+      "wilcoxon": {
+        "n": 24,
+        "W": 292.5,
+        "p": 0.0000013113021850585938,
+        "method": "exact-DP"
+      },
+      "tasks": 24,
+      "optEstimate": 15.041666666666666,
+      "optWilcoxon": {
+        "n": 23,
+        "W": 272,
+        "p": 8.344650268554688e-7,
+        "method": "exact-DP"
+      }
+    }
+  ],
+  "holm": {
+    "alpha": 0.05,
+    "m": 4,
+    "rows": [
+      {
+        "id": "HH3",
+        "p": 5.960464477539063e-8,
+        "rank": 1,
+        "threshold": 0.0125,
+        "passes": true,
+        "mcSe": null,
+        "resolvable": null
+      },
+      {
+        "id": "HH4",
+        "p": 0.0000013113021850585938,
+        "rank": 2,
+        "threshold": 0.016666666666666666,
+        "passes": true,
+        "mcSe": null,
+        "resolvable": null
+      },
+      {
+        "id": "HH2",
+        "p": 0.4296,
+        "rank": 3,
+        "threshold": 0.025,
+        "passes": false,
+        "mcSe": null,
+        "resolvable": null
+      },
+      {
+        "id": "HH1",
+        "p": 0.6469176541172942,
+        "se": 0.003379461517081317,
+        "rank": 4,
+        "threshold": 0.05,
+        "passes": false,
+        "mcSe": 0.003379461517081317,
+        "resolvable": true
+      }
+    ],
+    "survivors": 2,
+    "unresolvable": 0
+  },
+  "secondary": [
+    {
+      "id": "S1",
+      "label": "ptc-opt - native-opt (cost %, equivalence)",
+      "estimate": -22.01094599778811,
+      "ci95": [
+        -29.689138994493472,
+        -12.631096069652124
+      ],
+      "ci90": [
+        -28.63585169638547,
+        -14.355163601136043
+      ],
+      "tasks": 24,
+      "verdict": "ADVANTAGE",
+      "p": 0.9946,
+      "holm": {
+        "id": "S1",
+        "p": 0.9946,
+        "rank": 3,
+        "threshold": 0.05,
+        "passes": false,
+        "mcSe": null,
+        "resolvable": null
+      }
+    },
+    {
+      "id": "S2",
+      "label": "native-terse - native (cost %)",
+      "estimate": -36.95651039760332,
+      "ci95": [
+        -43.22886023664347,
+        -29.850576590011265
+      ],
+      "tasks": 24,
+      "p": 1.1920928955078125e-7,
+      "holm": {
+        "id": "S2",
+        "p": 1.1920928955078125e-7,
+        "rank": 2,
+        "threshold": 0.025,
+        "passes": true,
+        "mcSe": null,
+        "resolvable": null
+      }
+    },
+    {
+      "id": "S3",
+      "label": "ptc-terse - ptc (cost %)",
+      "estimate": -28.7208471797399,
+      "ci95": [
+        -33.146442706273625,
+        -23.7647832852428
+      ],
+      "tasks": 24,
+      "p": 5.960464477539063e-8,
+      "holm": {
+        "id": "S3",
+        "p": 5.960464477539063e-8,
+        "rank": 1,
+        "threshold": 0.016666666666666666,
+        "passes": true,
+        "mcSe": null,
+        "resolvable": null
+      }
+    }
+  ],
+  "batch1": {
+    "dir": "C:\\Users\\user\\betterharness\\results\\ds-full",
+    "records": 620,
+    "cells": 310,
+    "arms": 10,
+    "tasks": 31,
+    "excludedRecords": 0,
+    "usageJoined": 620,
+    "comparators": {
+      "ptcPct": 0.1259433775654524,
+      "ptcCi95": [
+        -8.595803844908612,
+        9.79671161253813
+      ],
+      "ptcTasks": 31,
+      "steps": 2.338709677419355,
+      "stepsCi95": [
+        1.3709677419354838,
+        3.370967741935484
+      ],
+      "stepTasks": 31
+    }
+  },
+  "exploratory": {
+    "HH5": {
+      "id": "HH5",
+      "arms": [
+        "cline",
+        "dsh:native",
+        "dsh:native-opt",
+        "dsh:native-terse",
+        "dsh:ptc",
+        "dsh:ptc-opt",
+        "dsh:ptc-terse",
+        "goose",
+        "opencode",
+        "openhands"
+      ],
+      "rho": 0.8181818181818182,
+      "p": 0.005349732513374331,
+      "se": 0.0005158058198299858,
+      "batch1Order": [
+        "dsh:ptc-terse",
+        "dsh:native-terse",
+        "opencode",
+        "goose",
+        "dsh:ptc",
+        "dsh:native",
+        "cline",
+        "dsh:ptc-opt",
+        "dsh:native-opt",
+        "openhands"
+      ],
+      "hardOrder": [
+        "goose",
+        "dsh:ptc-terse",
+        "opencode",
+        "dsh:native-terse",
+        "cline",
+        "dsh:ptc-opt",
+        "dsh:ptc",
+        "dsh:native",
+        "dsh:native-opt",
+        "openhands"
+      ],
+      "batch1Median": [
+        0.007735265999999999,
+        0.007697979,
+        0.008012181,
+        0.0044358869999999995,
+        0.007279008,
+        0.007815114,
+        0.003760908,
+        0.00498261,
+        0.004885416,
+        0.008688324
+      ],
+      "hardMedian": [
+        0.041063403,
+        0.052236440999999995,
+        0.05458101,
+        0.0341528415,
+        0.0499704,
+        0.042718491,
+        0.031878369,
+        0.029619669,
+        0.032001552,
+        0.060151419000000005
+      ]
+    },
+    "HH6": {
+      "id": "HH6",
+      "ratio": 6.459004280584068,
+      "ci95": [
+        4.746571629302526,
+        8.722785528601444
+      ],
+      "hardMedian": 0.039966426,
+      "batch1Median": 0.006187707,
+      "hardTasks": 24,
+      "batch1Tasks": 31
+    },
+    "HH7": {
+      "id": "HH7",
+      "solveSpreadPp": 12.5,
+      "scoreSpreadPp": 5.2083333333333375,
+      "ratio": 2.399999999999998,
+      "rho": 0.6817986171707132,
+      "descriptorHolds": true
+    },
+    "HH8": {
+      "id": "HH8",
+      "rows": [
+        {
+          "arm": "cline",
+          "n": 24,
+          "solved": 17,
+          "solveRate": 0.7083333333333334,
+          "solveCi": [
+            0.5083193634129031,
+            0.8508553966583573
+          ],
+          "meanScore": 0.9558333333333334,
+          "meanPassRate": 0.9558333333333334,
+          "meanCost": 0.045682543250000006,
+          "medianCost": 0.041063403,
+          "meanCostSolved": 0.043371006705882356,
+          "costPerSolved": 0.06449300223529413,
+          "medianSteps": 26
+        },
+        {
+          "arm": "goose",
+          "n": 24,
+          "solved": 19,
+          "solveRate": 0.7916666666666666,
+          "solveCi": [
+            0.5952915551476453,
+            0.9075531089521192
+          ],
+          "meanScore": 0.9747222222222223,
+          "meanPassRate": 0.9747222222222223,
+          "meanCost": 0.031850771,
+          "medianCost": 0.029619669,
+          "meanCostSolved": 0.029853138947368425,
+          "costPerSolved": 0.040232552842105265,
+          "medianSteps": 28.5
+        },
+        {
+          "arm": "opencode",
+          "n": 24,
+          "solved": 16,
+          "solveRate": 0.6666666666666666,
+          "solveCi": [
+            0.46705959494080457,
+            0.8202802131162036
+          ],
+          "meanScore": 0.9226388888888889,
+          "meanPassRate": 0.9226388888888889,
+          "meanCost": 0.03261234275,
+          "medianCost": 0.032001552,
+          "meanCostSolved": 0.03252099675,
+          "costPerSolved": 0.048918514125,
+          "medianSteps": 30
+        },
+        {
+          "arm": "openhands",
+          "n": 24,
+          "solved": 17,
+          "solveRate": 0.7083333333333334,
+          "solveCi": [
+            0.5083193634129031,
+            0.8508553966583573
+          ],
+          "meanScore": 0.9627083333333334,
+          "meanPassRate": 0.9627083333333334,
+          "meanCost": 0.06477524124999999,
+          "medianCost": 0.060151419000000005,
+          "meanCostSolved": 0.05589170152941175,
+          "costPerSolved": 0.0914473994117647,
+          "medianSteps": 48
+        }
+      ]
+    }
+  },
+  "sensitivityScore": {
+    "table": [
+      {
+        "task": "spec-diff-patch",
+        "nArms": 10,
+        "solves": 9,
+        "spread": 100,
+        "scoreMean": 1,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "lh-migration-planner",
+        "nArms": 10,
+        "solves": 9,
+        "spread": 100,
+        "scoreMean": 0.9960000000000001,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "edge-json-schema",
+        "nArms": 10,
+        "solves": 8,
+        "spread": 100,
+        "scoreMean": 0.9875,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "lh-ledger-replay",
+        "nArms": 10,
+        "solves": 3,
+        "spread": 100,
+        "scoreMean": 0.9319999999999998,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "edge-number-format",
+        "nArms": 10,
+        "solves": 8,
+        "spread": 100,
+        "scoreMean": 0.9119999999999999,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "cross-nullability",
+        "nArms": 10,
+        "solves": 1,
+        "spread": 100,
+        "scoreMean": 0.7541666666666667,
+        "cls": "DISCRIMINATING"
+      },
+      {
+        "task": "cross-cancellation",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "cross-degraded-mode",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "cross-units-normalisation",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "edge-cron-parser",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "edge-deep-merge",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "edge-glob-match",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "edge-template-engine",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "lh-inventory-allocation",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "lh-permission-resolution",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "spec-csv-dialect",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "spec-money-allocation",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "spec-query-engine",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "spec-timezone-offsets",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "spec-url-router",
+        "nArms": 10,
+        "solves": 10,
+        "spread": 0,
+        "scoreMean": 1,
+        "cls": "TOO EASY"
+      },
+      {
+        "task": "lh-search-ranking",
+        "nArms": 10,
+        "solves": 0,
+        "spread": 0,
+        "scoreMean": 0.9600000000000002,
+        "cls": "THRESHOLD"
+      },
+      {
+        "task": "cross-trace-context",
+        "nArms": 10,
+        "solves": 0,
+        "spread": 0,
+        "scoreMean": 0.8400000000000001,
+        "cls": "THRESHOLD"
+      },
+      {
+        "task": "lh-job-scheduler-catchup",
+        "nArms": 10,
+        "solves": 0,
+        "spread": 0,
+        "scoreMean": 0.8333333333333333,
+        "cls": "THRESHOLD"
+      },
+      {
+        "task": "cross-error-taxonomy",
+        "nArms": 10,
+        "solves": 0,
+        "spread": 0,
+        "scoreMean": 0.7679999999999999,
+        "cls": "THRESHOLD"
+      }
+    ],
+    "hh7": {
+      "id": "HH7",
+      "solveSpreadPp": 12.5,
+      "scoreSpreadPp": 5.2083333333333375,
+      "ratio": 2.399999999999998,
+      "rho": 0.6817986171707132,
+      "descriptorHolds": true
+    },
+    "classesDiffer": 0,
+    "meanScorePp": 95.76249999999999,
+    "meanPassRatePp": 95.76249999999999
+  },
+  "worstCase": {
+    "solves": 177,
+    "spreadPp": 12.5
+  },
+  "spentUsd": 10.767688173000003,
+  "generated": "2026-10-05T09:40:37.288Z"
+}

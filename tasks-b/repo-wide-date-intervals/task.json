@@ -1,0 +1,6 @@
+{
+  "prompt": "Support is drowning in boundary-day complaints. Guests can't make a booking that starts the day the previous guest checks out, trials are running a day longer than the purchased length, invoices keep billing one night too many, and the occupancy report splits a stay in two whenever one guest leaves the morning the next arrives. docs/interval-convention.md pins down which days an interval actually covers; the reproductions under test/ are the cases we managed to isolate, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-date-intervals",
+  "setup": ""
+}

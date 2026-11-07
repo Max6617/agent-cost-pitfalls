@@ -1,0 +1,6 @@
+{
+  "prompt": "The ISBN helper is misbehaving in production: ingest rejects ISBNs that cataloguing swears are valid, conversions between the ten- and thirteen-digit forms come out with the wrong final digit, 979-prefix titles convert when they should have no ten-digit form, and the hyphenation we show users splits publisher prefixes in the wrong place. The agreed rules are written down in docs/ — the code has drifted from them, so make the library behave the way the docs say. The tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-isbn-convert",
+  "setup": ""
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "The migration planner either refuses plans it should accept or emits an order that runs a step before something it depends on, and a dependency cycle makes it crash with an unhelpful error instead of naming the steps involved. Fix the planner so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

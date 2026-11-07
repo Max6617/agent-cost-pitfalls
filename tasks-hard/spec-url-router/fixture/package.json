@@ -1,0 +1,15 @@
+{
+  "name": "router",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Request router for the framework: patterns in, one matched route out",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "lint:routes": "node bin/route-lint.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

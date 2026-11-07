@@ -1,0 +1,10 @@
+{
+  "name": "multi-file-cache-invalidation",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Product feed: load, cache, invalidate, serve.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

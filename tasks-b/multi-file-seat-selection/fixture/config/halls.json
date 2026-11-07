@@ -1,0 +1,19 @@
+{
+  "venues": {
+    "studio": {
+      "rows": [
+        { "id": "A", "count": 9, "aislesAfter": [3, 6] },
+        { "id": "B", "count": 9, "aislesAfter": [3, 6] },
+        { "id": "C", "count": 9, "aislesAfter": [3, 6], "accessible": [1, 2, 8, 9] }
+      ]
+    },
+    "main-hall": {
+      "rows": [
+        { "id": "A", "count": 14, "aislesAfter": [4, 10] },
+        { "id": "B", "count": 14, "aislesAfter": [4, 10] },
+        { "id": "C", "count": 14, "aislesAfter": [4, 10], "accessible": [1, 2, 13, 14] },
+        { "id": "D", "count": 12, "aislesAfter": [6], "accessible": [1, 12] }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "dialect": {
+    "delimiter": ",",
+    "quote": "\"",
+    "escape": "\"",
+    "eol": "\r\n",
+    "header": true,
+    "trim": true,
+    "ragged": "pad",
+    "rename": {
+      "Item Name": "item_name",
+      "Supplier Ref": "supplier_ref"
+    }
+  },
+  "paths": {
+    "inbox": "data",
+    "loaded": "data/loaded",
+    "rejects": "data/rejects"
+  },
+  "report": {
+    "failFast": false,
+    "maxErrors": 200
+  }
+}

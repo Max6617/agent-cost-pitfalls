@@ -1,0 +1,43 @@
+{
+  "matrixId": "cmv3my0fu-qwen",
+  "provider": "qwen",
+  "plan": "rerun-b",
+  "tasksDir": "tasks-b",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 160,
+  "passes": 1,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8788",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8788",
+    "--upstream",
+    "https://dashscope-intl.aliyuncs.com/apps/anthropic",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv3my0fu-qwen-gateway.jsonl",
+    "--force-model",
+    "qwen3.8-flash",
+    "--max-tokens-ceiling",
+    "32768",
+    "--native-messages",
+    "--upstream-openai",
+    "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "qwen3.8-flash",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "STATIC breakpoints ON - this is how qwen3.8-flash batch 1 was collected",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-11T14:14:27.541Z"
+}

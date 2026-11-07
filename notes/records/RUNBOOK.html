@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Harness Runbook</title>
+<style>
+:root{--bg:#0f1115;--panel:#161a21;--panel2:#1c212a;--line:#2a3140;--fg:#e6e9ef;--dim:#96a0b5;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--key:#a371f7;--acc:#58a6ff;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(15,17,21,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 22px}
+h1{margin:0 0 2px;font-size:19px}
+.sub{color:var(--dim);font-size:13px}
+.pwrap{display:flex;align-items:center;gap:12px;margin-top:10px}
+.track{flex:1;height:8px;background:var(--panel2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+#bar{height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--ok));transition:width .25s}
+#pct,#cnt{font:12px/1 var(--mono);color:var(--dim);min-width:54px}
+button{cursor:pointer;font:inherit}
+#reset{background:var(--panel2);color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:4px 10px;font-size:12px}
+main{max-width:960px;margin:0 auto;padding:22px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:0 0 18px;overflow:hidden}
+section>h2{margin:0;padding:13px 16px;font-size:16px;background:var(--panel2);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.body{padding:14px 16px}
+.step{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0 0 12px;background:#12161c}
+.step:last-child{margin-bottom:0}
+.step h3{margin:0 0 6px;font-size:14.5px;display:flex;gap:9px;align-items:flex-start}
+.step h3 input{margin-top:3px;accent-color:var(--ok);width:16px;height:16px;flex:none}
+.pill{font:11px/1 var(--mono);padding:3px 7px;border-radius:99px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
+.ok{color:var(--ok);border-color:#1f4d29}.warn{color:var(--warn);border-color:#4d3d12}
+.key{color:var(--key);border-color:#3c2d5c}.bad{color:var(--bad);border-color:#5c2222}
+pre{position:relative;background:#0b0e13;border:1px solid var(--line);border-radius:7px;padding:11px 12px;overflow-x:auto;font:12.5px/1.55 var(--mono);margin:8px 0;white-space:pre}
+code{font:12.5px var(--mono);background:#0b0e13;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+pre code{background:none;border:0;padding:0}
+.copy{position:absolute;top:6px;right:6px;background:var(--panel2);color:var(--dim);border:1px solid var(--line);border-radius:5px;padding:2px 8px;font:11px var(--mono);opacity:.55}
+.copy:hover{opacity:1;color:var(--fg)}
+details{margin:9px 0;border-left:2px solid var(--line);padding-left:11px}
+summary{cursor:pointer;color:var(--dim);font-size:13px}
+summary:hover{color:var(--fg)}
+table{width:100%;border-collapse:collapse;margin:9px 0;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.note{background:#151b26;border-left:3px solid var(--acc);padding:9px 12px;border-radius:0 6px 6px 0;margin:9px 0;font-size:13.5px}
+.danger{background:#1e1416;border-left-color:var(--bad)}
+.good{background:#111a13;border-left-color:var(--ok)}
+.toc{display:flex;flex-wrap:wrap;gap:7px;padding:14px 16px}
+.toc a{color:var(--acc);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:4px 9px;border-radius:99px}
+.toc a:hover{background:var(--panel2)}
+footer{color:var(--dim);font-size:12.5px;text-align:center;padding:26px}
+kbd{background:var(--panel2);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 5px;font:11px var(--mono)}
+</style>
+</head>
+<body>
+<header>
+  <h1>DSH Harness Runbook</h1>
+  <div class="sub">From the current state to a measured result. Every command is copy-pasteable. Progress is saved in this browser.</div>
+  <div class="pwrap">
+    <span id="cnt">0 / 0</span>
+    <div class="track"><div id="bar"></div></div>
+    <span id="pct">0%</span>
+    <button id="reset">reset progress</button>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#p0">0 · Orient</a>
+  <a href="#p1">1 · Checkpoint</a>
+  <a href="#p2">2 · Verify offline</a>
+  <a href="#p3">3 · First live run</a>
+  <a href="#p4">4 · Host patch</a>
+  <a href="#p5">5 · Use it</a>
+  <a href="#p6">6 · Task suite</a>
+  <a href="#p7">7 · Measure</a>
+  <a href="#p8">8 · Cross-harness</a>
+  <a href="#p9">9 · Decision model</a>
+  <a href="#p10">10 · Write up</a>
+  <a href="#trouble">Troubleshooting</a>
+</nav>
+
+<main>
+
+<section id="p0">
+<h2>0 · Orient <span class="pill">5 min</span><span class="pill ok">no key</span></h2>
+<div class="body">
+<table>
+<tr><th>Piece</th><th>State</th></tr>
+<tr><td>5 presets (ptc-opt, standard-opt, research, economy, ptc-router)</td><td><span class="pill ok">installed &amp; validated</span></td></tr>
+<tr><td>Decision engine <code>router/router-core.mjs</code></td><td><span class="pill ok">26/26 tests pass, incl. Cordis integration</span></td></tr>
+<tr><td>Measurement gateway</td><td><span class="pill ok">15/15 self-test pass, never hit the real API</span></td></tr>
+<tr><td>Experiment runner / analyzer</td><td><span class="pill ok">dry-run verified</span></td></tr>
+<tr><td>5 external harnesses</td><td><span class="pill warn">not installed</span></td></tr>
+<tr><td>Task suite</td><td><span class="pill warn">1 example task, need ~15</span></td></tr>
+<tr><td>Live session touched?</td><td><span class="pill ok">no — profile patch still <code>[]</code></span></td></tr>
+</table>
+
+<div class="step">
+<div class="note danger"><b>Do this once per terminal window, before anything else.</b> <code>$env:DSH_HOME</code> is set for processes DSH launches, <b>not</b> for your own PowerShell window. Without it, every command below that uses it resolves to <code>C:\.agent-presets\...</code> and fails with <code>PathNotFound</code>. That was the cause of a real failure during setup.</div>
+
+<h3><input type="checkbox" data-step="0setup"><span>Set up your shell (once per terminal).</span></h3>
+<pre>if (-not $env:DSH_HOME) { $env:DSH_HOME = Join-Path $HOME '.dsh' }
+$env:DSH_HOME</pre>
+<p>Expect <code>C:\Users\&lt;you&gt;\.dsh</code>. If it prints nothing, the line did not run.</p>
+<p>Skip this if you only use <code>scripts/harness.ps1</code> — that script applies the same fallback internally, which is why its commands kept working while the raw ones failed.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="0a"><span>Run the preflight. It runs every check and tells you the cheapest next action.</span></h3>
+<pre>cd C:\Users\user\betterharness
+scripts/harness.ps1 preflight</pre>
+<p>Expect <code>nothing is broken</code> plus a numbered list of next actions. If it reports blockers, fix those first.</p>
+</div>
+</div>
+</section>
+
+<section id="p1">
+<h2>1 · Checkpoint <span class="pill">5 min</span><span class="pill ok">no key</span></h2>
+<div class="body">
+<div class="step">
+<h3><input type="checkbox" data-step="1a"><span>Snapshot both sides, then tag.</span></h3>
+<p>The git repo is only half the state — the presets live in <code>$DSH_HOME</code> and host tuning lives in the profile patch file. <code>snapshot-state</code> captures both with hashes.</p>
+<pre>cd C:\Users\user\betterharness
+node tools/snapshot-state.mjs --label v2-my-checkpoint
+git add -A; git commit -m "checkpoint"
+git tag v2-$(Get-Date -Format yyyyMMdd)</pre>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="1b"><span>Learn the diff command — this is how you prove what changed.</span></h3>
+<pre>node tools/snapshot-state.mjs --label tmp --diff v0-baseline</pre>
+<p>Shows added / removed / changed files plus content hashes. This is your replication package's changelog.</p>
+</div>
+</div>
+</section>
+
+<section id="p2">
+<h2>2 · Verify offline <span class="pill">10 min</span><span class="pill ok">no key</span><span class="pill ok">no session</span></h2>
+<div class="body">
+<div class="step">
+<h3><input type="checkbox" data-step="2a"><span>Router tests — 26 across three files: design rules, static guards for the mount-failure class, and integration tests that load the plugin into a real Cordis context and drive the agent-loop hooks.</span></h3>
+<pre>node --test router/router-core.test.mjs router/router-plugin.test.mjs router/router-integration.test.mjs</pre>
+<p>Expect <code>pass 15 / fail 0</code>. One test asserts the core has <b>no imports and no network calls</b> — that is the proof the decision layer cannot need an API key. Another asserts the <b>tier mapping is not degenerate</b>: an earlier version mapped every band to <code>standard</code> under the default cost mode, so the router injected persona text and never changed the model — while all tests passed.</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="2b"><span>Watch it decide on real inputs, without running an agent.</span></h3>
+<pre>node -e "import('./router/router-core.mjs').then(m =&gt; {
+  for (const t of ['Build a CLI that generates reports',
+                   'Fix the crash when the config file is missing',
+                   'Thoughts on the auth module?',
+                   'hi'])
+    console.log(JSON.stringify({ input: t, ...m.decide({ text: t }) }))
+})"</pre>
+<p>Look for: build &rarr; <code>react</code>, fix &rarr; <code>spec</code>, "thoughts?" &rarr; <code>weak</code> (honest ambiguity, not a guess), "hi" &rarr; <code>routed:false</code> (too short to be worth deciding).</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="2c"><span>Gateway self-test — 15 checks against a local fake upstream.</span></h3>
+<pre>node tools/test-gateway.mjs</pre>
+<p>Expect <code>ALL PASS</code>. Covers attribution, model enforcement, cache-split capture, cost, the Responses-API bridge, and that an <b>exempt</b> decision model is never rewritten but is still priced.</p>
+<pre>Remove-Item results\gateway-selftest.jsonl -Force -ErrorAction SilentlyContinue</pre>
+</div>
+</div>
+</section>
+
+<section id="p3">
+<h2>3 · First live run of the router <span class="pill">10 min</span><span class="pill ok">no key</span><span class="pill bad">do this first</span></h2>
+<div class="body">
+<div class="note good"><b>Do parts A, B and C below, in order — they are one action split into three.</b><br><br>
+Part A on its own does nothing except switch a log file on. The point of this section is to make the router run <b>once</b> and prove it works. The router is the only thing built here that has never executed, and everything downstream — the decision-model comparison, the cache claim — depends on it working. Free, and needs no API key.</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="3a"><span>A. Switch the ledger on. It ships off, so nothing is recorded by default.</span></h3>
+<pre>$f = "$env:DSH_HOME\.agent-presets\ptc-router\agent.cordis.yml"
+$ledger = Join-Path $env:USERPROFILE 'router-ledger.jsonl'
+(Get-Content $f -Raw) -replace 'ledgerPath: null', "ledgerPath: $ledger" |
+  Set-Content $f -Encoding UTF8
+node tools/validate-presets.mjs</pre>
+<p>With no argument it defaults to <code>$DSH_HOME/.agent-presets</code> and derives the module search paths itself, so it works even when <code>DSH_HOME</code> is unset. Pass a directory to check somewhere else; a bad path now prints a one-line message instead of a stack trace.</p>
+<p>Verified end to end: the exact commands above were run, the resulting path was checked with the same <code>dirname</code>/<code>appendFileSync</code> calls the router makes, and the preset still validated. The file is only created once the router runs.</p>
+<p>Validation must still say <i>all modules resolve</i>. If it does not, restore with <code>scripts/harness.ps1 presets -Force</code>.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="3b"><span>B. Start a NEW session, pick <code>PTC + router</code>, and give it a real task.</span></h3>
+<p>A running session <b>cannot</b> change preset — that is enforced by DSH, not a limitation of this setup. And a preset only applies to sessions started after the change.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="3c"><span>C. Check whether it actually routed.</span></h3>
+<pre>Get-Content "$env:USERPROFILE\router-ledger.jsonl"
+node tools/dsh-audit.mjs</pre>
+<p>Expect ledger lines of kind <code>input</code>, <code>inject</code>, <code>route</code>, and an audit <code>route:</code> line matching what the router chose.</p>
+<p><b>You are done with this section when</b> the ledger file exists and contains at least one <code>input</code> line. That single fact proves the decision layer loads inside a real session.</p>
+<details><summary>Three failure signatures — how to tell them apart</summary>
+<table>
+<tr><th>What you see</th><th>What it means</th><th>Do</th></tr>
+<tr><td>Ledger file does not exist</td><td>Preset did not mount</td><td>Open the preset picker — DSH lists broken presets with a reason rather than hiding them</td></tr>
+<tr><td><code>input</code> but no <code>route</code></td><td>Working correctly — the input was below <code>minChars</code>, or the chosen tier matched the session default</td><td>Nothing. This is the gate doing its job</td></tr>
+<tr><td><code>kind: error</code></td><td>The plugin threw and degraded to no-routing, by design</td><td>Read the error text in the ledger — the plugin is defensive, so this cannot have broken the run</td></tr>
+</table>
+</details>
+</div>
+</div>
+</section>
+
+<section id="p4">
+<h2>4 · Host patch <span class="pill">5 min</span><span class="pill ok">no key</span><span class="pill warn">reloads the host</span></h2>
+<div class="body">
+<div class="note danger">The <code>web</code> profile has <code>patchReload: live</code>. Applying this reloads the running host. <b>Stop DSH first</b>, or the script will refuse unless you pass <code>-Force</code>. Never run this while a session is mid-turn.</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="4a"><span>See exactly what would change. Writes nothing.</span></h3>
+<pre>scripts/harness.ps1 apply -DryRun</pre>
+<p>Four entries: spill cap 50000&rarr;32000, web-fetch <code>maxBodyChars</code> 100000&rarr;40000, reminder previews 500&rarr;200, session-title input 4096&rarr;2048.</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="4b"><span>Apply it. It backs up, verifies without booting, and auto-rolls-back on failure.</span></h3>
+<pre>scripts/harness.ps1 apply</pre>
+<p>The script composes the tree with <code>dsh --profile web --dump-config</code> and asserts all four values landed. If anything is missing it restores the backup and exits non-zero.</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="4c"><span>Know your undo.</span></h3>
+<pre>scripts/harness.ps1 rollback</pre>
+</div>
+</div>
+</section>
+
+<section id="p5">
+<h2>5 · Use it for real <span class="pill">a week</span><span class="pill ok">no key</span></h2>
+<div class="body">
+<div class="step">
+<h3><input type="checkbox" data-step="5a"><span>Work normally on <code>PTC (optimized)</code> and <code>Research</code>.</span></h3>
+<p>The 3–5% preset gain is currently <b>modelled, not measured</b>. Using them is how it becomes measured. Pick the mode per task:</p>
+<table>
+<tr><th>Preset</th><th>Use for</th></tr>
+<tr><td><b>PTC (optimized)</b></td><td>multi-step work — the everyday default</td></tr>
+<tr><td><b>Standard (optimized)</b></td><td>single-step or interactive work</td></tr>
+<tr><td><b>Research</b></td><td>investigation; read-only, cited output, per-source subagent fan-out</td></tr>
+<tr><td><b>Economy</b></td><td>cheap bulk edits — 12 plugin rows instead of 25</td></tr>
+<tr><td><b>PTC + router</b></td><td>the decision layer</td></tr>
+</table>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="5b"><span>Measure it. Run these weekly.</span></h3>
+<pre>node tools/dsh-audit.mjs            # newest session: composition, PTC containment, cache-risk
+node tools/dsh-audit.mjs --all      # aggregate
+node tools/estimate-gain.mjs ptc    # modelled before/after for the folding lever
+node tools/audit-tool-volume.mjs    # per-tool share of tool-result volume
+node tools/audit-fetch-caps.mjs     # where a fetch cap would actually bite</pre>
+<p>Watch the headline numbers: <b>PTC containment</b> (~70% is the current measurement) and the <b>tool-results share</b> of context (~37%).</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="5c"><span>Check the one number nothing here can measure.</span></h3>
+<p>The <b>provider cache-hit rate</b> is the single best predictor of the bill and DSH does not log it. Only your DeepSeek dashboard can tell you. Target the top decile: <b>&ge;94% of input read from cache</b>; a good loop sits near 84%; below ~80% means something is breaking the cache.</p>
+</div>
+</div>
+</section>
+
+<section id="p6">
+<h2>6 · Task suite <span class="pill">your time</span><span class="pill ok">no key</span></h2>
+<div class="body">
+<div class="step">
+<h3><input type="checkbox" data-step="6a"><span>Write ~15 tasks. This is the real bottleneck, not money.</span></h3>
+<p>Layout — one directory per task:</p>
+<pre>tasks/&lt;id&gt;/
+  task.json      { "prompt": "...", "repo": "./fixture", "test": "node --test", "setup": "" }
+  fixture/       the repository the agent works in</pre>
+<p>A worked example already exists at <code>tasks/example-fix/</code>. Copy its shape.</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="6b"><span>Hold every task to these rules.</span></h3>
+<table>
+<tr><th>Rule</th><th>Why</th></tr>
+<tr><td><b>Harness-agnostic</b> — solvable with a shell, an editor and a search tool</td><td>No browser, no MCP, no harness-specific feature</td></tr>
+<tr><td><b>Objectively gradable</b> — a hidden test suite the agent never sees</td><td>Never grade with an LLM; it invites the criticism that the metric was tuned</td></tr>
+<tr><td><b>Stratified by multi-stepness</b> — single-step edits, multi-file refactors, repo-wide sweeps, fetch-heavy research, long-horizon</td><td>The pooled mean hides the effect you are looking for</td></tr>
+<tr><td><b>Not used to design the presets</b></td><td>Hold-out. Say so in the paper</td></tr>
+</table>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="6c"><span>Add one condition patch per arm.</span></h3>
+<pre>Get-ChildItem conditions
+# one YAML per arm; each just selects agent-presets.default
+# add arms with:  Copy-Item conditions\ptc-opt.yml conditions\ptc-router.yml</pre>
+</div>
+</div>
+</section>
+
+<section id="p7">
+<h2>7 · Measure <span class="pill">needs a key</span><span class="pill">$</span></h2>
+<div class="body">
+<div class="note"><b>First step in this document that needs an API key.</b> Everything above ran without one. The key goes to the gateway, not to any tool built here.</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="7a"><span>Start the measurement gateway.</span></h3>
+<pre>cd C:\Users\user\betterharness
+$env:DEEPSEEK_API_KEY = 'sk-...'
+node tools/measure-gateway.mjs --port 8787 --log results/gateway.jsonl `
+  --force-model deepseek-flash --force-effort high</pre>
+<p>Leave it running. Check <code>http://127.0.0.1:8787/__stats</code> — empty harness stats, no error.</p>
+<p>Give every harness the synthetic key <code>exp-&lt;harness&gt;-&lt;runId&gt;</code>. The gateway swaps in your real key and records who asked.</p>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="7b"><span>Set up the experiment profile (a separate profile — never the live web one).</span></h3>
+<pre>dsh --profile exp --from-default-profile headless --help</pre>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="7c"><span>Pilot before spending real money.</span></h3>
+<pre>node tools/run-experiment.mjs --dry-run --seeds 2
+node tools/run-experiment.mjs --profile exp --seeds 2 --timeout-ms 900000
+node tools/analyze-results.mjs</pre>
+<p>The pilot answers one question: <b>is the effect big enough to justify 450 runs?</b> If the arms sit within noise, stop and report that — a clean negative result is legitimate and cheap here.</p>
+</div>
+</div>
+</section>
+
+<section id="p8">
+<h2>8 · Cross-harness comparison <span class="pill warn">the big one</span><span class="pill">needs a key</span></h2>
+<div class="body">
+<div class="note"><b>Do step 8a with ONE harness before installing five.</b> This is the step most likely to fail. An hour spent discovering that OpenCode will not talk to a custom endpoint is far cheaper than a week of setup across five toolchains.</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="8a"><span>Install ONE harness and point it at the gateway.</span></h3>
+<table>
+<tr><th>Harness</th><th>Install</th><th>Headless</th><th>Verified</th></tr>
+<tr><td><b>OpenCode</b> 210k★ MIT</td><td><code>npm i -g opencode-ai</code></td><td><code>opencode run "task"</code></td><td><span class="pill warn">unverified</span></td></tr>
+<tr><td><b>OpenHands</b> 89k★ MIT</td><td><code>pip install openhands-ai</code></td><td><code>openhands --task "..."</code></td><td><span class="pill warn">unverified</span></td></tr>
+<tr><td><b>Cline</b> 69k★ Apache-2.0</td><td><code>npm i -g cline</code></td><td><code>cline -y --json "task"</code></td><td><span class="pill ok">docs</span></td></tr>
+<tr><td><b>Goose</b> 55k★ Apache-2.0</td><td>see goose-docs.ai</td><td><code>goose run -t "task"</code></td><td><span class="pill warn">unverified</span></td></tr>
+<tr><td><b>Aider</b> 49k★ Apache-2.0</td><td><code>pip install aider-chat</code></td><td><code>aider --yes --message "task"</code></td><td><span class="pill warn">unverified</span></td></tr>
+</table>
+<p>Every one gets the same two settings — this is what makes them comparable:</p>
+<pre>base URL:  http://127.0.0.1:8787/v1
+api key:   exp-opencode-r001     (label = harness name, so the gateway attributes it)</pre>
+<p>Then run one trivial task and confirm the gateway saw it:</p>
+<pre>Get-Content results\gateway.jsonl | Select-String 'opencode'</pre>
+<details><summary>Why the gateway is what makes this fair</summary>
+<p>Six harnesses have different defaults for model, reasoning effort, autonomy and retries. Comparing them raw measures the defaults, not the design. The gateway forces model and effort to be identical across arms and <b>logs every rewrite</b>, so a harness that asked for something else shows up in the results instead of hiding. It also captures the provider's cache hit/miss split, which no harness exposes — so <b>per-harness cache discipline becomes a measured variable</b>, and nobody has published that.</p>
+</details>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="8b"><span>Record what you learned in the registry.</span></h3>
+<pre>notepad tools\harnesses.mjs</pre>
+<p>Flip each working harness's <code>verified</code> flag from <code>unverified</code> to <code>docs</code>. If a harness cannot be pointed at the gateway <b>it is not in the study</b> — write the reason into <code>notes/records/CROSS-HARNESS.md</code> section 2.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="8c"><span>Install the rest only after one works.</span></h3>
+<pre># repeat 8a for cline, openhands, goose, aider
+# each gets its own label: exp-cline-r001, exp-openhands-r001, ...
+Get-Content results\gateway.jsonl | ForEach-Object { (ConvertFrom-Json $_).harness } | Group-Object</pre>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="8d"><span>Run the full matrix and analyze.</span></h3>
+<pre>node tools/run-experiment.mjs --dry-run --seeds 5      # 6 arms x 15 tasks x 5 seeds = 450 runs
+node tools/run-experiment.mjs --profile exp --seeds 5
+node tools/analyze-results.mjs --runs results/runs.jsonl --usage results/gateway.jsonl</pre>
+<p>The analyzer implements the pre-registered plan: exact Wilcoxon over task blocks, bootstrap CIs, and a <b>quality guard</b> that refuses to interpret a cost comparison whose solve rates diverged by more than 15 points.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="8e"><span>The comparison that makes it a paper, not a leaderboard.</span></h3>
+<table>
+<tr><th>Component</th><th>Source</th><th>Meaning</th></tr>
+<tr><td>fixed prefix tokens</td><td>gateway, first request per session</td><td>system prompt + tool schemas</td></tr>
+<tr><td>context growth / step</td><td>session log</td><td>tokens added per step</td></tr>
+<tr><td>tool-result share</td><td><code>dsh-audit.mjs</code></td><td>how much growth is tool output</td></tr>
+<tr><td><b>cache hit rate</b></td><td>gateway</td><td><b>per-harness cache discipline — unpublished anywhere</b></td></tr>
+<tr><td>steps to solve</td><td>gateway request count</td><td>round trips</td></tr>
+</table>
+<div class="note good">The difference between a good and a great paper here is one thing: <b>explaining the variance rather than reporting the ranking.</b> Regress cost-per-solved-task on those five features. The ranking is the appendix; the decomposition is the contribution.</div>
+</div>
+</div>
+</section>
+
+<section id="p9">
+<h2>9 · Decision model <span class="pill">optional</span><span class="pill">no hardware</span></h2>
+<div class="body">
+<div class="note"><b>You said no hardware purchase — that rules out CLM's reference setup.</b> CLM needs <code>vllm serve</code>, and vLLM requires CUDA. Your machine (i7-1260P, 15.7 GB RAM, Intel Iris Xe 1 GB) has none. So the realistic options are CPU-only CLM, hosted Jev, or skipping it. <b>Skipping is a defensible choice</b> — see 9d.</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="9a"><span>Understand what you would be buying before buying it.</span></h3>
+<table>
+<tr><th></th><th>Jev (TypeSafe)</th><th>CLM-8B (Stanford+NVIDIA)</th></tr>
+<tr><td>licence</td><td>commercial, hosted</td><td><b>Apache 2.0</b></td></tr>
+<tr><td>shape</td><td>hosted API</td><td><b>75 MB head</b> over frozen Qwen3-8B</td></tr>
+<tr><td>cost</td><td>per call</td><td>free at the margin once served</td></tr>
+<tr><td>accuracy</td><td>better</td><td><b>not better on any published row</b> — ties on games, trails 95.2% vs 99.2% on BFCL v4 tool calling</td></tr>
+</table>
+<p>Read the "up to 9&times;" claim carefully: it comes from <b>one row</b> (a game, 16.5 vs 149.8 ms). The other rows are 1.6&times;–4&times;. And that game number measures a <i>combined system</i> — a physics planner labels actions in the prompt and a safety shield replaces unsafe answers.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="9b"><span>The number that should shape your paper.</span></h3>
+<div class="note">CLM's DeepSWE 81.6% is <b>31 of 38 tasks</b> — and on <b>25 of those 38 the verifier's choice could not change the result</b>. Independently, the routing literature finds only <b>29 of 294</b> questions were improvable by routing at all. <b>Two unrelated sources agree: decision models only matter on a minority of decisions.</b> That is your framing, and it is why the router gates on ambiguity instead of routing everything.</div>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="9c"><span>If you try CLM anyway, on CPU.</span></h3>
+<pre>pip install contrastive-lm</pre>
+<p>The reference path (<code>vllm serve</code>) will not run. The in-process engine accepts any OpenAI-compatible embeddings server, which is the only CPU route:</p>
+<pre>python -c "from clm import Engine; e = Engine(emb_url='http://127.0.0.1:PORT/v1/embeddings'); print(e.rank('What causes tides?', ['The Moon pull','Photosynthesis','The Earth is round']))"</pre>
+<p>Serve Qwen3-8B as embeddings from Ollama or llama.cpp. <b>Untested caveat:</b> CLM expects the encoder in a specific <i>pooling</i> mode and a CPU server may not reproduce it exactly. Expect <b>1–10 s per decision</b> on this CPU versus 16.5–80 ms on a 4090 — usable once per user input, unusable per step.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="9d"><span>If you use Jev or CLM, wire it as an exempt client.</span></h3>
+<pre>node tools/measure-gateway.mjs --port 8787 --log results/gateway.jsonl `
+  --force-model deepseek-flash --force-effort high `
+  --exempt clm `
+  --upstream-for clm=http://127.0.0.1:8700</pre>
+<div class="note danger"><b>This is why <code>--exempt</code> exists.</b> Model enforcement is what makes the harness comparison fair — but applying it to a decision model would rewrite the decision model's own model and destroy the measurement. Exempt clients are still attributed, logged and priced; they are just never rewritten.</div>
+<p>Then swap <code>decide()</code> in <code>router/router-core.mjs</code> for the model call <b>on the <code>weak</code> band only</b>. The ledger and the cache-safety guard keep working unchanged.</p>
+</div>
+
+<div class="step">
+<h3><input type="checkbox" data-step="9e"><span>The hypothesis, which is narrow and cheap.</span></h3>
+<p>The deterministic core already gets <b>87% of frontier quality at 56% cost with no classifier call at all</b>. So the question is not "is a decision model better" but:</p>
+<div class="note">&gt; Does a decision model beat keyword heuristics <b>on the ambiguous band only</b> — the inputs the router sends to <code>weak</code> — by enough to pay for its own latency and tokens?</div>
+<p>Arms: <code>ptc-opt</code> (no decision layer) vs <code>ptc-router</code> (deterministic) vs <code>ptc-router+model</code> (weak band delegated). A negative result is as publishable as a positive one.</p>
+</div>
+</div>
+</section>
+
+<section id="p10">
+<h2>10 · Write up <span class="pill ok">$0 for the first half</span></h2>
+<div class="body">
+<div class="step">
+<h3><input type="checkbox" data-step="10a"><span>Write stage 0 first. It is already done and costs nothing.</span></h3>
+<p><code>notes/records/EXECUTION.md</code> section 3 contains a complete descriptive result over <b>356 sessions and 27M tokens of tool output</b>: context composition by category, PTC containment (70.1%), batching (1.75 sub-calls per model call), and the finding that tool schemas collapse 25&rarr;1 while the fixed prefix grows ~11%.</p>
+<div class="note good">That is publishable on its own as a measurement study, and it de-risks everything above it. If the rest never happens, ship that.</div>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="10b"><span>Pick your tier honestly.</span></h3>
+<table>
+<tr><th>Tier</th><th>Requires</th></tr>
+<tr><td><b>Okay</b></td><td>1 harness, 1 task family, cost + success, no decomposition</td></tr>
+<tr><td><b>Good</b></td><td>6 arms &times; ~15 tasks &times; 5 seeds, blocked and randomised, provider-grade cost, quality guard, pre-registered analysis, replication package</td></tr>
+<tr><td><b>Great</b></td><td>the above <b>plus</b> the cost decomposition across all arms, per-harness cache-hit rates (unpublished), and a predictive model regressing cost on design features</td></tr>
+</table>
+</div>
+<div class="step">
+<h3><input type="checkbox" data-step="10c"><span>State the threats before you run, not after.</span></h3>
+<p>Cache contamination (the system prompt is identical across runs of a condition, so run 2+ hits a warm prefix — a first-order effect at k=5, not noise). Single model and provider. Tasks chosen to flatter one arm. Nondeterminism at small n. Our own harness, since DSH is ours. All four are written up in <code>notes/records/CROSS-HARNESS.md</code> section 7 and <code>notes/records/TEST-PROTOCOL.md</code> section 6.</p>
+</div>
+</div>
+</section>
+
+<section id="trouble">
+<h2>Troubleshooting</h2>
+<div class="body">
+<details><summary>A preset shows as broken in the picker</summary>
+<p>DSH lists broken presets with a reason naming the rows at fault rather than hiding them. Run <code>node tools/validate-presets.mjs "$env:DSH_HOME\.agent-presets"</code> — it parses every composition and resolves every plugin row, including relative <code>./x.mjs</code> paths. Restore with <code>scripts/harness.ps1 presets -Force</code>.</p>
+</details>
+<details><summary>scripts/harness.ps1 refuses to apply the patch</summary>
+<p>It detected a DSH host listening on port 3080. The profile is <code>patchReload: live</code>, so applying would reload it mid-session. Stop DSH first, or pass <code>-Force</code> if you accept the reload.</p>
+</details>
+<details><summary>The gateway exit-codes complaining about DEEPSEEK_API_KEY</summary>
+<p>By design — it refuses to start rather than forwarding synthetic keys upstream. Set <code>$env:DEEPSEEK_API_KEY</code>, or pass <code>--allow-unauthenticated</code> for a local smoke test only.</p>
+</details>
+<details><summary>The patch merge refuses to run</summary>
+<p>Your patch file contains <code>!!js</code> expressions. Re-emitting YAML would flatten those into plain strings, so the merger refuses and tells you to merge by hand. That is the safe outcome, not a bug.</p>
+</details>
+<details><summary>A harness will not talk to the gateway</summary>
+<p>Check in order: (1) is it using the <code>/v1</code> suffix, (2) does it accept a custom base URL at all, (3) does it need the Responses API rather than chat completions — the gateway bridges that at <code>/v1/responses</code> for Codex-style clients, (4) does it refuse non-HTTPS or non-OpenAI hosts. If none work, record it in <code>notes/records/CROSS-HARNESS.md</code> section 2 and drop the arm.</p>
+</details>
+<details><summary>The router runs but nothing appears in the ledger</summary>
+<p><code>ledgerPath</code> is still <code>null</code>. See Part A of section 3. (Regenerating presets now preserves a ledger path you have set, so it survives <code>scripts/harness.ps1 presets -Force</code>.) Also confirm you are in a <b>new</b> session — presets cannot change mid-session.</p>
+</details>
+<details><summary>I want to go back to the version without any of this</summary>
+<p><code>git checkout v0-baseline</code> in the workspace, and restore the DSH side with <code>Copy-Item snapshots\v0-baseline\agent-presets\* "$env:DSH_HOME\.agent-presets\" -Recurse -Force</code>. The live profile patch was never modified, so nothing else needs undoing.</p>
+</details>
+</div>
+</section>
+
+<section>
+<h2>Command reference</h2>
+<div class="body">
+<table>
+<tr><th>Command</th><th>Does</th></tr>
+<tr><td><code>scripts/harness.ps1 preflight</code></td><td>every check, then the cheapest next action</td></tr>
+<tr><td><code>scripts/harness.ps1 check</code></td><td>presets, catalog, patch status, newest session</td></tr>
+<tr><td><code>scripts/harness.ps1 apply [-DryRun]</code></td><td>merge host patch, verify, auto-rollback</td></tr>
+<tr><td><code>scripts/harness.ps1 rollback</code></td><td>restore newest patch backup</td></tr>
+<tr><td><code>scripts/harness.ps1 audit</code></td><td>context audit across all sessions</td></tr>
+<tr><td><code>scripts/harness.ps1 presets [-Force]</code></td><td>regenerate the five presets</td></tr>
+<tr><td><code>node tools/dsh-audit.mjs [--all]</code></td><td>composition, PTC containment, cache-risk</td></tr>
+<tr><td><code>node tools/estimate-gain.mjs ptc</code></td><td>modelled folding and catalog savings</td></tr>
+<tr><td><code>node tools/audit-tool-volume.mjs</code></td><td>per-tool share of tool-result volume</td></tr>
+<tr><td><code>node tools/audit-fetch-caps.mjs</code></td><td>where a fetch cap actually bites</td></tr>
+<tr><td><code>node tools/measure-gateway.mjs</code></td><td>the measurement gateway</td></tr>
+<tr><td><code>node tools/test-gateway.mjs</code></td><td>15-check self-test, no API spend</td></tr>
+<tr><td><code>node tools/run-experiment.mjs [--dry-run]</code></td><td>the task &times; condition &times; seed matrix</td></tr>
+<tr><td><code>node tools/analyze-results.mjs</code></td><td>Wilcoxon, bootstrap CI, quality guard</td></tr>
+<tr><td><code>node tools/snapshot-state.mjs --label X</code></td><td>capture workspace + DSH-side state</td></tr>
+<tr><td><code>node --test router/router-core.test.mjs</code></td><td>13 offline decision-layer tests</td></tr>
+</table>
+</div>
+</section>
+
+<footer>
+Generated for the DSH harness research project. Everything here is reproducible from
+<code>v1.1-decision-models</code>. Nothing in this runbook has touched a live session.
+</footer>
+</main>
+
+<script>
+(function(){
+  var KEY='dsh-runbook-v1';
+  var boxes=Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox][data-step]'));
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ state={}; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  function update(){
+    var done=boxes.filter(function(b){return b.checked;}).length;
+    var pct=boxes.length?Math.round(done/boxes.length*100):0;
+    document.getElementById('bar').style.width=pct+'%';
+    document.getElementById('pct').textContent=pct+'%';
+    document.getElementById('cnt').textContent=done+' / '+boxes.length;
+  }
+  boxes.forEach(function(b){
+    if(state[b.dataset.step]) b.checked=true;
+    b.addEventListener('change',function(){ state[b.dataset.step]=b.checked; save(); update(); });
+  });
+  update();
+  document.getElementById('reset').addEventListener('click',function(){
+    state={}; save(); boxes.forEach(function(b){b.checked=false;}); update();
+  });
+  Array.prototype.slice.call(document.querySelectorAll('pre')).forEach(function(pre){
+    var raw=pre.textContent;
+    var btn=document.createElement('button');
+    btn.className='copy'; btn.type='button'; btn.textContent='copy';
+    btn.addEventListener('click',function(){
+      var done=function(){ btn.textContent='copied'; setTimeout(function(){btn.textContent='copy';},1200); };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(raw).then(done,function(){}); }
+      else { var t=document.createElement('textarea'); t.value=raw; document.body.appendChild(t); t.select();
+             try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done(); }
+    });
+    pre.appendChild(btn);
+  });
+})();
+</script>
+</body>
+</html>

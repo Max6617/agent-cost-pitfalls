@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers are complaining about their carts after they log in. Things they added as guests show up at the price they first saw instead of what the catalog says now, and some people end up with more of an item than any one customer is supposed to be allowed. Support also found coupons sticking to carts that no longer qualify for them, and at least one account where signing in a second time doubled everything. The rules we all agreed to are in docs/, and the tests under test/ are just the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-cart-merge",
+  "setup": ""
+}

@@ -1,0 +1,6 @@
+{
+  "defaultCurrency": "USD",
+  "defaultRoundingMode": "half-up",
+  "invoicePrefix": "INV-",
+  "currencyTable": "data/currencies.json"
+}

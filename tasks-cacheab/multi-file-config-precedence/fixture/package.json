@@ -1,0 +1,10 @@
+{
+  "name": "multi-file-config-precedence",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Layered configuration loader for the ingest agent.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

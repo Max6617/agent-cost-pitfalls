@@ -1,0 +1,6 @@
+{
+  "prompt": "Compliance pulled last week's audit trail and it's a mess. Some changes never make it into the trail at all, one part of the shop writes its events with different field names than everything else, and half of what is there can't be trusted: the before snapshot of a price change shows the price it was changed to, order status changes record a before that already has the new status, a bulk reprice comes out back to front, and values policy says must be scrubbed are sitting in the clear inside nested details. The convention is written down in docs/audit-convention.md — make every module follow it. The reproductions under test/ are the cases we managed to pin down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-audit-events",
+  "setup": ""
+}

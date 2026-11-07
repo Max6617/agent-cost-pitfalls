@@ -1,0 +1,6 @@
+{
+  "prompt": "The sync worker hammers upstreams that have already asked us to slow down, and it keeps retrying payloads the API has flatly rejected until the batch quota runs out; the two failures are not being told apart. Fix the retry policy so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

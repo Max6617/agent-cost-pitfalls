@@ -1,0 +1,6 @@
+{
+  "prompt": "Front-of-house is losing trust in the allergy information we send out. When the kitchen swaps an ingredient out of a dish, the old ingredient's allergens still show up against the dish, the shared-equipment 'may contain' notes are landing on dishes that never go near that equipment, and guests are being refused dishes outright over a mere trace note instead of being offered them with a warning. The kitchen's signed-off rules are in docs/ and the reproductions we managed to write are under test/, but those are not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-menu-allergens",
+  "setup": ""
+}

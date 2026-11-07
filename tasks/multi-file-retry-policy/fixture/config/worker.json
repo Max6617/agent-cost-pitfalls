@@ -1,0 +1,7 @@
+{
+  "$comment": "Retry policy handed to the worker at start-up. The worker has no defaults of its own: a missing field here is an operator error.",
+  "attempts": 4,
+  "baseDelayMs": 250,
+  "maxDelayMs": 8000,
+  "perHostMinGapMs": 1000
+}

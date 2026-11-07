@@ -1,0 +1,6 @@
+{
+  "prompt": "Patches our reviewers approved last week are being refused by the merge bot even when the code they touch is sitting right there in the file, and support says the failure comment does not say which hunk went wrong or what it expected to find. When a patch does land it sometimes rewrites a line nobody touched, and it lands in the wrong place when the whitespace around it differs. A file whose last line has no newline comes back with one, a branch that only changed the line endings comes back as a diff of every line, and the same pair of revisions has produced two different patches on two runs of the same build. Make the library behave the way docs/unified-diff.md says it does; the reproductions under test/ are the ones we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-diff-patch",
+  "setup": ""
+}

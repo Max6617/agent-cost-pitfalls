@@ -1,0 +1,182 @@
+{
+ "generated": "2026-10-04T08:11:14.561Z",
+ "model": "prefix-retention",
+ "meanGrowthFraction": 0.8402148306652044,
+ "aggregate": {
+  "deepseek-flash|ptc": {
+   "runs": 62,
+   "cont": 547,
+   "meanRetention": 0.9996195532123864,
+   "fracHigh": 0.9780621572212066
+  },
+  "deepseek-flash|native": {
+   "runs": 62,
+   "cont": 686,
+   "meanRetention": 0.9995269656199232,
+   "fracHigh": 0.9825072886297376
+  },
+  "deepseek-flash|external": {
+   "runs": 496,
+   "cont": 4476,
+   "meanRetention": 0.9993905955665752,
+   "fracHigh": 0.9767649687220733
+  },
+  "glm-5.3-flash|ptc": {
+   "runs": 62,
+   "cont": 505,
+   "meanRetention": 0.9957824138618364,
+   "fracHigh": 0.9841584158415841
+  },
+  "glm-5.3-flash|native": {
+   "runs": 62,
+   "cont": 594,
+   "meanRetention": 0.9930397910696295,
+   "fracHigh": 0.930976430976431
+  },
+  "glm-5.3-flash|external": {
+   "runs": 496,
+   "cont": 4216,
+   "meanRetention": 0.947834015996449,
+   "fracHigh": 0.8911290322580645
+  },
+  "gpt-6-luna|ptc": {
+   "runs": 62,
+   "cont": 623,
+   "meanRetention": 0.9981677648949199,
+   "fracHigh": 0.9983948635634029
+  },
+  "gpt-6-luna|native": {
+   "runs": 62,
+   "cont": 1129,
+   "meanRetention": 0.9978535631275858,
+   "fracHigh": 0.9973427812223207
+  },
+  "gpt-6-luna|external": {
+   "runs": 496,
+   "cont": 6257,
+   "meanRetention": 0.9779543848221077,
+   "fracHigh": 0.9542911938628735
+  },
+  "qwen3.8-flash|ptc": {
+   "runs": 62,
+   "cont": 699,
+   "meanRetention": 0.697494208039923,
+   "fracHigh": 0.02575107296137339
+  },
+  "qwen3.8-flash|native": {
+   "runs": 63,
+   "cont": 702,
+   "meanRetention": 0.7596779605254571,
+   "fracHigh": 0.018518518518518517
+  },
+  "qwen3.8-flash|external": {
+   "runs": 496,
+   "cont": 9742,
+   "meanRetention": 0.8880290799578993,
+   "fracHigh": 0.23865735988503387
+  },
+  "claude-haiku-4.5|ptc": {
+   "runs": 62,
+   "cont": 1496,
+   "meanRetention": 0.99411371715056,
+   "fracHigh": 0.9933155080213903
+  },
+  "claude-haiku-4.5|native": {
+   "runs": 62,
+   "cont": 1485,
+   "meanRetention": 0.9996018813752748,
+   "fracHigh": 1
+  },
+  "claude-haiku-4.5|external": {
+   "runs": 496,
+   "cont": 9591,
+   "meanRetention": 0.5595026521016987,
+   "fracHigh": 0.5596913773329163
+  },
+  "claude-sonnet-5.5|ptc": {
+   "runs": 62,
+   "cont": 316,
+   "meanRetention": 0.9998234729179855,
+   "fracHigh": 1
+  },
+  "claude-sonnet-5.5|native": {
+   "runs": 62,
+   "cont": 397,
+   "meanRetention": 0.9998088480865125,
+   "fracHigh": 1
+  },
+  "claude-sonnet-5.5|external": {
+   "runs": 496,
+   "cont": 3333,
+   "meanRetention": 0.4514633251826254,
+   "fracHigh": 0.4515451545154515
+  }
+ },
+ "paired": [
+  {
+   "model": "deepseek-flash",
+   "tasks": 31,
+   "retentionPtc": 0.9995038269207196,
+   "retentionNative": 0.999571241321058,
+   "retentionDiff": -0.00006741440033841695,
+   "billedDiffPct": 0.12594372547675967,
+   "coldDiffPct": -9.756952778527534,
+   "verdict": "no billed effect; volume -9.8% is cancelled by cache pricing"
+  },
+  {
+   "model": "glm-5.3-flash",
+   "tasks": 31,
+   "retentionPtc": 0.9943117560740004,
+   "retentionNative": 0.9932743772352948,
+   "retentionDiff": 0.0010373788387055827,
+   "billedDiffPct": -20.75183285570261,
+   "coldDiffPct": -20.54664623764131,
+   "verdict": "NOT retention (ret diff ~0); volume moves it: cold -20.5%"
+  },
+  {
+   "model": "gpt-6-luna",
+   "tasks": 31,
+   "retentionPtc": 0.9970703348711001,
+   "retentionNative": 0.999636919370834,
+   "retentionDiff": -0.002566584499733904,
+   "billedDiffPct": 1.1980649138460746,
+   "coldDiffPct": -21.165383288055438,
+   "verdict": "no billed effect; volume -21.2% is cancelled by cache pricing"
+  },
+  {
+   "model": "qwen3.8-flash",
+   "tasks": 31,
+   "retentionPtc": 0.674072358666368,
+   "retentionNative": 0.7431700483444251,
+   "retentionDiff": -0.06909768967805707,
+   "billedDiffPct": 30.669685095033394,
+   "coldDiffPct": 20.976905840360722,
+   "verdict": "retention explains it"
+  },
+  {
+   "model": "claude-haiku-4.5",
+   "tasks": 31,
+   "retentionPtc": 0.9963890149743261,
+   "retentionNative": 0.9995409433987947,
+   "retentionDiff": -0.003151928424468653,
+   "billedDiffPct": 53.838742137015714,
+   "coldDiffPct": 18.672285139141287,
+   "verdict": "NOT retention (ret diff ~0); volume moves it: cold +18.7%"
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "tasks": 31,
+   "retentionPtc": 0.9998205860822792,
+   "retentionNative": 0.9997962237499065,
+   "retentionDiff": 0.000024362332372684925,
+   "billedDiffPct": 9.509946993348883,
+   "coldDiffPct": -15.109909640174346,
+   "verdict": "NOT retention (ret diff ~0); volume moves it: cold -15.1%"
+  }
+ ],
+ "notTestable": [
+  "P1 as filed (content of the appended turn is not logged; P1 IS refuted as stated)",
+  "P2 as filed (tool-call shape is not logged)",
+  "P3 (per-task tool diversity is not logged)"
+ ]
+}

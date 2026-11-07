@@ -1,0 +1,6 @@
+{
+  "prompt": "Feature rollouts are inconsistent: a user sees a flag turn on and off between requests, two different flags at the same percentage always select exactly the same users, an override for one user leaks to everybody, and the audit log records a different timestamp format from the rest of the service. Fix the flag evaluation so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

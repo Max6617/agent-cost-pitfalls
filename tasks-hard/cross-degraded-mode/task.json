@@ -1,0 +1,6 @@
+{
+  "prompt": "Checkout is behaving badly whenever anything it depends on has a bad afternoon. It keeps dialling the payment provider after we have taken it out of service, an account lookup that cannot reach the database comes back looking like an empty account with nothing to say for itself, requests that need pricing carry on towards a charge, and once a provider has failed enough to be taken out of rotation it never gets another chance. On top of that the dashboard looks calm while half the estate is down, because the response and the counters do not say which dependencies a request found degraded or what each call site did about it. Make the service behave the way docs/degraded-mode.md says it does - the tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-degraded-mode",
+  "setup": ""
+}

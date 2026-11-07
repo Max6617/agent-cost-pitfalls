@@ -1,0 +1,5 @@
+{
+  "defaultPageSize": 25,
+  "dataFile": "data/orders.json",
+  "reportName": "orders by region"
+}

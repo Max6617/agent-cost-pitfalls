@@ -1,0 +1,9 @@
+{
+  "name": "long-horizon-waitlist-promotion",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}

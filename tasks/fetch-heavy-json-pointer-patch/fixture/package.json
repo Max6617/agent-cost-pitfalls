@@ -1,0 +1,10 @@
+{
+  "name": "fetch-heavy-json-pointer-patch",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Config service: JSON Pointer lookup and JSON Patch application.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

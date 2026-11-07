@@ -1,0 +1,6 @@
+{
+  "prompt": "The scheduler is firing jobs at the wrong time. A nightly job requested for 02:30 local runs an hour out on the day the clocks move, a wall clock that never existed comes back silently shifted instead of being reported as such, two code paths disagree about which of the two repeated 01:30s a fall-back night means, and day and month buckets are cut at the wrong moment. A site whose zone is not in our table has also been running against UTC rather than failing loudly. Make the service behave the way docs/time-rules.md says it does; the reproductions under test/ are the ones we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-timezone-offsets",
+  "setup": ""
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Hourly ingest",
+  "digits": 2,
+  "grouping": true,
+  "significant": null,
+  "csvDelimiter": ",",
+  "unitSuffix": "",
+  "notes": ["values are bytes per second unless the line says otherwise"]
+}

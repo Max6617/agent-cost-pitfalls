@@ -1,0 +1,15 @@
+{
+  "name": "metrik",
+  "version": "2.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Number presentation and parsing for the metrics and telemetry reports",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "report": "node bin/metrik.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

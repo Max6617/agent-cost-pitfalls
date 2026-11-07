@@ -1,0 +1,13 @@
+{
+  "defaultCatchup": "all",
+  "defaultPoolLimit": 4,
+  "pools": {
+    "batch": 2,
+    "report": 3,
+    "io": 1
+  },
+  "defaultMisfireAfterMs": 0,
+  "defaultMaxAttempts": 1,
+  "defaultBackoffMs": 30000,
+  "maxBackoffMs": 600000
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers are disputing our parcel quotes: bulky but feather-light boxes price out cheaper than small dense ones, and the weight on the label keeps landing a half kilo under what the depot actually bills. The loyalty discount seems to come off the wrong amount, free shipping kicks in for baskets that should not qualify, and when two carriers quote the same price we apparently take whichever one shows up first. The rules sales and logistics signed off are in docs/ — make the service match them. The tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-shipping-quotes",
+  "setup": ""
+}

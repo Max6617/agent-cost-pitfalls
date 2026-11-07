@@ -1,0 +1,6 @@
+{
+  "prompt": "The invoice, the confirmation email and the finance export disagree with each other about money: negative credits are rendered with the sign in the wrong place in some screens and dropped in others, half-cent amounts round differently depending on which screen you look at, and the export total is a cent off on long statements. Make money render the same way everywhere so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

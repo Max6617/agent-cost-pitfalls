@@ -1,0 +1,10 @@
+{
+  "name": "multi-file-schema-validator",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Form intake API: schema description, coercion, validation.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

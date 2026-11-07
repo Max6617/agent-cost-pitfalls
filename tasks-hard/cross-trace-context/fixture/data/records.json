@@ -1,0 +1,7 @@
+{
+  "records": [
+    { "id": "r-1", "tenant": "acme", "status": "open", "total": "120.00" },
+    { "id": "r-2", "tenant": "acme", "status": "closed", "total": "0.00" },
+    { "id": "r-3", "tenant": "globex", "status": "open", "total": "75.50" }
+  ]
+}

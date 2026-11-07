@@ -1,0 +1,6 @@
+{
+  "prompt": "Numbers in our reports have gone wrong in ways customers noticed. Amounts between a thousand and ten thousand print without their thousands separators while longer ones still have them, long fractions come back with commas inside them, and values that should round up are being cut off instead - a total of 999.995 lands as 999.99 rather than the next whole unit. The significant-digit renderings have grown stray digits, scientific results lost the sign in their exponent so they read e21 where they used to read e+21, and the reader now accepts pasted cells it used to refuse: '1,2,3' comes back as a number instead of an error, and a negative zero survives a read. Make the toolkit behave the way the house rules say it should; the reproductions under test/ are the cases reporting managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-number-format",
+  "setup": ""
+}

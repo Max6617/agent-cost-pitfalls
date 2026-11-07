@@ -1,0 +1,199 @@
+{
+ "generated": "2026-10-11T20:24:50.754Z",
+ "method": "common-f: tools/position-adjust.mjs adjustedFit (log scale); arm-specific: olsReference on d = alpha + g(p_ptc) - h(p_native), one column per non-reference position per arm",
+ "scale": "log",
+ "seThresholdLog": 0.2,
+ "suites": {
+  "batch1": {
+   "datasets": [
+    "ds-full",
+    "glm-flash",
+    "glm-terse",
+    "glm-harness",
+    "glm53",
+    "qwen-full",
+    "haiku-full",
+    "sonnet-full",
+    "luna-full"
+   ],
+   "models": [
+    {
+     "model": "deepseek-flash",
+     "label": "DeepSeek V4.1 Flash",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": -0.7765796315751694,
+     "commonSeLog": 0.046684474555723145,
+     "rankDeficient": false,
+     "armSpecificPct": -5.8195818231966845,
+     "armSpecificSeLog": 0.33357082507964153,
+     "swingPp": -5.043002191621515
+    },
+    {
+     "model": "glm-5.3-flash",
+     "label": "GLM-5.3-Flash",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": -8.923523641409403,
+     "commonSeLog": 0.06133435330885876,
+     "rankDeficient": false,
+     "armSpecificPct": 38.53222324585619,
+     "armSpecificSeLog": 0.45684932013809904,
+     "swingPp": 47.45574688726559
+    },
+    {
+     "model": "qwen3.8-flash",
+     "label": "Qwen3.8-Flash",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": 35.34978128569954,
+     "commonSeLog": 0.07247260297104519,
+     "rankDeficient": false,
+     "armSpecificPct": -34.66396495204981,
+     "armSpecificSeLog": 0.531875416989963,
+     "swingPp": -70.01374623774936
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "label": "Claude Haiku 4.5",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": 66.13247369898063,
+     "commonSeLog": 0.0715078446379754,
+     "rankDeficient": false,
+     "armSpecificPct": 87.7360834796763,
+     "armSpecificSeLog": 0.4412822952009705,
+     "swingPp": 21.603609780695663
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "label": "Claude Sonnet 5.5",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": 17.015702387723696,
+     "commonSeLog": 0.03830567775302947,
+     "rankDeficient": false,
+     "armSpecificPct": 67.63859743955938,
+     "armSpecificSeLog": 0.2741335775954911,
+     "swingPp": 50.622895051835684
+    },
+    {
+     "model": "gpt-6-luna",
+     "label": "gpt-6-luna",
+     "blocks": 62,
+     "positionPairs": 46,
+     "params": 19,
+     "commonPct": 6.653212433477451,
+     "commonSeLog": 0.06449094911726175,
+     "rankDeficient": false,
+     "armSpecificPct": 24.855133697318955,
+     "armSpecificSeLog": 0.45584443903613237,
+     "swingPp": 18.201921263841506
+    }
+   ]
+  },
+  "batchb": {
+   "datasets": [
+    "batchb-deepseek",
+    "batchb-glm-flash",
+    "batchb-qwen",
+    "batchb-luna",
+    "batchb-haiku",
+    "batchb-sonnet"
+   ],
+   "models": [
+    {
+     "model": "deepseek-flash",
+     "label": "DeepSeek V4.1 Flash",
+     "blocks": 80,
+     "positionPairs": 58,
+     "params": 19,
+     "commonPct": -17.042583572861602,
+     "commonSeLog": 0.03472936786807697,
+     "rankDeficient": false,
+     "armSpecificPct": -1.1639567056904165,
+     "armSpecificSeLog": 0.1742626852070514,
+     "swingPp": 15.878626867171185
+    },
+    {
+     "model": "glm-5.3-flash",
+     "label": "GLM-5.3-Flash",
+     "blocks": 80,
+     "positionPairs": 58,
+     "params": 19,
+     "commonPct": -6.2225112392312765,
+     "commonSeLog": 0.04559906243992021,
+     "rankDeficient": false,
+     "armSpecificPct": 31.50950470200433,
+     "armSpecificSeLog": 0.23126895749967308,
+     "swingPp": 37.73201594123561
+    },
+    {
+     "model": "qwen3.8-flash",
+     "label": "Qwen3.8-Flash",
+     "blocks": 80,
+     "positionPairs": 58,
+     "params": 19,
+     "commonPct": 6.96494105994887,
+     "commonSeLog": 0.04709823836425332,
+     "rankDeficient": false,
+     "armSpecificPct": 0.8587717319735955,
+     "armSpecificSeLog": 0.24093566347097695,
+     "swingPp": -6.106169327975275
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "label": "Claude Haiku 4.5",
+     "blocks": 36,
+     "positionPairs": 32,
+     "params": 19,
+     "commonPct": 11.781323852592962,
+     "commonSeLog": 0.1013701728213889,
+     "rankDeficient": false,
+     "armSpecificPct": -30.511779928968586,
+     "armSpecificSeLog": 0.7096204806518208,
+     "swingPp": -42.29310378156155
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "label": "Claude Sonnet 5.5",
+     "blocks": 80,
+     "positionPairs": 58,
+     "params": 19,
+     "commonPct": 5.160467471312846,
+     "commonSeLog": 0.029912086632319805,
+     "rankDeficient": false,
+     "armSpecificPct": 13.494758916244498,
+     "armSpecificSeLog": 0.14469012565744885,
+     "swingPp": 8.334291444931651
+    },
+    {
+     "model": "gpt-6-luna",
+     "label": "gpt-6-luna",
+     "blocks": 80,
+     "positionPairs": 58,
+     "params": 19,
+     "commonPct": -16.18756612473595,
+     "commonSeLog": 0.051180499282019204,
+     "rankDeficient": false,
+     "armSpecificPct": -34.14571308204395,
+     "armSpecificSeLog": 0.25562130102935593,
+     "swingPp": -17.958146957307996
+    }
+   ]
+  }
+ },
+ "summary": {
+  "models": 12,
+  "rankDeficient": 0,
+  "minArmSpecificSeLog": 0.14469012565744885,
+  "maxArmSpecificSeLog": 0.7096204806518208,
+  "allAboveThreshold": false,
+  "maxAbsSwingPp": 70.01374623774936
+ }
+}

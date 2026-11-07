@@ -1,0 +1,6 @@
+{
+  "prompt": "Supplier files are coming out of the import pipeline mangled. Rows with a quoted newline lose their line breaks or split in the wrong place, a file that arrives with a byte-order mark ends up with a first column nobody can map to, and ragged rows quietly gain or lose a column instead of being reported to the supplier. When we write a file back out it is not what we read: the header disappears, the line endings change, and a field that was empty comes back as something else. Please make the reader and the writer behave the way the spec in docs/ says they do - the tests under test/ are the examples we wrote down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-csv-dialect",
+  "setup": ""
+}

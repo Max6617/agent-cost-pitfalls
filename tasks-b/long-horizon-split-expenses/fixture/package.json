@@ -1,0 +1,9 @@
+{
+  "name": "long-horizon-split-expenses",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "fetch-heavy-uri-resolution",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Webhook client: URI parsing, normalisation and reference resolution.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

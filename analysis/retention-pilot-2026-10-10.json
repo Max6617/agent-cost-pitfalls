@@ -1,0 +1,76 @@
+{
+ "generated": "2026-10-11T20:24:43.256Z",
+ "model": "claude-haiku-4.5",
+ "card": {
+  "miss": 1,
+  "hit": 0.1,
+  "write": 1.25,
+  "out": 5
+ },
+ "dataset": "results/retentionpilot-amended-haiku-full",
+ "metric": "tools/prefix-retention.mjs: continuation >= 50% of the largest prompt so far; retention = cacheHit(i)/largest prompt before i, clamped [0,1]",
+ "estimator": "per-harness mean retention over tasks; task-cluster percentile bootstrap (tools/stats.mjs bootstrapTaskMean)",
+ "iters": 200000,
+ "seed": 12345,
+ "cells": 9,
+ "gatewayLogs": 75,
+ "population": {
+  "collected": 10,
+  "solved": 7,
+  "carried": 9,
+  "excluded": 1,
+  "note": "carried = cells with an analysable retention value; excluded = cells with no usable usage (the collector rule-9 exclusion)"
+ },
+ "arms": [
+  {
+   "arm": "opencodeanthropic",
+   "tasks": 9,
+   "runs": 9,
+   "meanRetention": 0.8734946766901848,
+   "ciLo": 0.8176429548908325,
+   "ciHi": 0.9299168818331489,
+   "iters": 200000,
+   "seed": 12345
+  }
+ ],
+ "cost": {
+  "runs": 10,
+  "requests": 203,
+  "totalUsd": 0.88354355,
+  "perRunUsd": 0.088354355,
+  "cacheHitTokens": 2602873,
+  "cacheWriteTokens": 231041,
+  "cacheWriteShareOfInput": null,
+  "unknownCache": 0
+ },
+ "control": {
+  "dir": "results/retentionpilot-ctl-haiku-full",
+  "arms": [
+   {
+    "arm": "dsh:native",
+    "tasks": 1,
+    "runs": 1,
+    "meanRetention": 0.9991022200943344,
+    "ciLo": null,
+    "ciHi": null,
+    "iters": 200000,
+    "seed": 12345
+   }
+  ],
+  "cost": {
+   "runs": 1,
+   "requests": 8,
+   "totalUsd": 0.01607595,
+   "perRunUsd": 0.01607595,
+   "cacheHitTokens": 51382,
+   "cacheWriteTokens": 3603,
+   "cacheWriteShareOfInput": null,
+   "unknownCache": 0
+  }
+ },
+ "dshField": {
+  "lo": 0.994,
+  "hi": 1,
+  "source": "PAPER.md section 3.3 (haiku ptc 0.9941 / native 0.9996)"
+ }
+}

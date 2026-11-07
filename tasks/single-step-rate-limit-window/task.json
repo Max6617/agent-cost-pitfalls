@@ -1,0 +1,6 @@
+{
+  "prompt": "The client rate limiter refuses calls that should be allowed and lets through calls that should not be: after a burst is refused the window never recovers, and calls made right at the edge of the window are treated as if they had aged out. Fix the limiter so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

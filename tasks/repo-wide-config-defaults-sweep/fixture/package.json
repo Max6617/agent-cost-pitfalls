@@ -1,0 +1,8 @@
+{
+  "name": "repo-wide-config-defaults-sweep",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Settings: one default value per key, spread across the app.",
+  "scripts": { "test": "node --test" }
+}

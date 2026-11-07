@@ -1,0 +1,6 @@
+{
+  "prompt": "Amounts that come back negative from the payment provider are being read as positive, so refund and adjustment lines add to the order instead of reducing it, and the percentage discount codes take a flat amount off instead of a share. Fix the money handling so the test suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

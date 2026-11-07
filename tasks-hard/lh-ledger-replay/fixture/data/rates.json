@@ -1,0 +1,10 @@
+{
+  "base": "USD",
+  "published": [
+    { "from": "2023-10-01", "currency": "EUR", "rate": "1.060000" },
+    { "from": "2024-01-01", "currency": "EUR", "rate": "1.090000" },
+    { "from": "2024-01-01", "currency": "GBP", "rate": "1.270000" },
+    { "from": "2024-03-01", "currency": "EUR", "rate": "1.200000" },
+    { "from": "2024-04-01", "currency": "GBP", "rate": "1.250000" }
+  ]
+}

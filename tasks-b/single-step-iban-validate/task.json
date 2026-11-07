@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers pasting IBANs from their statements keep getting rejected - anything typed in lowercase or with the usual statement spacing bounces, British accounts fail even when keyed exactly right, and some long foreign IBANs the bank swears are valid are refused as well. The IBANs we generate for new accounts occasionally come back from the bank as malformed, and the grouped form we print on invoices silently loses digits for some countries. The rules we agreed with the payments team are written down in docs/; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-iban-validate",
+  "setup": ""
+}

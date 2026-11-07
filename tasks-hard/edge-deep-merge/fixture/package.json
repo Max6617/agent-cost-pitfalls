@@ -1,0 +1,12 @@
+{
+  "name": "layered-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Layered configuration: deep merge, override patches, structural diff.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "merge": "node bin/cfgmerge.js"
+  }
+}

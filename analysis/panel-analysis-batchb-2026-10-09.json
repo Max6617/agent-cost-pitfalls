@@ -1,0 +1,2879 @@
+{
+ "generated": "2026-10-11T20:03:53.173Z",
+ "meta": {
+  "batchb-deepseek": {
+   "id": "batchb-deepseek",
+   "model": "deepseek-flash",
+   "runs": "results/batchb-ds-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 808,
+   "dup": 0,
+   "excluded": 8,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-glm-flash": {
+   "id": "batchb-glm-flash",
+   "model": "glm-5.3-flash",
+   "runs": "results/batchb-glm-flash/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 800,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-qwen": {
+   "id": "batchb-qwen",
+   "model": "qwen3.8-flash",
+   "runs": "results/batchb-qwen-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 807,
+   "dup": 0,
+   "excluded": 7,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-luna": {
+   "id": "batchb-luna",
+   "model": "gpt-6-luna",
+   "runs": "results/batchb-luna-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 800,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 1,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 799,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-haiku": {
+   "id": "batchb-haiku",
+   "model": "claude-haiku-4.5",
+   "runs": "results/batchb-haiku-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 800,
+   "dup": 0,
+   "excluded": 312,
+   "statusExcluded": 135,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 353,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  },
+  "batchb-sonnet": {
+   "id": "batchb-sonnet",
+   "model": "claude-sonnet-5.5",
+   "runs": "results/batchb-sonnet-full/runs.jsonl",
+   "note": "tasks-b 40 x 10 x 2",
+   "rows": 800,
+   "dup": 0,
+   "excluded": 0,
+   "statusExcluded": 0,
+   "noUsage": 0,
+   "zeroUsage": 0,
+   "cells": 800,
+   "contested": 0,
+   "terseRows": 160,
+   "terseReal": true
+  }
+ },
+ "sections": {
+  "A1": {
+   "rankTables": {
+    "deepseek-flash": [
+     {
+      "rank": 1,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.01160898375,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:native-terse",
+      "billed": 0.012206542749999999,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 3,
+      "arm": "opencode",
+      "billed": 0.013242321500000001,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 4,
+      "arm": "goose",
+      "billed": 0.013353738250000002,
+      "solveRate": 0.9375
+     },
+     {
+      "rank": 5,
+      "arm": "cline",
+      "billed": 0.019191078125000007,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.020175936624999998,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.020257886749999992,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 8,
+      "arm": "openhands",
+      "billed": 0.022461933374999996,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 9,
+      "arm": "dsh:native-opt",
+      "billed": 0.025143385874999997,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 10,
+      "arm": "dsh:native",
+      "billed": 0.025786867874999998,
+      "solveRate": 0.925
+     }
+    ],
+    "glm-5.3-flash": [
+     {
+      "rank": 1,
+      "arm": "dsh:native-terse",
+      "billed": 0.009561287,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.011225148999999997,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 3,
+      "arm": "opencode",
+      "billed": 0.016591085499999998,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 4,
+      "arm": "goose",
+      "billed": 0.01763052187500001,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.022534091999999988,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.022548378375,
+      "solveRate": 0.925
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:native-opt",
+      "billed": 0.024227844249999998,
+      "solveRate": 0.9125
+     },
+     {
+      "rank": 8,
+      "arm": "cline",
+      "billed": 0.024525848500000003,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 9,
+      "arm": "dsh:native",
+      "billed": 0.025092431249999998,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 10,
+      "arm": "openhands",
+      "billed": 0.030703484625,
+      "solveRate": 0.85
+     }
+    ],
+    "qwen3.8-flash": [
+     {
+      "rank": 1,
+      "arm": "dsh:native-terse",
+      "billed": 0.02514071962499999,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.026586695875000003,
+      "solveRate": 0.9375
+     },
+     {
+      "rank": 3,
+      "arm": "cline",
+      "billed": 0.03879437237500001,
+      "solveRate": 0.8125
+     },
+     {
+      "rank": 4,
+      "arm": "dsh:native",
+      "billed": 0.044535159500000004,
+      "solveRate": 0.9375
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:ptc",
+      "billed": 0.047095180875,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:native-opt",
+      "billed": 0.04953778887500003,
+      "solveRate": 0.8875
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.0514899025,
+      "solveRate": 0.8875
+     },
+     {
+      "rank": 8,
+      "arm": "openhands",
+      "billed": 0.09432242262499999,
+      "solveRate": 0.6875
+     },
+     {
+      "rank": 9,
+      "arm": "opencode",
+      "billed": 0.11611275237499999,
+      "solveRate": 0.7625
+     },
+     {
+      "rank": 10,
+      "arm": "goose",
+      "billed": 0.17230173912500005,
+      "solveRate": 0.7375
+     }
+    ],
+    "claude-haiku-4.5": [
+     {
+      "rank": 1,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.09894381428571428,
+      "solveRate": 0.3142857142857143
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:native-terse",
+      "billed": 0.13765235285714286,
+      "solveRate": 0.6
+     },
+     {
+      "rank": 3,
+      "arm": "dsh:native-opt",
+      "billed": 0.26875009166666675,
+      "solveRate": 0.8055555555555556
+     },
+     {
+      "rank": 4,
+      "arm": "dsh:native",
+      "billed": 0.2851098638888889,
+      "solveRate": 0.7222222222222222
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.29804993428571425,
+      "solveRate": 0.4
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.3028079125,
+      "solveRate": 0.4722222222222222
+     },
+     {
+      "rank": 7,
+      "arm": "opencode",
+      "billed": 0.3787445428571429,
+      "solveRate": 0.3142857142857143
+     },
+     {
+      "rank": 8,
+      "arm": "goose",
+      "billed": 0.5041913714285715,
+      "solveRate": 0.7714285714285715
+     },
+     {
+      "rank": 9,
+      "arm": "cline",
+      "billed": 0.6668149166666668,
+      "solveRate": 0.6388888888888888
+     },
+     {
+      "rank": 10,
+      "arm": "openhands",
+      "billed": 1.1657655000000002,
+      "solveRate": 0.7941176470588235
+     }
+    ],
+    "claude-sonnet-5.5": [
+     {
+      "rank": 1,
+      "arm": "dsh:native-terse",
+      "billed": 0.09382986375,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 2,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.10227625625000006,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 3,
+      "arm": "dsh:native-opt",
+      "billed": 0.13467890875000005,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 4,
+      "arm": "dsh:ptc",
+      "billed": 0.13561097,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:native",
+      "billed": 0.13633031875000004,
+      "solveRate": 0.975
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.13656787874999998,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 7,
+      "arm": "goose",
+      "billed": 0.36977345000000006,
+      "solveRate": 0.9375
+     },
+     {
+      "rank": 8,
+      "arm": "cline",
+      "billed": 0.4777336750000001,
+      "solveRate": 0.95
+     },
+     {
+      "rank": 9,
+      "arm": "opencode",
+      "billed": 0.5026189499999999,
+      "solveRate": 0.875
+     },
+     {
+      "rank": 10,
+      "arm": "openhands",
+      "billed": 1.2136769999999992,
+      "solveRate": 0.925
+     }
+    ],
+    "gpt-6-luna": [
+     {
+      "rank": 1,
+      "arm": "goose",
+      "billed": 0.005500370125000001,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 2,
+      "arm": "opencode",
+      "billed": 0.007743169500000003,
+      "solveRate": 0.875
+     },
+     {
+      "rank": 3,
+      "arm": "dsh:ptc-terse",
+      "billed": 0.008580772375000002,
+      "solveRate": 0.925
+     },
+     {
+      "rank": 4,
+      "arm": "cline",
+      "billed": 0.009658398499999998,
+      "solveRate": 0.8375
+     },
+     {
+      "rank": 5,
+      "arm": "dsh:native-terse",
+      "billed": 0.01047352525,
+      "solveRate": 0.925
+     },
+     {
+      "rank": 6,
+      "arm": "dsh:ptc",
+      "billed": 0.011351836374999997,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 7,
+      "arm": "dsh:ptc-opt",
+      "billed": 0.011854116125000003,
+      "solveRate": 0.9625
+     },
+     {
+      "rank": 8,
+      "arm": "dsh:native-opt",
+      "billed": 0.012998526375000005,
+      "solveRate": 0.9
+     },
+     {
+      "rank": 9,
+      "arm": "dsh:native",
+      "billed": 0.013607533875,
+      "solveRate": 0.925
+     },
+     {
+      "rank": 10,
+      "arm": "openhands",
+      "billed": 0.020220234810126574,
+      "solveRate": 0.4810126582278481
+     }
+    ]
+   },
+   "correlations": [
+    {
+     "a": "qwen3.8-flash",
+     "b": "gpt-6-luna",
+     "rho": -0.10303030303030303,
+     "n": 10
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "gpt-6-luna",
+     "rho": -0.0060606060606061,
+     "n": 10
+    },
+    {
+     "a": "claude-sonnet-5.5",
+     "b": "gpt-6-luna",
+     "rho": 0.0060606060606061,
+     "n": 10
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "qwen3.8-flash",
+     "rho": 0.19999999999999996,
+     "n": 10
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-haiku-4.5",
+     "rho": 0.22424242424242424,
+     "n": 10
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.23636363636363633,
+     "n": 10
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "qwen3.8-flash",
+     "rho": 0.24848484848484853,
+     "n": 10
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.503030303030303,
+     "n": 10
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-haiku-4.5",
+     "rho": 0.5393939393939393,
+     "n": 10
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-haiku-4.5",
+     "rho": 0.6121212121212121,
+     "n": 10
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.696969696969697,
+     "n": 10
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "gpt-6-luna",
+     "rho": 0.7090909090909091,
+     "n": 10
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "gpt-6-luna",
+     "rho": 0.8181818181818181,
+     "n": 10
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "rho": 0.8545454545454545,
+     "n": 10
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.9151515151515152,
+     "n": 10
+    }
+   ]
+  },
+  "A1b": {
+   "correlations": [
+    {
+     "a": "glm-5.3-flash",
+     "b": "qwen3.8-flash",
+     "rho": -0.5714285714285714,
+     "n": 8
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-haiku-4.5",
+     "rho": -0.5238095238095237,
+     "n": 8
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": -0.4761904761904763,
+     "n": 8
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "qwen3.8-flash",
+     "rho": -0.45238095238095233,
+     "n": 8
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "gpt-6-luna",
+     "rho": -0.33333333333333326,
+     "n": 8
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "gpt-6-luna",
+     "rho": -0.23809523809523814,
+     "n": 8
+    },
+    {
+     "a": "claude-sonnet-5.5",
+     "b": "gpt-6-luna",
+     "rho": -0.1428571428571428,
+     "n": 8
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.023809523809523836,
+     "n": 8
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-haiku-4.5",
+     "rho": 0.11904761904761907,
+     "n": 8
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-haiku-4.5",
+     "rho": 0.26190476190476186,
+     "n": 8
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.40476190476190477,
+     "n": 8
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "rho": 0.7380952380952381,
+     "n": 8
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "gpt-6-luna",
+     "rho": 0.8095238095238095,
+     "n": 8
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "claude-sonnet-5.5",
+     "rho": 0.8571428571428572,
+     "n": 8
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "gpt-6-luna",
+     "rho": 0.9047619047619048,
+     "n": 8
+    }
+   ],
+   "cleanArms": [
+    "dsh:native",
+    "dsh:native-opt",
+    "dsh:ptc",
+    "dsh:ptc-opt",
+    "opencode",
+    "goose",
+    "cline",
+    "openhands"
+   ],
+   "cheapest": [
+    {
+     "model": "deepseek-flash",
+     "arm": "opencode",
+     "billed": 0.013242321500000001
+    },
+    {
+     "model": "glm-5.3-flash",
+     "arm": "opencode",
+     "billed": 0.016591085499999998
+    },
+    {
+     "model": "qwen3.8-flash",
+     "arm": "cline",
+     "billed": 0.03879437237500001
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "arm": "dsh:native-opt",
+     "billed": 0.26875009166666675
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "arm": "dsh:native-opt",
+     "billed": 0.13467890875000005
+    },
+    {
+     "model": "gpt-6-luna",
+     "arm": "goose",
+     "billed": 0.005500370125000001
+    }
+   ],
+   "medianRho": 0.023809523809523836,
+   "permutationP": 0.4311784410779461,
+   "rankVarianceExplained": 0.0005668934240362824
+  },
+  "A1c": {
+   "overallConcordance": 0.5357142857142857,
+   "perPair": [
+    {
+     "a": "glm-5.3-flash",
+     "b": "qwen3.8-flash",
+     "concordance": 0.2857142857142857
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-haiku-4.5",
+     "concordance": 0.32142857142857145
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "claude-sonnet-5.5",
+     "concordance": 0.32142857142857145
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "qwen3.8-flash",
+     "concordance": 0.35714285714285715
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "gpt-6-luna",
+     "concordance": 0.35714285714285715
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "gpt-6-luna",
+     "concordance": 0.39285714285714285
+    },
+    {
+     "a": "claude-sonnet-5.5",
+     "b": "gpt-6-luna",
+     "concordance": 0.42857142857142855
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-sonnet-5.5",
+     "concordance": 0.4642857142857143
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "claude-haiku-4.5",
+     "concordance": 0.5357142857142857
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-haiku-4.5",
+     "concordance": 0.6071428571428571
+    },
+    {
+     "a": "qwen3.8-flash",
+     "b": "claude-sonnet-5.5",
+     "concordance": 0.6071428571428571
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "glm-5.3-flash",
+     "concordance": 0.7857142857142857
+    },
+    {
+     "a": "glm-5.3-flash",
+     "b": "gpt-6-luna",
+     "concordance": 0.8214285714285714
+    },
+    {
+     "a": "claude-haiku-4.5",
+     "b": "claude-sonnet-5.5",
+     "concordance": 0.8571428571428571
+    },
+    {
+     "a": "deepseek-flash",
+     "b": "gpt-6-luna",
+     "concordance": 0.8928571428571429
+    }
+   ]
+  },
+  "A2": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "ratio": 4,
+    "tasks": 40,
+    "native": 0.025786867874999998,
+    "ptc": 0.020175936624999998,
+    "absDiff": -0.005610931250000001,
+    "relDiffPct": -21.758870744592134,
+    "ciLo": -0.0096607,
+    "ciHi": -0.002419937124999999,
+    "ciLoPct": -37.46364252855195,
+    "ciHiPct": -9.384377880751053,
+    "excludesZero": true
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "native": 0.025092431249999998,
+    "ptc": 0.022548378375,
+    "absDiff": -0.002544052875,
+    "relDiffPct": -10.138726094945465,
+    "ciLo": -0.005298851875,
+    "ciHi": 0.000035360874999999967,
+    "ciLoPct": -21.117331446310132,
+    "ciHiPct": 0.14092247438159253,
+    "excludesZero": false
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "ratio": 3.1333333333333333,
+    "tasks": 40,
+    "native": 0.044535159500000004,
+    "ptc": 0.047095180875,
+    "absDiff": 0.002560021375000001,
+    "relDiffPct": 5.748315272116631,
+    "ciLo": -0.0017510971250000007,
+    "ciHi": 0.006686565374999999,
+    "ciLoPct": -3.9319430864506066,
+    "ciHiPct": 15.014126928185807,
+    "excludesZero": false
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "ratio": 5,
+    "tasks": 18,
+    "native": 0.2851098638888889,
+    "ptc": 0.3028079125,
+    "absDiff": 0.017698048611111118,
+    "relDiffPct": 6.207448725102082,
+    "ciLo": -0.020955156944444445,
+    "ciHi": 0.056069429166666684,
+    "ciLoPct": -7.349853371825447,
+    "ciHiPct": 19.665902961715027,
+    "excludesZero": false
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "ratio": 5,
+    "tasks": 40,
+    "native": 0.13633031875000004,
+    "ptc": 0.13561097,
+    "absDiff": -0.0007193487500000001,
+    "relDiffPct": -0.5276513372781944,
+    "ciLo": -0.0107995775,
+    "ciHi": 0.008153777500000004,
+    "ciLoPct": -7.921625650860584,
+    "ciHiPct": 5.980898141192091,
+    "excludesZero": false
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "ratio": 5,
+    "tasks": 40,
+    "native": 0.013607533875,
+    "ptc": 0.011351836374999997,
+    "absDiff": -0.0022556975,
+    "relDiffPct": -16.576828106555052,
+    "ciLo": -0.003312791375,
+    "ciHi": -0.0011634250000000003,
+    "ciLoPct": -24.34527376842558,
+    "ciHiPct": -8.549859296234898,
+    "excludesZero": true
+   }
+  ],
+  "A3": {
+   "pearson": -0.0012398641937796913,
+   "atFive": [
+    {
+     "label": "Claude Haiku 4.5",
+     "relDiffPct": 6.207448725102082
+    },
+    {
+     "label": "Claude Sonnet 5.5",
+     "relDiffPct": -0.5276513372781944
+    },
+    {
+     "label": "gpt-6-luna",
+     "relDiffPct": -16.576828106555052
+    }
+   ],
+   "ratioRange": [
+    3.1333333333333333,
+    5
+   ]
+  },
+  "A4": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 4,
+    "tasks": 40,
+    "base": 0.025786867874999998,
+    "terse": 0.012206542749999999,
+    "relPct": -52.66372477196401,
+    "ciLoPct": -70.74438950255801,
+    "ciHiPct": -38.705438843452406,
+    "outBase": 32138.9375,
+    "outTerse": 13691,
+    "outChangePct": -57.40058301553995,
+    "solveBase": 0.925,
+    "solveTerse": 0.975
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 4,
+    "tasks": 40,
+    "base": 0.020175936624999998,
+    "terse": 0.01160898375,
+    "relPct": -42.46124001194915,
+    "ciLoPct": -49.33654536100131,
+    "ciHiPct": -35.79240029457617,
+    "outBase": 26787.375,
+    "outTerse": 14834.9625,
+    "outChangePct": -44.619573586437646,
+    "solveBase": 0.9625,
+    "solveTerse": 0.9625
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "base": 0.025092431249999998,
+    "terse": 0.009561287,
+    "relPct": -61.89573300116146,
+    "ciLoPct": -77.09898228773667,
+    "ciHiPct": -49.22732527163945,
+    "outBase": 12982.5,
+    "outTerse": 4089.925,
+    "outChangePct": -68.49663007895244,
+    "solveBase": 0.9,
+    "solveTerse": 0.9
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 3.3333333333333335,
+    "tasks": 40,
+    "base": 0.022548378375,
+    "terse": 0.011225148999999997,
+    "relPct": -50.21748875544137,
+    "ciLoPct": -59.78971314827424,
+    "ciHiPct": -41.10344309848845,
+    "outBase": 14867.7,
+    "outTerse": 6277.5875,
+    "outChangePct": -57.777009893931144,
+    "solveBase": 0.925,
+    "solveTerse": 0.9
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 3.1333333333333333,
+    "tasks": 40,
+    "base": 0.044535159500000004,
+    "terse": 0.02514071962499999,
+    "relPct": -43.54860315477258,
+    "ciLoPct": -52.269953978721006,
+    "ciHiPct": -35.72014966062936,
+    "outBase": 22285.125,
+    "outTerse": 10028.25,
+    "outChangePct": -55.00025241052047,
+    "solveBase": 0.9375,
+    "solveTerse": 0.9
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 3.1333333333333333,
+    "tasks": 40,
+    "base": 0.047095180875,
+    "terse": 0.026586695875000003,
+    "relPct": -43.546886579401,
+    "ciLoPct": -51.50791636066734,
+    "ciHiPct": -35.88654626862605,
+    "outBase": 23433.475,
+    "outTerse": 11163.35,
+    "outChangePct": -52.36152555265491,
+    "solveBase": 0.975,
+    "solveTerse": 0.9375
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 5,
+    "tasks": 18,
+    "base": 0.2851098638888889,
+    "terse": 0.13765235285714286,
+    "relPct": -51.560557781473534,
+    "ciLoPct": -67.15700120317167,
+    "ciHiPct": -36.5643912452423,
+    "outBase": 20717.083333333332,
+    "outTerse": 7828.8,
+    "outChangePct": -62.21089680416726,
+    "solveBase": 0.7222222222222222,
+    "solveTerse": 0.6
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 5,
+    "tasks": 18,
+    "base": 0.3028079125,
+    "terse": 0.09894381428571428,
+    "relPct": -67.74076802090022,
+    "ciLoPct": -75.40026027776493,
+    "ciHiPct": -60.76559756343883,
+    "outBase": 28305.083333333332,
+    "outTerse": 7506.628571428571,
+    "outChangePct": -73.47957438235686,
+    "solveBase": 0.4722222222222222,
+    "solveTerse": 0.3142857142857143
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 5,
+    "tasks": 40,
+    "base": 0.13633031875000004,
+    "terse": 0.09382986375,
+    "relPct": -31.17461720157535,
+    "ciLoPct": -41.92371827048193,
+    "ciHiPct": -21.856128756392273,
+    "outBase": 5787.2625,
+    "outTerse": 3453.275,
+    "outChangePct": -40.329732753611914,
+    "solveBase": 0.975,
+    "solveTerse": 0.9625
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 5,
+    "tasks": 40,
+    "base": 0.13561097,
+    "terse": 0.10227625625000006,
+    "relPct": -24.581133628053834,
+    "ciLoPct": -31.245415654795472,
+    "ciHiPct": -18.844211128347506,
+    "outBase": 5138.6875,
+    "outTerse": 3029.7375,
+    "outChangePct": -41.04063537625123,
+    "solveBase": 0.9625,
+    "solveTerse": 0.95
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "ratio": 5,
+    "tasks": 40,
+    "base": 0.013607533875,
+    "terse": 0.01047352525,
+    "relPct": -23.031422547165985,
+    "ciLoPct": -31.245335591714625,
+    "ciHiPct": -14.417336881331114,
+    "outBase": 9759.0875,
+    "outTerse": 7280.125,
+    "outChangePct": -25.401580834273695,
+    "solveBase": 0.925,
+    "solveTerse": 0.925
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "ratio": 5,
+    "tasks": 40,
+    "base": 0.011351836374999997,
+    "terse": 0.008580772375000002,
+    "relPct": -24.410711258159772,
+    "ciLoPct": -33.28370186273058,
+    "ciHiPct": -16.213127895793868,
+    "outBase": 8355.4375,
+    "outTerse": 6513.75,
+    "outChangePct": -22.041784167495717,
+    "solveBase": 0.9625,
+    "solveTerse": 0.925
+   }
+  ],
+  "A5": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.01160898375,
+    "perSolved": 0.012061281818181818,
+    "solveRate": 0.9625,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native-terse",
+    "perRun": 0.012206542749999999,
+    "perSolved": 0.012519531025641024,
+    "solveRate": 0.975,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "opencode",
+    "perRun": 0.013242321500000001,
+    "perSolved": 0.013758256103896105,
+    "solveRate": 0.9625,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "goose",
+    "perRun": 0.013353738250000002,
+    "perSolved": 0.014243987466666668,
+    "solveRate": 0.9375,
+    "rankRun": 4,
+    "rankSolved": 4,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "cline",
+    "perRun": 0.019191078125000007,
+    "perSolved": 0.02020113486842106,
+    "solveRate": 0.95,
+    "rankRun": 5,
+    "rankSolved": 5,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc",
+    "perRun": 0.020175936624999998,
+    "perSolved": 0.020962012077922077,
+    "solveRate": 0.9625,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.020257886749999992,
+    "perSolved": 0.021047155064935055,
+    "solveRate": 0.9625,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "openhands",
+    "perRun": 0.022461933374999996,
+    "perSolved": 0.023644140394736838,
+    "solveRate": 0.95,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native-opt",
+    "perRun": 0.025143385874999997,
+    "perSolved": 0.025788088076923073,
+    "solveRate": 0.975,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "arm": "dsh:native",
+    "perRun": 0.025786867874999998,
+    "perSolved": 0.027877694999999997,
+    "solveRate": 0.925,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native-terse",
+    "perRun": 0.009561287,
+    "perSolved": 0.010623652222222222,
+    "solveRate": 0.9,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.011225148999999997,
+    "perSolved": 0.012472387777777774,
+    "solveRate": 0.9,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "opencode",
+    "perRun": 0.016591085499999998,
+    "perSolved": 0.018182011506849314,
+    "solveRate": 0.9125,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "goose",
+    "perRun": 0.01763052187500001,
+    "perSolved": 0.01932111986301371,
+    "solveRate": 0.9125,
+    "rankRun": 4,
+    "rankSolved": 4,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.022534091999999988,
+    "perSolved": 0.023412043636363622,
+    "solveRate": 0.9625,
+    "rankRun": 5,
+    "rankSolved": 5,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:ptc",
+    "perRun": 0.022548378375,
+    "perSolved": 0.02437662527027027,
+    "solveRate": 0.925,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native-opt",
+    "perRun": 0.024227844249999998,
+    "perSolved": 0.02655106219178082,
+    "solveRate": 0.9125,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "cline",
+    "perRun": 0.024525848500000003,
+    "perSolved": 0.02725094277777778,
+    "solveRate": 0.9,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "dsh:native",
+    "perRun": 0.025092431249999998,
+    "perSolved": 0.027880479166666663,
+    "solveRate": 0.9,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "arm": "openhands",
+    "perRun": 0.030703484625,
+    "perSolved": 0.03612174661764706,
+    "solveRate": 0.85,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:native-terse",
+    "perRun": 0.02514071962499999,
+    "perSolved": 0.027934132916666656,
+    "solveRate": 0.9,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.026586695875000003,
+    "perSolved": 0.028359142266666672,
+    "solveRate": 0.9375,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "cline",
+    "perRun": 0.03879437237500001,
+    "perSolved": 0.04774691984615386,
+    "solveRate": 0.8125,
+    "rankRun": 3,
+    "rankSolved": 4,
+    "shift": 1
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:native",
+    "perRun": 0.044535159500000004,
+    "perSolved": 0.047504170133333336,
+    "solveRate": 0.9375,
+    "rankRun": 4,
+    "rankSolved": 3,
+    "shift": -1
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:ptc",
+    "perRun": 0.047095180875,
+    "perSolved": 0.04830274961538462,
+    "solveRate": 0.975,
+    "rankRun": 5,
+    "rankSolved": 5,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:native-opt",
+    "perRun": 0.04953778887500003,
+    "perSolved": 0.05581722690140849,
+    "solveRate": 0.8875,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.0514899025,
+    "perSolved": 0.058016791549295774,
+    "solveRate": 0.8875,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "openhands",
+    "perRun": 0.09432242262499999,
+    "perSolved": 0.13719625109090908,
+    "solveRate": 0.6875,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "opencode",
+    "perRun": 0.11611275237499999,
+    "perSolved": 0.15227901950819672,
+    "solveRate": 0.7625,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "arm": "goose",
+    "perRun": 0.17230173912500005,
+    "perSolved": 0.23362947677966106,
+    "solveRate": 0.7375,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.09894381428571428,
+    "perSolved": 0.31482122727272727,
+    "solveRate": 0.3142857142857143,
+    "rankRun": 1,
+    "rankSolved": 2,
+    "shift": 1
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:native-terse",
+    "perRun": 0.13765235285714286,
+    "perSolved": 0.2294205880952381,
+    "solveRate": 0.6,
+    "rankRun": 2,
+    "rankSolved": 1,
+    "shift": -1
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:native-opt",
+    "perRun": 0.26875009166666675,
+    "perSolved": 0.33362080344827594,
+    "solveRate": 0.8055555555555556,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:native",
+    "perRun": 0.2851098638888889,
+    "perSolved": 0.3947675038461539,
+    "solveRate": 0.7222222222222222,
+    "rankRun": 4,
+    "rankSolved": 4,
+    "shift": 0
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.29804993428571425,
+    "perSolved": 0.7451248357142856,
+    "solveRate": 0.4,
+    "rankRun": 5,
+    "rankSolved": 7,
+    "shift": 2
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "dsh:ptc",
+    "perRun": 0.3028079125,
+    "perSolved": 0.6412402852941177,
+    "solveRate": 0.4722222222222222,
+    "rankRun": 6,
+    "rankSolved": 5,
+    "shift": -1
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "opencode",
+    "perRun": 0.3787445428571429,
+    "perSolved": 1.2050962727272727,
+    "solveRate": 0.3142857142857143,
+    "rankRun": 7,
+    "rankSolved": 9,
+    "shift": 2
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "goose",
+    "perRun": 0.5041913714285715,
+    "perSolved": 0.6535814074074074,
+    "solveRate": 0.7714285714285715,
+    "rankRun": 8,
+    "rankSolved": 6,
+    "shift": -2
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "cline",
+    "perRun": 0.6668149166666668,
+    "perSolved": 1.0437103043478264,
+    "solveRate": 0.6388888888888888,
+    "rankRun": 9,
+    "rankSolved": 8,
+    "shift": -1
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "arm": "openhands",
+    "perRun": 1.1657655000000002,
+    "perSolved": 1.4680010000000003,
+    "solveRate": 0.7941176470588235,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:native-terse",
+    "perRun": 0.09382986375,
+    "perSolved": 0.09748557272727273,
+    "solveRate": 0.9625,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.10227625625000006,
+    "perSolved": 0.10765921710526323,
+    "solveRate": 0.95,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:native-opt",
+    "perRun": 0.13467890875000005,
+    "perSolved": 0.13813221410256415,
+    "solveRate": 0.975,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:ptc",
+    "perRun": 0.13561097,
+    "perSolved": 0.14089451428571428,
+    "solveRate": 0.9625,
+    "rankRun": 4,
+    "rankSolved": 5,
+    "shift": 1
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:native",
+    "perRun": 0.13633031875000004,
+    "perSolved": 0.139825967948718,
+    "solveRate": 0.975,
+    "rankRun": 5,
+    "rankSolved": 4,
+    "shift": -1
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.13656787874999998,
+    "perSolved": 0.14375566184210525,
+    "solveRate": 0.95,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "goose",
+    "perRun": 0.36977345000000006,
+    "perSolved": 0.3944250133333334,
+    "solveRate": 0.9375,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "cline",
+    "perRun": 0.4777336750000001,
+    "perSolved": 0.5028775526315791,
+    "solveRate": 0.95,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "opencode",
+    "perRun": 0.5026189499999999,
+    "perSolved": 0.574421657142857,
+    "solveRate": 0.875,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "arm": "openhands",
+    "perRun": 1.2136769999999992,
+    "perSolved": 1.3120832432432423,
+    "solveRate": 0.925,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "goose",
+    "perRun": 0.005500370125000001,
+    "perSolved": 0.00571467025974026,
+    "solveRate": 0.9625,
+    "rankRun": 1,
+    "rankSolved": 1,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "opencode",
+    "perRun": 0.007743169500000003,
+    "perSolved": 0.008849336571428574,
+    "solveRate": 0.875,
+    "rankRun": 2,
+    "rankSolved": 2,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:ptc-terse",
+    "perRun": 0.008580772375000002,
+    "perSolved": 0.009276510675675677,
+    "solveRate": 0.925,
+    "rankRun": 3,
+    "rankSolved": 3,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "cline",
+    "perRun": 0.009658398499999998,
+    "perSolved": 0.011532416119402982,
+    "solveRate": 0.8375,
+    "rankRun": 4,
+    "rankSolved": 5,
+    "shift": 1
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:native-terse",
+    "perRun": 0.01047352525,
+    "perSolved": 0.01132273,
+    "solveRate": 0.925,
+    "rankRun": 5,
+    "rankSolved": 4,
+    "shift": -1
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:ptc",
+    "perRun": 0.011351836374999997,
+    "perSolved": 0.011794115714285711,
+    "solveRate": 0.9625,
+    "rankRun": 6,
+    "rankSolved": 6,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:ptc-opt",
+    "perRun": 0.011854116125000003,
+    "perSolved": 0.012315964805194809,
+    "solveRate": 0.9625,
+    "rankRun": 7,
+    "rankSolved": 7,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:native-opt",
+    "perRun": 0.012998526375000005,
+    "perSolved": 0.014442807083333339,
+    "solveRate": 0.9,
+    "rankRun": 8,
+    "rankSolved": 8,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "dsh:native",
+    "perRun": 0.013607533875,
+    "perSolved": 0.014710847432432431,
+    "solveRate": 0.925,
+    "rankRun": 9,
+    "rankSolved": 9,
+    "shift": 0
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "arm": "openhands",
+    "perRun": 0.020220234810126574,
+    "perSolved": 0.042036803947368404,
+    "solveRate": 0.4810126582278481,
+    "rankRun": 10,
+    "rankSolved": 10,
+    "shift": 0
+   }
+  ],
+  "A6": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "provider": "DeepSeek",
+    "overall": 0.9488240238775428,
+    "best": 0.9624357747433605,
+    "worst": 0.9313330171143113,
+    "bestArm": "dsh:native-opt",
+    "worstArm": "dsh:native-terse",
+    "spread": 0.031102757629049238,
+    "automatic": "yes",
+    "dshHitRate": 0.9517891133070611,
+    "dshCells": 480,
+    "nonDshHitRate": 0.9443763897332635,
+    "nonDshCells": 320,
+    "note": "both sides hit cache here without an injected breakpoint: the split separates harnesses, not cache regimes"
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "provider": "z.ai",
+    "overall": 0.8938417473285315,
+    "best": 0.9298361437499905,
+    "worst": 0.8337788251062891,
+    "bestArm": "dsh:native",
+    "worstArm": "cline",
+    "spread": 0.09605731864370137,
+    "automatic": "yes",
+    "dshHitRate": 0.9010477279978117,
+    "dshCells": 480,
+    "nonDshHitRate": 0.8830327763246073,
+    "nonDshCells": 320,
+    "note": "both sides hit cache here without an injected breakpoint: the split separates harnesses, not cache regimes"
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "provider": "Alibaba",
+    "overall": 0.8303241635217501,
+    "best": 0.9484795180761114,
+    "worst": 0.689375231208474,
+    "bestArm": "goose",
+    "worstArm": "dsh:ptc-terse",
+    "spread": 0.2591042868676374,
+    "automatic": "yes",
+    "dshHitRate": 0.7676063932856556,
+    "dshCells": 480,
+    "nonDshHitRate": 0.9244008188758925,
+    "nonDshCells": 320,
+    "note": "both sides hit cache here without an injected breakpoint: the split separates harnesses, not cache regimes"
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "provider": "Anthropic",
+    "overall": 0.5686502112710442,
+    "best": 0.9646519359652496,
+    "worst": 0,
+    "bestArm": "dsh:native",
+    "worstArm": "opencode",
+    "spread": 0.9646519359652496,
+    "automatic": "NO - client must declare",
+    "dshHitRate": 0.942410913514923,
+    "dshCells": 213,
+    "nonDshHitRate": 0,
+    "nonDshCells": 140,
+    "note": "non-dsh arms speak /v1/chat/completions, which cannot carry a cache_control breakpoint: a 0% there measures the measurement path, not a refusal to cache"
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "provider": "Anthropic",
+    "overall": 0.5129796993259458,
+    "best": 0.8856093601487374,
+    "worst": 0,
+    "bestArm": "dsh:native-opt",
+    "worstArm": "goose",
+    "spread": 0.8856093601487374,
+    "automatic": "NO - client must declare",
+    "dshHitRate": 0.854966165543243,
+    "dshCells": 480,
+    "nonDshHitRate": 0,
+    "nonDshCells": 320,
+    "note": "non-dsh arms speak /v1/chat/completions, which cannot carry a cache_control breakpoint: a 0% there measures the measurement path, not a refusal to cache"
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "provider": "OpenAI",
+    "overall": 0.8949478941929294,
+    "best": 0.9345786592280401,
+    "worst": 0.824754695156986,
+    "bestArm": "dsh:native-opt",
+    "worstArm": "cline",
+    "spread": 0.1098239640710541,
+    "automatic": "yes",
+    "dshHitRate": 0.9120452826853512,
+    "dshCells": 480,
+    "nonDshHitRate": 0.8692214162106008,
+    "nonDshCells": 319,
+    "note": "both sides hit cache here without an injected breakpoint: the split separates harnesses, not cache regimes"
+   }
+  ],
+  "A7": {
+   "placebo": [],
+   "noiseFloorPct": null,
+   "shamDatasets": []
+  },
+  "A1d": {
+   "dshOnly": {
+    "concordance": 0.4777777777777778,
+    "comparisons": 90
+   },
+   "externalOnly": {
+    "concordance": 0.6555555555555556,
+    "comparisons": 90
+   },
+   "noAnthropic": {
+    "concordance": 0.5892857142857143,
+    "comparisons": 168
+   },
+   "ceilingModels": {
+    "concordance": null,
+    "comparisons": 0
+   },
+   "ceilingModelList": [
+    "deepseek-flash"
+   ]
+  },
+  "A2b": [
+   {
+    "id": "cost:deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "model": "deepseek-flash",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 4,
+    "rel": -21.758870744592134,
+    "tasks": 40,
+    "p": 0.00010499947500262499,
+    "se": 0.00002291161824412171,
+    "iters": 200000,
+    "holmThreshold": 0.002777777777777778,
+    "holmPasses": true
+   },
+   {
+    "id": "cost:glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "model": "glm-5.3-flash",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 3.3333333333333335,
+    "rel": -10.138726094945465,
+    "tasks": 40,
+    "p": 0.07178964105179474,
+    "se": 0.0005772169803871383,
+    "iters": 200000,
+    "holmThreshold": 0.0033333333333333335,
+    "holmPasses": false
+   },
+   {
+    "id": "cost:qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "model": "qwen3.8-flash",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 3.1333333333333333,
+    "rel": 5.748315272116631,
+    "tasks": 40,
+    "p": 0.25177874110629445,
+    "se": 0.000970531314881761,
+    "iters": 200000,
+    "holmThreshold": 0.0038461538461538464,
+    "holmPasses": false
+   },
+   {
+    "id": "cost:claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "model": "claude-haiku-4.5",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 5,
+    "rel": 6.207448725102082,
+    "tasks": 18,
+    "p": 0.3926680366598167,
+    "se": 0.0010919703513501214,
+    "iters": 200000,
+    "holmThreshold": 0.005555555555555556,
+    "holmPasses": false
+   },
+   {
+    "id": "cost:claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "model": "claude-sonnet-5.5",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 5,
+    "rel": -0.5276513372781944,
+    "tasks": 40,
+    "p": 0.8860505697471512,
+    "se": 0.0007105102307423163,
+    "iters": 200000,
+    "holmThreshold": 0.008333333333333333,
+    "holmPasses": false
+   },
+   {
+    "id": "cost:gpt-6-luna",
+    "label": "gpt-6-luna",
+    "model": "gpt-6-luna",
+    "block": "A2b",
+    "contrast": "dsh:native -> dsh:ptc",
+    "ratio": 5,
+    "rel": -16.576828106555052,
+    "tasks": 40,
+    "p": 0.00029499852500737496,
+    "se": 0.000038399967505039534,
+    "iters": 200000,
+    "holmThreshold": 0.0029411764705882353,
+    "holmPasses": true
+   }
+  ],
+  "A4solve": [
+   {
+    "id": "solve:deepseek-flash:dsh:native->dsh:native-terse",
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 74,
+    "terseSolved": 78,
+    "b": 0,
+    "c": 4,
+    "p": 0.125,
+    "holmThreshold": 0.0035714285714285718,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:deepseek-flash:dsh:ptc->dsh:ptc-terse",
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 77,
+    "terseSolved": 77,
+    "b": 1,
+    "c": 1,
+    "p": 1,
+    "holmThreshold": 0.01,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:glm-5.3-flash:dsh:native->dsh:native-terse",
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 72,
+    "terseSolved": 72,
+    "b": 7,
+    "c": 7,
+    "p": 1,
+    "holmThreshold": 0.0125,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:glm-5.3-flash:dsh:ptc->dsh:ptc-terse",
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 74,
+    "terseSolved": 72,
+    "b": 6,
+    "c": 4,
+    "p": 0.75390625,
+    "holmThreshold": 0.0071428571428571435,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:qwen3.8-flash:dsh:native->dsh:native-terse",
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 75,
+    "terseSolved": 72,
+    "b": 6,
+    "c": 3,
+    "p": 0.5078125,
+    "holmThreshold": 0.00625,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:qwen3.8-flash:dsh:ptc->dsh:ptc-terse",
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 78,
+    "terseSolved": 75,
+    "b": 4,
+    "c": 1,
+    "p": 0.375,
+    "holmThreshold": 0.004545454545454546,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:claude-haiku-4.5:dsh:native->dsh:native-terse",
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 35,
+    "baseSolved": 25,
+    "terseSolved": 21,
+    "b": 6,
+    "c": 2,
+    "p": 0.2890625,
+    "holmThreshold": 0.004166666666666667,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:claude-haiku-4.5:dsh:ptc->dsh:ptc-terse",
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 35,
+    "baseSolved": 17,
+    "terseSolved": 11,
+    "b": 7,
+    "c": 1,
+    "p": 0.0703125,
+    "holmThreshold": 0.003125,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:claude-sonnet-5.5:dsh:native->dsh:native-terse",
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 78,
+    "terseSolved": 77,
+    "b": 1,
+    "c": 0,
+    "p": 1,
+    "holmThreshold": 0.016666666666666666,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:claude-sonnet-5.5:dsh:ptc->dsh:ptc-terse",
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 77,
+    "terseSolved": 76,
+    "b": 1,
+    "c": 0,
+    "p": 1,
+    "holmThreshold": 0.025,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:gpt-6-luna:dsh:native->dsh:native-terse",
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "contrast": "dsh:native -> dsh:native-terse",
+    "cells": 80,
+    "baseSolved": 74,
+    "terseSolved": 74,
+    "b": 5,
+    "c": 5,
+    "p": 1,
+    "holmThreshold": 0.05,
+    "holmPasses": false
+   },
+   {
+    "id": "solve:gpt-6-luna:dsh:ptc->dsh:ptc-terse",
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "contrast": "dsh:ptc -> dsh:ptc-terse",
+    "cells": 80,
+    "baseSolved": 77,
+    "terseSolved": 74,
+    "b": 4,
+    "c": 1,
+    "p": 0.375,
+    "holmThreshold": 0.005,
+    "holmPasses": false
+   }
+  ],
+  "family": {
+   "alpha": 0.05,
+   "m": 18,
+   "rows": [
+    {
+     "id": "cost:deepseek-flash",
+     "label": "DeepSeek V4.1 Flash dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.00010499947500262499,
+     "se": 0.00002291161824412171,
+     "rank": 1,
+     "threshold": 0.002777777777777778,
+     "passes": true,
+     "mcSe": 0.00002291161824412171,
+     "resolvable": true
+    },
+    {
+     "id": "cost:gpt-6-luna",
+     "label": "gpt-6-luna dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.00029499852500737496,
+     "se": 0.000038399967505039534,
+     "rank": 2,
+     "threshold": 0.0029411764705882353,
+     "passes": true,
+     "mcSe": 0.000038399967505039534,
+     "resolvable": true
+    },
+    {
+     "id": "solve:claude-haiku-4.5:dsh:ptc->dsh:ptc-terse",
+     "label": "Claude Haiku 4.5 dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 0.0703125,
+     "se": null,
+     "rank": 3,
+     "threshold": 0.003125,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "cost:glm-5.3-flash",
+     "label": "GLM-5.3-Flash dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.07178964105179474,
+     "se": 0.0005772169803871383,
+     "rank": 4,
+     "threshold": 0.0033333333333333335,
+     "passes": false,
+     "mcSe": 0.0005772169803871383,
+     "resolvable": true
+    },
+    {
+     "id": "solve:deepseek-flash:dsh:native->dsh:native-terse",
+     "label": "DeepSeek V4.1 Flash dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 0.125,
+     "se": null,
+     "rank": 5,
+     "threshold": 0.0035714285714285718,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "cost:qwen3.8-flash",
+     "label": "Qwen3.8-Flash dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.25177874110629445,
+     "se": 0.000970531314881761,
+     "rank": 6,
+     "threshold": 0.0038461538461538464,
+     "passes": false,
+     "mcSe": 0.000970531314881761,
+     "resolvable": true
+    },
+    {
+     "id": "solve:claude-haiku-4.5:dsh:native->dsh:native-terse",
+     "label": "Claude Haiku 4.5 dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 0.2890625,
+     "se": null,
+     "rank": 7,
+     "threshold": 0.004166666666666667,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:qwen3.8-flash:dsh:ptc->dsh:ptc-terse",
+     "label": "Qwen3.8-Flash dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 0.375,
+     "se": null,
+     "rank": 8,
+     "threshold": 0.004545454545454546,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:gpt-6-luna:dsh:ptc->dsh:ptc-terse",
+     "label": "gpt-6-luna dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 0.375,
+     "se": null,
+     "rank": 9,
+     "threshold": 0.005,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "cost:claude-haiku-4.5",
+     "label": "Claude Haiku 4.5 dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.3926680366598167,
+     "se": 0.0010919703513501214,
+     "rank": 10,
+     "threshold": 0.005555555555555556,
+     "passes": false,
+     "mcSe": 0.0010919703513501214,
+     "resolvable": true
+    },
+    {
+     "id": "solve:qwen3.8-flash:dsh:native->dsh:native-terse",
+     "label": "Qwen3.8-Flash dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 0.5078125,
+     "se": null,
+     "rank": 11,
+     "threshold": 0.00625,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:glm-5.3-flash:dsh:ptc->dsh:ptc-terse",
+     "label": "GLM-5.3-Flash dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 0.75390625,
+     "se": null,
+     "rank": 12,
+     "threshold": 0.0071428571428571435,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "cost:claude-sonnet-5.5",
+     "label": "Claude Sonnet 5.5 dsh:native -> dsh:ptc",
+     "block": "A2b",
+     "p": 0.8860505697471512,
+     "se": 0.0007105102307423163,
+     "rank": 13,
+     "threshold": 0.008333333333333333,
+     "passes": false,
+     "mcSe": 0.0007105102307423163,
+     "resolvable": true
+    },
+    {
+     "id": "solve:deepseek-flash:dsh:ptc->dsh:ptc-terse",
+     "label": "DeepSeek V4.1 Flash dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 14,
+     "threshold": 0.01,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:glm-5.3-flash:dsh:native->dsh:native-terse",
+     "label": "GLM-5.3-Flash dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 15,
+     "threshold": 0.0125,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:claude-sonnet-5.5:dsh:native->dsh:native-terse",
+     "label": "Claude Sonnet 5.5 dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 16,
+     "threshold": 0.016666666666666666,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:claude-sonnet-5.5:dsh:ptc->dsh:ptc-terse",
+     "label": "Claude Sonnet 5.5 dsh:ptc -> dsh:ptc-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 17,
+     "threshold": 0.025,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    },
+    {
+     "id": "solve:gpt-6-luna:dsh:native->dsh:native-terse",
+     "label": "gpt-6-luna dsh:native -> dsh:native-terse",
+     "block": "A4",
+     "p": 1,
+     "se": null,
+     "rank": 18,
+     "threshold": 0.05,
+     "passes": false,
+     "mcSe": null,
+     "resolvable": null
+    }
+   ],
+   "survivors": 2,
+   "unresolvable": 0
+  },
+  "A8": {
+   "pairs": 54,
+   "ties": 33,
+   "details": [
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc-terse",
+     "lower": "dsh:native-terse",
+     "relPct": 5.147384240244106,
+     "ciLoPct": -0.46032668449552644,
+     "ciHiPct": 10.860233566956277,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:native-terse",
+     "lower": "opencode",
+     "relPct": 8.485439089622675,
+     "ciLoPct": 1.365202280555646,
+     "ciHiPct": 15.987484457874038,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 0.8413687131822086,
+     "ciLoPct": -4.7854288615481835,
+     "ciHiPct": 6.907666265314577,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "goose",
+     "lower": "cline",
+     "relPct": 43.71315182098918,
+     "ciLoPct": 32.44772301868355,
+     "ciHiPct": 54.92267399355383,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "cline",
+     "lower": "dsh:ptc",
+     "relPct": 5.131856030105086,
+     "ciLoPct": -3.039317912213433,
+     "ciHiPct": 13.574165729680695,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc",
+     "lower": "dsh:ptc-opt",
+     "relPct": 0.4061775496382626,
+     "ciLoPct": -6.817893516257019,
+     "ciHiPct": 7.805878627951925,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:ptc-opt",
+     "lower": "openhands",
+     "relPct": 10.879943462019824,
+     "ciLoPct": 3.397275014384213,
+     "ciHiPct": 18.1717350157464,
+     "distinct": true
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "openhands",
+     "lower": "dsh:native-opt",
+     "relPct": 11.937763571965903,
+     "ciLoPct": -0.306047230451284,
+     "ciHiPct": 25.757691483669976,
+     "distinct": false
+    },
+    {
+     "model": "deepseek-flash",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:native",
+     "relPct": 2.5592495903259125,
+     "ciLoPct": -10.135873357191603,
+     "ciHiPct": 16.562245318521573,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:ptc-terse",
+     "relPct": 17.40207149937029,
+     "ciLoPct": 7.3336439958344535,
+     "ciHiPct": 28.245999989331978,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc-terse",
+     "lower": "opencode",
+     "relPct": 47.80280867541271,
+     "ciLoPct": 32.440405690828705,
+     "ciHiPct": 67.43817609904333,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 6.2650293436195685,
+     "ciLoPct": -4.162281153936552,
+     "ciHiPct": 17.920362263216603,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "goose",
+     "lower": "dsh:ptc-opt",
+     "relPct": 27.81296072666582,
+     "ciLoPct": 13.738778648604233,
+     "ciHiPct": 40.029446802748126,
+     "distinct": true
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc-opt",
+     "lower": "dsh:ptc",
+     "relPct": 0.0633989379293049,
+     "ciLoPct": -7.031985136121749,
+     "ciHiPct": 7.821510513935954,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:ptc",
+     "lower": "dsh:native-opt",
+     "relPct": 7.448277863130357,
+     "ciLoPct": -0.8242327758969048,
+     "ciHiPct": 16.52121247056198,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native-opt",
+     "lower": "cline",
+     "relPct": 1.2300072879988255,
+     "ciLoPct": -10.738296495364008,
+     "ciHiPct": 13.231724073015702,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "cline",
+     "lower": "dsh:native",
+     "relPct": 2.3101453554195914,
+     "ciLoPct": -10.082149145624872,
+     "ciHiPct": 15.579151624458579,
+     "distinct": false
+    },
+    {
+     "model": "glm-5.3-flash",
+     "higher": "dsh:native",
+     "lower": "openhands",
+     "relPct": 22.361537306194677,
+     "ciLoPct": 6.842392464460772,
+     "ciHiPct": 36.63759664580133,
+     "distinct": true
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:ptc-terse",
+     "relPct": 5.751530869315808,
+     "ciLoPct": -3.396658937124597,
+     "ciHiPct": 15.293319194318816,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:ptc-terse",
+     "lower": "cline",
+     "relPct": 45.91648604021956,
+     "ciLoPct": 14.261382432878191,
+     "ciHiPct": 81.29338204196839,
+     "distinct": true
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "cline",
+     "lower": "dsh:native",
+     "relPct": 14.797989433899152,
+     "ciLoPct": -10.577850919543327,
+     "ciHiPct": 38.0393191629769,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:native",
+     "lower": "dsh:ptc",
+     "relPct": 5.748315272116627,
+     "ciLoPct": -3.9319430864506066,
+     "ciHiPct": 15.014126928185807,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:ptc",
+     "lower": "dsh:native-opt",
+     "relPct": 5.186534916349923,
+     "ciLoPct": -4.941439775285715,
+     "ciHiPct": 16.681351953720462,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:ptc-opt",
+     "relPct": 3.9406555466692006,
+     "ciLoPct": -7.763749830870903,
+     "ciHiPct": 17.5498714162179,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "dsh:ptc-opt",
+     "lower": "openhands",
+     "relPct": 83.1862521491471,
+     "ciLoPct": 52.68834457396768,
+     "ciHiPct": 115.92798243306058,
+     "distinct": true
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "openhands",
+     "lower": "opencode",
+     "relPct": 23.101961488661463,
+     "ciLoPct": -72.70319529178867,
+     "ciHiPct": 189.73758653498126,
+     "distinct": false
+    },
+    {
+     "model": "qwen3.8-flash",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 48.39174474869997,
+     "ciLoPct": -116.88923705525936,
+     "ciHiPct": 181.4061869317564,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:ptc-terse",
+     "lower": "dsh:native-terse",
+     "relPct": 39.12173676633508,
+     "ciLoPct": 22.334142803476265,
+     "ciHiPct": 59.89178514540312,
+     "distinct": true
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:native-opt",
+     "relPct": 95.23828404559025,
+     "ciLoPct": 69.46101151347315,
+     "ciHiPct": 120.84533116502767,
+     "distinct": true
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:native",
+     "relPct": 6.087355029635993,
+     "ciLoPct": -6.490227243643424,
+     "ciHiPct": 18.37171776468541,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:native",
+     "lower": "dsh:ptc-opt",
+     "relPct": 4.538625995019322,
+     "ciLoPct": -8.85683531487779,
+     "ciHiPct": 17.516375339560863,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:ptc-opt",
+     "lower": "dsh:ptc",
+     "relPct": 1.5963694894576614,
+     "ciLoPct": -5.249708048547906,
+     "ciHiPct": 10.151056311813727,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "dsh:ptc",
+     "lower": "opencode",
+     "relPct": 25.077492107192832,
+     "ciLoPct": -34.321709274650765,
+     "ciHiPct": 96.18939990179052,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "opencode",
+     "lower": "goose",
+     "relPct": 33.12175209841781,
+     "ciLoPct": -5.114668486480199,
+     "ciHiPct": 75.01947474232976,
+     "distinct": false
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "goose",
+     "lower": "cline",
+     "relPct": 32.254329299075295,
+     "ciLoPct": 13.177155956693243,
+     "ciHiPct": 53.21236222839597,
+     "distinct": true
+    },
+    {
+     "model": "claude-haiku-4.5",
+     "higher": "cline",
+     "lower": "openhands",
+     "relPct": 74.82594807979575,
+     "ciLoPct": 51.798497975679304,
+     "ciHiPct": 95.1032930718698,
+     "distinct": true
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:ptc-terse",
+     "relPct": 9.001816865581937,
+     "ciLoPct": 3.8282161525572946,
+     "ciHiPct": 13.764171910566155,
+     "distinct": true
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:ptc-terse",
+     "lower": "dsh:native-opt",
+     "relPct": 31.681500367784505,
+     "ciLoPct": 22.00908800863542,
+     "ciHiPct": 42.90970759892277,
+     "distinct": true
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:ptc",
+     "relPct": 0.6920617776389199,
+     "ciLoPct": -4.817378281586348,
+     "ciHiPct": 6.098576478107972,
+     "distinct": false
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:ptc",
+     "lower": "dsh:native",
+     "relPct": 0.5304502651961289,
+     "ciLoPct": -6.0125722130001735,
+     "ciHiPct": 7.9637676067061545,
+     "distinct": false
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:native",
+     "lower": "dsh:ptc-opt",
+     "relPct": 0.17425324181598614,
+     "ciLoPct": -8.200243975443643,
+     "ciHiPct": 7.4611273877036925,
+     "distinct": false
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "dsh:ptc-opt",
+     "lower": "goose",
+     "relPct": 170.76165595052132,
+     "ciLoPct": 150.3239822050762,
+     "ciHiPct": 191.45500292102912,
+     "distinct": true
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "goose",
+     "lower": "cline",
+     "relPct": 29.196316014575952,
+     "ciLoPct": 18.079455136651916,
+     "ciHiPct": 40.50928345450436,
+     "distinct": true
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "cline",
+     "lower": "opencode",
+     "relPct": 5.209026765802058,
+     "ciLoPct": -3.9727260172731165,
+     "ciHiPct": 14.227639489721962,
+     "distinct": false
+    },
+    {
+     "model": "claude-sonnet-5.5",
+     "higher": "opencode",
+     "lower": "openhands",
+     "relPct": 141.4706011382976,
+     "ciLoPct": 120.78788513644383,
+     "ciHiPct": 163.93726301007956,
+     "distinct": true
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "goose",
+     "lower": "opencode",
+     "relPct": 40.775426453688,
+     "ciLoPct": 13.651956285396336,
+     "ciHiPct": 77.96423063438839,
+     "distinct": true
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "opencode",
+     "lower": "dsh:ptc-terse",
+     "relPct": 10.817312923344879,
+     "ciLoPct": -16.103504191662086,
+     "ciHiPct": 30.139838085683117,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:ptc-terse",
+     "lower": "cline",
+     "relPct": 12.55861451516474,
+     "ciLoPct": -18.948253478172468,
+     "ciHiPct": 52.9879339678906,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "cline",
+     "lower": "dsh:native-terse",
+     "relPct": 8.43956428180099,
+     "ciLoPct": -29.638262492482582,
+     "ciHiPct": 39.05325375630339,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:native-terse",
+     "lower": "dsh:ptc",
+     "relPct": 8.386012388713112,
+     "ciLoPct": 0.8871941183318429,
+     "ciHiPct": 15.712235954174078,
+     "distinct": true
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:ptc",
+     "lower": "dsh:ptc-opt",
+     "relPct": 4.4246563587383125,
+     "ciLoPct": -4.322243413238063,
+     "ciHiPct": 13.41001534652582,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:ptc-opt",
+     "lower": "dsh:native-opt",
+     "relPct": 9.654117084161781,
+     "ciLoPct": -2.039205179458283,
+     "ciHiPct": 23.35587778797805,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:native-opt",
+     "lower": "dsh:native",
+     "relPct": 4.685204171845935,
+     "ciLoPct": -4.337943654016704,
+     "ciHiPct": 13.018579577256112,
+     "distinct": false
+    },
+    {
+     "model": "gpt-6-luna",
+     "higher": "dsh:native",
+     "lower": "openhands",
+     "relPct": 48.595880751585305,
+     "ciLoPct": 23.22324918702434,
+     "ciHiPct": 76.48885147456596,
+     "distinct": true
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Statement periods that start on the last day of a month come out with the wrong end date, and the same rollover is wrong for leap days and year ends: a period starting 31 January should end 14 February. Fix the date arithmetic so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

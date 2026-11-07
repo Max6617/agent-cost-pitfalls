@@ -1,0 +1,6 @@
+{
+  "prompt": "The reporting service is coming back with numbers nobody will sign off. Sort a report by two keys and the rows come back in an order the spec does not describe, filters on a column half the export leaves empty keep everything, and the row count in the header does not match the rows in the table. Paging is the worst of it: a row that belongs on the first page turns up on the second, so the same rows keep reappearing as we page through a report. Make the engine behave the way docs/query-spec.md says it does; the reproductions under test/ are the ones we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-query-engine",
+  "setup": ""
+}

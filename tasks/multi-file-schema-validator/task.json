@@ -1,0 +1,6 @@
+{
+  "prompt": "The order intake endpoint is both too strict and too lax: it rejects submissions whose values are perfectly readable, accepts a fractional quantity and a total of zero, and reports only the first problem it finds instead of all of them. Fix the intake validation so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

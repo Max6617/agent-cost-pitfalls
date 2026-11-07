@@ -1,0 +1,8 @@
+{
+  "name": "multi-file-feature-flags",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Feature flags: definition, evaluation, rollout, audit.",
+  "scripts": { "test": "node --test" }
+}

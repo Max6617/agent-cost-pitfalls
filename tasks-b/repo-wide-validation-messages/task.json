@@ -1,0 +1,6 @@
+{
+  "prompt": "Support is drowning in validation errors nobody can map back to a form. Depending on which screen saved the record, the same bad input comes back as a flat list of sentences, an exception that blows up the whole request, or objects whose codes don't exist in the registry we publish - and the field paths and message wording drift enough that the frontend gives up and shows a generic toast. The convention we all agreed to is written down in docs/; make every module follow it. The tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-validation-messages",
+  "setup": ""
+}

@@ -1,0 +1,12 @@
+measure-gateway listening on http://127.0.0.1:8797
+  base URL   : http://127.0.0.1:8797/v1
+  upstream   : https://api.deepseek.com
+  log        : C:\Users\user\betterharness\results\cmuvnokvo-deepseek-gateway.jsonl
+  enforced   : model=deepseek-flash effort=high temperature=-
+  upstream key: sk-...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8797/__stats
+  [unhandled] TypeError: terminated |     at Fetch.onAborted (node:internal/deps/undici/undici:13842:53) |     at Fetch.emit (node:events:509:28)
+  [unhandled] Error: EBUSY: resource busy or locked, open 'C:\Users\user\betterharness\results\cmuvnokvo-deepseek-gateway.jsonl' |     at Object.writeFileSync (node:fs:2483:20) |     at appendFileSync (node:fs:2565:6)
+  [unhandled] Error: EBUSY: resource busy or locked, open 'C:\Users\user\betterharness\results\cmuvnokvo-deepseek-gateway.jsonl' |     at Object.writeFileSync (node:fs:2483:20) |     at appendFileSync (node:fs:2565:6)

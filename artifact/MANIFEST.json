@@ -1,0 +1,1336 @@
+{
+ "generated": "2026-10-04T08:11:15.632Z",
+ "node": "v24.19.0",
+ "platform": "win32 x64",
+ "scope": "the six matrices that survive (31 tasks x 10 arms x 2 seeds = 620 cells each); plus the tasks-b replication suite (40 tasks x 10 arms x 2 seeds = 800 cells per provider), the position-adjusted re-derivation of the batch-1 contrasts, the arm/seed/ranking/provider ablations, the mixed-effects fit of H1/H3/H4, and the batch-1 contrasts re-derived at B = 200,000, and the counterbalanced re-run with its interleaved A/A",
+ "matrices": [
+  {
+   "dataset": "ds-full",
+   "records": 620,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 619,
+   "matrixIds": [
+    "cmuquohyu-deepseek"
+   ],
+   "models": [
+    "deepseek-flash"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 0,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "glm-flash",
+   "records": 620,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 617,
+   "matrixIds": [
+    "cmur3dilf-zai"
+   ],
+   "models": [
+    "glm-5.3-flash"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "0.1.7-rc.2",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 620,
+   "testsEdited": 2
+  },
+  {
+   "dataset": "luna-full",
+   "records": 620,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 589,
+   "matrixIds": [
+    "cmure98qw-openai"
+   ],
+   "models": [
+    "gpt-6-luna"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "0.1.7-rc.2",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 620,
+   "testsEdited": 81
+  },
+  {
+   "dataset": "qwen-full",
+   "records": 621,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 605,
+   "matrixIds": [
+    "cmurlrmga-qwen",
+    "cmurygosn-qwen"
+   ],
+   "models": [
+    "qwen3.8-flash"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "0.1.7-rc.2",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 621,
+   "testsEdited": 1
+  },
+  {
+   "dataset": "haiku-full",
+   "records": 620,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 519,
+   "matrixIds": [
+    "cmushs68z-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "0.1.7-rc.2",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 620,
+   "testsEdited": 5
+  },
+  {
+   "dataset": "sonnet-full",
+   "records": 620,
+   "cells": 620,
+   "tasks": 31,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 618,
+   "matrixIds": [
+    "cmussrbtr-anthropic-sonnet"
+   ],
+   "models": [
+    "claude-sonnet-5.5"
+   ],
+   "harnessVersions": [
+    "1.52.0",
+    "0.1.7-rc.2",
+    "1.18.30",
+    "3.0.65",
+    "1.16.0"
+   ],
+   "hasFixtureField": 620,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "batchb-ds-full",
+   "records": 808,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 765,
+   "matrixIds": [
+    "cmuvnokvo-deepseek",
+    "cmuxn84ar-deepseek"
+   ],
+   "models": [
+    "deepseek-flash"
+   ],
+   "harnessVersions": [
+    "3.0.65",
+    "1.18.30",
+    "0.1.7-rc.2",
+    "1.16.0",
+    "1.52.0"
+   ],
+   "hasFixtureField": 800,
+   "testsEdited": 247
+  },
+  {
+   "dataset": "batchb-glm-flash",
+   "records": 800,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 726,
+   "matrixIds": [
+    "cmuw95jy3-zai",
+    "cmux5wr6c-zai",
+    "cmuxnu0ob-zai"
+   ],
+   "models": [
+    "glm-5.3-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2",
+    "3.0.65",
+    "1.18.30",
+    "1.16.0",
+    "1.52.0"
+   ],
+   "hasFixtureField": 800,
+   "testsEdited": 165
+  },
+  {
+   "dataset": "batchb-qwen-full",
+   "records": 807,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 682,
+   "matrixIds": [
+    "cmuxuqwrk-qwen",
+    "cmuyb5hkv-qwen",
+    "cmuyu5nyd-qwen",
+    "cmuz7sgjb-qwen",
+    "cmuzr1hfo-qwen",
+    "cmuzzt29z-qwen"
+   ],
+   "models": [
+    "qwen3.8-flash"
+   ],
+   "harnessVersions": [
+    "1.18.30",
+    "3.0.65",
+    "0.1.7-rc.2",
+    "1.52.0",
+    "1.16.0"
+   ],
+   "hasFixtureField": 807,
+   "testsEdited": 268
+  },
+  {
+   "dataset": "batchb-luna-full",
+   "records": 800,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 700,
+   "matrixIds": [
+    "cmuxuqwrk-openai",
+    "cmuyb5ms5-openai"
+   ],
+   "models": [
+    "gpt-6-luna"
+   ],
+   "harnessVersions": [
+    "1.18.30",
+    "3.0.65",
+    "0.1.7-rc.2",
+    "1.52.0",
+    "1.16.0"
+   ],
+   "hasFixtureField": 800,
+   "testsEdited": 455
+  },
+  {
+   "dataset": "batchb-haiku-full",
+   "records": 800,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 206,
+   "matrixIds": [
+    "cmuz4v0ha-anthropic",
+    "cmv01sziv-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "1.18.30",
+    "0.1.7-rc.2",
+    "3.0.65",
+    "1.16.0",
+    "1.52.0"
+   ],
+   "hasFixtureField": 800,
+   "testsEdited": 23
+  },
+  {
+   "dataset": "batchb-sonnet-full",
+   "records": 800,
+   "cells": 800,
+   "tasks": 40,
+   "arms": 10,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 757,
+   "matrixIds": [
+    "cmuynvgov-anthropic-sonnet"
+   ],
+   "models": [
+    "claude-sonnet-5.5"
+   ],
+   "harnessVersions": [
+    "3.0.65",
+    "0.1.7-rc.2",
+    "1.16.0",
+    "1.18.30",
+    "1.52.0"
+   ],
+   "hasFixtureField": 800,
+   "testsEdited": 181
+  },
+  {
+   "dataset": "retentionpilot-amended-haiku-full",
+   "records": 10,
+   "cells": 10,
+   "tasks": 10,
+   "arms": 1,
+   "seeds": [
+    1
+   ],
+   "solved": 7,
+   "matrixIds": [
+    "cmv2njbgl-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "1.18.30"
+   ],
+   "hasFixtureField": 10,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "retentionpilot-haiku-full",
+   "records": 10,
+   "cells": 10,
+   "tasks": 10,
+   "arms": 1,
+   "seeds": [
+    1
+   ],
+   "solved": 0,
+   "matrixIds": [
+    "cmv2n8cwl-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "1.18.30"
+   ],
+   "hasFixtureField": 10,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "retentionpilot-ctl-haiku-full",
+   "records": 1,
+   "cells": 1,
+   "tasks": 1,
+   "arms": 1,
+   "seeds": [
+    1
+   ],
+   "solved": 1,
+   "matrixIds": [
+    "cmv2me3y6-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 1,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "rerun-b1-ds-full",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 124,
+   "matrixIds": [
+    "cmv2zdnws-deepseek"
+   ],
+   "models": [
+    "deepseek-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "rerun-b1-glm-flash",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 124,
+   "matrixIds": [
+    "cmv3193um-zai"
+   ],
+   "models": [
+    "glm-5.3-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "rerun-b1-qwen-full",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 122,
+   "matrixIds": [
+    "cmv34e935-qwen"
+   ],
+   "models": [
+    "qwen3.8-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "rerun-b1-luna-full",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 122,
+   "matrixIds": [
+    "cmv37rgsb-openai"
+   ],
+   "models": [
+    "gpt-6-luna"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 27
+  },
+  {
+   "dataset": "rerun-b1-haiku-full",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 110,
+   "matrixIds": [
+    "cmv45au5r-anthropic"
+   ],
+   "models": [
+    "claude-haiku-4.5"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 0
+  },
+  {
+   "dataset": "rerun-b-ds-full",
+   "records": 160,
+   "cells": 160,
+   "tasks": 40,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 156,
+   "matrixIds": [
+    "cmv39t2ww-deepseek"
+   ],
+   "models": [
+    "deepseek-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 160,
+   "testsEdited": 73
+  },
+  {
+   "dataset": "rerun-b-glm-flash",
+   "records": 160,
+   "cells": 160,
+   "tasks": 40,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 149,
+   "matrixIds": [
+    "cmv3efryx-zai"
+   ],
+   "models": [
+    "glm-5.3-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 160,
+   "testsEdited": 44
+  },
+  {
+   "dataset": "rerun-b-qwen-full",
+   "records": 161,
+   "cells": 160,
+   "tasks": 40,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 148,
+   "matrixIds": [
+    "cmv3my0fu-qwen"
+   ],
+   "models": [
+    "qwen3.8-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 161,
+   "testsEdited": 63
+  },
+  {
+   "dataset": "rerun-b-luna-full",
+   "records": 160,
+   "cells": 160,
+   "tasks": 40,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 151,
+   "matrixIds": [
+    "cmv3z5ym5-openai"
+   ],
+   "models": [
+    "gpt-6-luna"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 160,
+   "testsEdited": 137
+  },
+  {
+   "dataset": "rerun-aa-ds-full",
+   "records": 124,
+   "cells": 124,
+   "tasks": 31,
+   "arms": 2,
+   "seeds": [
+    1,
+    2
+   ],
+   "solved": 124,
+   "matrixIds": [
+    "cmv42rii8-deepseek"
+   ],
+   "models": [
+    "deepseek-flash"
+   ],
+   "harnessVersions": [
+    "0.1.7-rc.2"
+   ],
+   "hasFixtureField": 124,
+   "testsEdited": 0
+  }
+ ],
+ "inputs": [
+  {
+   "path": "results/batchb-ds-full/runs.jsonl",
+   "bytes": 5136514,
+   "sha256": "89e338e3e93b612420e05e9c7b7f0a3255a40baf8679f8fabeff0cbf8ecaa187"
+  },
+  {
+   "path": "results/batchb-glm-flash/runs.jsonl",
+   "bytes": 5099009,
+   "sha256": "be4feff95c660132d6c0eada1cd485fe180ec33ecd3a9b53e1680949b7587118"
+  },
+  {
+   "path": "results/batchb-haiku-full/runs.jsonl",
+   "bytes": 5053100,
+   "sha256": "6e2820d467792b354e4fb184114ace89bdc9765088110ae318962864bf52800b"
+  },
+  {
+   "path": "results/batchb-luna-full/runs.jsonl",
+   "bytes": 3764840,
+   "sha256": "dda7de92f446bc7cbc0a7177a72785a93f13f741475d38ffcb34025ac94a2012"
+  },
+  {
+   "path": "results/batchb-qwen-full/runs.jsonl",
+   "bytes": 5204682,
+   "sha256": "981638b7475d68c403446a11bb38d87d2112b2fda912985bb611b234004d6298"
+  },
+  {
+   "path": "results/batchb-sonnet-full/runs.jsonl",
+   "bytes": 4161886,
+   "sha256": "23ed793712fe870d9fb0914bdb5cc3bb9bb4aebe1f10ad48330a6d21de4c928f"
+  },
+  {
+   "path": "results/cmuqu2chs-deepseek-gateway.jsonl",
+   "bytes": 218210,
+   "sha256": "91a60248474391756596c89fb26dab45ecebae6f253b9cb590618583948b1c67"
+  },
+  {
+   "path": "results/cmuquemvt-deepseek-gateway.jsonl",
+   "bytes": 303060,
+   "sha256": "75e775863d4cf4d07dbb62315ee1216bb6ef27b58c1a25660b6ed9aa65213e4b"
+  },
+  {
+   "path": "results/cmuquohyu-deepseek-gateway.jsonl",
+   "bytes": 7215160,
+   "sha256": "c3c014912898d44c1b9d3d31c7fb5354f8bb7f0458e7da094b6bc85bf6c23e4a"
+  },
+  {
+   "path": "results/cmur362y7-zai-gateway.jsonl",
+   "bytes": 43136,
+   "sha256": "13f661202e24c89c5b92dab01efb686c15d273cf511487cf1dd1f14e7517fbd7"
+  },
+  {
+   "path": "results/cmur3dilf-zai-gateway.jsonl",
+   "bytes": 7438574,
+   "sha256": "aaa9831ac56bc29a44738e9dcced066f9a32a3b4fd40b1ba01a99e1f66c177ce"
+  },
+  {
+   "path": "results/cmure98qw-openai-gateway.jsonl",
+   "bytes": 9588834,
+   "sha256": "f00f69b922ab6dd52c60a7e239a341b91d5ca5325a0388f366577a411356f65e"
+  },
+  {
+   "path": "results/cmurlrmga-qwen-gateway.jsonl",
+   "bytes": 12506985,
+   "sha256": "931e41d8afa9f2166ba24d5d7271f43709d9a77d8f8e8633900a8ea65e496469"
+  },
+  {
+   "path": "results/cmurygosn-qwen-gateway.jsonl",
+   "bytes": 2242314,
+   "sha256": "b25320c65242d95fb773b8cedbf0a1c0cc19488b6751e5dade25a3b962f025d6"
+  },
+  {
+   "path": "results/cmus16rop-qwen-gateway.jsonl",
+   "bytes": 179458,
+   "sha256": "e5ebdb4c3a0c105cecdd743bef3f4d289ffa5f03d58541737e8cf9afbe184eaa"
+  },
+  {
+   "path": "results/cmushs68z-anthropic-gateway.jsonl",
+   "bytes": 16291654,
+   "sha256": "c126d8987e0d2222dded4426c139371b41cfa1609eb17d81ffc25df66bbbad67"
+  },
+  {
+   "path": "results/cmusso8vs-anthropic-sonnet-gateway.jsonl",
+   "bytes": 39091,
+   "sha256": "a7ccd5c75e46c61597a007dac3443ac496323a2b989b230e06d2722f88de657b"
+  },
+  {
+   "path": "results/cmussrbtr-anthropic-sonnet-gateway.jsonl",
+   "bytes": 6298157,
+   "sha256": "79d604ec5fded501215b9c33ce00b04a0f25c294cff6151aaa3d1c6c5f5e9404"
+  },
+  {
+   "path": "results/cmuti3u5l-deepseek-gateway.jsonl",
+   "bytes": 293165,
+   "sha256": "ac4b58862f17fac16c16ea09537def38f7d8cb4e0e468ef6780382b1df411b1f"
+  },
+  {
+   "path": "results/cmutjmthf-deepseek-gateway.jsonl",
+   "bytes": 5062434,
+   "sha256": "ded0938f14f72dd28460e343e2fd560ac177a73826c301cfd09dae6129bdb18a"
+  },
+  {
+   "path": "results/cmuu429yb-deepseek-gateway.jsonl",
+   "bytes": 652038,
+   "sha256": "100d467cdec93b62b0294df112c33e133b5a24c38df0a34e509c57a11ca8a5b6"
+  },
+  {
+   "path": "results/cmuu5f1yn-deepseek-gateway.jsonl",
+   "bytes": 671481,
+   "sha256": "8fd4624a5ea51279319eeadc5a350d3351c8cc4146972b6cf47fb9c5d3abf282"
+  },
+  {
+   "path": "results/cmuu6l0kq-deepseek-gateway.jsonl",
+   "bytes": 801730,
+   "sha256": "da0f6c86364bdf5934643c87d9f70f88ff896c3a0ca8603250fe0320e824ddbc"
+  },
+  {
+   "path": "results/cmuu7wgca-deepseek-gateway.jsonl",
+   "bytes": 4074166,
+   "sha256": "1f3205928363bb6c1f4d82ea9a1b024de8d3dcdd0489be2292c97964882048eb"
+  },
+  {
+   "path": "results/cmuv4gefu-deepseek-gateway.jsonl",
+   "bytes": 3707157,
+   "sha256": "1e6bf2eebd208b374252aa9991b51f898aaecba06a9b71fbaff257d7a4b5104f"
+  },
+  {
+   "path": "results/cmuvc93od-anthropic-gateway.jsonl",
+   "bytes": 7421732,
+   "sha256": "25c1efee5d071178a7547e58f519605baffab7d1612ef925296a1ce5cd29c669"
+  },
+  {
+   "path": "results/cmuvc93og-anthropic-sonnet-gateway.jsonl",
+   "bytes": 615707,
+   "sha256": "19cd42cdb08ff65e9f88a69ad93b5229e1a2a8f36412907ae0185e90949fee4f"
+  },
+  {
+   "path": "results/cmuvgr0qe-anthropic-sonnet-gateway.jsonl",
+   "bytes": 88179,
+   "sha256": "42b7c9832a8bca6d0c2cf37491e321068a868b46f765fed2ffdf987cb2c7daf6"
+  },
+  {
+   "path": "results/cmuvhd54s-anthropic-sonnet-gateway.jsonl",
+   "bytes": 1693649,
+   "sha256": "fa3246c16bd2ab5ee054d6db75fd225a860ecec40e421ef73281b45bb6753a53"
+  },
+  {
+   "path": "results/cmuvnokvo-deepseek-gateway.jsonl",
+   "bytes": 15407886,
+   "sha256": "b6dcd6e0f7bae5b8769db1276825704cbf37ad1d32fa8398471a256477cc53b5"
+  },
+  {
+   "path": "results/cmuw7udpz-deepseek-gateway.jsonl",
+   "bytes": 324187,
+   "sha256": "4f195493b11795c03b4245b023af1c836dd1fbeec17bec4eed5e9d79e312c052"
+  },
+  {
+   "path": "results/cmuw8eycr-deepseek-gateway.jsonl",
+   "bytes": 301058,
+   "sha256": "aff18d42dccafd0f3b61fa43bf75468d9f3f52e96319c2dd88e0155602187216"
+  },
+  {
+   "path": "results/cmuw95jy3-zai-gateway.jsonl",
+   "bytes": 9916722,
+   "sha256": "8d653cb1155a695176d5235e26a05bc5f7b2a72ac7de96606650cfc8987c4035"
+  },
+  {
+   "path": "results/cmux5wr6c-zai-gateway.jsonl",
+   "bytes": 7257920,
+   "sha256": "e3f810e351d0919d5fffbcb7b4692767ebc5fd58cefd196833afbd7ad3c3f2f7"
+  },
+  {
+   "path": "results/cmuxmft7j-zai-gateway.jsonl",
+   "bytes": 378427,
+   "sha256": "5a8c934ad6be15cd1207bf8620b643be155edc64fbd50d28d426e74775977589"
+  },
+  {
+   "path": "results/cmuxn84ar-deepseek-gateway.jsonl",
+   "bytes": 415742,
+   "sha256": "33d3db340623d71208ff6b198294839c728027fff4e1982fe3a055c53d22541f"
+  },
+  {
+   "path": "results/cmuxnu0ob-zai-gateway.jsonl",
+   "bytes": 385116,
+   "sha256": "e83480345aad66ef11d792ada63d963e82541d9bdae132d6ae4933ae99c9416a"
+  },
+  {
+   "path": "results/cmuxox5nq-deepseek-gateway.jsonl",
+   "bytes": 314541,
+   "sha256": "b80e26744e9bcf502871fc86058c90524c8d28bae085a67ed855c87b27fd638e"
+  },
+  {
+   "path": "results/cmuxunu6l-openai-gateway.jsonl",
+   "bytes": 7800,
+   "sha256": "f92c34b58f7c4738960d0bae68da4754e924cec865a2453cf1d8ea38e438a7f1"
+  },
+  {
+   "path": "results/cmuxuqwrk-openai-gateway.jsonl",
+   "bytes": 13701454,
+   "sha256": "1db000e8296b2d777ec1c8e989ce2b973e86a13f0c05d781fc98714022fe7297"
+  },
+  {
+   "path": "results/cmuxuqwrk-qwen-gateway.jsonl",
+   "bytes": 9157389,
+   "sha256": "452151f36e1eb26d8969c71e07a87461e3da8936fa052e7835770c5d0ba388a5"
+  },
+  {
+   "path": "results/cmuyb5hkv-qwen-gateway.jsonl",
+   "bytes": 11924853,
+   "sha256": "db28bc6c8c00f61a2a0bf1b4f86e9903e68004094d635b5b2d17e6658b388cdb"
+  },
+  {
+   "path": "results/cmuyb5ms5-openai-gateway.jsonl",
+   "bytes": 4423519,
+   "sha256": "c62ddfe8a55c45b62beb63d64385d122ee95de0f898b6d5166421f4e451e81f3"
+  },
+  {
+   "path": "results/cmuynvgov-anthropic-sonnet-gateway.jsonl",
+   "bytes": 9548575,
+   "sha256": "4d969dbfcd7f1acfa236391b71dac449180e583ec1675d359700638d8981c380"
+  },
+  {
+   "path": "results/cmuyu5nyd-qwen-gateway.jsonl",
+   "bytes": 8582493,
+   "sha256": "10784e257ef88b5a527ea5bea631caae57b6f3b02767d31ce6c9bea0764cee7c"
+  },
+  {
+   "path": "results/cmuz4v0ha-anthropic-gateway.jsonl",
+   "bytes": 2048681,
+   "sha256": "8280e9a743e235612e7eafbe9e8a0953e39406c02b7e629ea1baaa49ed3048ab"
+  },
+  {
+   "path": "results/cmuz73rge-anthropic-gateway.jsonl",
+   "bytes": 341635,
+   "sha256": "221ff0c162242e3e309c2eb3341aaedbaaf0897f69c3e0f6ee0eac4a9bbd5d6c"
+  },
+  {
+   "path": "results/cmuz7hgw5-qwen-gateway.jsonl",
+   "bytes": 53165,
+   "sha256": "493a235bcbee9b4e2d740aaca9b440cc7fd0cdaf422692afbd1ec7cb993b6eae"
+  },
+  {
+   "path": "results/cmuz7sgjb-qwen-gateway.jsonl",
+   "bytes": 10978757,
+   "sha256": "58dda4b6ee2e9f8fe487c05b78a6ac286de08a4ce132ec42872237084da6dd52"
+  },
+  {
+   "path": "results/cmuzr1hfo-qwen-gateway.jsonl",
+   "bytes": 6570006,
+   "sha256": "fbfd8cf5de4354f8fa62179ed7127106817ee0a0636dece9e5f59d242df86ad5"
+  },
+  {
+   "path": "results/cmuzyr51a-qwen-gateway.jsonl",
+   "bytes": 774871,
+   "sha256": "a0b3bbef526a437cfe7cffc3ef9e19f3e6c7899f393e29ecb43354b95ef44aa0"
+  },
+  {
+   "path": "results/cmuzzt29z-qwen-gateway.jsonl",
+   "bytes": 964375,
+   "sha256": "53536e2b30cd00fdcb16279797116ad80930cb75bf887d037494bd1be5ab2899"
+  },
+  {
+   "path": "results/cmv01sziv-anthropic-gateway.jsonl",
+   "bytes": 18922163,
+   "sha256": "772a229d6995643c065dbe54ec33e7a828fe0fa96a082c16a337c47cb8438e2a"
+  },
+  {
+   "path": "results/cmv0gmzkv-anthropic-gateway.jsonl",
+   "bytes": 436915,
+   "sha256": "8ce37a564f1c5204278419f6e015d138e8011afa62521cfc2b237ee5be8dda26"
+  },
+  {
+   "path": "results/cmv2j8ad6-deepseek-gateway.jsonl",
+   "bytes": 94448,
+   "sha256": "eb348ef0a6a6bdecc71ec34ee11f22ad31de04913ffae42eafe92259091f723a"
+  },
+  {
+   "path": "results/cmv2jkqjg-deepseek-gateway.jsonl",
+   "bytes": 1850951,
+   "sha256": "80d74b4b568c8fee609675145d410b89fc26a20a1bb8d3d3510547a79358a4d9"
+  },
+  {
+   "path": "results/cmv2me3y6-anthropic-gateway.jsonl",
+   "bytes": 117249,
+   "sha256": "9d612c9b15c11ee4bed391248d82fe71fa057b20c821cf52246151ea44d9d4b1"
+  },
+  {
+   "path": "results/cmv2mpg79-anthropic-gateway.jsonl",
+   "bytes": 101024,
+   "sha256": "b1cf226702c24a221df3fe5fef654ae9a68d294ea8ad2c57a31a99d0079af00c"
+  },
+  {
+   "path": "results/cmv2mxhsl-anthropic-gateway.jsonl",
+   "bytes": 5857,
+   "sha256": "a3301d5bff783305f09cce25c1669fe3b6a2ab2939e0bbe7c2e0514c664e5f54"
+  },
+  {
+   "path": "results/cmv2n1i7h-anthropic-gateway.jsonl",
+   "bytes": 6892,
+   "sha256": "b6dff2343875520ac9c845edc5353f6ee3ab844163ae62aba2af5f424509d79c"
+  },
+  {
+   "path": "results/cmv2n8cwl-anthropic-gateway.jsonl",
+   "bytes": 53685,
+   "sha256": "11c81100bf0998fbf062668e35e439728be80fcf5b739e26cc5f96c0d5fd269f"
+  },
+  {
+   "path": "results/cmv2njbgl-anthropic-gateway.jsonl",
+   "bytes": 212307,
+   "sha256": "32b69a03c12940a0f8ed133d0a1ef0502f07df6616f932c353f2b2b01de776d1"
+  },
+  {
+   "path": "results/cmv2ypvsm-deepseek-gateway.jsonl",
+   "bytes": 90793,
+   "sha256": "5171516ab802e36cb4ef0e0e7584f391db122b243fcdbe1fdf8b69635b3d24f2"
+  },
+  {
+   "path": "results/cmv2yw6al-deepseek-gateway.jsonl",
+   "bytes": 57888,
+   "sha256": "15f2e124d1adfe49060b17aa15693870ef762af968858c218176281c272d3a2b"
+  },
+  {
+   "path": "results/cmv2z1xi6-deepseek-gateway.jsonl",
+   "bytes": 60095,
+   "sha256": "e61c0395a567c07361fc9a0f3c6be0d0cd39ae80eeddb5c34704d275121bed31"
+  },
+  {
+   "path": "results/cmv2z7zqa-deepseek-gateway.jsonl",
+   "bytes": 99216,
+   "sha256": "3e7cb5bd19b9fc0850e020bc1d96c8c7d55972f7087673573c625e5d2a761dbe"
+  },
+  {
+   "path": "results/cmv2zdnws-deepseek-gateway.jsonl",
+   "bytes": 1587319,
+   "sha256": "ccdb8fbccfa6d226ac8a0cef3cfd9c14cbc416e98b007f54690d5cfbf4b6d8df"
+  },
+  {
+   "path": "results/cmv3193um-zai-gateway.jsonl",
+   "bytes": 1792542,
+   "sha256": "346640d49e7098ff18180a566905a08c4e07064c4154486a0b46b0d64870e2e5"
+  },
+  {
+   "path": "results/cmv34e935-qwen-gateway.jsonl",
+   "bytes": 2365200,
+   "sha256": "684481923fa78a9076a66a459494a6a6490ab294ac1561ca997e4e64caf9b24b"
+  },
+  {
+   "path": "results/cmv37rgsb-openai-gateway.jsonl",
+   "bytes": 2188503,
+   "sha256": "3bc42edf32e572667ab67add6d1652a9d06aa2a98769efb008afdfec810b7c0d"
+  },
+  {
+   "path": "results/cmv39t2ww-deepseek-gateway.jsonl",
+   "bytes": 3697482,
+   "sha256": "8bb8e498865a5c64b8688b9ac987edca608c01c53cb2a261ed47113cacf54bc6"
+  },
+  {
+   "path": "results/cmv3efryx-zai-gateway.jsonl",
+   "bytes": 4293449,
+   "sha256": "ac2cc2277e5f832daa5d97db2263f139e3062e01f4c756f7a9ad3e46a607d163"
+  },
+  {
+   "path": "results/cmv3my0fu-qwen-gateway.jsonl",
+   "bytes": 6354531,
+   "sha256": "1162385c22ed0b3d8786c0398888157c9e9c627b421bcf82ef0200154fa44234"
+  },
+  {
+   "path": "results/cmv3z5ym5-openai-gateway.jsonl",
+   "bytes": 4343098,
+   "sha256": "b47c7c44fa247c17854dd01fce0d9ae963c9977c3c131cf010168b7bcd30b308"
+  },
+  {
+   "path": "results/cmv42rii8-deepseek-gateway.jsonl",
+   "bytes": 1782943,
+   "sha256": "18f5ee5289cb15d06e6f498598d0047908650df9711cc13a9f672b89ff5cd41f"
+  },
+  {
+   "path": "results/cmv45au5r-anthropic-gateway.jsonl",
+   "bytes": 4350446,
+   "sha256": "25a2e27a54c6a8412fa3a4b6c473e08e55f3447ca2d55c2a73e4c669972b6a9e"
+  },
+  {
+   "path": "results/ds-full/runs.jsonl",
+   "bytes": 3194773,
+   "sha256": "249929dca4df02585f437282782b405092e39972488d045d406d52a2a3fb729d"
+  },
+  {
+   "path": "results/gateway-harness-verify.jsonl",
+   "bytes": 133317,
+   "sha256": "7cccd1dfe7a4d66407319b15cfc805c73bf1332906d2f369d7b09590c7d5591a"
+  },
+  {
+   "path": "results/glm-flash/runs.jsonl",
+   "bytes": 3209008,
+   "sha256": "64797b8b46d1b7257555e8cce1594bd19785c429411184d9702bd91b581741b5"
+  },
+  {
+   "path": "results/haiku-full/runs.jsonl",
+   "bytes": 3055546,
+   "sha256": "bf07e20f5de729289f091d515733433548b7730edfc0d0833316c0a418efe661"
+  },
+  {
+   "path": "results/hardbatch-qwen-fixed-gateway.jsonl",
+   "bytes": 38828,
+   "sha256": "639d4d5138acb4cee5b4c4f61174d01db43bf500a3d2d933c05654df1c8aecee"
+  },
+  {
+   "path": "results/luna-full/runs.jsonl",
+   "bytes": 2274280,
+   "sha256": "637208d97961e9f4790725e29f7615b02ab5c979ded474e14d3da90a573e7b5f"
+  },
+  {
+   "path": "results/openai-gateway-2.jsonl",
+   "bytes": 55613,
+   "sha256": "9e01f75c6d65588b2be020b5a5fc67b17299f856dcc9df05c2dda4e6cca1283f"
+  },
+  {
+   "path": "results/qwen-full/runs.jsonl",
+   "bytes": 3347081,
+   "sha256": "2ed4dc175d043cd3fdeee6ec26820eea4387b9b6d8475b1264f452b0c8f00ca7"
+  },
+  {
+   "path": "results/rerun-aa-ds-full/runs.jsonl",
+   "bytes": 760207,
+   "sha256": "6a5bdf635ee880907c6af4ca5c04934ee015a8a25b73e8338e4fc240720884d5"
+  },
+  {
+   "path": "results/rerun-b-ds-full/runs.jsonl",
+   "bytes": 1141221,
+   "sha256": "e99c36ecbeeccb7541d265f243333dedb75ecaf3dfc60d8156c9032926a1461c"
+  },
+  {
+   "path": "results/rerun-b-glm-flash/runs.jsonl",
+   "bytes": 1142515,
+   "sha256": "a92e666fb96bd4caf6499ca8e0570f4ef9276813561d8b23876d561b610c4fbb"
+  },
+  {
+   "path": "results/rerun-b-luna-full/runs.jsonl",
+   "bytes": 626478,
+   "sha256": "97841ef7cd7de6075ed3d956dedf346f72b8bc1aec815ae080f6dfc686e47ce1"
+  },
+  {
+   "path": "results/rerun-b-qwen-full/runs.jsonl",
+   "bytes": 1145509,
+   "sha256": "331ad6f4c06b8811812b730148e8fbc5eb0a1fc1e650c3e3520447ecfca91c97"
+  },
+  {
+   "path": "results/rerun-b1-ds-full/runs.jsonl",
+   "bytes": 751696,
+   "sha256": "e8e0543e34c9d38bc5749e76ca86399946df92bc7b9666b6693f2f73df71ccc5"
+  },
+  {
+   "path": "results/rerun-b1-glm-flash/runs.jsonl",
+   "bytes": 727221,
+   "sha256": "83a07e68c8c7b571c2c4283fa6af14bbed8be7ed08c864a7a8dd6906c9f71c7f"
+  },
+  {
+   "path": "results/rerun-b1-haiku-full/runs.jsonl",
+   "bytes": 621883,
+   "sha256": "7a6c49de0e2e07a774a6482114c1652a4dda238ba9e96bb045ba3c88813c1a0a"
+  },
+  {
+   "path": "results/rerun-b1-luna-full/runs.jsonl",
+   "bytes": 347945,
+   "sha256": "b0be8c071346feccee1a5b0835a773b74e699466ebd7964a60a25499edb494b0"
+  },
+  {
+   "path": "results/rerun-b1-qwen-full/runs.jsonl",
+   "bytes": 751733,
+   "sha256": "713b8fc2566056406e79dc01572a314b322f32e41efbf71820534836b6c3f75a"
+  },
+  {
+   "path": "results/rerun-ds-gateway.jsonl",
+   "bytes": 180622,
+   "sha256": "a3481861db72066f8d2626eff22a9bd16b8044e4625b5ee882192d1e79eb9185"
+  },
+  {
+   "path": "results/rerun-glm-gateway.jsonl",
+   "bytes": 38699,
+   "sha256": "cf5c6137f37642eb4b3068e166bb1a12f2ebec382eae62664c47bb8db3ff7c30"
+  },
+  {
+   "path": "results/retentionpilot-amended-haiku-full/runs.jsonl",
+   "bytes": 49620,
+   "sha256": "d9565a31af0f31ea192798e97499cddcdb91ba9beccea90cb377376c484c25b8"
+  },
+  {
+   "path": "results/retentionpilot-ctl-haiku-full/runs.jsonl",
+   "bytes": 2522,
+   "sha256": "96ed44990e91b872e958608b0aaf088cf29132f642bb85d40a4679450b26f453"
+  },
+  {
+   "path": "results/retentionpilot-haiku-full/runs.jsonl",
+   "bytes": 70698,
+   "sha256": "828eacdf53e95d8401ffe08ccd800be616805c0e2348cbc374458fbe559e1551"
+  },
+  {
+   "path": "results/sonnet-full/runs.jsonl",
+   "bytes": 2482349,
+   "sha256": "eb2c8d57035c1ac1a607a5979c2e579bf004977526baa71ae1e134bbe37b0b41"
+  }
+ ],
+ "inFlight": [
+  "c:/users/user/betterharness/results/cmuti3u5l-deepseek-gateway.jsonl",
+  "cmuti3u5l-deepseek-gateway.jsonl"
+ ],
+ "outputs": [
+  {
+   "path": "analysis/aa-placebo-2026-10-10.json",
+   "bytes": 7356,
+   "sha256": "29ab796f2a2d170813e4e79c4175cd12247c8884871cce09bfec1f8f0feb51d4"
+  },
+  {
+   "path": "analysis/ablations-2026-10-09.json",
+   "bytes": 13542,
+   "sha256": "c8d6dc38f43874c6fda3f5a7b4fe3f82354b5b22239d49af0ca17a1d2e6bd4df"
+  },
+  {
+   "path": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "bytes": 4271,
+   "sha256": "09d7f61e0cc763e999939d8f37e0afb4d672eaf20487099300557e5bf5c183e1"
+  },
+  {
+   "path": "analysis/common-f-infeasibility-2026-10-10.json",
+   "bytes": 5370,
+   "sha256": "81f6f7839b74b712bf41dda004b3c81d5594a32686e2c9ab57b0fbe9759707af"
+  },
+  {
+   "path": "analysis/cost-panel-6model-2026-10-03.json",
+   "bytes": 2352343,
+   "sha256": "b6d309e6a6dd9980db48c75cf0887436598be3335d9cc74aef3ac45503b1493e"
+  },
+  {
+   "path": "analysis/hypotheses-6model-2026-10-03.json",
+   "bytes": 2311,
+   "sha256": "fd566d4f1b1fd2977a798b0dfb190821c777441cc6aed2093e3c9cafc8f53e4f"
+  },
+  {
+   "path": "analysis/hypotheses-6model-2026-10-09.json",
+   "bytes": 2334,
+   "sha256": "0d2d0938282d3bd6ff72eb0996bfe8ea60f548f7fe3b470dc02576e01c4c9d67"
+  },
+  {
+   "path": "analysis/hypotheses-batchb-2026-10-09.json",
+   "bytes": 2335,
+   "sha256": "c682705249245132d073eeda31757b9b63b2b8fe0ec02fea70aa9b354a342b2d"
+  },
+  {
+   "path": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "bytes": 2008,
+   "sha256": "3ccd4a5f92d5abc0470e731f650acf4d1cbab76a2095d0cd20643e18290f1897"
+  },
+  {
+   "path": "analysis/mixed-effects-6model-2026-10-04.json",
+   "bytes": 2696,
+   "sha256": "a9d2c2637da2e70a7fc725786b3290d91927543fd4635cbaa01d3f138f9a69c6"
+  },
+  {
+   "path": "analysis/panel-analysis-6model-2026-10-03.json",
+   "bytes": 68472,
+   "sha256": "06397bdfbd7262527cddd0daf5f365c47858f691c7d78ed1f2b960df8b5ddf41"
+  },
+  {
+   "path": "analysis/panel-analysis-6model-2026-10-09.json",
+   "bytes": 70022,
+   "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+  },
+  {
+   "path": "analysis/panel-analysis-batchb-2026-10-09.json",
+   "bytes": 67991,
+   "sha256": "5916e990fce28314567449e5ad999e4643d6b424ca1399acb96f792e04551df0"
+  },
+  {
+   "path": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "bytes": 43897,
+   "sha256": "ed6f69e886a7811748a0119e15013b66eced18859172d954aa9c0d07eca2daa1"
+  },
+  {
+   "path": "analysis/position-adjust-6model-2026-10-09.json",
+   "bytes": 6861,
+   "sha256": "2387fadb2f9f185ecc1bf43d97b19f8ff6910a7845368fab8e96934fa22c0294"
+  },
+  {
+   "path": "analysis/position-adjust-batchb-2026-10-09.json",
+   "bytes": 6850,
+   "sha256": "92a6d44d4b9d6cc8d7a85a6b73a485ab64694e0f3ad254dc4e1ec229ea7e9505"
+  },
+  {
+   "path": "analysis/prefix-retention-ci-2026-10-10.json",
+   "bytes": 2596,
+   "sha256": "39eafa49f9004278b32faac90ccff8b6d8634abb824f51194f5aeba8baf0950e"
+  },
+  {
+   "path": "analysis/prefix-retention.json",
+   "bytes": 4771,
+   "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+  },
+  {
+   "path": "analysis/quality-guard-2026-10-10.json",
+   "bytes": 12064,
+   "sha256": "63e1971afc7089a3ae6afae8c1997ccb50f6088144970dfaae74dca774d0d762"
+  },
+  {
+   "path": "analysis/ranking-adjusted-2026-10-10.json",
+   "bytes": 39936,
+   "sha256": "9ca42b2f73689cd5b73ff155b124a821657c9e93a8ed20bc0b5d93f333fa226e"
+  },
+  {
+   "path": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "bytes": 4423,
+   "sha256": "1da2fcedb2d3c5818b424d449091132ad965bbd961892eb685e8f99f832b6d3d"
+  },
+  {
+   "path": "analysis/rerun-compare-2026-10-11.json",
+   "bytes": 24093,
+   "sha256": "873d7da2998a95e95975871d1ca0e41a9fe2425801fb45c8ca7a1b84ad510bac"
+  },
+  {
+   "path": "analysis/retention-pilot-2026-10-10.json",
+   "bytes": 1807,
+   "sha256": "c2267ba82ffb100ab410bcadfcff691f4b1fc4e19a11803fc7b75ddf5ee6b4c3"
+  },
+  {
+   "path": "analysis/test-edit-incidence-2026-10-10.json",
+   "bytes": 13749,
+   "sha256": "ac48b8bb778ae9df47d478a7d87b1214b5fc2c8b0327f6fb4f2606c0b5abbd13"
+  },
+  {
+   "path": "analysis/test-edit-sensitivity-6model-2026-10-04.json",
+   "bytes": 28047,
+   "sha256": "0fd7d056d397e909a8035326aec60ad276a2e109ce62b323603f233b10c6c060"
+  },
+  {
+   "path": "analysis/verdict-seed-stability-2026-10-10.json",
+   "bytes": 13635,
+   "sha256": "0804afc53b543ce2648e7064ec87dc517b50dcdff7dfb11879fa7b69ba70f426"
+  }
+ ],
+ "commands": [
+  "node tools/cost-panel.mjs --json analysis/cost-panel-6model-2026-10-03.json",
+  "node tools/panel-analysis.mjs --json analysis/panel-analysis-6model-2026-10-03.json",
+  "node tools/hypotheses.mjs --json analysis/hypotheses-6model-2026-10-03.json",
+  "node tools/prefix-retention.mjs --json analysis/prefix-retention.json",
+  "node tools/test-edit-sensitivity.mjs --json analysis/test-edit-sensitivity-6model-2026-10-04.json",
+  "node tools/panel-analysis.mjs --datasets batchb --json analysis/panel-analysis-batchb-2026-10-09.json",
+  "node tools/hypotheses.mjs --datasets batchb --json analysis/hypotheses-batchb-2026-10-09.json",
+  "node tools/panel-analysis.mjs --datasets batchb-deepseek,batchb-glm-flash,batchb-qwen,batchb-luna --json analysis/panel-analysis-batchb-four-2026-10-09.json",
+  "node tools/hypotheses.mjs --datasets batchb-deepseek,batchb-glm-flash,batchb-qwen,batchb-luna --json analysis/hypotheses-batchb-four-2026-10-09.json",
+  "node tools/replication-verdict.mjs --json analysis/replication-verdict-batchb-2026-10-09.json",
+  "node tools/position-adjust.mjs --json analysis/position-adjust-6model-2026-10-09.json",
+  "node tools/position-adjust.mjs --datasets batchb --json analysis/position-adjust-batchb-2026-10-09.json",
+  "node tools/ablations.mjs --json analysis/ablations-2026-10-09.json",
+  "node tools/panel-analysis.mjs --json analysis/panel-analysis-6model-2026-10-09.json",
+  "node tools/hypotheses.mjs --json analysis/hypotheses-6model-2026-10-09.json",
+  "node tools/replication-verdict.mjs --batch1-panel analysis/panel-analysis-6model-2026-10-09.json --json analysis/replication-verdict-batchb-2026-10-09.json",
+  "node tools/mixed-effects-hypotheses.mjs --json analysis/mixed-effects-6model-2026-10-04.json",
+  "node tools/verdict-seed-stability.mjs --seeds 20 --iters 200000 --json analysis/verdict-seed-stability-2026-10-10.json",
+  "node tools/test-edit-incidence.mjs --json analysis/test-edit-incidence-2026-10-10.json",
+  "node tools/prefix-retention.mjs --ci-json analysis/prefix-retention-ci-2026-10-10.json",
+  "node tools/ranking-adjusted.mjs --iters 200000 --json analysis/ranking-adjusted-2026-10-10.json",
+  "node tools/aa-analysis.mjs --iters 200000 --seed 12345 --json analysis/aa-placebo-2026-10-10.json",
+  "node tools/retention-pilot-analysis.mjs --dir results/retentionpilot-amended-haiku-full --control results/retentionpilot-ctl-haiku-full --json analysis/retention-pilot-2026-10-10.json",
+  "node tools/anthropic-cost-bracket.mjs --json analysis/anthropic-cost-bracket-2026-10-10.json",
+  "node tools/common-f-check.mjs --json analysis/common-f-infeasibility-2026-10-10.json",
+  "node tools/quality-guard.mjs --json analysis/quality-guard-2026-10-10.json",
+  "node tools/rerun-compare.mjs --json analysis/rerun-compare-2026-10-11.json"
+ ],
+ "testCommand": "node --test \"tools/*.test.mjs\"",
+ "notReproducible": [
+  {
+   "figures": [
+    "F31",
+    "F34",
+    "F35"
+   ],
+   "reason": "seven-model panel: results/glm53, glm-terse, glm-harness, haiku-full, sonnet-full destroyed; no git history, not in the backup mirror",
+   "survivesAs": "analysis/panel-analysis.json and analysis/hypotheses.json, generated 2026-10-02T07:52Z (the only witness; do not overwrite)"
+  },
+  {
+   "figures": [
+    "F38"
+   ],
+   "reason": "hard-task replication: results/f18-* and results/haiku-hard-probe destroyed",
+   "survivesAs": "nothing - cannot be re-run"
+  },
+  {
+   "figures": [
+    "F42"
+   ],
+   "reason": "hard batch: results/hardbatch-deepseek, hardbatch-glm, hardbatch-qwen-fixed destroyed",
+   "survivesAs": "results/hardbatch-qwen-fixed-gateway.jsonl only (a gateway log, no run records)"
+  }
+ ],
+ "scopes": [
+  "the six matrices that survive (31 tasks x 10 arms x 2 seeds = 620 cells each)",
+  "the tasks-b replication suite (40 tasks x 10 arms x 2 seeds = 800 cells per provider), the position-adjusted re-derivation of the batch-1 contrasts, the arm/seed/ranking/provider ablations, the mixed-effects fit of H1/H3/H4, and the batch-1 contrasts re-derived at B = 200,000, and the counterbalanced re-run with its interleaved A/A"
+ ],
+ "extended": "2026-11-07T11:24:38.353Z"
+}

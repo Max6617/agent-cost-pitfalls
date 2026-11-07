@@ -1,0 +1,9 @@
+{
+  "overheadMs": 250,
+  "tableSetupMs": 1500,
+  "batchOverheadMs": 10,
+  "batchLockMs": 40,
+  "lockBudgetMs": 2000,
+  "rowsPerSecond": 20000,
+  "defaultBatchSize": 5000
+}

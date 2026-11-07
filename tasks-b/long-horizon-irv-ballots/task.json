@@ -1,0 +1,6 @@
+{
+  "prompt": "The tally service is electing the wrong people and we cannot see why. Re-running the same ballots in a different arrival order can crown a different winner, a candidate knocked out in an early round shows back up in later counts - in one election they even won - and races with obvious more-than-half support drag on for extra rounds as if ballots that have left the count still set the bar. We also caught it counting a ballot that ranks the same candidate twice, which docs/ says should be skipped outright. The reproductions we managed to write are under test/, but they are not the whole acceptance criteria - make the service behave the way docs/ says it should.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-irv-ballots",
+  "setup": ""
+}

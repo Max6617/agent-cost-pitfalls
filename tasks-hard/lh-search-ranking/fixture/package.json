@@ -1,0 +1,12 @@
+{
+  "name": "docsearch",
+  "version": "1.4.0",
+  "private": true,
+  "description": "In-memory document index behind the search API",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "search": "node bin/search.js"
+  }
+}

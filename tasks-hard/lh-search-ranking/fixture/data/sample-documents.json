@@ -1,0 +1,38 @@
+[
+  {
+    "id": "doc-01",
+    "title": "Keeper's log: the lighthouse",
+    "tags": "operations history",
+    "body": "The keeper walked the lighthouse stairs twice a night and wrote what he saw in the log."
+  },
+  {
+    "id": "doc-02",
+    "title": "Release notes for the index",
+    "tags": "release notes",
+    "body": "This release notes entry describes the phrase handling, the ranking changes and the paging default."
+  },
+  {
+    "id": "doc-03",
+    "title": "Café opening hours",
+    "tags": "facilities",
+    "body": "The café in the north wing opens at 07:30 and closes when the last keeper leaves."
+  },
+  {
+    "id": "doc-04",
+    "title": "Draft: harbour survey",
+    "tags": "draft survey",
+    "body": "A draft survey of the harbour wall, taken before the winter storms, with tide tables attached."
+  },
+  {
+    "id": "doc-05",
+    "title": "RFC 822 and modern headers",
+    "tags": "mail rfc",
+    "body": "RFC 822 defined the header fields that mail still uses; the modern replacement keeps the same shape."
+  },
+  {
+    "id": "doc-06",
+    "title": "Index maintenance runbook",
+    "tags": "operations runbook",
+    "body": "Adding a document updates the postings and the average length; removing one drops its terms from the index."
+  }
+]

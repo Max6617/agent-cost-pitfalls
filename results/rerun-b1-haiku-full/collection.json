@@ -1,0 +1,44 @@
+{
+  "matrixId": "cmv45au5r-anthropic",
+  "provider": "anthropic",
+  "plan": "rerun-b1",
+  "tasksDir": "tasks",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 124,
+  "passes": 1,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8791",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8791",
+    "--upstream",
+    "https://api.anthropic.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv45au5r-anthropic-gateway.jsonl",
+    "--force-model",
+    "claude-haiku-4.5",
+    "--max-tokens-ceiling",
+    "32768",
+    "--native-messages",
+    "--auto-cache",
+    "--workspace-id",
+    "wrkspc_REDACTED"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "claude-haiku-4.5",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": true
+  },
+  "cacheMode": "STATIC breakpoints PLUS the top-level field: every arm caches, as it does on the four automatic-caching providers",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-11T18:22:33.955Z"
+}

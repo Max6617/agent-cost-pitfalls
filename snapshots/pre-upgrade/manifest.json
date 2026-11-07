@@ -1,0 +1,71 @@
+{
+ "label": "pre-upgrade",
+ "createdAt": "2026-09-29T10:51:29.885Z",
+ "dshVersion": "0.1.5-alpha.1",
+ "node": "v24.19.0",
+ "platform": "win32",
+ "workspaceGitHead": "8cc408e8d4cae314a03d5fe4046458ae8b46ae4e",
+ "dshHome": "C:\\Users\\user\\.dsh",
+ "files": {
+  "agent-presets\\economy\\agent.cordis.yml": {
+   "sha256": "da37300808008d2c",
+   "bytes": 14778
+  },
+  "agent-presets\\economy\\preset.yml": {
+   "sha256": "223611507d203d6a",
+   "bytes": 159
+  },
+  "agent-presets\\ptc-opt\\agent.cordis.yml": {
+   "sha256": "d4b542ef2ef28d59",
+   "bytes": 14718
+  },
+  "agent-presets\\ptc-opt\\preset.yml": {
+   "sha256": "db85c056551820e5",
+   "bytes": 195
+  },
+  "agent-presets\\ptc-router\\agent.cordis.yml": {
+   "sha256": "3cf76aec9756798e",
+   "bytes": 15631
+  },
+  "agent-presets\\ptc-router\\preset.yml": {
+   "sha256": "2ce342ca5f4f8ad0",
+   "bytes": 213
+  },
+  "agent-presets\\ptc-router\\router-core.mjs": {
+   "sha256": "869839030f815341",
+   "bytes": 10164
+  },
+  "agent-presets\\ptc-router\\router-plugin.mjs": {
+   "sha256": "df215dae9d0550e1",
+   "bytes": 7784
+  },
+  "agent-presets\\research\\agent.cordis.yml": {
+   "sha256": "f0420fb11f926d35",
+   "bytes": 13923
+  },
+  "agent-presets\\research\\preset.yml": {
+   "sha256": "ee34710da3c91f2e",
+   "bytes": 172
+  },
+  "agent-presets\\standard-opt\\agent.cordis.yml": {
+   "sha256": "f9ca1cfb6c941ee3",
+   "bytes": 13529
+  },
+  "agent-presets\\standard-opt\\preset.yml": {
+   "sha256": "af1f9dedfe0218e2",
+   "bytes": 195
+  },
+  "profile\\cordis.patch.yml": {
+   "sha256": "ef189a8c27db6d63",
+   "bytes": 217
+  },
+  "profile\\package.json": {
+   "sha256": "b07f71cba5c341f6",
+   "bytes": 236
+  },
+  "dsh-settings.yaml": {
+   "sha256": "024aa473155539c4",
+   "bytes": 885
+  }
+ }
+}

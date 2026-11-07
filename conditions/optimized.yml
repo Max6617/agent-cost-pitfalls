@@ -1,0 +1,11 @@
+# Optimized policy, expressed as overrides on the HEADLESS composition.
+#
+# Presentation is NOT set here - that is DSH_TOOLS_MODE, set by the runner per arm.
+# This patch carries only the policy half of the 2x2: a tighter tool-result pruner,
+# which is the lever that targets tool results (37-44% of context).
+
+- id: tool-result-pruner
+  config:
+    thresholdChars: 6000
+    headChars: 3000
+    tailChars: 800

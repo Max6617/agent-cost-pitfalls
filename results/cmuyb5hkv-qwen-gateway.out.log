@@ -1,0 +1,9 @@
+measure-gateway listening on http://127.0.0.1:8796
+  base URL   : http://127.0.0.1:8796/v1
+  upstream   : https://dashscope-intl.aliyuncs.com/apps/anthropic   (native messages: no /anthropic inserted)
+  log        : C:\Users\user\betterharness\results\cmuyb5hkv-qwen-gateway.jsonl
+  enforced   : model=qwen3.8-flash effort=- temperature=-
+  upstream key: sk-...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8796/__stats

@@ -1,0 +1,27 @@
+{
+  "note": "The batch tier as it is deployed. The scheduler binary plans this set; the harness passes its own jobs in tests.",
+  "jobs": [
+    { "id": "nightly-rollup", "pool": "batch", "priority": 5, "seq": 10,
+      "schedule": { "kind": "local-daily", "zone": "Europe/Berlin", "at": "02:30" },
+      "catchup": "last", "misfireAfterMs": 3600000, "maxAttempts": 2,
+      "backoffMs": 60000, "maxBackoffMs": 600000 },
+
+    { "id": "invoice-sweep", "pool": "batch", "priority": 3, "seq": 20,
+      "schedule": { "kind": "interval", "everyMs": 900000, "anchor": "2024-01-01T00:00:00.000Z" },
+      "catchup": "all", "misfireAfterMs": 300000, "maxAttempts": 3,
+      "backoffMs": 30000, "maxBackoffMs": 300000 },
+
+    { "id": "rate-pull", "pool": "io", "priority": 1, "seq": 30,
+      "schedule": { "kind": "interval", "everyMs": 3600000, "anchor": "2024-01-01T00:00:00.000Z" },
+      "catchup": "last", "misfireAfterMs": 0, "maxAttempts": 3,
+      "backoffMs": 15000, "maxBackoffMs": 120000 },
+
+    { "id": "report-refresh", "pool": "report", "priority": 0, "seq": 40,
+      "schedule": { "kind": "cron", "minute": "*/15", "hour": "*" },
+      "catchup": "none", "misfireAfterMs": 600000, "maxAttempts": 1 },
+
+    { "id": "mailbox-poll", "pool": "io", "priority": 0, "seq": 50,
+      "schedule": { "kind": "cron", "zone": "America/New_York", "minute": "0,30", "hour": "6,7,8" },
+      "catchup": "none", "misfireAfterMs": 1800000 }
+  ]
+}

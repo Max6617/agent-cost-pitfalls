@@ -1,0 +1,15 @@
+{
+  "name": "planner",
+  "version": "2.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Schema-migration planner for the release train",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "plan": "node bin/plan.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

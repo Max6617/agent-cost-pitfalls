@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers are ending up with two accounts because they typed their email with a capital letter or a +tag, and the support desk keeps splitting one person's tickets into separate threads. Newsletter readers say the unsubscribe link does nothing when their address had a tag on it, invites are being accepted by the wrong people, and a customer who updated their billing address is still found under the old one. docs/email-rules.md pins down the one canonicalisation everyone agreed on, and the services under src/ have each drifted from it in their own way. The tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-email-canonical",
+  "setup": ""
+}

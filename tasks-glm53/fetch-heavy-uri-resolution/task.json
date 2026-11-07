@@ -1,0 +1,6 @@
+{
+  "prompt": "The webhook client resolves redirect and location headers to the wrong absolute URL: a reference carrying only a query or only a fragment loses the base path, a network-path reference comes out malformed, and a relative reference with dot segments climbs too far up. Make URI parsing, normalisation and reference resolution follow the syntax so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

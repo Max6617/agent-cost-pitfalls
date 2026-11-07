@@ -1,0 +1,6 @@
+{
+  "description": "Deployment defaults for the wrapping service; bin/wrap.js flags override these.",
+  "width": 80,
+  "indent": 0,
+  "tabStops": 8
+}

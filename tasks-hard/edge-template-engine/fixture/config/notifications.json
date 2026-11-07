@@ -1,0 +1,20 @@
+{
+  "service": "notifications",
+  "version": 3,
+  "templates": {
+    "welcome": "templates/welcome.html",
+    "receipt": "templates/receipt.html",
+    "reset-password": "templates/reset-password.html"
+  },
+  "partials": {
+    "signature": "templates/partials/signature.html",
+    "footer": "templates/partials/footer.html",
+    "address": "templates/partials/address.html",
+    "order-row": "templates/partials/order-row.html"
+  },
+  "options": {
+    "escape": "html",
+    "maxPartialDepth": 8,
+    "logDiagnostics": true
+  }
+}

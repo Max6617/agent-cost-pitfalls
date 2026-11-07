@@ -1,0 +1,10 @@
+measure-gateway listening on http://127.0.0.1:8788
+  base URL   : http://127.0.0.1:8788/v1
+  upstream   : https://api.z.ai/api/anthropic
+  log        : C:\Users\user\betterharness\results\cmux5wr6c-zai-gateway.jsonl
+  enforced   : model=glm-5.3-flash effort=high temperature=-
+  upstream key: bc9...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8788/__stats
+  [unhandled] TypeError: terminated |     at Fetch.onAborted (node:internal/deps/undici/undici:13842:53) |     at Fetch.emit (node:events:509:28)

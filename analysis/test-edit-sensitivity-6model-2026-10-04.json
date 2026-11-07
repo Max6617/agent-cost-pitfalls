@@ -1,0 +1,1602 @@
+{
+ "generated": "2026-10-04T08:11:15.565Z",
+ "rule": "PRE-REGISTRATION.md section 12.8 (amendment 21): report as measured, no exclusion, no restoration; S1 and S2 reported in full for all six models and all ten arms.",
+ "datasets": {
+  "ds-full": {
+   "runs": 620,
+   "solved": 619,
+   "edited": 0,
+   "unedited": 0,
+   "unknown": 620,
+   "measured": false,
+   "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+   "asMeasured": {
+    "n": 620,
+    "solved": 619,
+    "rate": 0.9983870967741936
+   },
+   "s1": {
+    "n": 620,
+    "solved": 619,
+    "rate": 0.9983870967741936
+   },
+   "s2": {
+    "n": 620,
+    "solved": 619,
+    "rate": 0.9983870967741936
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 0,
+     "unknown": 62,
+     "measured": false,
+     "note": "fixture field absent on every record: incidence NOT measured, never report 0%",
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    }
+   }
+  },
+  "glm-flash": {
+   "runs": 620,
+   "solved": 617,
+   "edited": 2,
+   "unedited": 618,
+   "unknown": 0,
+   "measured": true,
+   "note": null,
+   "asMeasured": {
+    "n": 620,
+    "solved": 617,
+    "rate": 0.9951612903225806
+   },
+   "s1": {
+    "n": 618,
+    "solved": 615,
+    "rate": 0.9951456310679612
+   },
+   "s2": {
+    "n": 620,
+    "solved": 615,
+    "rate": 0.9919354838709677
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 60,
+     "edited": 2,
+     "unedited": 60,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     },
+     "s1": {
+      "n": 60,
+      "solved": 58,
+      "rate": 0.9666666666666667
+     },
+     "s2": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    }
+   }
+  },
+  "luna-full": {
+   "runs": 620,
+   "solved": 589,
+   "edited": 81,
+   "unedited": 539,
+   "unknown": 0,
+   "measured": true,
+   "note": null,
+   "asMeasured": {
+    "n": 620,
+    "solved": 589,
+    "rate": 0.95
+   },
+   "s1": {
+    "n": 539,
+    "solved": 510,
+    "rate": 0.9461966604823747
+   },
+   "s2": {
+    "n": 620,
+    "solved": 510,
+    "rate": 0.8225806451612904
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 3,
+     "unedited": 59,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 59,
+      "solved": 58,
+      "rate": 0.9830508474576272
+     },
+     "s2": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     }
+    },
+    "dsh:native": {
+     "runs": 62,
+     "solved": 60,
+     "edited": 15,
+     "unedited": 47,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     },
+     "s1": {
+      "n": 47,
+      "solved": 45,
+      "rate": 0.9574468085106383
+     },
+     "s2": {
+      "n": 62,
+      "solved": 45,
+      "rate": 0.7258064516129032
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 12,
+     "unedited": 50,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 50,
+      "solved": 50,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 50,
+      "rate": 0.8064516129032258
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 10,
+     "unedited": 52,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 52,
+      "solved": 51,
+      "rate": 0.9807692307692307
+     },
+     "s2": {
+      "n": 62,
+      "solved": 51,
+      "rate": 0.8225806451612904
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 1,
+     "unedited": 61,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 61,
+      "solved": 60,
+      "rate": 0.9836065573770492
+     },
+     "s2": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 60,
+     "edited": 1,
+     "unedited": 61,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     },
+     "s1": {
+      "n": 61,
+      "solved": 59,
+      "rate": 0.9672131147540983
+     },
+     "s2": {
+      "n": 62,
+      "solved": 59,
+      "rate": 0.9516129032258065
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 58,
+     "edited": 11,
+     "unedited": 51,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s1": {
+      "n": 51,
+      "solved": 48,
+      "rate": 0.9411764705882353
+     },
+     "s2": {
+      "n": 62,
+      "solved": 48,
+      "rate": 0.7741935483870968
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 58,
+     "edited": 3,
+     "unedited": 59,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s1": {
+      "n": 59,
+      "solved": 55,
+      "rate": 0.9322033898305084
+     },
+     "s2": {
+      "n": 62,
+      "solved": 55,
+      "rate": 0.8870967741935484
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 57,
+     "edited": 14,
+     "unedited": 48,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 57,
+      "rate": 0.9193548387096774
+     },
+     "s1": {
+      "n": 48,
+      "solved": 43,
+      "rate": 0.8958333333333334
+     },
+     "s2": {
+      "n": 62,
+      "solved": 43,
+      "rate": 0.6935483870967742
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 51,
+     "edited": 11,
+     "unedited": 51,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 51,
+      "rate": 0.8225806451612904
+     },
+     "s1": {
+      "n": 51,
+      "solved": 41,
+      "rate": 0.803921568627451
+     },
+     "s2": {
+      "n": 62,
+      "solved": 41,
+      "rate": 0.6612903225806451
+     }
+    }
+   }
+  },
+  "qwen-full": {
+   "runs": 621,
+   "solved": 605,
+   "edited": 1,
+   "unedited": 620,
+   "unknown": 0,
+   "measured": true,
+   "note": null,
+   "asMeasured": {
+    "n": 621,
+    "solved": 605,
+    "rate": 0.9742351046698873
+   },
+   "s1": {
+    "n": 620,
+    "solved": 604,
+    "rate": 0.9741935483870968
+   },
+   "s2": {
+    "n": 621,
+    "solved": 604,
+    "rate": 0.9726247987117552
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 58,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s1": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s2": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native": {
+     "runs": 63,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 63,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 63,
+      "solved": 62,
+      "rate": 0.9841269841269841
+     },
+     "s1": {
+      "n": 63,
+      "solved": 62,
+      "rate": 0.9841269841269841
+     },
+     "s2": {
+      "n": 63,
+      "solved": 62,
+      "rate": 0.9841269841269841
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 58,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s1": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     },
+     "s2": {
+      "n": 62,
+      "solved": 58,
+      "rate": 0.9354838709677419
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 57,
+     "edited": 1,
+     "unedited": 61,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 57,
+      "rate": 0.9193548387096774
+     },
+     "s1": {
+      "n": 61,
+      "solved": 56,
+      "rate": 0.9180327868852459
+     },
+     "s2": {
+      "n": 62,
+      "solved": 56,
+      "rate": 0.9032258064516129
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    }
+   }
+  },
+  "haiku-full": {
+   "runs": 620,
+   "solved": 519,
+   "edited": 5,
+   "unedited": 615,
+   "unknown": 0,
+   "measured": true,
+   "note": null,
+   "asMeasured": {
+    "n": 620,
+    "solved": 519,
+    "rate": 0.8370967741935483
+   },
+   "s1": {
+    "n": 615,
+    "solved": 518,
+    "rate": 0.8422764227642277
+   },
+   "s2": {
+    "n": 620,
+    "solved": 518,
+    "rate": 0.8354838709677419
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 30,
+     "edited": 1,
+     "unedited": 61,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 30,
+      "rate": 0.4838709677419355
+     },
+     "s1": {
+      "n": 61,
+      "solved": 30,
+      "rate": 0.4918032786885246
+     },
+     "s2": {
+      "n": 62,
+      "solved": 30,
+      "rate": 0.4838709677419355
+     }
+    },
+    "dsh:native": {
+     "runs": 62,
+     "solved": 60,
+     "edited": 1,
+     "unedited": 61,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     },
+     "s1": {
+      "n": 61,
+      "solved": 60,
+      "rate": 0.9836065573770492
+     },
+     "s2": {
+      "n": 62,
+      "solved": 60,
+      "rate": 0.967741935483871
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 46,
+     "edited": 3,
+     "unedited": 59,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 46,
+      "rate": 0.7419354838709677
+     },
+     "s1": {
+      "n": 59,
+      "solved": 45,
+      "rate": 0.7627118644067796
+     },
+     "s2": {
+      "n": 62,
+      "solved": 45,
+      "rate": 0.7258064516129032
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 32,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 32,
+      "rate": 0.5161290322580645
+     },
+     "s1": {
+      "n": 62,
+      "solved": 32,
+      "rate": 0.5161290322580645
+     },
+     "s2": {
+      "n": 62,
+      "solved": 32,
+      "rate": 0.5161290322580645
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 46,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 46,
+      "rate": 0.7419354838709677
+     },
+     "s1": {
+      "n": 62,
+      "solved": 46,
+      "rate": 0.7419354838709677
+     },
+     "s2": {
+      "n": 62,
+      "solved": 46,
+      "rate": 0.7419354838709677
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 57,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 57,
+      "rate": 0.9193548387096774
+     },
+     "s1": {
+      "n": 62,
+      "solved": 57,
+      "rate": 0.9193548387096774
+     },
+     "s2": {
+      "n": 62,
+      "solved": 57,
+      "rate": 0.9193548387096774
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    }
+   }
+  },
+  "sonnet-full": {
+   "runs": 620,
+   "solved": 618,
+   "edited": 0,
+   "unedited": 620,
+   "unknown": 0,
+   "measured": true,
+   "note": null,
+   "asMeasured": {
+    "n": 620,
+    "solved": 618,
+    "rate": 0.9967741935483871
+   },
+   "s1": {
+    "n": 620,
+    "solved": 618,
+    "rate": 0.9967741935483871
+   },
+   "s2": {
+    "n": 620,
+    "solved": 618,
+    "rate": 0.9967741935483871
+   },
+   "byArm": {
+    "goose": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:native": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "dsh:ptc": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "opencode": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "cline": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    },
+    "dsh:native-terse": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    },
+    "openhands": {
+     "runs": 62,
+     "solved": 61,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s1": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     },
+     "s2": {
+      "n": 62,
+      "solved": 61,
+      "rate": 0.9838709677419355
+     }
+    },
+    "dsh:native-opt": {
+     "runs": 62,
+     "solved": 62,
+     "edited": 0,
+     "unedited": 62,
+     "unknown": 0,
+     "measured": true,
+     "note": null,
+     "asMeasured": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s1": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     },
+     "s2": {
+      "n": 62,
+      "solved": 62,
+      "rate": 1
+     }
+    }
+   }
+  }
+ }
+}

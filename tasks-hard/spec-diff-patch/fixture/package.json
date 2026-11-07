@@ -1,0 +1,10 @@
+{
+  "name": "unidiff",
+  "version": "1.0.0",
+  "description": "Unified diff construction and application for the review service",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Every outbound call in this app is supposed to take its timeout from the one policy agreed in docs/timeout-policy.md, but the callers have drifted from it: we're seeing requests run well past the hard ceiling, a database call that treats a zero timeout as 'wait as long as it takes' instead of an error, and per-operation overrides from the config that some callers never pick up while others ignore the requested value entirely. The reproductions we managed to write are under test/, but they are not the whole acceptance criteria - the policy has to hold for every operation and every caller, including the combinations of an override, a requested value and the ceiling.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-timeout-policy",
+  "setup": ""
+}

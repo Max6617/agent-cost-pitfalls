@@ -1,0 +1,6 @@
+{
+  "defaultZone": "UTC",
+  "offsetTable": "data/offsets.json",
+  "siteQueue": "schedules",
+  "boundaryToleranceSeconds": 0
+}

@@ -1,0 +1,9 @@
+measure-gateway listening on http://127.0.0.1:8789
+  base URL   : http://127.0.0.1:8789/v1
+  upstream   : https://api.z.ai/api/anthropic
+  log        : C:\Users\user\betterharness\results\cmuxmft7j-zai-gateway.jsonl
+  enforced   : model=glm-5.3-flash effort=high temperature=-
+  upstream key: bc9...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8789/__stats

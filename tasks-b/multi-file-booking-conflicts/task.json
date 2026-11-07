@@ -1,0 +1,6 @@
+{
+  "prompt": "Facilities is on us about the booking service again. Back-to-back meetings get refused even in booths that need no turnaround, yet a meeting squeezed in just before an existing one goes through with no setup gap at all. Rooms also refuse meetings that exactly fill them, the conflict errors we show people sometimes name the wrong meeting, and while cancelling does free the room, nobody waiting ever gets the slot. The rules facilities signed off are in docs/booking-rules.md; the reproductions we managed to write are under test/, but they are not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-booking-conflicts",
+  "setup": ""
+}

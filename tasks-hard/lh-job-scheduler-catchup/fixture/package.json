@@ -1,0 +1,11 @@
+{
+  "name": "batch-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Batch tier scheduler: catch-up, misfire, pools, retries and the plan",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "plan": "node bin/sched.js"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "query-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "the reporting service's in-memory query engine",
+  "scripts": {
+    "test": "node --test"
+  }
+}

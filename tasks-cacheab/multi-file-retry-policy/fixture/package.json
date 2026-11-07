@@ -1,0 +1,10 @@
+{
+  "name": "multi-file-retry-policy",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sync worker: retry classification, backoff schedule, job runner.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

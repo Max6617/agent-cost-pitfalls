@@ -1,0 +1,6 @@
+{
+  "prompt": "The product feed serves prices that were retired hours ago and, under load, throws away work that was still valid: a load that started before a write finishes repopulates the entry that write just cleared, invalidation only ever drops the one key it names, and two requests for a cold feed each run their own pass over the rows. Fix the cache and the read path so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

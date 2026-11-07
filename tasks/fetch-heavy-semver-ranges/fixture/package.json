@@ -1,0 +1,10 @@
+{
+  "name": "fetch-heavy-semver-ranges",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency resolver: version parsing, precedence, range matching.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

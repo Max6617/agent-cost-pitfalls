@@ -1,0 +1,53 @@
+# Staged host-plane optimizations for the `web` profile.
+#
+# STATUS: NOT APPLIED. This file is a staging area, not live configuration.
+#
+# Why not applied: this profile has patchReload: live, so writing these entries
+# into ~/.dsh/profiles/web/cordis.patch.yml reloads the running host. That is
+# safe when no session is mid-turn, but it is not something to do from inside a
+# session. Apply it yourself when convenient.
+#
+# How to apply (safe, verifiable, no session needed):
+#   1. Back up:   Copy-Item $env:DSH_HOME\profiles\web\cordis.patch.yml cordis.patch.yml.bak
+#   2. Merge the entries below (minus this header) into that file.
+#   3. VERIFY WITHOUT BOOTING - this composes the tree and exits:
+#        dsh --profile web --dump-config | Select-String -Pattern 'spill-policy|web-fetch-http|repeat-tool-reminder' -Context 0,6
+#      Confirm the values below landed. If anything looks wrong, restore the .bak.
+#   4. Restart DSH when no session is mid-turn.
+#
+# Each entry carries the row's FULL config, so it is correct whether the loader
+# merges or replaces the config object.
+
+# Cap how much of a tool result the model sees inline. The full text still lands
+# in a spill file the model can read/grep. Was 50000.
+- id: spill-policy
+  config:
+    maxInlineBytes: 32000
+
+# A single web fetch can currently inject 100,000 characters (~25k tokens) into
+# the conversation. Fetches are the second-largest context consumer measured in
+# this workspace. Lower the inline cap; the fetched page is still on disk.
+- id: web-fetch-http
+  config:
+    maxResponseBytes: 2000000
+    maxBodyChars: 40000
+    timeoutMs: 30000
+    maxRedirects: 5
+
+# Reminder text is injected into the conversation on repeat calls. Three
+# thresholds with 500-char argument previews is more than this needs.
+- id: repeat-tool-reminder
+  config:
+    thresholds:
+      - 3
+      - 5
+    argumentsPreviewChars: 200
+
+# Session titles are a per-session LLM call. Keep it small.
+- id: session-title-llm
+  config:
+    targetWords: 5
+    targetCjkCharacters: 10
+    maxInputBytes: 2048
+    maxOutputTokens: 64
+    timeoutMs: 60000

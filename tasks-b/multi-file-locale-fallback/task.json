@@ -1,0 +1,6 @@
+{
+  "prompt": "Translation complaints are piling up since the Quebec rollout: fr-CA users keep getting English strings even where the French translations exist, and the French team says our plural forms handle zero wrong. Placeholders like {name} are also leaking into rendered pages instead of being filled or flagged, and the strict release build let an untranslated key ship where it was supposed to fail loudly. The agreed behaviour is written down in docs/, and the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-locale-fallback",
+  "setup": ""
+}

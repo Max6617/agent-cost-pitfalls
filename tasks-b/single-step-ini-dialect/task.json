@@ -1,0 +1,6 @@
+{
+  "prompt": "The integrators are filing tickets against our INI reader and I can finally reproduce some of it: quoted values that mention ; or # come back cut short or make the read fail outright, settings that wrap onto a second line lose everything after the wrap, and when a file sets the same key twice we keep the wrong one. Saving is just as unreliable - the writer puts quotes around values that were fine bare and loses padding and line breaks that mattered, so a load-then-save no longer reproduces the input. The agreed rules are in docs/dialect.md; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-ini-dialect",
+  "setup": ""
+}

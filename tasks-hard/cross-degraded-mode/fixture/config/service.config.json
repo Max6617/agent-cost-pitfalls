@@ -1,0 +1,108 @@
+{
+  "service": "checkout-api",
+  "defaultAccountId": "acct-1",
+  "defaultAmount": "25.00",
+  "dependencies": {
+    "db.primary": {
+      "class": "read",
+      "failureThreshold": 3,
+      "failureWindow": 5,
+      "openMs": 30000,
+      "fallback": ["db.replica", "cache.orders"]
+    },
+    "db.replica": {
+      "class": "read",
+      "failureThreshold": 2,
+      "failureWindow": 4,
+      "openMs": 30000,
+      "fallback": ["cache.orders"]
+    },
+    "cache.orders": {
+      "class": "read",
+      "failureThreshold": 4,
+      "failureWindow": 6,
+      "openMs": 15000,
+      "fallback": []
+    },
+    "search.index": {
+      "class": "read",
+      "failureThreshold": 3,
+      "failureWindow": 5,
+      "openMs": 20000,
+      "fallback": []
+    },
+    "pricing.quotes": {
+      "class": "critical",
+      "failureThreshold": 2,
+      "failureWindow": 4,
+      "openMs": 30000
+    },
+    "payment.charges": {
+      "class": "write",
+      "failureThreshold": 2,
+      "failureWindow": 4,
+      "openMs": 60000,
+      "degradedCode": "payment-degraded"
+    },
+    "store.receipts": {
+      "class": "write",
+      "failureThreshold": 3,
+      "failureWindow": 5,
+      "openMs": 30000,
+      "degradedCode": "store-degraded"
+    },
+    "email.receipts": {
+      "class": "write",
+      "failureThreshold": 2,
+      "failureWindow": 4,
+      "openMs": 30000,
+      "degradedCode": "email-degraded"
+    },
+    "flags.experiments": {
+      "class": "read",
+      "failureThreshold": 3,
+      "failureWindow": 5,
+      "openMs": 20000,
+      "fallback": []
+    },
+    "metrics.sink": {
+      "class": "write",
+      "failureThreshold": 2,
+      "failureWindow": 4,
+      "openMs": 20000,
+      "degradedCode": "metrics-degraded"
+    }
+  },
+  "routes": {
+    "checkout": {
+      "steps": [
+        { "name": "account", "dependency": "db.primary", "required": true },
+        { "name": "transactions", "dependency": "db.replica", "required": false },
+        { "name": "cart", "dependency": "cache.orders", "required": false },
+        { "name": "catalog", "dependency": "search.index", "required": false },
+        { "name": "features", "dependency": "flags.experiments", "required": false },
+        { "name": "quote", "dependency": "pricing.quotes", "required": true },
+        { "name": "payment", "dependency": "payment.charges", "required": true },
+        { "name": "receipt", "dependency": "store.receipts", "required": true },
+        { "name": "notify", "dependency": "email.receipts", "required": false, "optional": true },
+        { "name": "telemetry", "dependency": "metrics.sink", "required": false, "optional": true }
+      ]
+    },
+    "browse": {
+      "steps": [
+        { "name": "account", "dependency": "db.primary", "required": true },
+        { "name": "cart", "dependency": "cache.orders", "required": false },
+        { "name": "catalog", "dependency": "search.index", "required": false },
+        { "name": "features", "dependency": "flags.experiments", "required": false },
+        { "name": "telemetry", "dependency": "metrics.sink", "required": false, "optional": true }
+      ]
+    },
+    "refund": {
+      "steps": [
+        { "name": "account", "dependency": "db.primary", "required": true },
+        { "name": "payment", "dependency": "payment.charges", "required": true },
+        { "name": "telemetry", "dependency": "metrics.sink", "required": false, "optional": true }
+      ]
+    }
+  }
+}

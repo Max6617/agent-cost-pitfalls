@@ -1,0 +1,10 @@
+{
+  "name": "long-horizon-billing-tiers",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wholesale billing: tiers, discounts, currency, ledger.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

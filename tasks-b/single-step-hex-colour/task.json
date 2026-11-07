@@ -1,0 +1,6 @@
+{
+  "prompt": "Design QA bounced the theme build again. Colours written with percentage channels come out a step off from the same colour written in integers, a negative hue rotation lands somewhere unrelated on the wheel, and translucent swatches lose a notch of alpha when they pass through the canonical hex form - the four-digit hex shorthand also disagrees with its eight-digit spelling. Please make the library behave the way docs/colour-rules.md says it should; the cases under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-hex-colour",
+  "setup": ""
+}

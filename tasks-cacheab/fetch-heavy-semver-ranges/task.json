@@ -1,0 +1,6 @@
+{
+  "prompt": "The resolver picks versions the registry does not actually offer and refuses ones it does: caret and tilde ranges resolve to the wrong boundaries, prerelease versions are selected when they should not be and skipped when they should not be, and a partial version like 1.2 in a manifest is treated as the exact version 1.2.0. Make range matching follow the published syntax so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

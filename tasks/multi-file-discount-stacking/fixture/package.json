@@ -1,0 +1,8 @@
+{
+  "name": "multi-file-discount-stacking",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Checkout: stacking promotions, coupons and loyalty.",
+  "scripts": { "test": "node --test" }
+}

@@ -1,0 +1,30 @@
+{
+  "baseUrl": "https://planner.internal",
+  "client": {
+    "timeout": "1.5s"
+  },
+  "retry": {
+    "attempts": 4,
+    "baseBackoff": "250ms",
+    "maxBackoff": "2s",
+    "budget": "24s"
+  },
+  "cache": {
+    "ttl": "2.5s",
+    "maxEntries": 128
+  },
+  "limiter": {
+    "limit": 60,
+    "window": "1 m"
+  },
+  "metrics": {
+    "buckets": ["100ms", "250ms", "1s", "2.5s", "10s"]
+  },
+  "log": {
+    "slow": "2.5s",
+    "maxRecord": "8kb"
+  },
+  "scheduler": {
+    "tick": "500ms"
+  }
+}

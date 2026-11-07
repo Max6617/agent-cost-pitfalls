@@ -1,0 +1,10 @@
+{
+  "name": "billing-money",
+  "version": "1.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Billing money toolkit: exact decimals, rounding, allocation, discounts and invoice totals.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

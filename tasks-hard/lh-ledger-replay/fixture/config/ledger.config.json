@@ -1,0 +1,15 @@
+{
+  "baseCurrency": "USD",
+  "rounding": {
+    "mode": "half-up",
+    "scale": 2
+  },
+  "paths": {
+    "accounts": "data/accounts.json",
+    "rates": "data/rates.json"
+  },
+  "close": {
+    "lockAfterDays": 45,
+    "requireIdempotencyKey": false
+  }
+}

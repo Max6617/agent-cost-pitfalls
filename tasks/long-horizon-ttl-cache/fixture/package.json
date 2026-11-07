@@ -1,0 +1,10 @@
+{
+  "name": "long-horizon-ttl-cache",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rate-limit response cache: TTL, LRU capacity, statistics.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

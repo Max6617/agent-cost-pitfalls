@@ -1,0 +1,41 @@
+{
+  "matrixId": "cmv39t2ww-deepseek",
+  "provider": "deepseek",
+  "plan": "rerun-b",
+  "tasksDir": "tasks-b",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 160,
+  "passes": 1,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8804",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8804",
+    "--upstream",
+    "https://api.deepseek.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv39t2ww-deepseek-gateway.jsonl",
+    "--force-model",
+    "deepseek-flash",
+    "--force-effort",
+    "high",
+    "--no-cache-breakpoints"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "deepseek-flash",
+    "reasoning_effort": "high",
+    "temperature": null,
+    "max_tokens_ceiling": null,
+    "cache_static_breakpoints": false,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "NONE (provider caches automatically; batch 1 injected nothing)",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-11T03:41:53.013Z"
+}

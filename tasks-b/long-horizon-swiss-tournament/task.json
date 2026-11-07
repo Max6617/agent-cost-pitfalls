@@ -1,0 +1,6 @@
+{
+  "prompt": "The league has been running on this service for a month and the complaints will not stop: players say they have been paired against someone they already played, the bye keeps landing on the top of the table instead of the bottom, and the tie-break totals do not match the rules sheet. Worse, the table seems to depend on the order we type results in, and nobody is confident the late-entry and forfeit policies in the docs are what the code actually does. The rules under docs/ are the contract; the tests under test/ are just the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-swiss-tournament",
+  "setup": ""
+}

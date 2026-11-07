@@ -1,0 +1,41 @@
+{
+  "matrixId": "cmv2j8ad6-deepseek-p1",
+  "provider": "deepseek",
+  "plan": "aaplacebo-smoke",
+  "tasksDir": "tasks",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 2,
+  "passes": 2,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8788",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8788",
+    "--upstream",
+    "https://api.deepseek.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv2j8ad6-deepseek-gateway.jsonl",
+    "--force-model",
+    "deepseek-flash",
+    "--force-effort",
+    "high",
+    "--no-cache-breakpoints"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "deepseek-flash",
+    "reasoning_effort": "high",
+    "temperature": null,
+    "max_tokens_ceiling": null,
+    "cache_static_breakpoints": false,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "NONE (provider caches automatically; batch 1 injected nothing)",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-10T15:18:03.735Z"
+}

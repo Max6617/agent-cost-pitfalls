@@ -1,0 +1,161 @@
+{
+ "generated": "2026-10-11T20:20:42.660Z",
+ "tool": "tools/mixed-effects-hypotheses.mjs",
+ "model": "y = b0 + b1*x + u_task + e (REML random intercept)",
+ "sections": {
+  "H1": {
+   "n": 186,
+   "tasks": 31,
+   "b1Mixed": 0.0047,
+   "seMixed": 0.0187,
+   "ciModel": [
+    -0.032,
+    0.0413
+   ],
+   "ciCluster": [
+    -0.007,
+    0.0153
+   ],
+   "sigmaU": 0,
+   "sigmaE": 0.0406,
+   "icc": 0,
+   "b1PooledRederived": 0.0047,
+   "iters": 2000
+  },
+  "slotAdjustedModeEffect": [
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "n": 124,
+    "pct": 1.0879,
+    "ci": [
+     -9.9296,
+     12.1055
+    ],
+    "raw": 0.13,
+    "std": -0.33,
+    "sigmaU": 0.0052,
+    "sigmaE": 0.0028,
+    "icc": 0.783,
+    "singular": false
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "n": 124,
+    "pct": -20.1047,
+    "ci": [
+     -40.4545,
+     0.2452
+    ],
+    "raw": -20.75,
+    "std": -10.08,
+    "sigmaU": 0.0044,
+    "sigmaE": 0.0049,
+    "icc": 0.4453,
+    "singular": false
+   },
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "n": 124,
+    "pct": 31.9713,
+    "ci": [
+     13.925,
+     50.0176
+    ],
+    "raw": 30.67,
+    "std": 15.77,
+    "sigmaU": 0.0077,
+    "sigmaE": 0.0077,
+    "icc": 0.4973,
+    "singular": false
+   },
+   {
+    "model": "claude-haiku-4.5",
+    "label": "Claude Haiku 4.5",
+    "n": 124,
+    "pct": 52.9659,
+    "ci": [
+     35.1051,
+     70.8268
+    ],
+    "raw": 53.84,
+    "std": 25.41,
+    "sigmaU": 0.0708,
+    "sigmaE": 0.0573,
+    "icc": 0.604,
+    "singular": false
+   },
+   {
+    "model": "claude-sonnet-5.5",
+    "label": "Claude Sonnet 5.5",
+    "n": 124,
+    "pct": 7.0448,
+    "ci": [
+     -0.571,
+     14.6605
+    ],
+    "raw": 9.51,
+    "std": 3.69,
+    "sigmaU": 0.0286,
+    "sigmaE": 0.0159,
+    "icc": 0.7651,
+    "singular": false
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "n": 124,
+    "pct": 1.8461,
+    "ci": [
+     -10.4676,
+     14.1598
+    ],
+    "raw": 1.2,
+    "std": 0.75,
+    "sigmaU": 0.0025,
+    "sigmaE": 0.0021,
+    "icc": 0.5913,
+    "singular": false
+   }
+  ],
+  "H3": {
+   "n": 744,
+   "b1Mixed": 2.2285,
+   "seMixed": 0.5749,
+   "ciModel": [
+    1.1017,
+    3.3553
+   ],
+   "ciCluster": [
+    1.2312,
+    3.3065
+   ],
+   "sigmaU": 3.085,
+   "sigmaE": 7.8404,
+   "icc": 0.1341,
+   "iters": 2000
+  },
+  "H4": {
+   "n": 186,
+   "bS": -0.0309,
+   "bC": 0.1029,
+   "ciModel": [
+    0.0279,
+    0.1778
+   ],
+   "ciCluster": [
+    0.0549,
+    0.1695
+   ],
+   "sigmaU": 0,
+   "sigmaE": 0.0399,
+   "icc": 0,
+   "iters": 2000
+  },
+  "H2": {
+   "note": "one observation per task; a random intercept is not identified and is not fitted"
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "The same webhook event is being applied several times over: the provider retries until it gets a 2xx and every retry runs the handler again, out-of-order deliveries overwrite newer state with older, and a redelivery of an event that was already applied is logged with the wrong reason. Fix the intake so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,8 @@
+{
+  "port": 8080,
+  "topic": "ingest.prod",
+  "origins": ["file:///srv/drop/incoming"],
+  "limits": { "maxInflight": 16 },
+  "labels": { "env": "prod", "team": "platform" },
+  "secrets": { "apiKey": "file-layer-key" }
+}

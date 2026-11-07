@@ -1,0 +1,6 @@
+{
+  "prompt": "The response cache keeps serving stale entries and drops hot ones: entries come back after their ttl has passed, the cache grows past the size limit it was configured with, and an entry that was just read gets thrown out on the next insert. Fix the cache so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

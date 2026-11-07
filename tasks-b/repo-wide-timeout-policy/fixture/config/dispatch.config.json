@@ -1,0 +1,10 @@
+{
+  "http": { "baseUrl": "http://internal" },
+  "queue": { "batchSize": 20 },
+  "webhooks": { "attempts": 3 },
+  "timeouts": {
+    "overrides": {
+      "webhook.deliver": 12000
+    }
+  }
+}

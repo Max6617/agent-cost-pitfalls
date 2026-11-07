@@ -1,0 +1,6 @@
+{
+  "prompt": "Supplier feeds with quoted fields come in mangled: a doubled quote inside a quoted field is read as two characters plus the end of the field, a quoted field containing a newline is split into two records, and a file with Windows line endings gains a stray carriage return in every row. Fix the CSV reader and writer so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,13 @@
+{
+  "spec": "gateway-payload-schema",
+  "subsetVersion": 4,
+  "unknownKeywords": "ignore",
+  "collectFailures": true,
+  "maxReportEntries": 50,
+  "formats": "annotation",
+  "notes": [
+    "The gateway forwards the report to the client verbatim; the client libraries",
+    "read path + keyword and ignore the message.",
+    "service teams own their schemas; the platform team owns this validator."
+  ]
+}

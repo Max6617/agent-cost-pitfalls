@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "subjects": [
+    { "id": "u-anna", "name": "Anna Reyes", "groups": ["g-platform"], "roles": [] },
+    { "id": "u-bruno", "name": "Bruno Sandoval", "groups": ["g-support"], "roles": [] },
+    { "id": "u-chen", "name": "Chen Wei", "groups": ["g-platform", "g-audit"], "roles": ["r-approver"] },
+    { "id": "u-dara", "name": "Dara Okonkwo", "groups": [], "roles": ["r-admin"] },
+    { "id": "u-elif", "name": "Elif Demir", "groups": ["g-contractors"], "roles": [] },
+    { "id": "u-gustav", "name": "Gustav Lind", "groups": ["g-support"], "roles": ["r-approver"] },
+    { "id": "u-hana", "name": "Hana Ito", "groups": ["g-vendors"], "roles": [] }
+  ],
+  "groups": [
+    { "id": "g-platform", "name": "Platform", "groups": ["g-engineering"], "roles": ["r-deployer"] },
+    { "id": "g-engineering", "name": "Engineering", "groups": [], "roles": ["r-reader"] },
+    { "id": "g-support", "name": "Support", "groups": [], "roles": ["r-responder"] },
+    { "id": "g-audit", "name": "Audit", "groups": [], "roles": ["r-auditor"] },
+    { "id": "g-contractors", "name": "Contractors", "groups": [], "roles": ["r-reader"] },
+    { "id": "g-vendors", "name": "Vendor accounts", "groups": ["g-contractors"], "roles": ["r-vendor"] }
+  ],
+  "roles": [
+    { "id": "r-admin", "name": "Administrator", "roles": [] },
+    { "id": "r-approver", "name": "Approver", "roles": [] },
+    { "id": "r-deployer", "name": "Deployer", "roles": ["r-operator"] },
+    { "id": "r-operator", "name": "Operator", "roles": ["r-reader"] },
+    { "id": "r-reader", "name": "Reader", "roles": [] },
+    { "id": "r-responder", "name": "Responder", "roles": ["r-reader"] },
+    { "id": "r-auditor", "name": "Auditor", "roles": ["r-reader"] },
+    { "id": "r-vendor", "name": "Vendor", "roles": ["r-responder"] }
+  ],
+  "rules": [
+    { "id": "p-101", "role": "r-reader", "effect": "allow", "action": "project.read", "resource": "project/*" },
+    { "id": "p-102", "role": "r-operator", "effect": "allow", "action": "project.deploy", "resource": "project/*" },
+    { "id": "p-103", "role": "r-deployer", "effect": "allow", "action": "project.deploy", "resource": "project/prod/**" },
+    { "id": "p-104", "role": "r-auditor", "effect": "allow", "action": "audit.read", "resource": "**" },
+    { "id": "p-105", "role": "r-responder", "effect": "allow", "action": "project.read", "resource": "project/*" },
+    { "id": "p-106", "role": "r-reader", "effect": "deny", "action": "project.read", "resource": "project/*/secret" },
+    { "id": "p-107", "role": "r-approver", "effect": "allow", "action": "project.delete", "resource": "project/*" },
+    { "id": "p-108", "role": "r-admin", "effect": "allow", "action": "project.delete", "resource": "**" },
+    { "id": "p-109", "role": "r-operator", "effect": "deny", "action": "project.deploy", "resource": "project/prod/legacy" },
+    { "id": "p-110", "role": "r-admin", "effect": "allow", "action": "org.manage", "resource": "**" },
+    { "id": "p-111", "role": "r-vendor", "effect": "deny", "action": "project.read", "resource": "project/*/financials" },
+    { "id": "p-112", "role": "r-approver", "effect": "allow", "action": "audit.export", "resource": "audit/*" }
+  ]
+}

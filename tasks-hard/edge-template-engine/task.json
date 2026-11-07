@@ -1,0 +1,6 @@
+{
+  "prompt": "Customer emails are coming out wrong in ways support keeps forwarding to us: a line item whose quantity or discount is zero disappears from the list it is in, a name with an apostrophe or a slash in it reaches the markup unescaped, an indented fragment loses its alignment after the first line, and blank lines turn up where a section tag sat on a line of its own. The rules we agreed on are written up under docs/ - please make the engine behave the way they say. The cases under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-template-engine",
+  "setup": ""
+}

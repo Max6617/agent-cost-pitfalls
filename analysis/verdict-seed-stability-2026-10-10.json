@@ -1,0 +1,672 @@
+{
+ "seeds": [
+  12345,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "providers": {
+  "qwen3.8-flash": {
+   "label": "Qwen3.8-Flash",
+   "tasks": 40,
+   "target": "positive",
+   "targetCiPct": [
+    10,
+    53.3
+   ],
+   "bySeed": [
+    {
+     "seed": 12345,
+     "loPct": -3.9319430864506066,
+     "hiPct": 15.014126928185807,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 1,
+     "loPct": -3.945368153447388,
+     "hiPct": 15.059004391799698,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 2,
+     "loPct": -3.8972735687631217,
+     "hiPct": 15.05786961423142,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 3,
+     "loPct": -3.9507571540189454,
+     "hiPct": 15.06963756355245,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 4,
+     "loPct": -3.966236777483638,
+     "hiPct": 15.022177870498027,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 5,
+     "loPct": -3.939483196416978,
+     "hiPct": 15.085842737354508,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 6,
+     "loPct": -3.953320858770021,
+     "hiPct": 15.00227758250198,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 7,
+     "loPct": -3.8906523956650467,
+     "hiPct": 15.036498858839838,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 8,
+     "loPct": -3.952142856926334,
+     "hiPct": 15.081456876785182,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 9,
+     "loPct": -3.9550694771846464,
+     "hiPct": 15.025741627803082,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 10,
+     "loPct": -3.9398935463563345,
+     "hiPct": 15.047195182943037,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 11,
+     "loPct": -3.9678843521375526,
+     "hiPct": 15.087973076642964,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 12,
+     "loPct": -3.910951806515931,
+     "hiPct": 15.04828112269363,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 13,
+     "loPct": -3.964395254944579,
+     "hiPct": 15.002866162408152,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 14,
+     "loPct": -3.989209918513929,
+     "hiPct": 15.025379273650064,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 15,
+     "loPct": -3.929589328180126,
+     "hiPct": 15.009972906911893,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 16,
+     "loPct": -3.9120259578277685,
+     "hiPct": 15.071396847697377,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 17,
+     "loPct": -3.908554262615809,
+     "hiPct": 15.024817077392521,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 18,
+     "loPct": -3.9386175882001724,
+     "hiPct": 15.042349573262442,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 19,
+     "loPct": -3.876197524340285,
+     "hiPct": 15.087744324795782,
+     "classification": "null",
+     "match": false
+    }
+   ]
+  },
+  "glm-5.3-flash": {
+   "label": "GLM-5.3-Flash",
+   "tasks": 40,
+   "target": "negative",
+   "targetCiPct": [
+    -43.7,
+    -2.7
+   ],
+   "bySeed": [
+    {
+     "seed": 12345,
+     "loPct": -21.117331446310132,
+     "hiPct": 0.14092247438159253,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 1,
+     "loPct": -21.10478383795511,
+     "hiPct": 0.10952754926846836,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 2,
+     "loPct": -21.121115455880748,
+     "hiPct": 0.1391819096844205,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 3,
+     "loPct": -21.02675682333492,
+     "hiPct": 0.10587106819312413,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 4,
+     "loPct": -21.050560814030327,
+     "hiPct": 0.1553436556690777,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 5,
+     "loPct": -21.10229603598097,
+     "hiPct": 0.05674270802276573,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 6,
+     "loPct": -21.070920539037044,
+     "hiPct": 0.12411013380777891,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 7,
+     "loPct": -21.161589313909147,
+     "hiPct": 0.07453392942941717,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 8,
+     "loPct": -21.126567797211752,
+     "hiPct": 0.11373798224514281,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 9,
+     "loPct": -21.063495989452992,
+     "hiPct": 0.16614422327051334,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 10,
+     "loPct": -21.063239437987903,
+     "hiPct": 0.09480448412108408,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 11,
+     "loPct": -21.111134358493054,
+     "hiPct": 0.09366170924549136,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 12,
+     "loPct": -21.098633078849222,
+     "hiPct": 0.10157196305957875,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 13,
+     "loPct": -21.088804916024234,
+     "hiPct": 0.16433441458567422,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 14,
+     "loPct": -21.15243565726617,
+     "hiPct": 0.11010541276266432,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 15,
+     "loPct": -21.060211632541577,
+     "hiPct": 0.14444544906345208,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 16,
+     "loPct": -21.077878314402078,
+     "hiPct": 0.14960088811641273,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 17,
+     "loPct": -21.036482365573875,
+     "hiPct": 0.10777851588215637,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 18,
+     "loPct": -21.0194578096134,
+     "hiPct": 0.10479753730519906,
+     "classification": "null",
+     "match": false
+    },
+    {
+     "seed": 19,
+     "loPct": -21.135302004663252,
+     "hiPct": 0.12360599772491207,
+     "classification": "null",
+     "match": false
+    }
+   ]
+  },
+  "gpt-6-luna": {
+   "label": "gpt-6-luna",
+   "tasks": 40,
+   "target": "null",
+   "targetCiPct": [
+    -8.4,
+    11.3
+   ],
+   "bySeed": [
+    {
+     "seed": 12345,
+     "loPct": -24.34527376842558,
+     "hiPct": -8.549859296234898,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 1,
+     "loPct": -24.35890867844707,
+     "hiPct": -8.551257418787797,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 2,
+     "loPct": -24.370927755636394,
+     "hiPct": -8.5598969343003,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 3,
+     "loPct": -24.352238660144426,
+     "hiPct": -8.576528346140156,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 4,
+     "loPct": -24.344159495983618,
+     "hiPct": -8.549944726850809,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 5,
+     "loPct": -24.363346477430685,
+     "hiPct": -8.538189290379403,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 6,
+     "loPct": -24.36324818629196,
+     "hiPct": -8.60089168802455,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 7,
+     "loPct": -24.36532607933706,
+     "hiPct": -8.621465768719238,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 8,
+     "loPct": -24.344500299838497,
+     "hiPct": -8.595318488597183,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 9,
+     "loPct": -24.379429479832922,
+     "hiPct": -8.583022910167108,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 10,
+     "loPct": -24.302484053158384,
+     "hiPct": -8.549031629730187,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 11,
+     "loPct": -24.355311406490983,
+     "hiPct": -8.581871893374213,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 12,
+     "loPct": -24.347551918183267,
+     "hiPct": -8.529315529629724,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 13,
+     "loPct": -24.397557305364415,
+     "hiPct": -8.574687454158546,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 14,
+     "loPct": -24.354735438790154,
+     "hiPct": -8.552788739612819,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 15,
+     "loPct": -24.348704772193717,
+     "hiPct": -8.572050128370526,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 16,
+     "loPct": -24.3613191078681,
+     "hiPct": -8.592997164227157,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 17,
+     "loPct": -24.33455084821532,
+     "hiPct": -8.54259861249105,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 18,
+     "loPct": -24.41591110865414,
+     "hiPct": -8.575418666742063,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 19,
+     "loPct": -24.349954080125332,
+     "hiPct": -8.565005317688392,
+     "classification": "negative",
+     "match": false
+    }
+   ]
+  },
+  "deepseek-flash": {
+   "label": "DeepSeek V4.1 Flash",
+   "tasks": 40,
+   "target": "null",
+   "targetCiPct": [
+    -9,
+    9.8
+   ],
+   "bySeed": [
+    {
+     "seed": 12345,
+     "loPct": -37.46364252855195,
+     "hiPct": -9.384377880751053,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 1,
+     "loPct": -37.35394764378688,
+     "hiPct": -9.4106334928433,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 2,
+     "loPct": -37.25887066460956,
+     "hiPct": -9.410735773586074,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 3,
+     "loPct": -37.4250419701272,
+     "hiPct": -9.41610478546728,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 4,
+     "loPct": -37.265320168318425,
+     "hiPct": -9.416123205695836,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 5,
+     "loPct": -37.31462675747703,
+     "hiPct": -9.443489848415721,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 6,
+     "loPct": -37.35825991624043,
+     "hiPct": -9.467599019138339,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 7,
+     "loPct": -37.43224718794973,
+     "hiPct": -9.4436861692727,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 8,
+     "loPct": -37.44695234725167,
+     "hiPct": -9.375111051558834,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 9,
+     "loPct": -37.339803331970195,
+     "hiPct": -9.374568624302148,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 10,
+     "loPct": -37.39626666466563,
+     "hiPct": -9.450766323438183,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 11,
+     "loPct": -37.3619328128659,
+     "hiPct": -9.398581815939131,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 12,
+     "loPct": -37.30344083131499,
+     "hiPct": -9.362249854083913,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 13,
+     "loPct": -37.28432693573104,
+     "hiPct": -9.378073799899203,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 14,
+     "loPct": -37.414391684821865,
+     "hiPct": -9.408742995702033,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 15,
+     "loPct": -37.40293575688863,
+     "hiPct": -9.401849952279246,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 16,
+     "loPct": -37.29070324326854,
+     "hiPct": -9.391534624287909,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 17,
+     "loPct": -37.40214223283214,
+     "hiPct": -9.44759271195513,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 18,
+     "loPct": -37.26903232911531,
+     "hiPct": -9.371292247333468,
+     "classification": "negative",
+     "match": false
+    },
+    {
+     "seed": 19,
+     "loPct": -37.37683380828196,
+     "hiPct": -9.375876460529618,
+     "classification": "negative",
+     "match": false
+    }
+   ]
+  }
+ },
+ "summary": {
+  "seeds": 20,
+  "iters": 200000,
+  "r1MatchedCounts": {
+   "0": 20
+  },
+  "verdicts": {
+   "not replicated": 20
+  },
+  "bounds": {
+   "qwen3.8-flash": {
+    "minHiPct": 15.00227758250198,
+    "maxHiPct": 15.087973076642964,
+    "classes": [
+     "null"
+    ]
+   },
+   "glm-5.3-flash": {
+    "minHiPct": 0.05674270802276573,
+    "maxHiPct": 0.16614422327051334,
+    "classes": [
+     "null"
+    ]
+   },
+   "gpt-6-luna": {
+    "minHiPct": -8.621465768719238,
+    "maxHiPct": -8.529315529629724,
+    "classes": [
+     "negative"
+    ]
+   },
+   "deepseek-flash": {
+    "minHiPct": -9.467599019138339,
+    "maxHiPct": -9.362249854083913,
+    "classes": [
+     "negative"
+    ]
+   }
+  }
+ },
+ "iters": 200000,
+ "generated": "2026-10-11T20:22:59.718Z"
+}

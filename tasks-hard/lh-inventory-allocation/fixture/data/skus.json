@@ -1,0 +1,8 @@
+{
+  "skus": [
+    { "sku": "SKU-BOLT-6", "description": "Hex bolt, 6mm, zinc", "packSize": 6, "buffer": { "web": 12, "trade": 0 } },
+    { "sku": "SKU-BOLT-8", "description": "Hex bolt, 8mm, zinc", "packSize": 6, "buffer": { "web": 12, "trade": 6 } },
+    { "sku": "SKU-WASHER", "description": "Flat washer, 6mm", "packSize": 1, "buffer": { "web": 0, "trade": 0 } },
+    { "sku": "SKU-CABLE-3", "description": "Twin and earth cable, 3 core, per metre", "packSize": 1, "buffer": { "web": 25, "trade": 25 } }
+  ]
+}

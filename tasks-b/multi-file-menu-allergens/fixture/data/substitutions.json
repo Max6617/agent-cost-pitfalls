@@ -1,0 +1,6 @@
+[
+  { "dish": "satay", "replace": "peanut-sauce", "with": "sunflower-sauce" },
+  { "dish": "pad-thai", "replace": "soy-sauce", "with": "tamari" },
+  { "dish": "mushroom-soup", "replace": "cream", "with": "coconut-milk" },
+  { "dish": "mushroom-soup", "replace": "flour", "with": "rice-flour" }
+]

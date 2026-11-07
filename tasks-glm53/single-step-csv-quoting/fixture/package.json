@@ -1,0 +1,10 @@
+{
+  "name": "single-step-csv-quoting",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Import/export for the supplier feed.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

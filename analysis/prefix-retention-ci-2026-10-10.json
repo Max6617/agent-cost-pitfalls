@@ -1,0 +1,99 @@
+{
+ "generated": "2026-10-11T20:23:08.709Z",
+ "method": "paired by task, seeds averaged per (task, class), task-cluster percentile bootstrap",
+ "iters": 200000,
+ "seed": 12345,
+ "note": "The filed prefix-retention.json uses pairByTask, where the last row read wins and one seed per (task, class) is silently discarded; lastSeedPairing reproduces that estimate for comparison. This file is additive and does not replace the filed one.",
+ "models": [
+  {
+   "model": "deepseek-flash",
+   "tasks": 31,
+   "retentionPtc": 0.9995403004552712,
+   "retentionNative": 0.9994918789740255,
+   "diff": 0.000048421481245487114,
+   "ciLo": -0.00013094777906634322,
+   "ciHi": 0.00023039080658970152,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": -0.00006741440033832742
+   }
+  },
+  {
+   "model": "glm-5.3-flash",
+   "tasks": 31,
+   "retentionPtc": 0.9953868227465646,
+   "retentionNative": 0.9934495315444997,
+   "diff": 0.0019372912020644427,
+   "ciLo": -0.0017573903564897895,
+   "ciHi": 0.006355079731194718,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": 0.0010373788387053535
+   }
+  },
+  {
+   "model": "gpt-6-luna",
+   "tasks": 31,
+   "retentionPtc": 0.9984132102196256,
+   "retentionNative": 0.9981911901953294,
+   "diff": 0.00022202002429610833,
+   "ciLo": -0.003906628145981575,
+   "ciHi": 0.004459443253263707,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": -0.0025665844997338786
+   }
+  },
+  {
+   "model": "qwen3.8-flash",
+   "tasks": 31,
+   "retentionPtc": 0.6768725008590363,
+   "retentionNative": 0.741476418463909,
+   "diff": -0.06460391760487288,
+   "ciLo": -0.07814579767902032,
+   "ciHi": -0.051558490311721335,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": -0.06909768967805716
+   }
+  },
+  {
+   "model": "claude-haiku-4.5",
+   "tasks": 31,
+   "retentionPtc": 0.994421863404541,
+   "retentionNative": 0.9995496695738396,
+   "diff": -0.005127806169298514,
+   "ciLo": -0.008651664277112876,
+   "ciHi": -0.002051149956254224,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": -0.003151928424468739
+   }
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "tasks": 31,
+   "retentionPtc": 0.9998197443999202,
+   "retentionNative": 0.9997952441657446,
+   "diff": 0.00002450023417517107,
+   "ciLo": 0.000016110756459342482,
+   "ciHi": 0.000032475278193546605,
+   "iters": 200000,
+   "seed": 12345,
+   "lastSeedPairing": {
+    "tasks": 31,
+    "diff": 0.000024362332372545253
+   }
+  }
+ ]
+}

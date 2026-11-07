@@ -1,0 +1,6 @@
+{
+  "prompt": "The gateway mangled another message body last week and the quoted-printable codec is taking the blame. Receivers report that our encoded output ships lines longer than the 76 columns the docs promise, and that blanks at the end of a line go out raw unless the line happens to be the last one. Incoming mail is no better: the decoder refuses escapes written with lowercase hex, and a body whose encoded form ends in a bare '=' picks up a stray character. Make the codec behave the way docs/quoted-printable.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-quoted-printable",
+  "setup": ""
+}

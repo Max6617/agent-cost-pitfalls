@@ -1,0 +1,132 @@
+{
+  "matrixId": "cmuquohyu-deepseek",
+  "startedAt": "2026-10-02T11:03:02.634Z",
+  "gateway": "http://127.0.0.1:8790",
+  "gatewayStats": {
+    "enforcedModel": "deepseek-flash",
+    "enforcedEffort": "high",
+    "upstreamKeyMasked": "sk-...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "deepseek-flash",
+  "requestedModel": "deepseek-flash",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\ds-full",
+  "tasks": 31,
+  "seeds": 2,
+  "jobs": 4,
+  "arms": [
+    "dsh:native",
+    "dsh:ptc",
+    "dsh:native-opt",
+    "dsh:ptc-opt",
+    "dsh:native-terse",
+    "dsh:ptc-terse",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "plannedRuns": 620,
+  "harnesses": [
+    "dsh",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "harnessVersions": {
+    "dsh": {
+      "harness": "dsh",
+      "command": "dsh",
+      "probedVersion": null,
+      "raw": "Der Befehl \"dsh\" ist entweder falsch geschrieben oder\r",
+      "error": "exit 1",
+      "declaredVersion": null,
+      "probedAt": "2026-10-02T11:02:46.018Z"
+    },
+    "opencode": {
+      "harness": "opencode",
+      "command": "opencode",
+      "probedVersion": "1.18.30",
+      "raw": "1.18.30",
+      "error": null,
+      "declaredVersion": "1.18.30",
+      "probedAt": "2026-10-02T11:02:46.923Z"
+    },
+    "cline": {
+      "harness": "cline",
+      "command": "C:\\Users\\user\\betterharness-tools\\cline-3.0.65\\node_modules\\.bin\\cline.cmd",
+      "probedVersion": "3.0.65",
+      "raw": "3.0.65",
+      "error": null,
+      "declaredVersion": "3.0.66",
+      "probedAt": "2026-10-02T11:02:48.618Z"
+    },
+    "openhands": {
+      "harness": "openhands",
+      "command": "openhands",
+      "probedVersion": "1.16.0",
+      "raw": "OpenHands CLI 1.16.0\r",
+      "error": null,
+      "declaredVersion": "1.16.0",
+      "probedAt": "2026-10-02T11:03:02.566Z"
+    },
+    "goose": {
+      "harness": "goose",
+      "command": "goose",
+      "probedVersion": "1.52.0",
+      "raw": "1.52.0",
+      "error": null,
+      "declaredVersion": "1.52.0",
+      "probedAt": "2026-10-02T11:03:02.633Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks",
+    "--seeds",
+    "2",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\ds-full",
+    "--gateway",
+    "http://127.0.0.1:8790",
+    "--model",
+    "deepseek-flash",
+    "--matrix-id",
+    "cmuquohyu-deepseek",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "dsh",
+    "--harness",
+    "opencode",
+    "--harness",
+    "cline",
+    "--harness",
+    "openhands",
+    "--harness",
+    "goose"
+  ],
+  "harnessVersionsPostHoc": {
+    "note": "The per-record harnessVersion is null for DSH because the probe could not execute it during collection - DSH is not on PATH and is launched as node plus its bin.js. This block records what the INSTALL PROVES. No historical record was rewritten.",
+    "dsh": {
+      "version": "0.1.7-rc.2",
+      "evidence": "C:\\Users\\user\\dsh-app\\node_modules\\@deepseek-ai\\dsh\\package.json",
+      "packageJsonMtime": "2026-09-29T11:03:43.265Z",
+      "installPredatesMatrix": true,
+      "installChangedDuringMatrix": false,
+      "conclusion": "the install predates the matrix and was unchanged through it, so every DSH run used 0.1.7-rc.2"
+    },
+    "recordsAffected": 372,
+    "probedAt": "2026-10-02T14:26:12.088Z"
+  }
+}

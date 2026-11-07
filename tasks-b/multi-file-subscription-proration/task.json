@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers are disputing their invoices after mid-period subscription moves. Support's hand calculations never match what we bill for upgrades and seat additions - sometimes a cent, sometimes what looks like a whole day - downgrades are showing up on the account straight away instead of at the end of the paid period, and accounts carrying a credit balance are being taxed as if the credit were not there; one team that moved plan and seats together says the credit came off twice. The rules everyone signed off are in docs/, and the tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-subscription-proration",
+  "setup": ""
+}

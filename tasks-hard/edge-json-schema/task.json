@@ -1,0 +1,6 @@
+{
+  "prompt": "Request bodies our schemas allow are being rejected — a 19.99 price comes back as \"not a multiple of 0.01\" — while bodies they should reject go through: `additionalProperties: false` stops doing anything the moment the same schema also declares `patternProperties`, and a `oneOf` is satisfied when two of its branches match. A three-emoji label is also counted as six characters and blows a `maxLength: 3`. Make the validator behave the way docs/schema-spec.md describes it; the tests under test/ are the cases we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-json-schema",
+  "setup": ""
+}

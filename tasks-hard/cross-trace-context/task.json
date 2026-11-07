@@ -1,0 +1,6 @@
+{
+  "prompt": "The traces on our dashboards stopped lining up. Jobs that the worker picks up show no request id at all, a failure that reaches the client comes back stripped of the id its own log line has, a cache hit is attributed to the span that filled the cache instead of the request that replayed it, and when two requests are in flight their events turn up under one id. Make the service emit and return a request context the way docs/trace-context.md says it must; the tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-trace-context",
+  "setup": ""
+}

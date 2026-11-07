@@ -1,0 +1,255 @@
+{
+ "generated": "2026-10-01T13:11:39.918Z",
+ "models": {
+  "DeepSeek V4.1 Flash": {
+   "runs": 620,
+   "arms": {
+    "opencode": 62,
+    "dsh:ptc-terse": 62,
+    "dsh:native": 62,
+    "dsh:ptc": 62,
+    "dsh:ptc-opt": 62,
+    "dsh:native-terse": 62,
+    "dsh:native-opt": 62,
+    "goose": 62,
+    "cline": 62,
+    "openhands": 62
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "ds-full"
+   ],
+   "cells": 620,
+   "infra": 0,
+   "unexplained": 1,
+   "noGateway": 0,
+   "terse": {
+    "rows": 124,
+    "real": 0
+   }
+  },
+  "GLM-5.3-Flash": {
+   "runs": 620,
+   "arms": {
+    "dsh:native-opt": 62,
+    "dsh:ptc": 62,
+    "dsh:ptc-opt": 62,
+    "dsh:native": 62,
+    "opencode": 62,
+    "dsh:ptc-terse": 62,
+    "dsh:native-terse": 62,
+    "goose": 62,
+    "cline": 62,
+    "openhands": 62
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "glm-flash",
+    "glm-terse",
+    "glm-harness"
+   ],
+   "cells": 620,
+   "infra": 0,
+   "unexplained": 1,
+   "noGateway": 1,
+   "terse": {
+    "rows": 124,
+    "real": 124
+   }
+  },
+  "GLM-5.3": {
+   "runs": 316,
+   "arms": {
+    "dsh:native-opt": 32,
+    "dsh:native": 32,
+    "dsh:ptc-opt": 32,
+    "dsh:ptc": 32,
+    "opencode": 33,
+    "openhands": 31,
+    "goose": 31,
+    "dsh:ptc-terse": 31,
+    "cline": 31,
+    "dsh:native-terse": 31
+   },
+   "tasks": 31,
+   "seeds": [
+    1
+   ],
+   "dirs": [
+    "glm53"
+   ],
+   "cells": 310,
+   "infra": 6,
+   "unexplained": 2,
+   "noGateway": 2,
+   "terse": {
+    "rows": 62,
+    "real": 62
+   }
+  },
+  "Qwen3.8-Flash": {
+   "runs": 620,
+   "arms": {
+    "opencode": 62,
+    "dsh:ptc-terse": 62,
+    "dsh:native-opt": 62,
+    "goose": 62,
+    "openhands": 62,
+    "dsh:ptc": 62,
+    "dsh:native": 62,
+    "cline": 62,
+    "dsh:ptc-opt": 62,
+    "dsh:native-terse": 62
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "qwen-full"
+   ],
+   "cells": 620,
+   "infra": 1,
+   "unexplained": 11,
+   "noGateway": 5,
+   "terse": {
+    "rows": 124,
+    "real": 124
+   }
+  },
+  "Claude Haiku 4.5": {
+   "runs": 654,
+   "arms": {
+    "opencode": 66,
+    "dsh:native-opt": 65,
+    "dsh:ptc-terse": 66,
+    "goose": 66,
+    "dsh:ptc": 66,
+    "dsh:native": 65,
+    "cline": 65,
+    "dsh:ptc-opt": 67,
+    "dsh:native-terse": 64,
+    "openhands": 64
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "haiku-full"
+   ],
+   "cells": 620,
+   "infra": 9,
+   "unexplained": 98,
+   "noGateway": 1,
+   "terse": {
+    "rows": 130,
+    "real": 130
+   }
+  },
+  "Claude Sonnet 5.5": {
+   "runs": 620,
+   "arms": {
+    "opencode": 62,
+    "dsh:native-opt": 62,
+    "dsh:ptc-terse": 62,
+    "goose": 62,
+    "dsh:ptc": 62,
+    "openhands": 62,
+    "cline": 62,
+    "dsh:native": 62,
+    "dsh:ptc-opt": 62,
+    "dsh:native-terse": 62
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "sonnet-full"
+   ],
+   "cells": 620,
+   "infra": 0,
+   "unexplained": 3,
+   "noGateway": 1,
+   "terse": {
+    "rows": 124,
+    "real": 124
+   }
+  },
+  "gpt-6-luna": {
+   "runs": 619,
+   "arms": {
+    "opencode": 62,
+    "dsh:native-opt": 62,
+    "dsh:ptc-terse": 62,
+    "dsh:ptc": 62,
+    "goose": 62,
+    "dsh:ptc-opt": 62,
+    "dsh:native": 62,
+    "cline": 62,
+    "openhands": 62,
+    "dsh:native-terse": 61
+   },
+   "tasks": 31,
+   "seeds": [
+    1,
+    2
+   ],
+   "dirs": [
+    "luna-full"
+   ],
+   "cells": 619,
+   "infra": 111,
+   "unexplained": 18,
+   "noGateway": 2,
+   "terse": {
+    "rows": 123,
+    "real": 123
+   }
+  },
+  "Claude Sonnet 5.5 (F18 replication)": {
+   "runs": 30,
+   "arms": {
+    "dsh:ptc-opt": 3,
+    "opencode": 3,
+    "dsh:ptc-terse": 3,
+    "dsh:native-opt": 3,
+    "cline": 3,
+    "openhands": 3,
+    "dsh:native-terse": 3,
+    "dsh:native": 3,
+    "dsh:ptc": 3,
+    "goose": 3
+   },
+   "tasks": 1,
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "dirs": [
+    "f18-sonnet"
+   ],
+   "cells": 30,
+   "infra": 0,
+   "unexplained": 29,
+   "noGateway": 0,
+   "terse": {
+    "rows": 6,
+    "real": 6
+   }
+  }
+ }
+}

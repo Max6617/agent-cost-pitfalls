@@ -1,0 +1,6 @@
+{
+  "prompt": "The gateway serves the wrong representation for perfectly ordinary Accept headers: a client that explicitly refuses a type with q=0 still gets it, a wildcard beats an exact match at equal quality, and a range with parameters is dropped instead of used. Make the negotiation follow the header syntax so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

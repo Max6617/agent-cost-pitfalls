@@ -1,0 +1,963 @@
+{
+ "generated": "2026-10-02T07:54:31.068Z",
+ "conditions": {
+  "none": {
+   "label": "none (harness as-is)",
+   "runs": 40,
+   "solved": 31,
+   "droppedByText": 32,
+   "droppedByStatus": 0,
+   "reqs": 1152,
+   "inputTokens": 28448525,
+   "hitTokens": 0,
+   "createdTokens": 0,
+   "hitRate": 0,
+   "costPerRun": 0.7817629999999999,
+   "totalCost": 31.270519999999994,
+   "perRun": [
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc",
+     "cost": 0.12977799999999998,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.174226,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.08872000000000001,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-opt",
+     "cost": 0.08406000000000001,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native",
+     "cost": 0.08707300000000001,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-terse",
+     "cost": 0.098347,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc",
+     "cost": 0.650433,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.172689,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.4580879999999996,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native",
+     "cost": 0.18668099999999999,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-terse",
+     "cost": 0.19834400000000002,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-opt",
+     "cost": 0.22594000000000003,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc",
+     "cost": 1.7782650000000004,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-opt",
+     "cost": 2.1795509999999996,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-terse",
+     "cost": 2.250351,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native",
+     "cost": 2.766807,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.978669,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-opt",
+     "cost": 1.370632,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc",
+     "cost": 1.7210280000000002,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.4062420000000002,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.41526399999999997,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native",
+     "cost": 0.554867,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-terse",
+     "cost": 0.613369,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc",
+     "cost": 0.703986,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-opt",
+     "cost": 1.4340570000000001,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-terse",
+     "cost": 0.31459299999999996,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native",
+     "cost": 0.20455800000000002,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.3201510000000001,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.137401,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-opt",
+     "cost": 0.6703429999999999,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-opt",
+     "cost": 0.213824,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc",
+     "cost": 0.7987669999999999,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.585603,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native",
+     "cost": 0.647069,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-terse",
+     "cost": 0.3297549999999999,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.36339200000000005,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native-terse",
+     "cost": 1.0653639999999998,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.1963829999999995,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc",
+     "cost": 1.091159,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native",
+     "cost": 0.604691,
+     "solved": true,
+     "hitRate": 0
+    }
+   ]
+  },
+  "static": {
+   "label": "static breakpoints",
+   "runs": 49,
+   "solved": 35,
+   "droppedByText": 23,
+   "droppedByStatus": 0,
+   "reqs": 1195,
+   "inputTokens": 25145151,
+   "hitTokens": 2957900,
+   "createdTokens": 5378,
+   "hitRate": 0.11763301799221647,
+   "costPerRun": 0.5128462346938777,
+   "totalCost": 25.129465500000006,
+   "perRun": [
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.088637,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc",
+     "cost": 0.10234900000000001,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-opt",
+     "cost": 0.04254790000000001,
+     "solved": true,
+     "hitRate": 0.5814997026544845
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.13984900000000003,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-terse",
+     "cost": 0.014974000000000001,
+     "solved": true,
+     "hitRate": 0.7413840639647091
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native",
+     "cost": 0.026466600000000003,
+     "solved": true,
+     "hitRate": 0.6891337775499744
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.37619499999999995,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc",
+     "cost": 0.5168959999999999,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native",
+     "cost": 0.22386620000000002,
+     "solved": true,
+     "hitRate": 0.3485477461497791
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.40755699999999995,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-terse",
+     "cost": 0.2410676,
+     "solved": true,
+     "hitRate": 0.372218569401668
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-opt",
+     "cost": 0.158244,
+     "solved": true,
+     "hitRate": 0.39581564911901945
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.789064,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc",
+     "cost": 1.632883,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-terse",
+     "cost": 0.839553,
+     "solved": true,
+     "hitRate": 0.19720375696048695
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native",
+     "cost": 0.8576094,
+     "solved": true,
+     "hitRate": 0.18409478484205985
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.3110490000000001,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-opt",
+     "cost": 1.4386887999999998,
+     "solved": true,
+     "hitRate": 0.1600100383033715
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc",
+     "cost": 1.1255649999999997,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.45304400000000006,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.7303320000000001,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-terse",
+     "cost": 0.5721582000000001,
+     "solved": true,
+     "hitRate": 0.2641892721690446
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native",
+     "cost": 0.6225863999999999,
+     "solved": true,
+     "hitRate": 0.2264465320374684
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-opt",
+     "cost": 0.35851540000000004,
+     "solved": true,
+     "hitRate": 0.2794050214025141
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc",
+     "cost": 0.401524,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-terse",
+     "cost": 0.15626179999999998,
+     "solved": true,
+     "hitRate": 0.3934432226057932
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.107898,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native",
+     "cost": 0.3614034,
+     "solved": true,
+     "hitRate": 0.2755411404882461
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-opt",
+     "cost": 0.23368,
+     "solved": true,
+     "hitRate": 0.34720966867236525
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.697773,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc",
+     "cost": 0.341742,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-opt",
+     "cost": 0.2813976,
+     "solved": true,
+     "hitRate": 0.33334835968579896
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native",
+     "cost": 0.14631599999999997,
+     "solved": true,
+     "hitRate": 0.4051651398264224
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.37422300000000003,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.23897000000000004,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-terse",
+     "cost": 0.26552560000000003,
+     "solved": true,
+     "hitRate": 0.33836474390139276
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native-terse",
+     "cost": 0.5872481999999999,
+     "solved": true,
+     "hitRate": 0.25616878795732667
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc-opt",
+     "cost": 1.151046,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc",
+     "cost": 1.2555749999999999,
+     "solved": true,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native",
+     "cost": 0.5500970000000001,
+     "solved": true,
+     "hitRate": 0.22163902429374713
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.6457520000000001,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native-opt",
+     "cost": 0.600769,
+     "solved": true,
+     "hitRate": 0.22759204401184935
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:native-terse",
+     "cost": 0.3379338,
+     "solved": true,
+     "hitRate": 0.2665782305538902
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.4177280000000001,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:ptc",
+     "cost": 0.44259499999999996,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:native",
+     "cost": 0.3929136,
+     "solved": true,
+     "hitRate": 0.24542152655193086
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.22378699999999999,
+     "solved": false,
+     "hitRate": 0
+    },
+    {
+     "task": "multi-file-event-bus-ordering",
+     "arm": "dsh:native-opt",
+     "cost": 0.4397609999999999,
+     "solved": true,
+     "hitRate": 0.25380327367524885
+    },
+    {
+     "task": "multi-file-retry-policy",
+     "arm": "dsh:ptc",
+     "cost": 0.407848,
+     "solved": true,
+     "hitRate": 0
+    }
+   ]
+  },
+  "auto": {
+   "label": "static + automatic",
+   "runs": 41,
+   "solved": 30,
+   "droppedByText": 31,
+   "droppedByStatus": 0,
+   "reqs": 1142,
+   "inputTokens": 25605053,
+   "hitTokens": 24303746,
+   "createdTokens": 1293270,
+   "hitRate": 0.9491777267557306,
+   "costPerRun": 0.1666547341463415,
+   "totalCost": 6.832844100000001,
+   "perRun": [
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc",
+     "cost": 0.040781950000000004,
+     "solved": true,
+     "hitRate": 0.8878022835868269
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.0403651,
+     "solved": true,
+     "hitRate": 0.8855995017674974
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.021732249999999998,
+     "solved": true,
+     "hitRate": 0.7735678370816065
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-opt",
+     "cost": 0.018841950000000003,
+     "solved": true,
+     "hitRate": 0.9361427816956103
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native-terse",
+     "cost": 0.01792325,
+     "solved": true,
+     "hitRate": 0.9401967249919317
+    },
+    {
+     "task": "example-fix",
+     "arm": "dsh:native",
+     "cost": 0.01943385,
+     "solved": true,
+     "hitRate": 0.9396750481460384
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.14623365,
+     "solved": true,
+     "hitRate": 0.9217223778130582
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc",
+     "cost": 0.24129245000000002,
+     "solved": true,
+     "hitRate": 0.9315210120692162
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.06081185000000001,
+     "solved": false,
+     "hitRate": 0.8732087505756053
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-terse",
+     "cost": 0.06794135000000001,
+     "solved": true,
+     "hitRate": 0.9366635844282448
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native-opt",
+     "cost": 0.09734315000000002,
+     "solved": true,
+     "hitRate": 0.9481545717850969
+    },
+    {
+     "task": "fetch-heavy-duration-parse",
+     "arm": "dsh:native",
+     "cost": 0.32398135,
+     "solved": true,
+     "hitRate": 0.9594835454409596
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc",
+     "cost": 0.45847744999999995,
+     "solved": false,
+     "hitRate": 0.9526927424076723
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.4073564499999999,
+     "solved": false,
+     "hitRate": 0.9593565331168171
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-terse",
+     "cost": 0.16224300000000005,
+     "solved": true,
+     "hitRate": 0.9570832756331408
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native",
+     "cost": 0.14858200000000002,
+     "solved": true,
+     "hitRate": 0.9567609950816166
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.11132225000000001,
+     "solved": false,
+     "hitRate": 0.928388820962387
+    },
+    {
+     "task": "fetch-heavy-semver-ranges",
+     "arm": "dsh:native-opt",
+     "cost": 0.10422739999999998,
+     "solved": true,
+     "hitRate": 0.938884386646377
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc",
+     "cost": 0.32312080000000004,
+     "solved": false,
+     "hitRate": 0.9603327028504184
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.13973300000000002,
+     "solved": false,
+     "hitRate": 0.9415234108047458
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.39969695,
+     "solved": false,
+     "hitRate": 0.9361993292706973
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-terse",
+     "cost": 0.07400580000000001,
+     "solved": true,
+     "hitRate": 0.9449648130089381
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native",
+     "cost": 0.2732615500000001,
+     "solved": true,
+     "hitRate": 0.9443828124671082
+    },
+    {
+     "task": "long-horizon-billing-tiers",
+     "arm": "dsh:native-opt",
+     "cost": 0.31364435000000007,
+     "solved": true,
+     "hitRate": 0.9669110277189585
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc",
+     "cost": 0.2827273,
+     "solved": false,
+     "hitRate": 0.945422377153818
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-terse",
+     "cost": 0.03700395,
+     "solved": true,
+     "hitRate": 0.9280296266904738
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native",
+     "cost": 0.05946035,
+     "solved": true,
+     "hitRate": 0.9433468419491944
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.41821715,
+     "solved": false,
+     "hitRate": 0.9528744708991057
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.0897338,
+     "solved": false,
+     "hitRate": 0.9080722199100224
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc",
+     "cost": 0.14921184999999998,
+     "solved": true,
+     "hitRate": 0.912989595104582
+    },
+    {
+     "task": "long-horizon-job-ordering",
+     "arm": "dsh:native-opt",
+     "cost": 0.2945891999999998,
+     "solved": true,
+     "hitRate": 0.9766971911878894
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-opt",
+     "cost": 0.16000735000000002,
+     "solved": true,
+     "hitRate": 0.9607450712145015
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native",
+     "cost": 0.0641495,
+     "solved": true,
+     "hitRate": 0.9298589972627528
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.21220195,
+     "solved": true,
+     "hitRate": 0.9434053845564899
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:native-terse",
+     "cost": 0.05528535,
+     "solved": true,
+     "hitRate": 0.9116834207530095
+    },
+    {
+     "task": "long-horizon-ttl-cache",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.0695166,
+     "solved": false,
+     "hitRate": 0.8965380770928575
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native-terse",
+     "cost": 0.11861039999999996,
+     "solved": true,
+     "hitRate": 0.9525887380497463
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc-opt",
+     "cost": 0.3361829499999999,
+     "solved": true,
+     "hitRate": 0.9621820534882564
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc",
+     "cost": 0.20316890000000004,
+     "solved": true,
+     "hitRate": 0.9346303221756602
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:native",
+     "cost": 0.10783275000000002,
+     "solved": true,
+     "hitRate": 0.9530629645088989
+    },
+    {
+     "task": "multi-file-config-precedence",
+     "arm": "dsh:ptc-terse",
+     "cost": 0.1625916,
+     "solved": true,
+     "hitRate": 0.9461516477656454
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,825 @@
+{
+  "generated": "2026-10-11T20:03:26.817Z",
+  "plan": "RERUN-PLAN.md",
+  "suites": {
+    "rerun-b1": [
+      {
+        "model": "deepseek-flash",
+        "label": "DeepSeek V4.1 Flash",
+        "rerun": {
+          "tasks": 31,
+          "nativeMean": 0.009210607741935486,
+          "pct": 0.9259782654529732,
+          "ciLoPct": -9.957027458242042,
+          "ciHiPct": 12.665216235249648,
+          "cls": "null",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": 0.12594372547675967,
+          "ciLoPct": -8.898534439895037,
+          "ciHiPct": 9.76010954913175,
+          "cls": "null"
+        },
+        "filedAdjustedLog": {
+          "pct": -0.7765796315751694,
+          "ciLoPct": -10.024598947133656,
+          "ciHiPct": 9.632923412658489,
+          "cls": "null"
+        },
+        "filedAdjustedAdditive": {
+          "pct": 0.33946696784849806,
+          "ciLoPct": -11.3734332006335,
+          "ciHiPct": 11.593364285088086,
+          "cls": "null"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 31,
+          "blocksNativeFirst": 31,
+          "pct": 6.1686623319731915,
+          "ciLoPct": -9.200601830859622,
+          "ciHiPct": 22.164526672374958,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.009210607741935486,
+            "costPerSolved": 0.009210607741935486,
+            "requestsPerCell": 12.209677419354838
+          },
+          "ptc": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.009295895967741935,
+            "costPerSolved": 0.009295895967741935,
+            "requestsPerCell": 10.209677419354838
+          },
+          "mcnemar": {
+            "n": 0,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": 0.9259782654529536,
+          "perSolvedPct": 0.9259782654529536,
+          "bothSolved": {
+            "cells": 62,
+            "tasks": 31,
+            "pct": 0.925978265452974,
+            "ciLoPct": -9.957027458242045,
+            "ciHiPct": 12.665216235249652,
+            "excludesZero": false,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.009210607741935486,
+          "filedNativeMean": 0.009341985967741936,
+          "pct": -1.406320093608593
+        }
+      },
+      {
+        "model": "glm-5.3-flash",
+        "label": "GLM-5.3-Flash",
+        "rerun": {
+          "tasks": 31,
+          "nativeMean": 0.008286233870967743,
+          "pct": 15.384447387962735,
+          "ciLoPct": 0.9695092813284315,
+          "ciHiPct": 32.948835661167514,
+          "cls": "positive",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": -20.75183285570261,
+          "ciLoPct": -44.29844542338426,
+          "ciHiPct": -2.793193005906967,
+          "cls": "negative"
+        },
+        "filedAdjustedLog": {
+          "pct": -8.923523641409403,
+          "ciLoPct": -19.96689088640997,
+          "ciHiPct": 1.804311102244771,
+          "cls": "null"
+        },
+        "filedAdjustedAdditive": {
+          "pct": -17.270414330509407,
+          "ciLoPct": -42.54825962047055,
+          "ciHiPct": 0.4127572976952423,
+          "cls": "null"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 31,
+          "blocksNativeFirst": 31,
+          "pct": -10.835141455951524,
+          "ciLoPct": -49.38683152164761,
+          "ciHiPct": 22.39049035694971,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.008286233870967743,
+            "costPerSolved": 0.008286233870967743,
+            "requestsPerCell": 12.46774193548387
+          },
+          "ptc": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.009561025161290322,
+            "costPerSolved": 0.009561025161290322,
+            "requestsPerCell": 11.612903225806452
+          },
+          "mcnemar": {
+            "n": 0,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": 15.38444738796272,
+          "perSolvedPct": 15.38444738796272,
+          "bothSolved": {
+            "cells": 62,
+            "tasks": 31,
+            "pct": 15.384447387962735,
+            "ciLoPct": 0.9695092813284351,
+            "ciHiPct": 32.94883566116751,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.008286233870967743,
+          "filedNativeMean": 0.009016447258064515,
+          "pct": -8.098681955286235
+        }
+      },
+      {
+        "model": "qwen3.8-flash",
+        "label": "Qwen3.8-Flash",
+        "rerun": {
+          "tasks": 31,
+          "nativeMean": 0.01727487129032258,
+          "pct": 33.1475799614286,
+          "ciLoPct": 23.313442921688544,
+          "ciHiPct": 42.506012976036175,
+          "cls": "positive",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": 30.669685095033394,
+          "ciLoPct": 10.022270632353246,
+          "ciHiPct": 53.78834004726409,
+          "cls": "positive"
+        },
+        "filedAdjustedLog": {
+          "pct": 35.34978128569954,
+          "ciLoPct": 15.613462910407105,
+          "ciHiPct": 58.32131728553422,
+          "cls": "positive"
+        },
+        "filedAdjustedAdditive": {
+          "pct": 32.392994402543884,
+          "ciLoPct": 12.936996305890661,
+          "ciHiPct": 54.788862833700804,
+          "cls": "positive"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 31,
+          "blocksNativeFirst": 31,
+          "pct": -4.7945812620871795,
+          "ciLoPct": -32.6968868371313,
+          "ciHiPct": 20.423681337886617,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.01727487129032258,
+            "costPerSolved": 0.01727487129032258,
+            "requestsPerCell": 14.112903225806452
+          },
+          "ptc": {
+            "cells": 62,
+            "solved": 60,
+            "costPerCell": 0.02300107306451613,
+            "costPerSolved": 0.023767775499999998,
+            "requestsPerCell": 14.17741935483871
+          },
+          "mcnemar": {
+            "n": 2,
+            "n01": 2,
+            "n10": 0,
+            "p": 0.5,
+            "method": "exact-binomial"
+          },
+          "perCellPct": 33.147579961428605,
+          "perSolvedPct": 37.58583262680955,
+          "bothSolved": {
+            "cells": 60,
+            "tasks": 31,
+            "pct": 36.32139925619804,
+            "ciLoPct": 24.573535983013354,
+            "ciHiPct": 48.99508191615,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.01727487129032258,
+          "filedNativeMean": 0.015993867741935484,
+          "pct": 8.009341886880428
+        }
+      },
+      {
+        "model": "gpt-6-luna",
+        "label": "gpt-6-luna",
+        "rerun": {
+          "tasks": 31,
+          "nativeMean": 0.006669977096774194,
+          "pct": -2.1135996549584326,
+          "ciLoPct": -13.548411855551667,
+          "ciHiPct": 8.638337927261825,
+          "cls": "null",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": 1.1980649138460746,
+          "ciLoPct": -8.418191689364738,
+          "ciHiPct": 11.285952800609214,
+          "cls": "null"
+        },
+        "filedAdjustedLog": {
+          "pct": 6.653212433477451,
+          "ciLoPct": -6.474218165766443,
+          "ciHiPct": 23.025722978203646,
+          "cls": "null"
+        },
+        "filedAdjustedAdditive": {
+          "pct": 2.3522622270552933,
+          "ciLoPct": -9.901116786895967,
+          "ciHiPct": 15.975505170078549,
+          "cls": "null"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 31,
+          "blocksNativeFirst": 31,
+          "pct": -2.4639103805018623,
+          "ciLoPct": -25.712533907506664,
+          "ciHiPct": 19.929839755661753,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 62,
+            "solved": 61,
+            "costPerCell": 0.006669977096774194,
+            "costPerSolved": 0.006779320983606558,
+            "requestsPerCell": 21.177419354838708
+          },
+          "ptc": {
+            "cells": 62,
+            "solved": 61,
+            "costPerCell": 0.006529000483870967,
+            "costPerSolved": 0.006636033278688523,
+            "requestsPerCell": 12.790322580645162
+          },
+          "mcnemar": {
+            "n": 2,
+            "n01": 1,
+            "n10": 1,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": -2.1135996549584535,
+          "perSolvedPct": -2.1135996549584646,
+          "bothSolved": {
+            "cells": 60,
+            "tasks": 31,
+            "pct": -1.3099450719538868,
+            "ciLoPct": -11.29376301443418,
+            "ciHiPct": 8.808218945134637,
+            "excludesZero": false,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.006669977096774194,
+          "filedNativeMean": 0.006315964516129032,
+          "pct": 5.60504384945677
+        }
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "label": "Claude Haiku 4.5",
+        "rerun": {
+          "tasks": 31,
+          "nativeMean": 0.11782979112903226,
+          "pct": 78.41408760877952,
+          "ciLoPct": 56.94654100600183,
+          "ciHiPct": 102.29058672049374,
+          "cls": "positive",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": 53.838742137015714,
+          "ciLoPct": 31.252882542938664,
+          "ciHiPct": 76.73177992356119,
+          "cls": "positive"
+        },
+        "filedAdjustedLog": {
+          "pct": 66.13247369898063,
+          "ciLoPct": 39.06329512565387,
+          "ciHiPct": 99.13158884790087,
+          "cls": "positive"
+        },
+        "filedAdjustedAdditive": {
+          "pct": 51.78958057953924,
+          "ciLoPct": 28.443645404463535,
+          "ciHiPct": 75.62713976448549,
+          "cls": "positive"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 31,
+          "blocksNativeFirst": 31,
+          "pct": -49.03142922649751,
+          "ciLoPct": -97.12298031097221,
+          "ciHiPct": -3.209442514943841,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 62,
+            "solved": 62,
+            "costPerCell": 0.11782979112903226,
+            "costPerSolved": 0.11782979112903226,
+            "requestsPerCell": 25.56451612903226
+          },
+          "ptc": {
+            "cells": 62,
+            "solved": 48,
+            "costPerCell": 0.21022494677419354,
+            "costPerSolved": 0.27154055625,
+            "requestsPerCell": 27.661290322580644
+          },
+          "mcnemar": {
+            "n": 14,
+            "n01": 14,
+            "n10": 0,
+            "p": 0.0001220703125,
+            "method": "exact-binomial"
+          },
+          "perCellPct": 78.41408760877952,
+          "perSolvedPct": 130.4515298280069,
+          "bothSolved": {
+            "cells": 48,
+            "tasks": 28,
+            "pct": 107.05492191713537,
+            "ciLoPct": 72.66725653165466,
+            "ciHiPct": 146.1530016010395,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.11782979112903226,
+          "filedNativeMean": 0.11970697096774192,
+          "pct": -1.568145800978893
+        }
+      }
+    ],
+    "rerun-b": [
+      {
+        "model": "deepseek-flash",
+        "label": "DeepSeek V4.1 Flash",
+        "rerun": {
+          "tasks": 40,
+          "nativeMean": 0.025116565874999996,
+          "pct": -16.767289747965997,
+          "ciLoPct": -29.773991744004697,
+          "ciHiPct": -6.309042238840706,
+          "cls": "negative",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": -21.758870744592134,
+          "ciLoPct": -37.46364252855195,
+          "ciHiPct": -9.384377880751053,
+          "cls": "negative"
+        },
+        "filedAdjustedLog": {
+          "pct": -17.042583572861602,
+          "ciLoPct": -23.163017147115774,
+          "ciHiPct": -10.75196982494161,
+          "cls": "negative"
+        },
+        "filedAdjustedAdditive": {
+          "pct": -23.467777165604048,
+          "ciLoPct": -37.83897873388258,
+          "ciHiPct": -10.99215221860169,
+          "cls": "negative"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 40,
+          "blocksNativeFirst": 40,
+          "pct": -15.777978047327295,
+          "ciLoPct": -38.84769195716465,
+          "ciHiPct": 2.8904548639852674,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 80,
+            "solved": 78,
+            "costPerCell": 0.025116565874999996,
+            "costPerSolved": 0.02576058038461538,
+            "requestsPerCell": 24.425
+          },
+          "ptc": {
+            "cells": 80,
+            "solved": 78,
+            "costPerCell": 0.020905198500000003,
+            "costPerSolved": 0.021441229230769233,
+            "requestsPerCell": 16
+          },
+          "mcnemar": {
+            "n": 4,
+            "n01": 2,
+            "n10": 2,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": -16.767289747965975,
+          "perSolvedPct": -16.767289747965965,
+          "bothSolved": {
+            "cells": 76,
+            "tasks": 39,
+            "pct": -19.08122132577347,
+            "ciLoPct": -34.61348311916958,
+            "ciHiPct": -6.645920370168673,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.025116565874999996,
+          "filedNativeMean": 0.025786867874999998,
+          "pct": -2.5993928508465713
+        }
+      },
+      {
+        "model": "glm-5.3-flash",
+        "label": "GLM-5.3-Flash",
+        "rerun": {
+          "tasks": 40,
+          "nativeMean": 0.025427062500000003,
+          "pct": -3.838712198862922,
+          "ciLoPct": -16.446598481440788,
+          "ciHiPct": 9.333995029901702,
+          "cls": "null",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": -10.138726094945465,
+          "ciLoPct": -21.117331446310132,
+          "ciHiPct": 0.14092247438159253,
+          "cls": "null"
+        },
+        "filedAdjustedLog": {
+          "pct": -6.2225112392312765,
+          "ciLoPct": -14.937315497887438,
+          "ciHiPct": 3.107241945367223,
+          "cls": "null"
+        },
+        "filedAdjustedAdditive": {
+          "pct": -8.751495128472987,
+          "ciLoPct": -21.189589042695854,
+          "ciHiPct": 2.2618289475070754,
+          "cls": "null"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 40,
+          "blocksNativeFirst": 40,
+          "pct": 1.0419508741916206,
+          "ciLoPct": -16.111428391509712,
+          "ciHiPct": 18.435195987670706,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 80,
+            "solved": 78,
+            "costPerCell": 0.025427062500000003,
+            "costPerSolved": 0.026079038461538466,
+            "requestsPerCell": 24.6375
+          },
+          "ptc": {
+            "cells": 80,
+            "solved": 71,
+            "costPerCell": 0.02445099075,
+            "costPerSolved": 0.027550412112676056,
+            "requestsPerCell": 19.1375
+          },
+          "mcnemar": {
+            "n": 9,
+            "n01": 8,
+            "n10": 1,
+            "p": 0.0390625,
+            "method": "exact-binomial"
+          },
+          "perCellPct": -3.838712198862948,
+          "perSolvedPct": 5.641978147728044,
+          "bothSolved": {
+            "cells": 70,
+            "tasks": 37,
+            "pct": -2.2850914278369183,
+            "ciLoPct": -17.24766722433544,
+            "ciHiPct": 14.795571931341897,
+            "excludesZero": false,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.025427062500000003,
+          "filedNativeMean": 0.025092431249999998,
+          "pct": 1.333594368222113
+        }
+      },
+      {
+        "model": "qwen3.8-flash",
+        "label": "Qwen3.8-Flash",
+        "rerun": {
+          "tasks": 40,
+          "nativeMean": 0.046699510624999996,
+          "pct": 12.938852397235376,
+          "ciLoPct": 0.5835564363582676,
+          "ciHiPct": 28.207087073730957,
+          "cls": "positive",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": 5.748315272116631,
+          "ciLoPct": -3.9319430864506066,
+          "ciHiPct": 15.014126928185807,
+          "cls": "null"
+        },
+        "filedAdjustedLog": {
+          "pct": 6.96494105994887,
+          "ciLoPct": -2.4860466513597523,
+          "ciHiPct": 16.926270498558416,
+          "cls": "null"
+        },
+        "filedAdjustedAdditive": {
+          "pct": 5.7889383843058315,
+          "ciLoPct": -4.537608345194604,
+          "ciHiPct": 16.13807558074904,
+          "cls": "null"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 40,
+          "blocksNativeFirst": 40,
+          "pct": 18.029976946894408,
+          "ciLoPct": -9.568769708477983,
+          "ciHiPct": 52.95175202384682,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 80,
+            "solved": 74,
+            "costPerCell": 0.046699510624999996,
+            "costPerSolved": 0.05048595743243243,
+            "requestsPerCell": 29.225
+          },
+          "ptc": {
+            "cells": 80,
+            "solved": 74,
+            "costPerCell": 0.052741891375000016,
+            "costPerSolved": 0.05701826094594596,
+            "requestsPerCell": 25.475
+          },
+          "mcnemar": {
+            "n": 6,
+            "n01": 3,
+            "n10": 3,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": 12.938852397235422,
+          "perSolvedPct": 12.938852397235422,
+          "bothSolved": {
+            "cells": 71,
+            "tasks": 37,
+            "pct": 11.515393961628408,
+            "ciLoPct": 1.011178611268961,
+            "ciHiPct": 22.695112014376235,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.046699510624999996,
+          "filedNativeMean": 0.044535159500000004,
+          "pct": 4.859870604033634
+        }
+      },
+      {
+        "model": "gpt-6-luna",
+        "label": "gpt-6-luna",
+        "rerun": {
+          "tasks": 40,
+          "nativeMean": 0.014417565374999997,
+          "pct": -18.995030913809895,
+          "ciLoPct": -28.98392094164512,
+          "ciHiPct": -9.403836325590444,
+          "cls": "negative",
+          "iters": 200000,
+          "seed": 12345
+        },
+        "filedRaw": {
+          "pct": -16.576828106555052,
+          "ciLoPct": -24.34527376842558,
+          "ciHiPct": -8.549859296234898,
+          "cls": "negative"
+        },
+        "filedAdjustedLog": {
+          "pct": -16.18756612473595,
+          "ciLoPct": -24.85997789176373,
+          "ciHiPct": -7.116580185766508,
+          "cls": "negative"
+        },
+        "filedAdjustedAdditive": {
+          "pct": -16.72889664284609,
+          "ciLoPct": -25.95319549177708,
+          "ciHiPct": -8.469453640817688,
+          "cls": "negative"
+        },
+        "orderEffect": {
+          "blocksPtcFirst": 40,
+          "blocksNativeFirst": 40,
+          "pct": -0.39897512862846796,
+          "ciLoPct": -19.969807012151488,
+          "ciHiPct": 18.974961861952526,
+          "iters": 200000,
+          "seed": 12345
+        },
+        "quality": {
+          "native": {
+            "cells": 80,
+            "solved": 76,
+            "costPerCell": 0.014417565374999997,
+            "costPerSolved": 0.015176384605263155,
+            "requestsPerCell": 33.5875
+          },
+          "ptc": {
+            "cells": 80,
+            "solved": 75,
+            "costPerCell": 0.011678944375000002,
+            "costPerSolved": 0.012457540666666668,
+            "requestsPerCell": 18.4
+          },
+          "mcnemar": {
+            "n": 9,
+            "n01": 5,
+            "n10": 4,
+            "p": 1,
+            "method": "exact-binomial"
+          },
+          "perCellPct": -18.995030913809853,
+          "perSolvedPct": -17.914964659327325,
+          "bothSolved": {
+            "cells": 71,
+            "tasks": 37,
+            "pct": -23.593133083434775,
+            "ciLoPct": -32.82398019243094,
+            "ciHiPct": -14.927062585392992,
+            "excludesZero": true,
+            "iters": 200000,
+            "seed": 12345
+          }
+        },
+        "drift": {
+          "rerunNativeMean": 0.014417565374999997,
+          "filedNativeMean": 0.013607533875,
+          "pct": 5.952816340132006
+        }
+      }
+    ]
+  },
+  "q2": {
+    "closerToAdjusted": 5,
+    "rows": 8,
+    "verdict": "holds",
+    "detail": [
+      {
+        "suite": "rerun-b1",
+        "model": "deepseek-flash",
+        "rerun": 0.9259782654529732,
+        "raw": 0.12594372547675967,
+        "adjustedLog": -0.7765796315751694
+      },
+      {
+        "suite": "rerun-b1",
+        "model": "glm-5.3-flash",
+        "rerun": 15.384447387962735,
+        "raw": -20.75183285570261,
+        "adjustedLog": -8.923523641409403
+      },
+      {
+        "suite": "rerun-b1",
+        "model": "qwen3.8-flash",
+        "rerun": 33.1475799614286,
+        "raw": 30.669685095033394,
+        "adjustedLog": 35.34978128569954
+      },
+      {
+        "suite": "rerun-b1",
+        "model": "gpt-6-luna",
+        "rerun": -2.1135996549584326,
+        "raw": 1.1980649138460746,
+        "adjustedLog": 6.653212433477451
+      },
+      {
+        "suite": "rerun-b",
+        "model": "deepseek-flash",
+        "rerun": -16.767289747965997,
+        "raw": -21.758870744592134,
+        "adjustedLog": -17.042583572861602
+      },
+      {
+        "suite": "rerun-b",
+        "model": "glm-5.3-flash",
+        "rerun": -3.838712198862922,
+        "raw": -10.138726094945465,
+        "adjustedLog": -6.2225112392312765
+      },
+      {
+        "suite": "rerun-b",
+        "model": "qwen3.8-flash",
+        "rerun": 12.938852397235376,
+        "raw": 5.748315272116631,
+        "adjustedLog": 6.96494105994887
+      },
+      {
+        "suite": "rerun-b",
+        "model": "gpt-6-luna",
+        "rerun": -18.995030913809895,
+        "raw": -16.576828106555052,
+        "adjustedLog": -16.18756612473595
+      }
+    ]
+  },
+  "aa": {
+    "label": {
+      "tasks": 31,
+      "nativeMean": 0.008653055322580646,
+      "pct": -5.287138648752127,
+      "ciLoPct": -17.66342535397202,
+      "ciHiPct": 5.6253000175604555,
+      "cls": "null",
+      "iters": 200000,
+      "seed": 12345,
+      "halfWidthPct": 11.644362685766238
+    },
+    "carryOver": {
+      "pct": 1.7081219825215403,
+      "ciLoPct": -7.946911142060981,
+      "ciHiPct": 13.734390979587937
+    },
+    "hitShare": {
+      "native": 0.9552431075286639,
+      "twin": 0.9518092299984654
+    },
+    "prediction": {
+      "labelWithin2pct": false,
+      "hitSharesWithin1pt": true
+    }
+  },
+  "missing": []
+}

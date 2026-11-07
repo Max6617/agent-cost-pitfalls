@@ -1,0 +1,11 @@
+{
+  "name": "spec-csv-dialect",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Delimited-text reader and writer for the supplier import pipeline",
+  "scripts": {
+    "test": "node --test",
+    "import": "node bin/import.js"
+  }
+}

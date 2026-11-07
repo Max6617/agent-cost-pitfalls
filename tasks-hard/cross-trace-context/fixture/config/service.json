@@ -1,0 +1,29 @@
+{
+  "service": "orders-api",
+  "defaultUrl": "https://downstream.internal/orders",
+  "cachePrefix": "record:",
+  "attempts": 3,
+  "trace": {
+    "header": "x-request-id",
+    "anonymousTraceId": "trace:anonymous",
+    "maxSpanDepth": 8
+  },
+  "principals": [
+    { "id": "svc-reconciler", "token": "tok-reconciler", "system": true },
+    { "id": "user-42", "token": "tok-user-42", "system": false }
+  ],
+  "routes": [
+    { "id": "read", "method": "GET", "path": "/read/:id", "access": "public", "handler": "read" },
+    { "id": "write", "method": "PUT", "path": "/read/:id", "access": "authenticated", "handler": "write" },
+    { "id": "send", "method": "POST", "path": "/send", "access": "authenticated", "handler": "send" },
+    { "id": "diagnose", "method": "POST", "path": "/diagnose", "access": "system", "handler": "diagnose" },
+    { "id": "enqueue", "method": "POST", "path": "/jobs", "access": "authenticated", "handler": "enqueue" },
+    { "id": "tick", "method": "POST", "path": "/scheduler/tick", "access": "system", "handler": "tick" },
+    { "id": "audit", "method": "POST", "path": "/audit", "access": "authenticated", "handler": "auditOnly" },
+    { "id": "status", "method": "GET", "path": "/status", "access": "public", "handler": "status" }
+  ],
+  "scheduled": [
+    { "name": "rebuild-index", "payload": { "shard": 1 } },
+    { "name": "expire-carts", "payload": { "shard": 2 } }
+  ]
+}

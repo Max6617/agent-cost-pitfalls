@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers keep bursting straight through their API quotas and the end-of-day usage numbers no longer add up: keys that should be throttled get admitted, and replaying a day's traffic gives totals that depend on the order the events happened to arrive in. A couple of customers also noticed that the extra allowance we grant them one day never shows up against the next day's budget. The rules we signed off with the API team are written down in docs/quota-rules.md - make the service behave the way that document says. The reproductions we managed to write are under test/, but they are not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-quota-windows",
+  "setup": ""
+}

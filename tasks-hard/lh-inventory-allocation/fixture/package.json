@@ -1,0 +1,12 @@
+{
+  "name": "inventory-allocation",
+  "version": "1.0.0",
+  "description": "Warehouse stock allocation engine: holds with a TTL, channel safety stock, backorders and available-to-promise",
+  "type": "module",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "allocate": "node bin/allocate.js"
+  }
+}

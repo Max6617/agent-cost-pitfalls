@@ -1,0 +1,6 @@
+{
+  "defaultCount": 5,
+  "maxCount": 100,
+  "outputFormat": "iso-utc",
+  "notes": "Read by bin/plan.js only. The library takes its arguments explicitly and never reads this file, so that a planning pass is reproducible from its inputs alone."
+}

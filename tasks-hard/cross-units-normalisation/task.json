@@ -1,0 +1,6 @@
+{
+  "prompt": "Latency has been unaccountable since the last release. A call we configure with a 1.5s timeout behaves like one second, the retry budget and the per-attempt timeout disagree about how many attempts we get, and a cache entry expires far too early for one caller while another still finds it long after its TTL. The latency graph on the dashboard is in the wrong unit and the operator report prints numbers nobody can match against the config file. Make the service behave the way docs/units.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-units-normalisation",
+  "setup": ""
+}

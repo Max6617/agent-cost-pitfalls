@@ -1,0 +1,3 @@
+name: PTC (optimized)
+description: PTC mode with token discipline - batched run_code programs, a tighter tool-result pruner, and no goal/ralph rows. The everyday multi-step coding mode.
+order: 5

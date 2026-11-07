@@ -1,0 +1,6 @@
+{
+  "prompt": "Compliance is on us because raw emails and full card numbers are turning up in the service logs, and the audit snapshots are somehow clobbering the live records they capture - after we snapshot an account, the object we handed in comes back with its email and phone replaced. Finance also noticed the payment receipts show the wrong digits of the card. Every way an entity leaves the process is supposed to follow the one redaction policy pinned in docs/, so get all of them in line with it; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-pii-redaction",
+  "setup": ""
+}

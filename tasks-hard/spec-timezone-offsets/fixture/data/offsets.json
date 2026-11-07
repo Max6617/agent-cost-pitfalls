@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "generated": "2024-11-04",
+  "source": "operations offset extract",
+  "zones": {
+    "UTC": {
+      "kind": "fixed",
+      "offsetMinutes": 0,
+      "transitions": []
+    },
+    "America/New_York": {
+      "kind": "transition",
+      "initialOffsetMinutes": -300,
+      "transitions": [
+        { "at": "2024-03-10T07:00:00Z", "offsetMinutes": -240 },
+        { "at": "2024-11-03T06:00:00Z", "offsetMinutes": -300 },
+        { "at": "2025-03-09T07:00:00Z", "offsetMinutes": -240 },
+        { "at": "2025-11-02T06:00:00Z", "offsetMinutes": -300 }
+      ]
+    },
+    "Europe/Berlin": {
+      "kind": "transition",
+      "initialOffsetMinutes": 60,
+      "transitions": [
+        { "at": "2024-03-31T01:00:00Z", "offsetMinutes": 120 },
+        { "at": "2024-10-27T01:00:00Z", "offsetMinutes": 60 },
+        { "at": "2025-03-30T01:00:00Z", "offsetMinutes": 120 },
+        { "at": "2025-10-26T01:00:00Z", "offsetMinutes": 60 }
+      ]
+    },
+    "America/Havana": {
+      "kind": "transition",
+      "initialOffsetMinutes": -300,
+      "transitions": [
+        { "at": "2024-03-10T05:00:00Z", "offsetMinutes": -240 },
+        { "at": "2024-11-03T05:00:00Z", "offsetMinutes": -300 },
+        { "at": "2025-03-09T05:00:00Z", "offsetMinutes": -240 },
+        { "at": "2025-11-02T05:00:00Z", "offsetMinutes": -300 }
+      ]
+    },
+    "America/Santiago": {
+      "kind": "transition",
+      "initialOffsetMinutes": -180,
+      "transitions": [
+        { "at": "2024-04-07T03:00:00Z", "offsetMinutes": -240 },
+        { "at": "2024-09-08T04:00:00Z", "offsetMinutes": -180 },
+        { "at": "2025-04-06T03:00:00Z", "offsetMinutes": -240 },
+        { "at": "2025-09-07T04:00:00Z", "offsetMinutes": -180 }
+      ]
+    },
+    "Australia/Lord_Howe": {
+      "kind": "transition",
+      "initialOffsetMinutes": 660,
+      "transitions": [
+        { "at": "2024-04-06T15:00:00Z", "offsetMinutes": 630 },
+        { "at": "2024-10-05T15:30:00Z", "offsetMinutes": 660 },
+        { "at": "2025-04-05T15:00:00Z", "offsetMinutes": 630 },
+        { "at": "2025-10-04T15:30:00Z", "offsetMinutes": 660 }
+      ]
+    },
+    "Pacific/Auckland": {
+      "kind": "transition",
+      "initialOffsetMinutes": 780,
+      "transitions": [
+        { "at": "2024-04-06T14:00:00Z", "offsetMinutes": 720 },
+        { "at": "2024-09-28T14:00:00Z", "offsetMinutes": 780 },
+        { "at": "2025-04-05T14:00:00Z", "offsetMinutes": 720 },
+        { "at": "2025-09-27T14:00:00Z", "offsetMinutes": 780 }
+      ]
+    },
+    "Asia/Kolkata": {
+      "kind": "fixed",
+      "offsetMinutes": 330,
+      "transitions": []
+    },
+    "Asia/Kathmandu": {
+      "kind": "fixed",
+      "offsetMinutes": 345
+    },
+    "Africa/Nairobi": {
+      "kind": "fixed",
+      "offsetMinutes": 180,
+      "transitions": [
+        { "at": "2024-07-01T00:00:00Z", "offsetMinutes": 180 }
+      ]
+    },
+    "Europe/Lisbon": {
+      "kind": "transition",
+      "initialOffsetMinutes": 0,
+      "transitions": [
+        { "at": "2024-03-31T01:00:00Z", "offsetMinutes": 60 },
+        { "at": "2024-10-27T01:00:00Z", "offsetMinutes": 0 },
+        { "at": "2025-03-30T01:00:00Z", "offsetMinutes": 60 },
+        { "at": "2025-10-26T01:00:00Z", "offsetMinutes": 0 }
+      ]
+    }
+  }
+}

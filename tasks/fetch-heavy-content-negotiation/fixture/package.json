@@ -1,0 +1,10 @@
+{
+  "name": "fetch-heavy-content-negotiation",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API gateway: parsing and honouring Accept-style request headers.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Point OpenCode at the measurement gateway.
+  //
+  // VERIFIED against the published schema at https://opencode.ai/config.json:
+  //   $defs.ProviderConfig.properties.options.properties.baseURL  (string)
+  //   $defs.ProviderConfig.properties.options.properties.apiKey   (string)
+  //
+  // The apiKey is the SYNTHETIC key, not a real one. The gateway swaps it for
+  // DEEPSEEK_API_KEY and records which harness and run produced each request.
+  // Give every run a fresh id so usage attributes cleanly: exp-opencode-r001.
+  //
+  // The base URL must end in /v1. The gateway bridges /v1/responses too, for
+  // clients that speak the Responses API rather than chat completions.
+  "provider": {
+    "gateway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Measurement Gateway",
+      "options": {
+        "baseURL": "http://127.0.0.1:8787/v1",
+        "apiKey": "exp-opencode-r001"
+      },
+      "models": {
+        "deepseek-flash": { "name": "deepseek-flash" },
+        "deepseek-pro": { "name": "deepseek-pro" }
+      }
+    }
+  }
+}

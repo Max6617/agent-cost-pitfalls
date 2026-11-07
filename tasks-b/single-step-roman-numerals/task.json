@@ -1,0 +1,6 @@
+{
+  "prompt": "Support keeps bouncing numerals our converter produced, and the archive team found that re-importing a legacy inscription like DCCCC comes straight back out unnormalised. Strict parsing is somehow accepting spellings like IL and IIII, and a value that should have been rejected outright came back to them as MMMM. The agreed rules are in docs/, and the tests under test/ are the reproductions we managed to write - not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-roman-numerals",
+  "setup": ""
+}

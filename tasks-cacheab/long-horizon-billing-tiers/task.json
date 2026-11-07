@@ -1,0 +1,6 @@
+{
+  "prompt": "Customers are being overcharged on quantity orders and the finance team says the invoice figures do not foot after the last release: the wrong discount tier is picked for some quantities, a promotional code is taken off the wrong amount, the floor is applied at the wrong point, and foreign-currency invoices come out materially wrong. Make the billing behaviour match the rules in docs/ so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

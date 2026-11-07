@@ -1,0 +1,45 @@
+{
+  "matrixId": "cmv3193um-zai",
+  "provider": "zai",
+  "plan": "rerun-b1",
+  "tasksDir": "tasks",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 124,
+  "passes": 1,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8801",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8801",
+    "--upstream",
+    "https://api.z.ai/api/anthropic",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv3193um-zai-gateway.jsonl",
+    "--force-model",
+    "glm-5.3-flash",
+    "--force-effort",
+    "high",
+    "--max-tokens-ceiling",
+    "32768",
+    "--no-cache-breakpoints",
+    "--upstream-openai",
+    "https://api.z.ai/api/coding/paas/v4"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "glm-5.3-flash",
+    "reasoning_effort": "high",
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": false,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "NONE (provider caches automatically; batch 1 injected nothing)",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-10T23:39:31.659Z"
+}

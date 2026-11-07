@@ -1,0 +1,46 @@
+{
+  "matrixId": "cmushs68z-anthropic",
+  "provider": "anthropic",
+  "plan": "batch1",
+  "tasksDir": "tasks",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 620,
+  "harnesses": [
+    "dsh",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "gateway": "http://127.0.0.1:8803",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8803",
+    "--upstream",
+    "https://api.anthropic.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmushs68z-anthropic-gateway.jsonl",
+    "--force-model",
+    "claude-haiku-4.5",
+    "--max-tokens-ceiling",
+    "32768",
+    "--native-messages",
+    "--auto-cache",
+    "--workspace-id",
+    "wrkspc_REDACTED"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "claude-haiku-4.5",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": true
+  },
+  "cacheMode": "STATIC breakpoints PLUS the top-level field: every arm caches, as it does on the four automatic-caching providers",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-03T14:39:27.504Z"
+}

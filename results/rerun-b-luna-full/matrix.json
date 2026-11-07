@@ -1,0 +1,68 @@
+{
+  "matrixId": "cmv3z5ym5-openai",
+  "startedAt": "2026-10-11T15:31:33.169Z",
+  "gateway": "http://127.0.0.1:8789",
+  "gatewayStats": {
+    "enforcedModel": "gpt-6-luna",
+    "enforcedEffort": null,
+    "upstreamKeyMasked": "sk-...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "gpt-6-luna",
+  "requestedModel": "gpt-6-luna",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks-b",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\rerun-b-luna-full",
+  "tasks": 40,
+  "seeds": 2,
+  "jobs": 4,
+  "arms": [
+    "dsh:native",
+    "dsh:ptc"
+  ],
+  "plannedRuns": 160,
+  "harnesses": [
+    "dsh"
+  ],
+  "harnessVersions": {
+    "dsh": {
+      "harness": "dsh",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\user\\dsh-app\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "probedVersion": "0.1.7-rc.2",
+      "raw": "0.1.7-rc.2",
+      "error": null,
+      "versionSource": "probe",
+      "versionEvidence": null,
+      "declaredVersion": null,
+      "probedAt": "2026-10-11T15:31:33.167Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks-b",
+    "--seeds",
+    "2",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\rerun-b-luna-full",
+    "--gateway",
+    "http://127.0.0.1:8789",
+    "--model",
+    "gpt-6-luna",
+    "--matrix-id",
+    "cmv3z5ym5-openai",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "dsh",
+    "--arms",
+    "dsh:native,dsh:ptc",
+    "--counterbalance"
+  ]
+}

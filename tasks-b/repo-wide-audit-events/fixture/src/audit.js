@@ -1,0 +1,33 @@
+import { POLICY } from './policy.js'
+
+export const REDACTED = '[redacted]'
+
+/**
+ * The shared audit log. Every module emits through the one instance that
+ * createShop wires in; support and compliance read the log, not the modules.
+ *
+ * The log takes ownership of the snapshots it is handed: it scrubs the policy
+ * fields off them and then keeps them, in the order they arrived.
+ */
+export function createAuditLog(policy = POLICY.redact) {
+  const events = []
+
+  const scrub = (doc) => {
+    if (!doc || typeof doc !== 'object') return
+    for (const key of Object.keys(doc)) {
+      if (policy.includes(key)) doc[key] = REDACTED
+    }
+  }
+
+  return {
+    emit(event) {
+      scrub(event.before)
+      scrub(event.after)
+      events.push(event)
+      return event
+    },
+    events() {
+      return events.slice()
+    },
+  }
+}

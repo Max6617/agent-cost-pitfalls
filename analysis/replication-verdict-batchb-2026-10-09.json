@@ -1,0 +1,221 @@
+{
+ "generated": "2026-10-11T20:07:02.053Z",
+ "panelPath": "analysis/panel-analysis-batchb-2026-10-09.json",
+ "panelGenerated": "2026-10-11T20:03:53.173Z",
+ "rule": "tasks-b/PLAN.md section 5",
+ "providers": [
+  {
+   "model": "qwen3.8-flash",
+   "label": "Qwen3.8-Flash",
+   "tasks": 40,
+   "batch1": {
+    "relPct": 30.7,
+    "ciPct": [
+     10,
+     53.3
+    ],
+    "classification": "positive"
+   },
+   "tasksB": {
+    "relPct": 5.748315272116631,
+    "ciPct": [
+     -3.9319430864506066,
+     15.014126928185807
+    ],
+    "classification": "null"
+   },
+   "match": false,
+   "nearestBoundToZeroPp": 3.9319430864506066,
+   "knifeEdge": false,
+   "r3": {
+    "batch1PointInTasksBci": false,
+    "tasksBPointInBatch1ci": false,
+    "ciOverlap": true
+   }
+  },
+  {
+   "model": "glm-5.3-flash",
+   "label": "GLM-5.3-Flash",
+   "tasks": 40,
+   "batch1": {
+    "relPct": -20.8,
+    "ciPct": [
+     -43.7,
+     -2.7
+    ],
+    "classification": "negative"
+   },
+   "tasksB": {
+    "relPct": -10.138726094945465,
+    "ciPct": [
+     -21.117331446310132,
+     0.14092247438159253
+    ],
+    "classification": "null"
+   },
+   "match": false,
+   "nearestBoundToZeroPp": 0.14092247438159253,
+   "knifeEdge": true,
+   "r3": {
+    "batch1PointInTasksBci": true,
+    "tasksBPointInBatch1ci": true,
+    "ciOverlap": true
+   }
+  },
+  {
+   "model": "gpt-6-luna",
+   "label": "gpt-6-luna",
+   "tasks": 40,
+   "batch1": {
+    "relPct": 1.2,
+    "ciPct": [
+     -8.4,
+     11.3
+    ],
+    "classification": "null"
+   },
+   "tasksB": {
+    "relPct": -16.576828106555052,
+    "ciPct": [
+     -24.34527376842558,
+     -8.549859296234898
+    ],
+    "classification": "negative"
+   },
+   "match": false,
+   "nearestBoundToZeroPp": 8.549859296234898,
+   "knifeEdge": false,
+   "r3": {
+    "batch1PointInTasksBci": false,
+    "tasksBPointInBatch1ci": false,
+    "ciOverlap": false
+   }
+  },
+  {
+   "model": "deepseek-flash",
+   "label": "DeepSeek V4.1 Flash",
+   "tasks": 40,
+   "batch1": {
+    "relPct": 0.1,
+    "ciPct": [
+     -9,
+     9.8
+    ],
+    "classification": "null"
+   },
+   "tasksB": {
+    "relPct": -21.758870744592134,
+    "ciPct": [
+     -37.46364252855195,
+     -9.384377880751053
+    ],
+    "classification": "negative"
+   },
+   "match": false,
+   "nearestBoundToZeroPp": 9.384377880751053,
+   "knifeEdge": false,
+   "r3": {
+    "batch1PointInTasksBci": false,
+    "tasksBPointInBatch1ci": false,
+    "ciOverlap": false
+   }
+  }
+ ],
+ "R1": {
+  "holds": false,
+  "matched": 0,
+  "of": 4,
+  "deviations": [
+   {
+    "model": "qwen3.8-flash",
+    "label": "Qwen3.8-Flash",
+    "batch1": "positive",
+    "tasksB": "null"
+   },
+   {
+    "model": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "batch1": "negative",
+    "tasksB": "null"
+   },
+   {
+    "model": "gpt-6-luna",
+    "label": "gpt-6-luna",
+    "batch1": "null",
+    "tasksB": "negative"
+   },
+   {
+    "model": "deepseek-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "batch1": "null",
+    "tasksB": "negative"
+   }
+  ]
+ },
+ "R2": {
+  "holds": false,
+  "sawPositive": false,
+  "sawNegative": true
+ },
+ "verdict": "not replicated",
+ "extension": [
+  {
+   "model": "claude-haiku-4.5",
+   "label": "Claude Haiku 4.5",
+   "relDiffPct": 6.207448725102082,
+   "ciPct": [
+    -7.349853371825447,
+    19.665902961715027
+   ],
+   "tasks": 18,
+   "classification": "null"
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "label": "Claude Sonnet 5.5",
+   "relDiffPct": -0.5276513372781944,
+   "ciPct": [
+    -7.921625650860584,
+    5.980898141192091
+   ],
+   "tasks": 40,
+   "classification": "null"
+  }
+ ],
+ "batch1PanelPath": "analysis/panel-analysis-6model-2026-10-09.json",
+ "batch1PanelGenerated": "2026-10-10T20:50:16.959Z",
+ "extensionVerdict": [
+  {
+   "model": "claude-haiku-4.5",
+   "label": "Claude Haiku 4.5",
+   "absent": false,
+   "tasks": 18,
+   "relDiffPct": 6.207448725102082,
+   "ciPct": [
+    -7.349853371825447,
+    19.665902961715027
+   ],
+   "classification": "null",
+   "target": "positive",
+   "replicated": false,
+   "correctedClassification": "positive",
+   "correctedReplicates": false
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "label": "Claude Sonnet 5.5",
+   "absent": false,
+   "tasks": 40,
+   "relDiffPct": -0.5276513372781944,
+   "ciPct": [
+    -7.921625650860584,
+    5.980898141192091
+   ],
+   "classification": "null",
+   "target": "positive",
+   "replicated": false,
+   "correctedClassification": "null",
+   "correctedReplicates": true
+  }
+ ]
+}

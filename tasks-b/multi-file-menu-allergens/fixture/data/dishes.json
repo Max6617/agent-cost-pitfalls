@@ -1,0 +1,85 @@
+[
+  {
+    "id": "satay",
+    "name": "Chicken satay",
+    "ingredients": [
+      { "ref": "chicken" },
+      { "ref": "peanut-sauce" },
+      { "ref": "crushed-peanuts", "optional": true }
+    ],
+    "equipment": ["grill"]
+  },
+  {
+    "id": "pad-thai",
+    "name": "Pad thai",
+    "ingredients": [
+      { "ref": "rice-noodles" },
+      { "ref": "tofu" },
+      { "ref": "egg" },
+      { "ref": "soy-sauce" },
+      { "ref": "crushed-peanuts", "optional": true }
+    ],
+    "equipment": ["wok"]
+  },
+  {
+    "id": "garden-salad",
+    "name": "Garden salad",
+    "ingredients": [
+      { "ref": "lettuce" },
+      { "ref": "tomato" },
+      { "ref": "mustard-dressing" },
+      { "ref": "croutons", "optional": true }
+    ],
+    "equipment": []
+  },
+  {
+    "id": "fried-chicken",
+    "name": "Buttermilk fried chicken",
+    "ingredients": [
+      { "ref": "chicken" },
+      { "ref": "flour" },
+      { "ref": "egg" },
+      { "ref": "butter" }
+    ],
+    "equipment": ["fryer"]
+  },
+  {
+    "id": "grilled-salmon",
+    "name": "Grilled salmon",
+    "ingredients": [
+      { "ref": "salmon" },
+      { "ref": "butter" },
+      { "ref": "lemon" },
+      { "ref": "walnuts", "optional": true }
+    ],
+    "equipment": ["grill"]
+  },
+  {
+    "id": "steamed-rice",
+    "name": "Steamed jasmine rice",
+    "ingredients": [
+      { "ref": "rice" }
+    ],
+    "equipment": ["steamer"]
+  },
+  {
+    "id": "prawn-toast",
+    "name": "Sesame prawn toast",
+    "ingredients": [
+      { "ref": "prawns" },
+      { "ref": "sesame-seeds" },
+      { "ref": "breadcrumbs" }
+    ],
+    "equipment": ["fryer"]
+  },
+  {
+    "id": "mushroom-soup",
+    "name": "Mushroom soup",
+    "ingredients": [
+      { "ref": "mushroom" },
+      { "ref": "cream" },
+      { "ref": "flour" }
+    ],
+    "equipment": ["hob"]
+  }
+]

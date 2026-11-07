@@ -1,0 +1,30 @@
+ui-onboarding:
+  welcomeNoticeVersion: 2026-08-13.1
+llm-deepseek:
+  models:
+    - id: deepseek-flash
+      description: Fast, efficient, and economical; suited to focused, routine, or
+        parallel tasks.
+      contextWindow: 1000000
+      inputModalities:
+        - text
+      name: DeepSeek-V4.1-Flash
+    - id: deepseek-pro
+      name: DeepSeek-Pro
+      description: Stronger agentic coding, knowledge, and difficult reasoning; suited
+        to complex or quality-critical tasks at higher cost.
+      contextWindow: 1000000
+      inputModalities:
+        - text
+    - id: deepseek-flash-vision-exp
+      name: DeepSeek-Flash-Vision-Exp
+      contextWindow: 1000000
+      inputModalities:
+        - text
+        - image
+      imagePixelBudget: 640000
+      imageMaxBytes: 1048576
+agent-default-model:
+  provider: deepseek-official
+  model: deepseek-flash
+  reasoningEffort: max

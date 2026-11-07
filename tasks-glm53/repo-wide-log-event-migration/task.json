@@ -1,0 +1,6 @@
+{
+  "prompt": "Our dashboards and alerts key on the structured log events declared in src/logger.js, but most of the pipeline still writes free-form warning strings, so none of those events are being emitted. Migrate the call sites to the structured event API so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,72 @@
+{
+  "matrixId": "cmv2z7zqa-deepseek",
+  "startedAt": "2026-10-10T22:42:08.868Z",
+  "gateway": "http://127.0.0.1:8799",
+  "gatewayStats": {
+    "enforcedModel": "deepseek-flash",
+    "enforcedEffort": "high",
+    "upstreamKeyMasked": "sk-...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "deepseek-flash",
+  "requestedModel": "deepseek-flash",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\rerun-aa-smoke-ds-full",
+  "tasks": 1,
+  "seeds": 2,
+  "jobs": 4,
+  "arms": [
+    "dsh:native",
+    "dsh:native-twin"
+  ],
+  "plannedRuns": 4,
+  "harnesses": [
+    "dsh"
+  ],
+  "harnessVersions": {
+    "dsh": {
+      "harness": "dsh",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\user\\dsh-app\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "probedVersion": "0.1.7-rc.2",
+      "raw": "0.1.7-rc.2",
+      "error": null,
+      "versionSource": "probe",
+      "versionEvidence": null,
+      "declaredVersion": null,
+      "probedAt": "2026-10-10T22:42:08.867Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks",
+    "--seeds",
+    "2",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\rerun-aa-smoke-ds-full",
+    "--gateway",
+    "http://127.0.0.1:8799",
+    "--model",
+    "deepseek-flash",
+    "--matrix-id",
+    "cmv2z7zqa-deepseek",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "dsh",
+    "--arms",
+    "dsh:native",
+    "--aa-workdir",
+    "--counterbalance",
+    "--aa-twin",
+    "--only",
+    "example-fix"
+  ]
+}

@@ -1,0 +1,1873 @@
+{
+ "generated": "2026-10-11T20:23:08.870Z",
+ "iters": 200000,
+ "seed": 12345,
+ "suites": {
+  "batch1": {
+   "suite": "batch1",
+   "iters": 200000,
+   "seed": 12345,
+   "models": [
+    "deepseek-flash",
+    "glm-5.3-flash",
+    "qwen3.8-flash",
+    "claude-haiku-4.5",
+    "claude-sonnet-5.5",
+    "gpt-6-luna"
+   ],
+   "stepFunctions": {
+    "deepseek-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    },
+    "glm-5.3-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    },
+    "qwen3.8-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    },
+    "claude-haiku-4.5": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    },
+    "claude-sonnet-5.5": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    },
+    "gpt-6-luna": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 46,
+     "n": 62
+    }
+   },
+   "raw": {
+    "ties": {
+     "pairs": 54,
+     "ties": 40,
+     "fraction": 0.7407407407407407,
+     "details": [
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "goose",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "openhands",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "openhands",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "openhands",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "goose",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "opencode",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:ptc",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "cline",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "opencode",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "opencode",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": false
+      }
+     ]
+    },
+    "rho": {
+     "medianRho": 0.23809523809523814,
+     "pairs": 15,
+     "correlations": [
+      {
+       "a": "deepseek-flash",
+       "b": "glm-5.3-flash",
+       "rho": 0.8333333333333334
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.23809523809523814
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.0714285714285714
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.04761904761904767
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.8571428571428572
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.38095238095238093
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.23809523809523814
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.09523809523809523
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.8571428571428572
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.38095238095238093
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.47619047619047616
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "gpt-6-luna",
+       "rho": -0.26190476190476186
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.9523809523809523
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "gpt-6-luna",
+       "rho": 0.2857142857142857
+      },
+      {
+       "a": "claude-sonnet-5.5",
+       "b": "gpt-6-luna",
+       "rho": 0.1428571428571429
+      }
+     ]
+    }
+   },
+   "adjusted": {
+    "ties": {
+     "pairs": 54,
+     "ties": 41,
+     "fraction": 0.7592592592592593,
+     "details": [
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "openhands",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "openhands",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "openhands",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "openhands",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "goose",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "opencode",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "cline",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "opencode",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "opencode",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": false
+      }
+     ]
+    },
+    "rho": {
+     "medianRho": 0.23809523809523814,
+     "pairs": 15,
+     "correlations": [
+      {
+       "a": "deepseek-flash",
+       "b": "glm-5.3-flash",
+       "rho": 0.6190476190476191
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.09523809523809534
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-haiku-4.5",
+       "rho": -0.33333333333333326
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": -0.33333333333333326
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.5
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.4285714285714286
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.23809523809523814
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.09523809523809523
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.7857142857142857
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.23809523809523814
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.33333333333333337
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "gpt-6-luna",
+       "rho": -0.11904761904761907
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.9523809523809523
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "gpt-6-luna",
+       "rho": 0.40476190476190477
+      },
+      {
+       "a": "claude-sonnet-5.5",
+       "b": "gpt-6-luna",
+       "rho": 0.26190476190476186
+      }
+     ]
+    }
+   }
+  },
+  "batchb": {
+   "suite": "batchb",
+   "iters": 200000,
+   "seed": 12345,
+   "models": [
+    "deepseek-flash",
+    "glm-5.3-flash",
+    "qwen3.8-flash",
+    "claude-haiku-4.5",
+    "claude-sonnet-5.5",
+    "gpt-6-luna"
+   ],
+   "stepFunctions": {
+    "deepseek-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 58,
+     "n": 80
+    },
+    "glm-5.3-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 58,
+     "n": 80
+    },
+    "qwen3.8-flash": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 58,
+     "n": 80
+    },
+    "claude-haiku-4.5": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 32,
+     "n": 36
+    },
+    "claude-sonnet-5.5": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 58,
+     "n": 80
+    },
+    "gpt-6-luna": {
+     "cols": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "pairs": 58,
+     "n": 80
+    }
+   },
+   "raw": {
+    "ties": {
+     "pairs": 54,
+     "ties": 33,
+     "fraction": 0.6111111111111112,
+     "details": [
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "openhands",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc-opt",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "openhands",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "cline",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "opencode",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "goose",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "cline",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native",
+       "dearer": "openhands",
+       "distinct": true
+      }
+     ]
+    },
+    "rho": {
+     "medianRho": 0.023809523809523836,
+     "pairs": 15,
+     "correlations": [
+      {
+       "a": "deepseek-flash",
+       "b": "glm-5.3-flash",
+       "rho": 0.7380952380952381
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.45238095238095233
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-haiku-4.5",
+       "rho": -0.5238095238095237
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": -0.4761904761904763
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.9047619047619048
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.5714285714285714
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.11904761904761907
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.023809523809523836
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.8095238095238095
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.26190476190476186
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.40476190476190477
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "gpt-6-luna",
+       "rho": -0.33333333333333326
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.8571428571428572
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "gpt-6-luna",
+       "rho": -0.23809523809523814
+      },
+      {
+       "a": "claude-sonnet-5.5",
+       "b": "gpt-6-luna",
+       "rho": -0.1428571428571428
+      }
+     ]
+    }
+   },
+   "adjusted": {
+    "ties": {
+     "pairs": 54,
+     "ties": 34,
+     "fraction": 0.6296296296296297,
+     "details": [
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "openhands",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "deepseek-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "goose",
+       "dearer": "dsh:ptc",
+       "distinct": true
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "glm-5.3-flash",
+       "cheaper": "dsh:native",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "cline",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "openhands",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "qwen3.8-flash",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native-terse",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:native-opt",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "opencode",
+       "dearer": "goose",
+       "distinct": false
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-haiku-4.5",
+       "cheaper": "cline",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc-terse",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "dsh:native",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "goose",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "goose",
+       "dearer": "cline",
+       "distinct": true
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "cline",
+       "dearer": "opencode",
+       "distinct": false
+      },
+      {
+       "model": "claude-sonnet-5.5",
+       "cheaper": "opencode",
+       "dearer": "openhands",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "goose",
+       "dearer": "opencode",
+       "distinct": true
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "opencode",
+       "dearer": "dsh:ptc-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-terse",
+       "dearer": "cline",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "cline",
+       "dearer": "dsh:native-terse",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-terse",
+       "dearer": "dsh:ptc",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc",
+       "dearer": "dsh:ptc-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:ptc-opt",
+       "dearer": "dsh:native-opt",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native-opt",
+       "dearer": "dsh:native",
+       "distinct": false
+      },
+      {
+       "model": "gpt-6-luna",
+       "cheaper": "dsh:native",
+       "dearer": "openhands",
+       "distinct": true
+      }
+     ]
+    },
+    "rho": {
+     "medianRho": -0.0714285714285714,
+     "pairs": 15,
+     "correlations": [
+      {
+       "a": "deepseek-flash",
+       "b": "glm-5.3-flash",
+       "rho": 0.7380952380952381
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.5
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-haiku-4.5",
+       "rho": -0.5
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": -0.6190476190476191
+      },
+      {
+       "a": "deepseek-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.8809523809523809
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "qwen3.8-flash",
+       "rho": -0.5238095238095237
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.09523809523809523
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": -0.0714285714285714
+      },
+      {
+       "a": "glm-5.3-flash",
+       "b": "gpt-6-luna",
+       "rho": 0.8333333333333334
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-haiku-4.5",
+       "rho": 0.26190476190476186
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.47619047619047616
+      },
+      {
+       "a": "qwen3.8-flash",
+       "b": "gpt-6-luna",
+       "rho": -0.33333333333333326
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "claude-sonnet-5.5",
+       "rho": 0.8809523809523809
+      },
+      {
+       "a": "claude-haiku-4.5",
+       "b": "gpt-6-luna",
+       "rho": -0.23809523809523814
+      },
+      {
+       "a": "claude-sonnet-5.5",
+       "b": "gpt-6-luna",
+       "rho": -0.23809523809523814
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,3 @@
+name: Standard (optimized)
+description: Standard mode with token discipline - narrow searches, subagent delegation for broad reads, a tighter tool-result pruner, and no goal/ralph rows.
+order: 6

@@ -1,0 +1,8 @@
+{
+  "name": "fetch-heavy-duration-parse",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Config parser: ISO 8601 duration strings in deployment profiles.",
+  "scripts": { "test": "node --test" }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "units-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Request planning service: timeouts, retries, caching, rate limits and the operator report.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "report": "node bin/report.js"
+  }
+}

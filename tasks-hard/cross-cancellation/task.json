@@ -1,0 +1,6 @@
+{
+  "prompt": "Cancelled requests are still costing us. A client hangs up and the charge still goes through, the cache entry it was writing is gone or half-written, and the rate-limit slot it took never comes back, so the next caller is refused; support also has jobs running for callers who left minutes ago. When we try to work out where a request died, the audit line says it was cancelled but not where, and the deadline we pass in seems to make no difference at all. Make the gateway behave the way docs/pipeline-policy.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs cross-cancellation",
+  "setup": ""
+}

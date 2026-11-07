@@ -1,0 +1,47 @@
+{
+  "matrixId": "cmuxnu0ob-zai",
+  "provider": "zai",
+  "plan": "batchb",
+  "tasksDir": "tasks-b",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 800,
+  "harnesses": [
+    "dsh",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "gateway": "http://127.0.0.1:8791",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8791",
+    "--upstream",
+    "https://api.z.ai/api/anthropic",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmuxnu0ob-zai-gateway.jsonl",
+    "--force-model",
+    "glm-5.3-flash",
+    "--force-effort",
+    "high",
+    "--max-tokens-ceiling",
+    "32768",
+    "--no-cache-breakpoints",
+    "--upstream-openai",
+    "https://api.z.ai/api/coding/paas/v4"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "glm-5.3-flash",
+    "reasoning_effort": "high",
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": false,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "NONE (provider caches automatically; batch 1 injected nothing)",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-07T05:43:56.593Z"
+}

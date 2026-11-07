@@ -1,0 +1,10 @@
+{
+  "name": "scheduler",
+  "version": "1.4.0",
+  "private": true,
+  "type": "module",
+  "description": "UTC <-> local wall clock conversion for the scheduling service",
+  "scripts": {
+    "test": "node --test"
+  }
+}

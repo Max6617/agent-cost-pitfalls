@@ -1,0 +1,442 @@
+{
+  "generated": "2026-10-11T20:25:07.765Z",
+  "tool": "tools/quality-guard.mjs",
+  "arms": {
+    "base": "dsh:native",
+    "treat": "dsh:ptc"
+  },
+  "suites": {
+    "batch1": [
+      {
+        "model": "deepseek-flash",
+        "native": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.009341985967741936,
+          "costPerSolved": 0.009341985967741936,
+          "requestsPerCell": 13.064516129032258
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.00935375161290323,
+          "costPerSolved": 0.00935375161290323,
+          "requestsPerCell": 10.725806451612904
+        },
+        "mcnemar": {
+          "n": 0,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 0.125943725476807,
+        "perSolvedPct": 0.125943725476807,
+        "bothSolved": {
+          "cells": 62,
+          "tasks": 31,
+          "pct": 0.12594372547675803,
+          "ciLoPct": -8.898534439895037,
+          "ciHiPct": 9.76010954913175,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "glm-5.3-flash",
+        "native": {
+          "cells": 62,
+          "solved": 61,
+          "costPerCell": 0.009016447258064515,
+          "costPerSolved": 0.009164257868852457,
+          "requestsPerCell": 12.612903225806452
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.007145369193548387,
+          "costPerSolved": 0.007145369193548387,
+          "requestsPerCell": 11.14516129032258
+        },
+        "mcnemar": {
+          "n": 1,
+          "n01": 0,
+          "n10": 1,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": -20.751832855702588,
+        "perSolvedPct": -22.030029099965454,
+        "bothSolved": {
+          "cells": 61,
+          "tasks": 31,
+          "pct": -16.030381421234406,
+          "ciLoPct": -30.46642377397398,
+          "ciHiPct": -2.1990894512549786,
+          "excludesZero": true,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "qwen3.8-flash",
+        "native": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.015993867741935484,
+          "costPerSolved": 0.015993867741935484,
+          "requestsPerCell": 13.225806451612904
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 61,
+          "costPerCell": 0.020899136612903223,
+          "costPerSolved": 0.021241745409836064,
+          "requestsPerCell": 13.14516129032258
+        },
+        "mcnemar": {
+          "n": 1,
+          "n01": 1,
+          "n10": 0,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 30.669685095033383,
+        "perSolvedPct": 32.81181108019786,
+        "bothSolved": {
+          "cells": 61,
+          "tasks": 31,
+          "pct": 32.318926547856016,
+          "ciLoPct": 12.550401936865969,
+          "ciHiPct": 54.98843212070533,
+          "excludesZero": true,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "native": {
+          "cells": 62,
+          "solved": 60,
+          "costPerCell": 0.11970697096774192,
+          "costPerSolved": 0.12369720333333331,
+          "requestsPerCell": 26.016129032258064
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 46,
+          "costPerCell": 0.1841556983870968,
+          "costPerSolved": 0.2482098543478261,
+          "requestsPerCell": 26.161290322580644
+        },
+        "mcnemar": {
+          "n": 18,
+          "n01": 16,
+          "n10": 2,
+          "p": 0.001312255859375,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 53.83874213701576,
+        "perSolvedPct": 100.65922887436835,
+        "bothSolved": {
+          "cells": 44,
+          "tasks": 25,
+          "pct": 67.77452022699339,
+          "ciLoPct": 36.67271982490447,
+          "ciHiPct": 99.65953375850319,
+          "excludesZero": true,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "claude-sonnet-5.5",
+        "native": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.07772335645161293,
+          "costPerSolved": 0.07772335645161293,
+          "requestsPerCell": 9.403225806451612
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 62,
+          "costPerCell": 0.08511480645161294,
+          "costPerSolved": 0.08511480645161294,
+          "requestsPerCell": 8.096774193548388
+        },
+        "mcnemar": {
+          "n": 0,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 9.509946993348883,
+        "perSolvedPct": 9.509946993348883,
+        "bothSolved": {
+          "cells": 62,
+          "tasks": 31,
+          "pct": 9.509946993348887,
+          "ciLoPct": -0.08346600508116965,
+          "ciHiPct": 18.00716025890087,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "gpt-6-luna",
+        "native": {
+          "cells": 62,
+          "solved": 60,
+          "costPerCell": 0.006315964516129032,
+          "costPerSolved": 0.006526496666666667,
+          "requestsPerCell": 20.403225806451612
+        },
+        "ptc": {
+          "cells": 62,
+          "solved": 61,
+          "costPerCell": 0.006391633870967743,
+          "costPerSolved": 0.006496414754098362,
+          "requestsPerCell": 12.080645161290322
+        },
+        "mcnemar": {
+          "n": 3,
+          "n01": 1,
+          "n10": 2,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 1.1980649138460864,
+        "perSolvedPct": -0.4609197568727019,
+        "bothSolved": {
+          "cells": 59,
+          "tasks": 31,
+          "pct": -3.681256575089547,
+          "ciLoPct": -13.3157023024009,
+          "ciHiPct": 5.538549026397776,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      }
+    ],
+    "batchb": [
+      {
+        "model": "deepseek-flash",
+        "native": {
+          "cells": 80,
+          "solved": 74,
+          "costPerCell": 0.025786867874999998,
+          "costPerSolved": 0.027877694999999997,
+          "requestsPerCell": 25.6125
+        },
+        "ptc": {
+          "cells": 80,
+          "solved": 77,
+          "costPerCell": 0.020175936624999998,
+          "costPerSolved": 0.020962012077922077,
+          "requestsPerCell": 16.1875
+        },
+        "mcnemar": {
+          "n": 3,
+          "n01": 0,
+          "n10": 3,
+          "p": 0.25,
+          "method": "exact-binomial"
+        },
+        "perCellPct": -21.75887074459213,
+        "perSolvedPct": -24.807226429867757,
+        "bothSolved": {
+          "cells": 74,
+          "tasks": 37,
+          "pct": -22.64330631140079,
+          "ciLoPct": -39.76502614841465,
+          "ciHiPct": -9.1861085903956,
+          "excludesZero": true,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "glm-5.3-flash",
+        "native": {
+          "cells": 80,
+          "solved": 72,
+          "costPerCell": 0.025092431249999998,
+          "costPerSolved": 0.027880479166666663,
+          "requestsPerCell": 24.2
+        },
+        "ptc": {
+          "cells": 80,
+          "solved": 74,
+          "costPerCell": 0.022548378375,
+          "costPerSolved": 0.02437662527027027,
+          "requestsPerCell": 19.075
+        },
+        "mcnemar": {
+          "n": 12,
+          "n01": 5,
+          "n10": 7,
+          "p": 0.7744140625,
+          "method": "exact-binomial"
+        },
+        "perCellPct": -10.138726094945449,
+        "perSolvedPct": -12.567409173460442,
+        "bothSolved": {
+          "cells": 67,
+          "tasks": 36,
+          "pct": -13.870557316200838,
+          "ciLoPct": -32.59913546672638,
+          "ciHiPct": 0.8197826699579877,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "qwen3.8-flash",
+        "native": {
+          "cells": 80,
+          "solved": 75,
+          "costPerCell": 0.044535159500000004,
+          "costPerSolved": 0.047504170133333336,
+          "requestsPerCell": 28.3
+        },
+        "ptc": {
+          "cells": 80,
+          "solved": 78,
+          "costPerCell": 0.047095180875,
+          "costPerSolved": 0.04830274961538462,
+          "requestsPerCell": 23.7125
+        },
+        "mcnemar": {
+          "n": 5,
+          "n01": 1,
+          "n10": 4,
+          "p": 0.375,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 5.748315272116633,
+        "perSolvedPct": 1.6810723770352087,
+        "bothSolved": {
+          "cells": 74,
+          "tasks": 39,
+          "pct": 7.41064166099413,
+          "ciLoPct": -1.357806707750285,
+          "ciHiPct": 16.292203234127484,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "gpt-6-luna",
+        "native": {
+          "cells": 80,
+          "solved": 74,
+          "costPerCell": 0.013607533875,
+          "costPerSolved": 0.014710847432432433,
+          "requestsPerCell": 31.7375
+        },
+        "ptc": {
+          "cells": 80,
+          "solved": 77,
+          "costPerCell": 0.011351836374999997,
+          "costPerSolved": 0.01179411571428571,
+          "requestsPerCell": 17.3625
+        },
+        "mcnemar": {
+          "n": 5,
+          "n01": 1,
+          "n10": 4,
+          "p": 0.375,
+          "method": "exact-binomial"
+        },
+        "perCellPct": -16.576828106555077,
+        "perSolvedPct": -19.827081556949043,
+        "bothSolved": {
+          "cells": 73,
+          "tasks": 40,
+          "pct": -18.0140036993498,
+          "ciLoPct": -25.13562097277336,
+          "ciHiPct": -10.609021561883152,
+          "excludesZero": true,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "native": {
+          "cells": 36,
+          "solved": 26,
+          "costPerCell": 0.2851098638888889,
+          "costPerSolved": 0.3947675038461539,
+          "requestsPerCell": 45.416666666666664
+        },
+        "ptc": {
+          "cells": 36,
+          "solved": 17,
+          "costPerCell": 0.3028079125,
+          "costPerSolved": 0.6412402852941177,
+          "requestsPerCell": 32.861111111111114
+        },
+        "mcnemar": {
+          "n": 11,
+          "n01": 10,
+          "n10": 1,
+          "p": 0.01171875,
+          "method": "exact-binomial"
+        },
+        "perCellPct": 6.2074487251020605,
+        "perSolvedPct": 62.43492157956789,
+        "bothSolved": {
+          "cells": 16,
+          "tasks": 10,
+          "pct": 8.516852799368191,
+          "ciLoPct": -11.27054659864768,
+          "ciHiPct": 27.221548282754167,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      },
+      {
+        "model": "claude-sonnet-5.5",
+        "native": {
+          "cells": 80,
+          "solved": 78,
+          "costPerCell": 0.13633031875000004,
+          "costPerSolved": 0.139825967948718,
+          "requestsPerCell": 10.9
+        },
+        "ptc": {
+          "cells": 80,
+          "solved": 77,
+          "costPerCell": 0.13561097,
+          "costPerSolved": 0.14089451428571428,
+          "requestsPerCell": 9.1375
+        },
+        "mcnemar": {
+          "n": 1,
+          "n01": 1,
+          "n10": 0,
+          "p": 1,
+          "method": "exact-binomial"
+        },
+        "perCellPct": -0.5276513372782232,
+        "perSolvedPct": 0.7641973466532281,
+        "bothSolved": {
+          "cells": 77,
+          "tasks": 39,
+          "pct": -0.5401063284548365,
+          "ciLoPct": -8.199404342347204,
+          "ciHiPct": 6.18494267164521,
+          "excludesZero": false,
+          "iters": 200000,
+          "seed": 12345
+        }
+      }
+    ]
+  }
+}

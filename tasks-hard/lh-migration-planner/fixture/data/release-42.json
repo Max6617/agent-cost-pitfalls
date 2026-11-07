@@ -1,0 +1,41 @@
+[
+  {
+    "id": "m-0011",
+    "requires": [],
+    "operation": { "kind": "add-column", "table": "orders", "column": "region" },
+    "reversible": true
+  },
+  {
+    "id": "m-0013",
+    "requires": ["m-0011"],
+    "operation": { "kind": "create-index", "table": "orders", "columns": ["region"] },
+    "reversible": true
+  },
+  {
+    "id": "m-0014",
+    "requires": ["m-0011"],
+    "operation": { "kind": "backfill", "table": "orders", "column": "region" },
+    "rows": 20500,
+    "batchSize": 5000,
+    "reversible": true
+  },
+  {
+    "id": "m-0016",
+    "requires": ["m-0014"],
+    "operation": { "kind": "add-constraint", "table": "orders", "constraint": "orders_region_present" },
+    "reversible": true
+  },
+  {
+    "id": "m-0018",
+    "requires": ["m-0016"],
+    "operation": { "kind": "drop-column", "table": "orders", "column": "legacy_region_code" },
+    "reversible": false,
+    "acknowledgement": "drop-column"
+  },
+  {
+    "id": "m-0019",
+    "requires": [],
+    "operation": { "kind": "analyze" },
+    "reversible": true
+  }
+]

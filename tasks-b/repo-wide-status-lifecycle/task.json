@@ -1,0 +1,6 @@
+{
+  "prompt": "Every team swears their board follows the lifecycle in docs/, yet the same piece of work shows up as 'shipped' on one board and 'in-progress' on another, support keeps sending cancelled tickets straight back to 'open', and a held shipment apparently can never come back. The weekly rollup doesn't agree with the boards either, and half the legacy spellings that used to import fine are now refused outright. Make the boards behave the way docs/status-lifecycle.md says they do - the tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-status-lifecycle",
+  "setup": ""
+}

@@ -1,0 +1,6 @@
+{
+  "prompt": "Ever since the typed-id migration the ids coming out of the service are a mess, and every team insists theirs is fine. Some endpoints still hand back the old bare ids, exporting an order turns its id into ord_ord_…, the payment webhook happily accepts a user id as a payment, and refunds come back with their id bodies shouted into uppercase even though the convention says case is significant. The convention everyone agreed to is written down in docs/ids.md and there is supposed to be one shared toolkit implementing it; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs repo-wide-id-prefixing",
+  "setup": ""
+}

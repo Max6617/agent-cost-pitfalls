@@ -1,0 +1,6 @@
+{
+  "prompt": "Paging through the list endpoint loses rows and repeats them: a client walking the pages misses records that share a creation millisecond with the one it just saw, and rows inserted during the walk shift everything so that some are never returned at all. Fix the cursor handling so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

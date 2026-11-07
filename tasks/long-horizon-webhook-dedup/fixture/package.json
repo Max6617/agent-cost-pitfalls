@@ -1,0 +1,8 @@
+{
+  "name": "long-horizon-webhook-dedup",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Webhook intake: deduplication, ordering, replay.",
+  "scripts": { "test": "node --test" }
+}

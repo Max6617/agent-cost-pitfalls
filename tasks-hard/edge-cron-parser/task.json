@@ -1,0 +1,6 @@
+{
+  "prompt": "Scheduling has drifted: a job we wrote as every five minutes is firing at the wrong minutes, and a schedule that names both a day of the month and a weekday fires on days nobody asked for and skips the ones we meant. A job that only runs on 29 February disappears once the leap year it was written in is past, and a typo in an expression is answered with \"no next run\" after the planner has ground through its whole search instead of being rejected outright. Make the planner behave the way docs/schedule-rules.md says it does; the reproductions under test/ are the cases we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-cron-parser",
+  "setup": ""
+}

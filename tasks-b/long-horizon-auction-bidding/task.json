@@ -1,0 +1,6 @@
+{
+  "prompt": "Support is drowning in tickets from the auction desk since the last release. Buyers swear their bids were high enough and got turned away as too low, proxy bidders are being charged their full ceiling instead of just enough to beat the underbidder, and auctions keep closing on schedule even while last-second bids are still landing. There may be more wrong than those three reports - make the service behave the way docs/auction-rules.md says it should. The reproductions under test/ are what we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-auction-bidding",
+  "setup": ""
+}

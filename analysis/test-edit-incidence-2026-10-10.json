@@ -1,0 +1,743 @@
+{
+ "generated": "2026-10-11T20:23:00.232Z",
+ "flag": "fixture.gradedOnEditedTests",
+ "rule": "tasks-b/PLAN.md section 3",
+ "suites": {
+  "batch1": {
+   "ds-full": {
+    "model": "deepseek-flash",
+    "runs": "results/ds-full/runs.jsonl",
+    "totals": {
+     "runs": 620,
+     "edited": 0,
+     "missingFixture": 620
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:native": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 62
+     }
+    }
+   },
+   "glm-flash": {
+    "model": "glm-5.3-flash",
+    "runs": "results/glm-flash/runs.jsonl",
+    "totals": {
+     "runs": 620,
+     "edited": 2,
+     "missingFixture": 0
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     }
+    }
+   },
+   "qwen-full": {
+    "model": "qwen3.8-flash",
+    "runs": "results/qwen-full/runs.jsonl",
+    "totals": {
+     "runs": 621,
+     "edited": 1,
+     "missingFixture": 0
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 63,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     }
+    }
+   },
+   "haiku-full": {
+    "model": "claude-haiku-4.5",
+    "runs": "results/haiku-full/runs.jsonl",
+    "totals": {
+     "runs": 620,
+     "edited": 5,
+     "missingFixture": 0
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 62,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 3,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     }
+    }
+   },
+   "sonnet-full": {
+    "model": "claude-sonnet-5.5",
+    "runs": "results/sonnet-full/runs.jsonl",
+    "totals": {
+     "runs": 620,
+     "edited": 0,
+     "missingFixture": 0
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 0,
+      "missingFixture": 0
+     }
+    }
+   },
+   "luna-full": {
+    "model": "gpt-6-luna",
+    "runs": "results/luna-full/runs.jsonl",
+    "totals": {
+     "runs": 620,
+     "edited": 81,
+     "missingFixture": 0
+    },
+    "arms": {
+     "goose": {
+      "runs": 62,
+      "edited": 3,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 62,
+      "edited": 15,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 62,
+      "edited": 12,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 62,
+      "edited": 10,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 62,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 62,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 62,
+      "edited": 11,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 62,
+      "edited": 3,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 62,
+      "edited": 14,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 62,
+      "edited": 11,
+      "missingFixture": 0
+     }
+    }
+   }
+  },
+  "batchb": {
+   "batchb-deepseek": {
+    "model": "deepseek-flash",
+    "runs": "results/batchb-ds-full/runs.jsonl",
+    "totals": {
+     "runs": 808,
+     "edited": 247,
+     "missingFixture": 8
+    },
+    "arms": {
+     "cline": {
+      "runs": 82,
+      "edited": 43,
+      "missingFixture": 2
+     },
+     "opencode": {
+      "runs": 82,
+      "edited": 2,
+      "missingFixture": 2
+     },
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 82,
+      "edited": 29,
+      "missingFixture": 2
+     },
+     "goose": {
+      "runs": 82,
+      "edited": 39,
+      "missingFixture": 2
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 46,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 80,
+      "edited": 23,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 80,
+      "edited": 18,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 46,
+      "missingFixture": 0
+     }
+    }
+   },
+   "batchb-glm-flash": {
+    "model": "glm-5.3-flash",
+    "runs": "results/batchb-glm-flash/runs.jsonl",
+    "totals": {
+     "runs": 800,
+     "edited": 165,
+     "missingFixture": 0
+    },
+    "arms": {
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 80,
+      "edited": 27,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 80,
+      "edited": 4,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 80,
+      "edited": 5,
+      "missingFixture": 0
+     },
+     "goose": {
+      "runs": 80,
+      "edited": 30,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 80,
+      "edited": 22,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 30,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 80,
+      "edited": 17,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 30,
+      "missingFixture": 0
+     }
+    }
+   },
+   "batchb-qwen": {
+    "model": "qwen3.8-flash",
+    "runs": "results/batchb-qwen-full/runs.jsonl",
+    "totals": {
+     "runs": 807,
+     "edited": 268,
+     "missingFixture": 0
+    },
+    "arms": {
+     "opencode": {
+      "runs": 82,
+      "edited": 5,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 80,
+      "edited": 20,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 82,
+      "edited": 29,
+      "missingFixture": 0
+     },
+     "goose": {
+      "runs": 80,
+      "edited": 49,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 42,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 83,
+      "edited": 30,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 80,
+      "edited": 55,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 34,
+      "missingFixture": 0
+     }
+    }
+   },
+   "batchb-luna": {
+    "model": "gpt-6-luna",
+    "runs": "results/batchb-luna-full/runs.jsonl",
+    "totals": {
+     "runs": 800,
+     "edited": 455,
+     "missingFixture": 0
+    },
+    "arms": {
+     "opencode": {
+      "runs": 80,
+      "edited": 14,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 80,
+      "edited": 66,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 18,
+      "missingFixture": 0
+     },
+     "goose": {
+      "runs": 80,
+      "edited": 46,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 60,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 80,
+      "edited": 65,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 22,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 80,
+      "edited": 61,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 64,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 80,
+      "edited": 39,
+      "missingFixture": 0
+     }
+    }
+   },
+   "batchb-haiku": {
+    "model": "claude-haiku-4.5",
+    "runs": "results/batchb-haiku-full/runs.jsonl",
+    "totals": {
+     "runs": 800,
+     "edited": 23,
+     "missingFixture": 0
+    },
+    "arms": {
+     "opencode": {
+      "runs": 80,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "cline": {
+      "runs": 80,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 80,
+      "edited": 5,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 80,
+      "edited": 1,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "goose": {
+      "runs": 80,
+      "edited": 3,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 2,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 80,
+      "edited": 7,
+      "missingFixture": 0
+     }
+    }
+   },
+   "batchb-sonnet": {
+    "model": "claude-sonnet-5.5",
+    "runs": "results/batchb-sonnet-full/runs.jsonl",
+    "totals": {
+     "runs": 800,
+     "edited": 181,
+     "missingFixture": 0
+    },
+    "arms": {
+     "cline": {
+      "runs": 80,
+      "edited": 37,
+      "missingFixture": 0
+     },
+     "dsh:ptc-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "openhands": {
+      "runs": 80,
+      "edited": 19,
+      "missingFixture": 0
+     },
+     "opencode": {
+      "runs": 80,
+      "edited": 14,
+      "missingFixture": 0
+     },
+     "goose": {
+      "runs": 80,
+      "edited": 20,
+      "missingFixture": 0
+     },
+     "dsh:ptc-opt": {
+      "runs": 80,
+      "edited": 24,
+      "missingFixture": 0
+     },
+     "dsh:native-terse": {
+      "runs": 80,
+      "edited": 0,
+      "missingFixture": 0
+     },
+     "dsh:native-opt": {
+      "runs": 80,
+      "edited": 20,
+      "missingFixture": 0
+     },
+     "dsh:native": {
+      "runs": 80,
+      "edited": 23,
+      "missingFixture": 0
+     },
+     "dsh:ptc": {
+      "runs": 80,
+      "edited": 24,
+      "missingFixture": 0
+     }
+    }
+   }
+  }
+ }
+}

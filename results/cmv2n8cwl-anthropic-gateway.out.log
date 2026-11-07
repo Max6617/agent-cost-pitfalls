@@ -1,0 +1,38 @@
+measure-gateway listening on http://127.0.0.1:8794
+  base URL   : http://127.0.0.1:8794/v1
+  upstream   : https://api.anthropic.com   (native messages: no /anthropic inserted)
+  log        : C:\Users\user\betterharness\results\cmv2n8cwl-anthropic-gateway.jsonl
+  enforced   : model=claude-haiku-4.5 effort=- temperature=-
+  upstream key: sk-...XXXX   (synthetic exp-* keys are replaced with this)
+  exempt     : none
+  give each harness the key:  exp-<harness>-<runId>
+  live stats : http://127.0.0.1:8794/__stats
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001
+[gateway] NOTE claude-haiku-4-5 was served as claude-haiku-4-5-20251001

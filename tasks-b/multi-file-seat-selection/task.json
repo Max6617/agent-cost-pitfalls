@@ -1,0 +1,6 @@
+{
+  "prompt": "Something is off in group seating since the last release. Sales report parties being seated on opposite sides of an aisle as if they were together, the best-available picks keep favouring the front rows over anything centred, and seats whose courtesy holds have already lapsed still show as taken. On top of that the wheelchair spaces never open up for general sale even when standard seating can no longer take the group. The behaviour the venues agreed to is written down in docs/, and the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-seat-selection",
+  "setup": ""
+}

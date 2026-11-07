@@ -1,0 +1,6 @@
+{
+  "prompt": "Fans are furious and the seat counts do not add up. When someone cancels, the freed seat keeps going to the wrong person in line, and once an offer goes unanswered that seat can apparently never be sold again. People who pass on a seat find themselves dumped at the back of the queue, and our paid priority members are not being moved up the way docs/waitlist-rules.md says they should be. The reproductions we managed to write are under test/, but they are not the whole acceptance criteria - make the service behave the way the docs say it must.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-waitlist-promotion",
+  "setup": ""
+}

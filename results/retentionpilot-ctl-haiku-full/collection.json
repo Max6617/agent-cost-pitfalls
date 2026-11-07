@@ -1,0 +1,44 @@
+{
+  "matrixId": "cmv2me3y6-anthropic",
+  "provider": "anthropic",
+  "plan": "retentionpilot-control",
+  "tasksDir": "tasks",
+  "seeds": 1,
+  "jobs": "4",
+  "cells": 1,
+  "passes": 1,
+  "pass": 1,
+  "harnesses": [
+    "dsh"
+  ],
+  "gateway": "http://127.0.0.1:8790",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8790",
+    "--upstream",
+    "https://api.anthropic.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmv2me3y6-anthropic-gateway.jsonl",
+    "--force-model",
+    "claude-haiku-4.5",
+    "--max-tokens-ceiling",
+    "32768",
+    "--native-messages",
+    "--auto-cache",
+    "--workspace-id",
+    "wrkspc_REDACTED"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "claude-haiku-4.5",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": "32768",
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": true
+  },
+  "cacheMode": "STATIC breakpoints PLUS the top-level field: every arm caches, as it does on the four automatic-caching providers",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-10T16:46:05.689Z"
+}

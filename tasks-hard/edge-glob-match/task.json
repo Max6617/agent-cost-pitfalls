@@ -1,0 +1,6 @@
+{
+  "prompt": "Nightly backups are picking up files out of directories the job was told to skip, and a rule that names a directory still hands back the plain file of the same name. A pattern with two stars either matches nothing at all or swallows the whole tree, and a file called data[1].json can no longer be selected. An exclusion only bites when it is written after the inclusion it is meant to trim, and asking one compiled pattern about two paths can give a different answer the second time. Make the selector behave the way docs/ describes it; the reproductions under test/ are the cases we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-glob-match",
+  "setup": ""
+}

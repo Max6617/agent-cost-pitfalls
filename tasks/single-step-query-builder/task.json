@@ -1,0 +1,6 @@
+{
+  "prompt": "Searches that contain a space come back empty and searches containing an ampersand come back truncated, because the query string is being built with the wrong encoder; repeated parameters are also being joined into a single value the API does not accept. Fix the query builder so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

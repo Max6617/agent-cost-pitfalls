@@ -1,0 +1,6 @@
+{
+  "prompt": "Billing is disputing our invoices again. When we split a shared charge across the lines of an invoice the parts come back a minor unit away from the charge, one of the rounding modes we offer behaves exactly like another one, yen amounts are going out with cents in them, and a voucher followed by a percentage keeps landing on the wrong figure. docs/billing-rules.md is what billing signed off, so make the toolkit behave the way that document says it does; the reproductions under test/ are the handful we wrote down and not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs spec-money-allocation",
+  "setup": ""
+}

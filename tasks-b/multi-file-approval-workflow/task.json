@@ -1,0 +1,6 @@
+{
+  "prompt": "Sign-off is misbehaving in ways legal has started to notice. A pooled sign-off step went through on a single yes when one of the named approvers had handed their say to a stand-in - the pool was supposed to need more than that. Items are being pushed up to the next tier on their deadline day itself, when the wording says that day is the last moment they are still ours to decide. A veto shows up in the record but the item keeps moving and can still come out the far end approved. And when we send a rejected item back round, approvals we already collected have vanished and everyone has to sign again. The rules we agreed are in docs/; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-approval-workflow",
+  "setup": ""
+}

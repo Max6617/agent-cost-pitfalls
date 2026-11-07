@@ -1,0 +1,10 @@
+{
+  "name": "repo-wide-money-formatting",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Invoicing app: one money formatting routine used everywhere.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

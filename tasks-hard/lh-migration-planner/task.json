@@ -1,0 +1,6 @@
+{
+  "prompt": "Planning a release has stopped being trustworthy: the plan sometimes schedules a migration in front of the migration it depends on, a release whose tickets require each other never comes back with an answer, and a destructive operation can be planned without anyone acknowledging it. When a run dies half way and we re-plan from what the runner recorded, it either redoes a step that already succeeded or drops one that never ran, one of our backfills loses the tail of its rows, and the estimated times no longer add up to the schedule we publish. Make the planner behave the way docs/ says it does - the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-migration-planner",
+  "setup": ""
+}

@@ -1,0 +1,68 @@
+{
+  "matrixId": "cmv2njbgl-anthropic",
+  "startedAt": "2026-10-10T17:13:06.347Z",
+  "gateway": "http://127.0.0.1:8795",
+  "gatewayStats": {
+    "enforcedModel": "claude-haiku-4.5",
+    "enforcedEffort": null,
+    "upstreamKeyMasked": "sk-...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "claude-haiku-4.5",
+  "requestedModel": "claude-haiku-4.5",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\retentionpilot-amended-haiku-full",
+  "tasks": 10,
+  "seeds": 1,
+  "jobs": 4,
+  "arms": [
+    "opencodeanthropic"
+  ],
+  "plannedRuns": 10,
+  "harnesses": [
+    "opencodeanthropic"
+  ],
+  "harnessVersions": {
+    "opencodeanthropic": {
+      "harness": "opencodeanthropic",
+      "command": "opencode",
+      "probedVersion": "1.18.30",
+      "raw": "1.18.30",
+      "error": null,
+      "versionSource": "probe",
+      "versionEvidence": null,
+      "declaredVersion": "1.18.30",
+      "probedAt": "2026-10-10T17:13:06.346Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks",
+    "--seeds",
+    "1",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\retentionpilot-amended-haiku-full",
+    "--gateway",
+    "http://127.0.0.1:8795",
+    "--model",
+    "claude-haiku-4.5",
+    "--matrix-id",
+    "cmv2njbgl-anthropic",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "opencodeanthropic",
+    "--arms",
+    "opencodeanthropic",
+    "--task-list",
+    "fetch-heavy-content-negotiation,fetch-heavy-duration-parse,long-horizon-billing-tiers,long-horizon-job-ordering,multi-file-cache-invalidation,multi-file-config-precedence,repo-wide-config-defaults-sweep,repo-wide-error-type-migration,single-step-csv-quoting,single-step-date-month-end"
+  ]
+}

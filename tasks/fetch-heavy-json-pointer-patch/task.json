@@ -1,0 +1,6 @@
+{
+  "prompt": "The config service applies patches incorrectly: a pointer whose key contains an escaped slash resolves to the wrong member, adding to an array overwrites the element at that index instead of inserting before it, and moving an element within an array lands one position off while a copy ends up sharing state with its source. Fix the pointer and patch handling so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

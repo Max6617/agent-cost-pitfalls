@@ -1,0 +1,6 @@
+{
+  "prompt": "Configuration merges are going wrong in ways that are hard to see. An override file that was supposed to extend a list silently empties it instead, a patch from the service wipes settings it never mentioned, one team's config ended up as a key on Object.prototype, and the diff keeps reporting a change where nothing changed at all. Please make the toolkit behave the way docs/merge-rules.md says it does - the tests under test/ are the reproductions we managed to write down, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs edge-deep-merge",
+  "setup": ""
+}

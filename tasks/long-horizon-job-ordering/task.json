@@ -1,0 +1,6 @@
+{
+  "prompt": "The nightly batch runs jobs before the data they read is ready: a dependency listed later in the file is ignored, a high-priority job that is still blocked jumps ahead of the job it needs, and equal priorities come out in a different order on different runs. Fix the plan so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,10 @@
+{
+  "name": "single-step-parse-negative",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Order totals for the storefront: line items, discount codes, shipping.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

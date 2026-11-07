@@ -1,0 +1,6 @@
+{
+  "caseSensitive": true,
+  "maxPatternSegments": 24,
+  "trailingSlash": "ignore",
+  "notes": "Passed straight to new Router(options) by the demo app. The framework itself constructs the router without options and relies on the documented defaults."
+}

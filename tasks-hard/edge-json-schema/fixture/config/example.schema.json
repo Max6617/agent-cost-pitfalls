@@ -1,0 +1,32 @@
+{
+  "$comment": "orders.create — the schema the checkout service registered. Kept here as the worked example for docs/schema-spec.md.",
+  "type": "object",
+  "required": ["items", "currency"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^ord_[a-z0-9]+$" },
+    "currency": { "enum": ["EUR", "USD", "GBP"] },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": ["sku", "quantity"],
+        "properties": {
+          "sku": { "type": "string", "minLength": 1, "maxLength": 32 },
+          "quantity": { "type": "integer", "minimum": 1 },
+          "unitPrice": { "type": "number", "minimum": 0, "multipleOf": 0.01 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "coupon": { "type": "string", "pattern": "^[A-Z]{4}-[0-9]{4}$" },
+    "note": { "type": "string", "maxLength": 280 },
+    "contact": { "type": "string", "format": "email" },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "patternProperties": {
+    "^x-": { "type": "string" }
+  },
+  "additionalProperties": false
+}

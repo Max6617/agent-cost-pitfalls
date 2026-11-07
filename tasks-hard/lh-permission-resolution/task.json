@@ -1,0 +1,6 @@
+{
+  "prompt": "Access is not being decided the way the platform team signed off. An access review revoked a role and the subject kept working for the rest of the day; people who reach a role through a group two levels up are told they have no access at all; a deny aimed at one project does not stick, while a grant scoped to a project leaks sideways onto its siblings and downwards into everything nested under it. On top of that the console's \"why was I denied?\" panel cites a rule that had nothing to do with the verdict and prints a route that does not exist in the policy. Make the service behave the way docs/authorization-rules.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-permission-resolution",
+  "setup": ""
+}

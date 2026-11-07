@@ -1,0 +1,13 @@
+{
+  "title": "Frozen capture",
+  "points": [
+    { "series": "ingest", "bucket": "2024-05-01T00", "value": 1234567.891 },
+    { "series": "ingest", "bucket": "2024-05-01T01", "value": 987654.321 },
+    { "series": "query", "bucket": "2024-05-01T00", "value": 12.345 },
+    { "series": "query", "bucket": "2024-05-01T01", "value": 0.0000012 },
+    { "series": "flush", "bucket": "2024-05-01T00", "value": 999.995 },
+    { "series": "flush", "bucket": "2024-05-01T01", "value": 1e21 },
+    { "series": "cache", "bucket": "2024-05-01T00", "value": -0.004 },
+    { "series": "cache", "bucket": "2024-05-01T01", "value": 9007199254740991 }
+  ]
+}

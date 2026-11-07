@@ -1,0 +1,10 @@
+{
+  "name": "single-step-retry-after",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Upstream client: deciding when to retry from the response headers.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

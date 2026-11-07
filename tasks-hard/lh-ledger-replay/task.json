@@ -1,0 +1,6 @@
+{
+  "prompt": "Month-end close no longer agrees with the ledger. After a replay the balances depend on the order the journal entries happened to arrive in, our corrections land in the wrong month, and republishing an FX rate quietly restates periods that were already reported. Finance also says the statement does not foot once the intercompany accounts are involved, and that re-importing a file double-counts. Make the ledger behave the way docs/ledger-rules.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-ledger-replay",
+  "setup": ""
+}

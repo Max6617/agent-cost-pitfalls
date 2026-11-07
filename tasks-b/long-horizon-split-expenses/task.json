@@ -1,0 +1,6 @@
+{
+  "prompt": "The shared-expense splitter's numbers stopped adding up. People say the odd leftover cent from a split keeps landing with the wrong person, percent splits are occasionally a cent out, and when someone logs a repayment the balances move the wrong way - a full recalculation tells a different story than the running totals. A three-way 'I owe her, she owes him, he owes me' loop never cancels out either, and we removed a flatmate who still owed money and the app just forgot the debt. The agreed rules are written down in docs/, and the reproductions we managed are under test/ - those tests are a starting point, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs long-horizon-split-expenses",
+  "setup": ""
+}

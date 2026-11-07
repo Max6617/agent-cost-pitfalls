@@ -1,0 +1,6 @@
+{
+  "prompt": "Every failure the API reports comes back as a generic 500 with no code, so clients cannot tell a missing cart from a declined card and the messages are guessed at from free text. Migrate the modules to the error type the API layer expects so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

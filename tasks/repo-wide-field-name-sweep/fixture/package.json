@@ -1,0 +1,8 @@
+{
+  "name": "repo-wide-field-name-sweep",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Storefront API: one field-naming convention across every payload.",
+  "scripts": { "test": "node --test" }
+}

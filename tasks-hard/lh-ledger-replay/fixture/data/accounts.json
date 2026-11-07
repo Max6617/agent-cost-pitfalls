@@ -1,0 +1,52 @@
+{
+  "roots": [
+    {
+      "code": "1000",
+      "name": "Assets",
+      "children": [
+        { "code": "1100", "name": "Cash" },
+        {
+          "code": "1200",
+          "name": "Accounts receivable",
+          "children": [
+            { "code": "1210", "name": "AR - trade" },
+            { "code": "1220", "name": "AR - other" }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "name": "Liabilities",
+      "children": [
+        { "code": "2100", "name": "Accounts payable" },
+        {
+          "code": "1900",
+          "name": "Intercompany clearing",
+          "internal": true,
+          "children": [
+            { "code": "1910", "name": "IC clearing - EU" },
+            { "code": "1920", "name": "IC clearing - US" }
+          ]
+        },
+        { "code": "1950", "name": "Intercompany suspense", "internal": true }
+      ]
+    },
+    {
+      "code": "4000",
+      "name": "Revenue",
+      "children": [
+        { "code": "4100", "name": "Product revenue" },
+        { "code": "4200", "name": "Services revenue" }
+      ]
+    },
+    {
+      "code": "5000",
+      "name": "Cost of sales",
+      "children": [
+        { "code": "5100", "name": "Hosting" },
+        { "code": "5200", "name": "Payment fees" }
+      ]
+    }
+  ]
+}

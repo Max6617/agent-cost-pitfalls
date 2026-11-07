@@ -1,0 +1,6 @@
+{
+  "prompt": "Support is drowning in invite complaints. People are joining with whatever role the org defaults to today instead of the role the invite promised, invites are dying at the exact moment they should still be usable, and re-sending an invite somehow brings dead ones back to life - a revoked link worked after a re-invite. The same person under a slightly different spelling of their address is also treated as a stranger. The behaviour we agreed to is written down in docs/, and the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-user-invitations",
+  "setup": ""
+}

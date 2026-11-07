@@ -1,0 +1,6 @@
+{
+  "prompt": "When the upstream asks us to wait, the client either ignores it or waits far too long: a plain Retry-After of 0 is treated as if no header was sent, and a date-form value is measured against the wall clock instead of the moment the response arrived, so a slow response makes us wait all over again. Fix the retry timing so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

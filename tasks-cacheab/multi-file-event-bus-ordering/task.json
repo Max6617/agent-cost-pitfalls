@@ -1,0 +1,6 @@
+{
+  "prompt": "Listeners on the event bus run in the wrong order and a broken listener takes the rest down with it: a low-priority audit listener sometimes runs after the metrics one, the order changes between runs, and a listener that throws stops the listeners registered after it. Fix the bus so the suite under test/ passes.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

@@ -1,0 +1,5 @@
+{
+  "boards": ["orders", "tickets", "subscriptions", "shipments"],
+  "idPrefixes": { "orders": "o", "tickets": "t", "subscriptions": "s", "shipments": "h" },
+  "weeklyRollup": "friday"
+}

@@ -1,0 +1,40 @@
+# OpenAI route for DSH, via the pi-ai adapter ALREADY mounted in the exp composition
+# (row id `llm-pi-ai`, which ships with no config). Two overrides, no new rows:
+#
+#   1. agent-default-model.provider   deepseek-official -> openai
+#      DSH selects its provider ROUTE here. The route key in `providers` below is the
+#      same string, which is how a request finds its profile.
+#   2. llm-pi-ai.config.providers.openai
+#      `openai` is an INSTALLED pi-ai provider, so the catalog supplies the wire
+#      protocol and only the endpoint is overridden. That is why there is no `api:`
+#      field - naming a protocol would override what the catalog already knows.
+#
+# baseURL points at the measurement gateway, not at OpenAI: the gateway swaps the
+# synthetic exp-* key for the real one, records per-request usage, and enforces the
+# model, so the harness itself stays unmodified.
+#
+# `models` IS REQUIRED for these ids. gpt-6-luna and gpt-6.1-sol are not in the
+# installed catalog, and without a declaration DSH answers:
+#   UNKNOWN_MODEL: pi-ai provider "openai" has no configured model "gpt-6-luna"
+# A model profile needs only an id; context and output are declared so the harness
+# sizes its own requests rather than falling back to defaults.
+- id: agent-default-model
+  config:
+    provider: openai
+    model: gpt-6-luna
+
+- id: llm-pi-ai
+  config:
+    providers:
+      openai:
+        apiKeyEnv: OPENAI_API_KEY
+        baseURL: !!js process.env.OPENAI_BASE_URL
+        models:
+          - id: gpt-6-luna
+            name: GPT-6 Luna
+            contextWindow: 262144
+            maxTokens: 32768
+          - id: gpt-6.1-sol
+            name: GPT-6.1 Sol
+            contextWindow: 262144
+            maxTokens: 32768

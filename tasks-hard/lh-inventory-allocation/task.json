@@ -1,0 +1,6 @@
+{
+  "prompt": "The pick line and the promise report have stopped agreeing with what is actually on the shelf. Orders keep being promised more units than we are holding, stock stays held long after a hold's deadline has passed, backorders sit untouched while lines that arrived later take the stock they were waiting for, and the available-to-promise figure the shop reads does not match the reservations we can list for the same shelf. Make the engine behave the way docs/allocation-rules.md says it does; the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node tasks-hard/_grade/run.mjs lh-inventory-allocation",
+  "setup": ""
+}

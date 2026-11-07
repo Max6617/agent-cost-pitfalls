@@ -1,0 +1,3 @@
+name: PTC + router
+description: PTC mode plus the deterministic decision layer - one decision per input picks a persona band and a model tier, and escalates on observed stalls. No model call, no API key.
+order: 9

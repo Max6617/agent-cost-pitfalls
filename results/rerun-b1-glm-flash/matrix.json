@@ -1,0 +1,68 @@
+{
+  "matrixId": "cmv3193um-zai",
+  "startedAt": "2026-10-10T23:39:31.969Z",
+  "gateway": "http://127.0.0.1:8801",
+  "gatewayStats": {
+    "enforcedModel": "glm-5.3-flash",
+    "enforcedEffort": "high",
+    "upstreamKeyMasked": "bc9...XXXX",
+    "upstreamKeyConfigured": true,
+    "noCacheBreakpoints": null
+  },
+  "model": "glm-5.3-flash",
+  "requestedModel": "glm-5.3-flash",
+  "tasksDir": "C:\\Users\\user\\betterharness\\tasks",
+  "conditionsDir": "C:\\Users\\user\\betterharness\\conditions",
+  "outDir": "C:\\Users\\user\\betterharness\\results\\rerun-b1-glm-flash",
+  "tasks": 31,
+  "seeds": 2,
+  "jobs": 4,
+  "arms": [
+    "dsh:native",
+    "dsh:ptc"
+  ],
+  "plannedRuns": 124,
+  "harnesses": [
+    "dsh"
+  ],
+  "harnessVersions": {
+    "dsh": {
+      "harness": "dsh",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\user\\dsh-app\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "probedVersion": "0.1.7-rc.2",
+      "raw": "0.1.7-rc.2",
+      "error": null,
+      "versionSource": "probe",
+      "versionEvidence": null,
+      "declaredVersion": null,
+      "probedAt": "2026-10-10T23:39:31.968Z"
+    }
+  },
+  "node": "v24.19.0",
+  "platform": "win32",
+  "argv": [
+    "--tasks",
+    "tasks",
+    "--seeds",
+    "2",
+    "--jobs",
+    "4",
+    "--out",
+    "C:\\Users\\user\\betterharness\\results\\rerun-b1-glm-flash",
+    "--gateway",
+    "http://127.0.0.1:8801",
+    "--model",
+    "glm-5.3-flash",
+    "--matrix-id",
+    "cmv3193um-zai",
+    "--resume",
+    "--backup-every",
+    "25",
+    "--commit",
+    "--harness",
+    "dsh",
+    "--arms",
+    "dsh:native,dsh:ptc",
+    "--counterbalance"
+  ]
+}

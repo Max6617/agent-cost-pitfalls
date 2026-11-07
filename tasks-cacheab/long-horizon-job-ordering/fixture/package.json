@@ -1,0 +1,10 @@
+{
+  "name": "long-horizon-job-ordering",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Batch runner: dependency-aware ordering of jobs.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

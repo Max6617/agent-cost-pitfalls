@@ -1,0 +1,6 @@
+{
+  "prompt": "The fraction library behind the calculator has been embarrassing us in review. Some negative values print with the sign on the bottom, a negative mixed number comes back as a different value than the one that was typed in, and exact division keeps drifting into sixteen-digit decimal expansions. The rules we all agreed to are written down in docs/, and the tests under test/ are the reproductions we managed to write, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs single-step-fraction-math",
+  "setup": ""
+}

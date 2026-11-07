@@ -1,0 +1,6 @@
+{
+  "prompt": "Candidates have been complaining about their quiz results all week. Multi-answer questions with the penalty rule are dragging section scores below the floor the docs promise, a section that goes negative is eating into the other sections instead of being zeroed, and bonus points keep disappearing whenever someone was already near full marks. The ranked export is not reproducible either: two candidates on the same total swap places depending on the order their attempts were submitted. The agreed behaviour is written down in docs/, and the reproductions under test/ are a starting point, not the whole acceptance criteria.",
+  "repo": "./fixture",
+  "test": "node C:/Users/user/betterharness/tasks-b/_grade/run.mjs multi-file-quiz-scoring",
+  "setup": ""
+}

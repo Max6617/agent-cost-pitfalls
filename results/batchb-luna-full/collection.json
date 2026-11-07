@@ -1,0 +1,42 @@
+{
+  "matrixId": "cmuyb5ms5-openai",
+  "provider": "openai",
+  "plan": "batchb",
+  "tasksDir": "tasks-b",
+  "seeds": 2,
+  "jobs": "4",
+  "cells": 800,
+  "harnesses": [
+    "dsh",
+    "opencode",
+    "cline",
+    "openhands",
+    "goose"
+  ],
+  "gateway": "http://127.0.0.1:8797",
+  "gatewayArgs": [
+    "C:\\Users\\user\\betterharness\\tools\\measure-gateway.mjs",
+    "--port",
+    "8797",
+    "--upstream",
+    "https://api.openai.com",
+    "--log",
+    "C:\\Users\\user\\betterharness\\results\\cmuyb5ms5-openai-gateway.jsonl",
+    "--force-model",
+    "gpt-6-luna",
+    "--upstream-openai",
+    "https://api.openai.com/v1"
+  ],
+  "extraGatewayFlags": null,
+  "enforced": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens_ceiling": null,
+    "cache_static_breakpoints": true,
+    "cache_automatic_top_level": false
+  },
+  "cacheMode": "STATIC breakpoints (study default)",
+  "launchedBy": "tools/collect.mjs",
+  "launchedAt": "2026-10-07T16:37:57.995Z"
+}

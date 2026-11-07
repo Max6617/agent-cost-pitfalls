@@ -1,0 +1,6 @@
+{
+  "prompt": "The function add() in src/calc.js returns the wrong result for negative numbers. Fix it so the test suite passes. Do not change the test file.",
+  "repo": "./fixture",
+  "test": "node --test",
+  "setup": ""
+}

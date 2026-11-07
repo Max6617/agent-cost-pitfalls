@@ -1,0 +1,14 @@
+{
+  "gateway": "edge-7",
+  "timeoutMs": 1000,
+  "retry": {
+    "maxAttempts": 3,
+    "backoffMs": 25
+  },
+  "limiter": {
+    "capacity": 4
+  },
+  "cache": {
+    "enabled": true
+  }
+}

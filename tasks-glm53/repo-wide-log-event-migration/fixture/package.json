@@ -1,0 +1,10 @@
+{
+  "name": "repo-wide-log-event-migration",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Order pipeline services sharing one structured logger.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

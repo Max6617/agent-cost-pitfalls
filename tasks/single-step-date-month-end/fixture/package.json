@@ -1,0 +1,10 @@
+{
+  "name": "single-step-date-month-end",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reporting-period helpers for the statement export.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "USD": { "minorUnits": 2, "symbol": "$" },
+  "EUR": { "minorUnits": 2, "symbol": "€" },
+  "GBP": { "minorUnits": 2, "symbol": "£" },
+  "CHF": { "minorUnits": 2, "symbol": "CHF" },
+  "JPY": { "minorUnits": 0, "symbol": "¥" },
+  "KRW": { "minorUnits": 0, "symbol": "₩" },
+  "BHD": { "minorUnits": 3, "symbol": "BD" },
+  "KWD": { "minorUnits": 3, "symbol": "KD" },
+  "TND": { "minorUnits": 3, "symbol": "DT" }
+}
