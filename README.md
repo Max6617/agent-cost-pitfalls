@@ -201,7 +201,7 @@ Evidence from a Cross-provider Study of Code Mode.
 [arXiv link to be added].
 Code and data: https://github.com/Max6617/agent-cost-pitfalls
 Release v1.0.
-[Zenodo DOI to be added on release].
+Zenodo: https://doi.org/10.5281/zenodo.24039669
 ```
 
 ## Use of AI tools
