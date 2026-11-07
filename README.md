@@ -4,8 +4,6 @@ Research artifact for the paper **Six Pitfalls in Measuring the Cost of Coding A
 
 This repository is the measurement gateway, run records, gateway logs, analysis code and checksummed artifact behind that study: a fixed-protocol comparison of code mode (programmatic tool calling) against native tool calling across six models from five providers, with four other open-source harnesses, on two task suites. Every main-matrix number in the paper is re-derived from archived token counts under a pre-registered cost function; `artifact/MANIFEST.json` checksums the inputs and analysis outputs.
 
-> The previous root README was a week-one research plan. This file replaces it as the public entry point.
-
 ## Requirements
 
 There is **no root `package.json`**. The analysis tools are plain Node ESM scripts under `tools/`.
@@ -32,7 +30,7 @@ Run the unit tests:
 node --test "tools/*.test.mjs"
 ```
 
-(One failure is expected if a local Cline install is missing; that failure is independent of the artifact hashes.)
+(Two failures are expected when the local harness installs the tests look for are missing; they are independent of the artifact hashes.)
 
 ## Rebuild the analysis JSONs
 
@@ -202,12 +200,11 @@ Six Pitfalls in Measuring the Cost of Coding Agents:
 Evidence from a Cross-provider Study of Code Mode.
 [arXiv link to be added].
 Code and data: https://github.com/Max6617/agent-cost-pitfalls
-(the rev1 preprint cites commit 71a6627 of the earlier betterharness repository; the release commit is set at the Zenodo release).
+Release v1.0.
 [Zenodo DOI to be added on release].
 ```
-
-After the repository is public: create a GitHub release, archive it on [Zenodo](https://zenodo.org) via the GitHub integration, then replace the DOI placeholder here and in `paper/PAPER.tex`.
 
 ## Use of AI tools
 
 LLM assistants were used extensively in the experiments, tooling and manuscript; the authors directed the work and take full responsibility for all content, numbers and citations. LLM assistants are not authors.
+
