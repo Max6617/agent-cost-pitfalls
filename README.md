@@ -106,7 +106,7 @@ Writes TikZ sources under `paper/figures/` from the analysis JSONs (see mapping 
 
 ## Number audit (osaudit)
 
-`osaudit.toml` lets [osaudit](https://github.com/ASSERT-KTH/osaudit) trace every number printed in `paper/PAPER.tex` to the committed file behind it. Run it from the repository root (Python 3.13+):
+`osaudit.toml` lets [osaudit](https://github.com/ASSERT-KTH/osaudit) trace every number printed in `paper/PAPER.tex` to the committed file behind it. Run it from the repository root (Python 3.13+) on Linux, macOS or WSL. osaudit 0.7.0 on native Windows writes paths with backslashes, so every file-scoped entry reports as unused there.
 
 ```bash
 osaudit                 # every static check; silent and exit 0 when every number traces
