@@ -119,7 +119,7 @@ osaudit results --rerun # also re-run each extraction and compare
 |---|---|
 | `paper-numbers/map/*.json` | For each cited quantity, the committed file and JSON path it is copied from |
 | `paper-numbers/extract.py` | Copies those values; refuses a source whose sha256 differs from `artifact/MANIFEST.json` |
-| `paper-numbers/derived.py` | The few cited quantities no analysis output stores (slot cost spread, order-effect and R1 counts, two gateway totals) |
+| `paper-numbers/derived.py` | The few cited quantities no analysis output stores (slot cost spread, order-effect and R1 counts, three gateway totals) |
 | `paper-numbers/results/*.json` | The extracted values, each with an osaudit provenance block |
 | `paper-numbers/build.sh` | Regenerates `results/` through `osaudit run` (clean tree required) |
 
