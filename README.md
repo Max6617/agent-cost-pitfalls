@@ -104,6 +104,27 @@ node tools/figures.mjs
 
 Writes TikZ sources under `paper/figures/` from the analysis JSONs (see mapping below).
 
+## Number audit (osaudit)
+
+`osaudit.toml` lets [osaudit](https://github.com/ASSERT-KTH/osaudit) trace every number printed in `paper/PAPER.tex` to the committed file behind it. Run it from the repository root (Python 3.13+):
+
+```bash
+osaudit                 # every static check; silent and exit 0 when every number traces
+osaudit results --rerun # also re-run each extraction and compare
+```
+
+`paper-numbers/` holds the bridge between the paper and the v1.0 artifact. None of the v1.0 files are modified:
+
+| path | role |
+|---|---|
+| `paper-numbers/map/*.json` | For each cited quantity, the committed file and JSON path it is copied from |
+| `paper-numbers/extract.py` | Copies those values; refuses a source whose sha256 differs from `artifact/MANIFEST.json` |
+| `paper-numbers/derived.py` | The few cited quantities no analysis output stores (slot cost spread, order-effect and R1 counts, two gateway totals) |
+| `paper-numbers/results/*.json` | The extracted values, each with an osaudit provenance block |
+| `paper-numbers/build.sh` | Regenerates `results/` through `osaudit run` (clean tree required) |
+
+The header of `osaudit.toml` explains why `analysis/*.json` and `tools/*.mjs` are inputs rather than audited results and instruments, and what the allow entries cover.
+
 ## Directory map
 
 | path | role |
