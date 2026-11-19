@@ -422,7 +422,7 @@ ledger implies that only about 19\% of the unrecorded input was read from cache,
 DSH arms. Table~\ref{tab:cost} reports per-model brackets. We quote no standalone external-harness cost on
 Anthropic. The rankings and Figure~\ref{fig:ties} still include those arms, priced at the miss-rate
 default for unsplit input, and should be read with that caveat. A ten-cell pilot that ran OpenCode on Anthropic's native API, where the split is reported,
-measured a prefix retention of 0.874 [0.818, 0.930], below the DSH arms' 0.994--1.000.
+measured a prefix retention of 0.873 [0.818, 0.930], below the DSH arms' 0.994--1.000.
 
 \begin{inlinetable}
 \captionof{table}{Cost per run and solve rate on batch 1 (all ten arms). For the four cheaper providers
@@ -521,7 +521,7 @@ order-adjusted estimate than to the raw one in at least 5 of the 8 pre-registere
 (at most 3 would refute it). It does in exactly 5 (Table~\ref{tab:rerun}), so the prediction holds,
 narrowly. In two of the five rows the margin is under 1.3 points, while in the row the plan singled out
 it is decisive: GLM's significant batch-1 saving of \mi{}20.8\%, null after adjustment, did
-not return. The re-run puts GLM's batch-1 contrast at +15.4\% [+1.0, +33.0]. Of the nine
+not return. The re-run puts GLM's batch-1 contrast at +15.4\% [+1.0, +32.9]. Of the nine
 classifications, seven agree with the original raw reading and seven with the adjusted one. The order
 effect itself, measured as the contrast in PTC-first blocks minus the contrast in native-first blocks,
 has an interval that includes zero for eight of the nine rows. For Haiku it is \mi{}49.0\% of native
@@ -538,13 +538,13 @@ verdict in the pre-registered test (which estimate the re-run lies closer to; Ha
 suite & model & filed raw & filed adj. & re-run [95\% CI] & closer to & order effect [95\% CI] \\
 \midrule
 batch 1 & DeepSeek V4.1 Flash & +0.1 & \mi{}0.8 & +0.9 [\mi{}10.0, +12.7] & raw & +6.2 [\mi{}9.2, +22.2] \\
- & GLM-5.3-Flash & \mi{}20.8 & \mi{}8.9 & +15.4 [+1.0, +33.0] & adjusted & \mi{}10.8 [\mi{}49.4, +22.4] \\
+ & GLM-5.3-Flash & \mi{}20.8 & \mi{}8.9 & +15.4 [+1.0, +32.9] & adjusted & \mi{}10.8 [\mi{}49.4, +22.4] \\
  & Qwen3.8-Flash & +30.7 & +35.3 & +33.1 [+23.3, +42.5] & adjusted & \mi{}4.8 [\mi{}32.7, +20.4] \\
- & gpt-6-luna & +1.2 & +6.7 & \mi{}2.1 [\mi{}13.6, +8.6] & raw & \mi{}2.5 [\mi{}25.7, +19.9] \\
- & Claude Haiku 4.5 & +53.8 & +66.1 & +78.4 [+57.0, +102.3] & (adjusted) & \mi{}49.0 [\mi{}97.1, \mi{}3.2] \\
+ & gpt-6-luna & +1.2 & +6.7 & \mi{}2.1 [\mi{}13.5, +8.6] & raw & \mi{}2.5 [\mi{}25.7, +19.9] \\
+ & Claude Haiku 4.5 & +53.8 & +66.1 & +78.4 [+56.9, +102.3] & (adjusted) & \mi{}49.0 [\mi{}97.1, \mi{}3.2] \\
 \midrule
-tasks-b & DeepSeek V4.1 Flash & \mi{}21.8 & \mi{}17.0 & \mi{}16.8 [\mi{}29.8, \mi{}6.3] & adjusted & \mi{}15.8 [\mi{}38.9, +2.9] \\
- & GLM-5.3-Flash & \mi{}10.1 & \mi{}6.2 & \mi{}3.8 [\mi{}16.5, +9.3] & adjusted & +1.0 [\mi{}16.1, +18.4] \\
+tasks-b & DeepSeek V4.1 Flash & \mi{}21.8 & \mi{}17.0 & \mi{}16.8 [\mi{}29.8, \mi{}6.3] & adjusted & \mi{}15.8 [\mi{}38.8, +2.9] \\
+ & GLM-5.3-Flash & \mi{}10.1 & \mi{}6.2 & \mi{}3.8 [\mi{}16.4, +9.3] & adjusted & +1.0 [\mi{}16.1, +18.4] \\
  & Qwen3.8-Flash & +5.7 & +7.0 & +12.9 [+0.6, +28.2] & adjusted & +18.0 [\mi{}9.6, +53.0] \\
  & gpt-6-luna & \mi{}16.6 & \mi{}16.2 & \mi{}19.0 [\mi{}29.0, \mi{}9.4] & raw & \mi{}0.4 [\mi{}20.0, +19.0] \\
 \bottomrule
@@ -836,7 +836,7 @@ decision rules.}\label{tab:hypotheses}
 hypothesis & result & verdict \\
 \midrule
 H1 (primary): the PTC penalty rises with output share & $b_1 = +0.00467$ [\mi{}0.00566, +0.01579], $n = 186$ & inconclusive \\
-H2: terseness reduces the PTC penalty & mean $d = +0.00151$ [\mi{}0.00010, +0.00354], Wilcoxon $p = 0.80$ & inconclusive \\
+H2: terseness reduces the PTC penalty & mean $d = +0.00151$ [\mi{}0.00009, +0.00356], Wilcoxon $p = 0.80$ & inconclusive \\
 H3: 24 schemas rather than 1 increase requests & +2.228 [+1.228, +3.360] & supported \\
 H4: cache hit rate does not predict arm cost & $b_C = +0.11157$ [+0.06235, +0.17140] & refuted \\
 \bottomrule
@@ -850,7 +850,7 @@ providers; \S\ref{sec:survives} reports the statistics.
 them, and version 4 edited the text after its tag. Amendments 21--23 post-date the last tag.
 \item H1 was refuted on the four cheaper providers and became inconclusive when the Anthropic models
 were added. A mixed model with a task random intercept gives the same $b_1$. On the four
-pre-registered providers on tasks-b, $b_1 = -0.0125$ [$-0.0203$, $-0.0050$].
+pre-registered providers on tasks-b, $b_1 = -0.0125$ [$-0.0202$, $-0.0051$].
 \item The Holm family was filed with 12 members (4 cost, 8 solve-rate) and grew to 18 when the
 Anthropic models were added, after their collection. Of the 18, two survive, both Haiku's: the PTC
 cost contrast ($p = 0.00005$) and the PTC-to-PTC-terse solve-rate contrast ($p = 0.00014$). Qwen's

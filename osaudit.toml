@@ -26,8 +26,8 @@ schema = "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/
 # development pilot (raw logs not in the artifact, as the paper states), provider-console
 # readings, the reseed experiment, and rounded projections whose exact value is traced.
 #
-# Paper errata. The last section names, for printed numbers that disagree with the data, the
-# value they report; each is a numbers/derive-mismatch until paper/PAPER.tex is corrected.
+# Corrections. The last section traces the numbers the v1.0 PDF misprinted (double rounding, or
+# values left from the earlier B = 5,000 bootstrap) and paper/PAPER.tex now prints correctly.
 
 [paper]
 tex = ["paper/PAPER.tex"]
@@ -5989,84 +5989,83 @@ reason = "reseed experiment (25 of 40 reseeds) recorded only in prose, METHODS.m
 file = "paper/PAPER.tex"
 line = 655
 
-# ---- paper lines all: paper errata: each fails until the paper prints the value the data give ----
+# ---- paper lines all: corrected values (were misprinted in the v1.0 PDF) ----
 
-# Paper errata. Each entry names the value the printed number reports; osaudit reports the
-# mismatch (numbers/derive-mismatch) until paper/PAPER.tex prints the value the data give.
+# Each entry names the value the corrected number reports; the comment gives the v1.0 misprint.
 
-# analysis/retention-pilot-2026-10-10.json arms[0].meanRetention = 0.87349, prints 0.873
+# analysis/retention-pilot-2026-10-10.json arms[0].meanRetention = 0.87349, v1.0 printed 0.874
 [[numbers.derive]]
-value = "0.874"
+value = "0.873"
 expr = "cache_p3_opencode_pilot.opencode_retention_mean"
 file = "paper/PAPER.tex"
 line = 425
 
-# rerun-compare rerun-b1 GLM rerun.ciHiPct = 32.949, prints 32.9 (double rounding via 32.95)
+# rerun-compare rerun-b1 GLM rerun.ciHiPct = 32.949, v1.0 printed 33.0 (double rounding via 32.95)
 [[numbers.derive]]
-value = "33.0"
+value = "32.9"
 expr = "rerun_table7.b1_glm_rerun_ci_hi_pct"
 file = "paper/PAPER.tex"
 line = 524
 
-# same cell as line 524, prints 32.9
+# same cell as line 524, v1.0 printed 33.0
 [[numbers.derive]]
-value = "33.0"
+value = "32.9"
 expr = "rerun_table7.b1_glm_rerun_ci_hi_pct"
 file = "paper/PAPER.tex"
 line = 541
 
-# rerun-compare rerun-b1 gpt-6-luna rerun.ciLoPct = -13.548, prints -13.5
+# rerun-compare rerun-b1 gpt-6-luna rerun.ciLoPct = -13.548, v1.0 printed -13.6
 [[numbers.derive]]
-value = "13.6"
+value = "13.5"
 expr = "-rerun_table7.b1_luna_rerun_ci_lo_pct"
 file = "paper/PAPER.tex"
 line = 543
 
-# rerun-compare rerun-b1 Haiku rerun.ciLoPct = 56.947, prints 56.9
+# rerun-compare rerun-b1 Haiku rerun.ciLoPct = 56.947, v1.0 printed 57.0
 [[numbers.derive]]
-value = "57.0"
+value = "56.9"
 expr = "rerun_table7.b1_haiku_rerun_ci_lo_pct"
 file = "paper/PAPER.tex"
 line = 544
 
-# rerun-compare rerun-b DeepSeek orderEffect.ciLoPct = -38.848, prints -38.8
+# rerun-compare rerun-b DeepSeek orderEffect.ciLoPct = -38.848, v1.0 printed -38.9
 [[numbers.derive]]
-value = "38.9"
+value = "38.8"
 expr = "-rerun_table7.b_deepseek_order_effect_ci_lo_pct"
 file = "paper/PAPER.tex"
 line = 546
 
-# rerun-compare rerun-b GLM rerun.ciLoPct = -16.447, prints -16.4
+# rerun-compare rerun-b GLM rerun.ciLoPct = -16.447, v1.0 printed -16.5
 [[numbers.derive]]
-value = "16.5"
+value = "16.4"
 expr = "-rerun_table7.b_glm_rerun_ci_lo_pct"
 file = "paper/PAPER.tex"
 line = 547
 
-# hypotheses-6model-2026-10-09 H2 ciD.lo = -0.0000893, prints -0.00009; 0.00010 is the B = 5,000 bound of the 10-03 file
+# hypotheses-6model-2026-10-09 H2 ciD.lo = -0.0000893, v1.0 printed 0.00010, the B = 5,000 bound of the 10-03 file
 [[numbers.derive]]
-value = "0.00010"
+value = "0.00009"
 expr = "-limits_hypotheses.h2_ci_lo"
 file = "paper/PAPER.tex"
 line = 839
 
-# hypotheses-6model-2026-10-09 H2 ciD.hi = 0.0035595, prints 0.00356; 0.00354 is the B = 5,000 bound of the 10-03 file
+# hypotheses-6model-2026-10-09 H2 ciD.hi = 0.0035595, v1.0 printed 0.00354, the B = 5,000 bound of the 10-03 file
 [[numbers.derive]]
-value = "0.00354"
+value = "0.00356"
 expr = "limits_hypotheses.h2_ci_hi"
 file = "paper/PAPER.tex"
 line = 839
 
-# hypotheses-batchb-four-2026-10-09 H1 ciPooled.lo = -0.020227, prints -0.0202
+# hypotheses-batchb-four-2026-10-09 H1 ciPooled.lo = -0.020227, v1.0 printed -0.0203
 [[numbers.derive]]
-value = "0.0203"
+value = "0.0202"
 expr = "-limits_prereg.tasksb_four_h1_ci_lo"
 file = "paper/PAPER.tex"
 line = 853
 
-# hypotheses-batchb-four-2026-10-09 H1 ciPooled.hi = -0.0050628, prints -0.0051
+# hypotheses-batchb-four-2026-10-09 H1 ciPooled.hi = -0.0050628, v1.0 printed -0.0050
 [[numbers.derive]]
-value = "0.0050"
+value = "0.0051"
 expr = "-limits_prereg.tasksb_four_h1_ci_hi"
 file = "paper/PAPER.tex"
 line = 853
