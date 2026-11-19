@@ -1,0 +1,6072 @@
+schema = "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/audit-v1.json"
+
+# osaudit configuration for "Six Pitfalls in Measuring the Cost of Coding Agents" (paper/PAPER.tex).
+#
+# How the numbers trace. paper-numbers/extract.py copies each quantity the paper cites from a
+# committed file, by the explicit JSON path listed in paper-numbers/map/*.json, and refuses a
+# source whose sha256 differs from artifact/MANIFEST.json. paper-numbers/derived.py computes the
+# few cited quantities no analysis output stores. paper-numbers/build.sh writes every
+# paper-numbers/results/*.json through `osaudit run`, which records the command, the sha256 of
+# each input and the git commit.
+#
+# Scope. osaudit has no rule exclusions; this file narrows the audit in two places, because the
+# fix would rewrite the v1.0 artifact (doi:10.5281/zenodo.24039669):
+# - analysis/*.json are inputs of the extractors, not results files. Declaring them would report
+#   results/no-provenance on each, and adding a provenance block rewrites outputs checksummed in
+#   artifact/MANIFEST.json.
+# - tools/*.mjs are not instruments. The analysis tools stamp a `generated` time with new Date()
+#   (results/wall-clock), and a fix or an inline exemption edits the v1.0 analysis code. Their
+#   commands and outputs are recorded in the MANIFEST and re-checked by
+#   `node tools/artifact.mjs --verify`.
+#
+# Allow entries. Most cover numbers the study does not produce: model-name versions, suite and
+# pitfall labels, confidence levels and other protocol constants, typesetting tokens, figures
+# from cited work, and provider price cards. The rest are study numbers no committed data file
+# can back, and each reason says so and names where the number is recorded: the Anthropic
+# development pilot (raw logs not in the artifact, as the paper states), provider-console
+# readings, the reseed experiment, and rounded projections whose exact value is traced.
+#
+# Paper errata. The last section names, for printed numbers that disagree with the data, the
+# value they report; each is a numbers/derive-mismatch until paper/PAPER.tex is corrected.
+
+[paper]
+tex = ["paper/PAPER.tex"]
+
+[results]
+files = ["paper-numbers/results/*.json"]
+instruments = ["paper-numbers/extract.py", "paper-numbers/derived.py"]
+
+# ---- paper lines 1-286: front matter, introduction, related work, setup, Table 1 ----
+
+# Part A: paper/PAPER.tex lines 1-286 (preamble, abstract, introduction, related work, study setup, Table 1)
+
+# ---- preamble typesetting ----
+[[numbers.allow]]
+value = "1.18"
+reason = "typesetting parameter: pgfplots compat level in the preamble"
+file = "paper/PAPER.tex"
+line = 14
+
+[[numbers.allow]]
+value = "1"
+reason = "typesetting parameter: argument count of the L column type in the preamble"
+file = "paper/PAPER.tex"
+line = 31
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "typesetting parameter: macro argument #1 of the L column type in the preamble"
+file = "paper/PAPER.tex"
+line = 31
+occurrence = 2
+
+# ---- abstract ----
+[[numbers.allow]]
+value = "23"
+reason = "protocol record: PRE-REGISTRATION.md section 12 amendment log, whose last entry is Amendment 23"
+file = "paper/PAPER.tex"
+line = 57
+
+[[numbers.derive]]
+value = "8,520"
+expr = "front_population.batch1_models * front_population.batch1_tasks * front_population.batch1_arms * front_population.batch1_seeds + front_population.tasksb_models * front_population.tasksb_tasks * front_population.tasksb_arms * front_population.tasksb_seeds"
+file = "paper/PAPER.tex"
+line = 57
+
+[[numbers.allow]]
+value = "0.023%"
+reason = "Anthropic development pilot bill reconciliation (35.58 credit delta / 35.5718 computed), recorded in _ev/anthropic-pilot-2026-10-03.md; pilot raw logs not in artifact/MANIFEST.json (README tab:anthropicab row)"
+file = "paper/PAPER.tex"
+line = 60
+
+[[numbers.allow]]
+value = "62"
+reason = "run count of the Anthropic development pilot (31 tasks x 2 arms x 1 seed), recorded in _ev/anthropic-pilot-2026-10-03.md; raw logs not in artifact/MANIFEST.json"
+file = "paper/PAPER.tex"
+line = 60
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna, not a quantity"
+file = "paper/PAPER.tex"
+line = 62
+
+[[numbers.derive]]
+value = "21.8%"
+expr = "-front_tasksb_r1.deepseek_rel_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "37.46"
+expr = "-front_tasksb_r1.deepseek_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "9.38"
+expr = "-front_tasksb_r1.deepseek_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "16.6%"
+expr = "-front_tasksb_r1.luna_rel_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "24.35"
+expr = "-front_tasksb_r1.luna_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "8.55"
+expr = "-front_tasksb_r1.luna_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 63
+
+[[numbers.derive]]
+value = "22.64%"
+expr = "-front_tasksb_both_solved.deepseek_pct"
+file = "paper/PAPER.tex"
+line = 64
+
+[[numbers.derive]]
+value = "39.77"
+expr = "-front_tasksb_both_solved.deepseek_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 64
+
+[[numbers.derive]]
+value = "9.19"
+expr = "-front_tasksb_both_solved.deepseek_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 64
+
+[[numbers.derive]]
+value = "18.01%"
+expr = "-front_tasksb_both_solved.luna_pct"
+file = "paper/PAPER.tex"
+line = 65
+
+[[numbers.derive]]
+value = "25.14"
+expr = "-front_tasksb_both_solved.luna_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 65
+
+[[numbers.derive]]
+value = "10.61"
+expr = "-front_tasksb_both_solved.luna_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 65
+
+[[numbers.derive]]
+value = "16.8%"
+expr = "-front_rerun.tasksb_deepseek_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.derive]]
+value = "29.8"
+expr = "-front_rerun.tasksb_deepseek_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.derive]]
+value = "6.3"
+expr = "-front_rerun.tasksb_deepseek_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.derive]]
+value = "19.0%"
+expr = "-front_rerun.tasksb_luna_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.derive]]
+value = "29.0"
+expr = "-front_rerun.tasksb_luna_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.derive]]
+value = "9.4"
+expr = "-front_rerun.tasksb_luna_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 66
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 67
+
+[[numbers.allow]]
+value = "1"
+reason = "enumeration label (1) of the first pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 68
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 69
+
+[[numbers.allow]]
+value = "2"
+reason = "enumeration label (2) of the second pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 69
+
+[[numbers.allow]]
+value = "3"
+reason = "enumeration label (3) of the third pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 71
+
+[[numbers.allow]]
+value = "3.4"
+reason = "Anthropic cache A/B development pilot, 62-run total $34.96 -> $10.42 (3.4x), recorded in _ev/anthropic-pilot-2026-10-03.md and METHODS.md section 4; raw logs not in artifact/MANIFEST.json (README tab:anthropicab row)"
+file = "paper/PAPER.tex"
+line = 71
+
+[[numbers.allow]]
+value = "4"
+reason = "enumeration label (4) of the fourth pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 73
+
+[[numbers.derive]]
+value = "9"
+expr = "front_rerun.batch1_rows + front_rerun.tasksb_rows"
+file = "paper/PAPER.tex"
+line = 74
+
+[[numbers.derive]]
+value = "8.1%"
+expr = "-front_rerun.batch1_glm_native_drift_pct"
+file = "paper/PAPER.tex"
+line = 75
+
+[[numbers.derive]]
+value = "8.0%"
+expr = "front_rerun.batch1_qwen_native_drift_pct"
+file = "paper/PAPER.tex"
+line = 75
+
+[[numbers.allow]]
+value = "5"
+reason = "enumeration label (5) of the fifth pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 76
+
+[[numbers.derive]]
+value = "54%"
+expr = "front_quality_batch1_haiku.per_cell_pct"
+file = "paper/PAPER.tex"
+line = 76
+
+[[numbers.derive]]
+value = "101%"
+expr = "front_quality_batch1_haiku.per_solved_pct"
+file = "paper/PAPER.tex"
+line = 77
+
+[[numbers.derive]]
+value = "46"
+expr = "front_quality_batch1_haiku.ptc_solved"
+file = "paper/PAPER.tex"
+line = 77
+
+[[numbers.derive]]
+value = "60"
+expr = "front_quality_batch1_haiku.native_solved"
+file = "paper/PAPER.tex"
+line = 77
+
+[[numbers.derive]]
+value = "62"
+expr = "front_quality_batch1_haiku.cells_per_arm"
+file = "paper/PAPER.tex"
+line = 77
+
+[[numbers.derive]]
+value = "48"
+expr = "front_rerun.batch1_haiku_ptc_solved"
+file = "paper/PAPER.tex"
+line = 78
+
+[[numbers.derive]]
+value = "62"
+expr = "front_rerun.batch1_haiku_native_solved"
+file = "paper/PAPER.tex"
+line = 78
+
+[[numbers.allow]]
+value = "6"
+reason = "enumeration label (6) of the sixth pitfall, not a quantity"
+file = "paper/PAPER.tex"
+line = 78
+
+[[numbers.derive]]
+value = "5.3%"
+expr = "-front_rerun.aa_label_pct"
+file = "paper/PAPER.tex"
+line = 79
+
+[[numbers.derive]]
+value = "11.6%"
+expr = "front_rerun.aa_label_half_width_pct"
+file = "paper/PAPER.tex"
+line = 79
+
+[[numbers.derive]]
+value = "31"
+expr = "front_rerun.aa_label_tasks"
+file = "paper/PAPER.tex"
+line = 79
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model name Claude Haiku 4.5, not a quantity"
+file = "paper/PAPER.tex"
+line = 80
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 81
+
+# ---- introduction ----
+[[numbers.allow]]
+value = "0.43"
+reason = "literature: AutoCodeRover's reported dollar cost per SWE-bench Lite task"
+file = "paper/PAPER.tex"
+line = 91
+cite = "zhang2024autocoderover"
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 111
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna, not a quantity"
+file = "paper/PAPER.tex"
+line = 112
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch-1', not a quantity"
+file = "paper/PAPER.tex"
+line = 113
+
+# ---- related work (literature) ----
+[[numbers.allow]]
+value = "40"
+reason = "literature: tokens-per-solved-task spread across harnesses reported by Vats et al."
+file = "paper/PAPER.tex"
+line = 149
+cite = "vats2026scaffold"
+
+[[numbers.allow]]
+value = "44"
+reason = "literature: resolve-rate swing in points reported by zhao2026pairingmatters (cited on line 154)"
+file = "paper/PAPER.tex"
+line = 153
+
+[[numbers.allow]]
+value = "20"
+reason = "literature: charged-tokens-per-resolved-task spread across harnesses reported by Zhao et al."
+file = "paper/PAPER.tex"
+line = 154
+cite = "zhao2026pairingmatters"
+
+[[numbers.allow]]
+value = "1"
+reason = "metric name pass@1, not a quantity"
+file = "paper/PAPER.tex"
+line = 158
+
+[[numbers.allow]]
+value = "2.4"
+reason = "literature: lower bound of the per-cell cost coefficient of variation reported by hu2026costinefficient (cited on line 163)"
+file = "paper/PAPER.tex"
+line = 162
+
+[[numbers.allow]]
+value = "8.4%"
+reason = "literature: upper bound of the per-cell cost coefficient of variation reported by hu2026costinefficient (cited on line 163)"
+file = "paper/PAPER.tex"
+line = 162
+
+[[numbers.allow]]
+value = "41"
+reason = "literature: lower bound of the caching cost cut reported by Lumer et al."
+file = "paper/PAPER.tex"
+line = 170
+cite = "lumer2026dontbreakthecache"
+
+[[numbers.allow]]
+value = "80%"
+reason = "literature: upper bound of the caching cost cut reported by Lumer et al."
+file = "paper/PAPER.tex"
+line = 170
+cite = "lumer2026dontbreakthecache"
+
+[[numbers.allow]]
+value = "120"
+reason = "literature: number of prompt-caching pull requests studied by zhang2026silentcostly (cited on line 175)"
+file = "paper/PAPER.tex"
+line = 173
+
+[[numbers.allow]]
+value = "26"
+reason = "literature: fan-out at the token crossover reported by patel2026bitterlesson (cited on line 185)"
+file = "paper/PAPER.tex"
+line = 184
+
+[[numbers.allow]]
+value = "20"
+reason = "literature: lower bound of the cost swing reported by Yang et al."
+file = "paper/PAPER.tex"
+line = 187
+cite = "yang2026restrictingexecutecode"
+
+[[numbers.allow]]
+value = "40%"
+reason = "literature: upper bound of the cost swing reported by Yang et al."
+file = "paper/PAPER.tex"
+line = 187
+cite = "yang2026restrictingexecutecode"
+
+[[numbers.allow]]
+value = "150"
+reason = "literature: vendor demonstration 150,000 -> 2,000 tokens, anthropic2025codeexecutionmcp (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+
+[[numbers.allow]]
+value = "000"
+reason = "literature: thousands group of 150,000 in the vendor demonstration, anthropic2025codeexecutionmcp (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+occurrence = 1
+
+[[numbers.allow]]
+value = "2"
+reason = "literature: vendor demonstration 150,000 -> 2,000 tokens, anthropic2025codeexecutionmcp (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+
+[[numbers.allow]]
+value = "000"
+reason = "literature: thousands group of 2,000 in the vendor demonstration, anthropic2025codeexecutionmcp (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+occurrence = 2
+
+[[numbers.allow]]
+value = "98.7%"
+reason = "literature: token saving in the vendor demonstration, anthropic2025codeexecutionmcp (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+
+[[numbers.allow]]
+value = "99.9%"
+reason = "literature: input-token saving in the vendor demonstration, cloudflare2026codemode (cited on line 190)"
+file = "paper/PAPER.tex"
+line = 189
+
+[[numbers.allow]]
+value = "2"
+reason = "literature: thousands digit of the 2,500-endpoint API in Cloudflare's code-mode demonstration"
+file = "paper/PAPER.tex"
+line = 190
+cite = "cloudflare2026codemode"
+
+[[numbers.allow]]
+value = "500"
+reason = "literature: hundreds group of the 2,500-endpoint API in Cloudflare's code-mode demonstration"
+file = "paper/PAPER.tex"
+line = 190
+cite = "cloudflare2026codemode"
+
+[[numbers.allow]]
+value = "37.6%"
+reason = "literature: mean token cut reported by mbat2026codemode (cited on line 195)"
+file = "paper/PAPER.tex"
+line = 193
+
+[[numbers.allow]]
+value = "40.7%"
+reason = "literature: mean cost cut reported by mbat2026codemode (cited on line 195)"
+file = "paper/PAPER.tex"
+line = 194
+
+[[numbers.allow]]
+value = "73.8%"
+reason = "literature: MCP-call cut reported by zheng2026ebench (cited on line 199)"
+file = "paper/PAPER.tex"
+line = 198
+
+[[numbers.allow]]
+value = "33.6%"
+reason = "literature: turn cut reported by zheng2026ebench (cited on line 199)"
+file = "paper/PAPER.tex"
+line = 198
+
+# ---- study: harnesses, models ----
+[[numbers.derive]]
+value = "24"
+expr = "front_tool_schemas.dsh_native_request_tools"
+file = "paper/PAPER.tex"
+line = 217
+
+[[numbers.derive]]
+value = "24"
+expr = "front_tool_schemas.dsh_native_request_tools"
+file = "paper/PAPER.tex"
+line = 220
+
+[[numbers.derive]]
+value = "1"
+expr = "front_tool_schemas.dsh_ptc_request_tools"
+file = "paper/PAPER.tex"
+line = 220
+
+[[numbers.derive]]
+value = "10"
+expr = "front_population.batch1_arms"
+file = "paper/PAPER.tex"
+line = 230
+
+[[numbers.derive]]
+value = "2"
+expr = "front_population.batch1_seeds"
+file = "paper/PAPER.tex"
+line = 230
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna, not a quantity"
+file = "paper/PAPER.tex"
+line = 233
+
+# ---- Table 1 (tab:models) ----
+[[numbers.allow]]
+value = "0.15"
+reason = "provider price card (DeepSeek miss, USD/M), captured in _ev/deepseek-pricing.html and _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 245
+
+[[numbers.allow]]
+value = "0.003"
+reason = "provider price card (DeepSeek hit, USD/M), captured in _ev/deepseek-pricing.html and _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 245
+
+[[numbers.allow]]
+value = "0.60"
+reason = "provider price card (DeepSeek output, USD/M), captured in _ev/deepseek-pricing.html and _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 245
+
+[[numbers.derive]]
+value = "4.00"
+expr = "front_table1.deepseek_out_in"
+file = "paper/PAPER.tex"
+line = 245
+
+[[numbers.allow]]
+value = "50"
+reason = "provider price card: DeepSeek cache discount miss/hit = 0.15/0.003, card in _ev/deepseek-pricing.html; METHODS.md section 5 price table"
+file = "paper/PAPER.tex"
+line = 245
+
+[[numbers.allow]]
+value = "0.15"
+reason = "provider price card (GLM-5.3-Flash input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.allow]]
+value = "0.03"
+reason = "provider price card (GLM-5.3-Flash cached input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.allow]]
+value = "0.50"
+reason = "provider price card (GLM-5.3-Flash output, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.derive]]
+value = "3.33"
+expr = "front_table1.glm_out_in"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.allow]]
+value = "5"
+reason = "provider price card: GLM-5.3-Flash cache discount miss/hit = 0.15/0.03, card in _ev/provider-pricing-2026-10-02.md; METHODS.md section 5 price table"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model name GLM-5.3-Flash, not a quantity"
+file = "paper/PAPER.tex"
+line = 246
+
+[[numbers.allow]]
+value = "0.15"
+reason = "provider price card (Qwen3.8-Flash input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 247
+
+[[numbers.allow]]
+value = "0.016"
+reason = "provider price card (Qwen3.8-Flash implicit cache, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 247
+
+[[numbers.allow]]
+value = "0.47"
+reason = "provider price card (Qwen3.8-Flash output, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 247
+
+[[numbers.derive]]
+value = "3.13"
+expr = "front_table1.qwen_out_in"
+file = "paper/PAPER.tex"
+line = 247
+
+[[numbers.allow]]
+value = "9.4"
+reason = "provider price card: Qwen3.8-Flash cache discount miss/hit = 0.15/0.016, card in _ev/provider-pricing-2026-10-02.md; METHODS.md section 5 price table"
+file = "paper/PAPER.tex"
+line = 247
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna, not a quantity"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.allow]]
+value = "0.10"
+reason = "provider price card (gpt-6-luna input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.allow]]
+value = "0.01"
+reason = "provider price card (gpt-6-luna cached input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.allow]]
+value = "0.50"
+reason = "provider price card (gpt-6-luna output, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.derive]]
+value = "5.00"
+expr = "front_table1.luna_out_in"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.allow]]
+value = "10"
+reason = "provider price card: gpt-6-luna cache discount miss/hit = 0.10/0.01, card in _ev/provider-pricing-2026-10-02.md; METHODS.md section 5 price table"
+file = "paper/PAPER.tex"
+line = 248
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model name Claude Haiku 4.5, not a quantity"
+file = "paper/PAPER.tex"
+line = 249
+
+[[numbers.derive]]
+value = "1.00"
+expr = "front_table1.haiku_miss_usd_per_m"
+file = "paper/PAPER.tex"
+line = 249
+
+[[numbers.derive]]
+value = "0.10"
+expr = "front_table1.haiku_hit_usd_per_m"
+file = "paper/PAPER.tex"
+line = 249
+
+[[numbers.derive]]
+value = "5.00"
+expr = "front_table1.haiku_out_usd_per_m"
+file = "paper/PAPER.tex"
+line = 249
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.00"
+expr = "front_table1.haiku_out_in"
+file = "paper/PAPER.tex"
+line = 249
+occurrence = 2
+
+[[numbers.derive]]
+value = "10"
+expr = "front_table1.haiku_miss_usd_per_m / front_table1.haiku_hit_usd_per_m"
+file = "paper/PAPER.tex"
+line = 249
+
+[[numbers.allow]]
+value = "5.5"
+reason = "model name Claude Sonnet 5.5, not a quantity"
+file = "paper/PAPER.tex"
+line = 250
+
+[[numbers.allow]]
+value = "2.00"
+reason = "provider price card (Claude Sonnet 5.5 base input, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 250
+
+[[numbers.allow]]
+value = "0.20"
+reason = "provider price card (Claude Sonnet 5.5 cache hit, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 250
+
+[[numbers.allow]]
+value = "10.00"
+reason = "provider price card (Claude Sonnet 5.5 output, USD/M), captured in _ev/provider-pricing-2026-10-02.md; coded in tools/prices.mjs"
+file = "paper/PAPER.tex"
+line = 250
+
+[[numbers.derive]]
+value = "5.00"
+expr = "front_table1.sonnet_out_in"
+file = "paper/PAPER.tex"
+line = 250
+
+[[numbers.allow]]
+value = "10"
+reason = "provider price card: Claude Sonnet 5.5 cache discount miss/hit = 2.00/0.20, card in _ev/provider-pricing-2026-10-02.md; METHODS.md section 5 price table"
+file = "paper/PAPER.tex"
+line = 250
+
+# ---- task suites and population ----
+[[numbers.derive]]
+value = "31"
+expr = "front_population.batch1_tasks"
+file = "paper/PAPER.tex"
+line = 257
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'Batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 257
+
+[[numbers.allow]]
+value = "0"
+reason = "protocol constant: a run is solved when the harness exits 0, METHODS.md section 5 metrics table"
+file = "paper/PAPER.tex"
+line = 259
+
+[[numbers.derive]]
+value = "40"
+expr = "front_population.tasksb_tasks"
+file = "paper/PAPER.tex"
+line = 261
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch-1', not a quantity"
+file = "paper/PAPER.tex"
+line = 262
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'Batch 1', not a quantity"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "3,720"
+expr = "front_population.batch1_models * front_population.batch1_tasks * front_population.batch1_arms * front_population.batch1_seeds"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "6"
+expr = "front_population.batch1_models"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "31"
+expr = "front_population.batch1_tasks"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "10"
+expr = "front_population.batch1_arms"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "2"
+expr = "front_population.batch1_seeds"
+file = "paper/PAPER.tex"
+line = 265
+
+[[numbers.derive]]
+value = "621"
+expr = "front_population.batch1_qwen_records"
+file = "paper/PAPER.tex"
+line = 266
+
+[[numbers.allow]]
+value = "2"
+reason = "seed label identifying the duplicated cell (seed 2), not a quantity"
+file = "paper/PAPER.tex"
+line = 266
+
+[[numbers.derive]]
+value = "3,719"
+expr = "front_population.batch1_deepseek_cells + front_population.batch1_glm_cells + front_population.batch1_qwen_cells + front_population.batch1_haiku_cells + front_population.batch1_sonnet_cells + front_population.batch1_luna_cells"
+file = "paper/PAPER.tex"
+line = 269
+
+[[numbers.derive]]
+value = "620"
+expr = "front_population.batch1_qwen_cells"
+file = "paper/PAPER.tex"
+line = 269
+occurrence = 1
+
+[[numbers.derive]]
+value = "619"
+expr = "front_population.batch1_luna_cells"
+file = "paper/PAPER.tex"
+line = 269
+
+[[numbers.derive]]
+value = "620"
+expr = "(front_population.batch1_deepseek_cells + front_population.batch1_glm_cells + front_population.batch1_haiku_cells + front_population.batch1_sonnet_cells) / 4"
+file = "paper/PAPER.tex"
+line = 269
+occurrence = 2
+
+[[numbers.derive]]
+value = "4,800"
+expr = "front_population.tasksb_models * front_population.tasksb_tasks * front_population.tasksb_arms * front_population.tasksb_seeds"
+file = "paper/PAPER.tex"
+line = 269
+
+[[numbers.derive]]
+value = "447"
+expr = "front_population.tasksb_haiku_planned_cells - front_population.tasksb_haiku_cells"
+file = "paper/PAPER.tex"
+line = 270
+
+[[numbers.derive]]
+value = "353"
+expr = "front_population.tasksb_haiku_cells"
+file = "paper/PAPER.tex"
+line = 271
+
+[[numbers.derive]]
+value = "18"
+expr = "front_population.tasksb_haiku_tasks"
+file = "paper/PAPER.tex"
+line = 271
+
+[[numbers.derive]]
+value = "7"
+expr = "front_population.tasksb_haiku_tasks * front_population.tasksb_arms * front_population.tasksb_seeds - front_population.tasksb_haiku_cells"
+file = "paper/PAPER.tex"
+line = 271
+
+[[numbers.derive]]
+value = "360"
+expr = "front_population.tasksb_haiku_tasks * front_population.tasksb_arms * front_population.tasksb_seeds"
+file = "paper/PAPER.tex"
+line = 271
+
+# ---- measurement ----
+[[numbers.allow]]
+value = "20"
+reason = "protocol constant: per-run timeout of 20 minutes, METHODS.md section 6 Procedure"
+file = "paper/PAPER.tex"
+line = 285
+
+# ---- paper lines 287-426: validation, design, Tables 2-4 ----
+
+# Part B: paper/PAPER.tex lines 287-426 (validation, design, tab:raw, tab:coldbilled, tab:anthropicab, Pitfalls 1-3)
+
+[[numbers.derive]]
+value = "20.8%"
+expr = "-cache_raw_table2.glm_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 307
+
+[[numbers.derive]]
+value = "53.8%"
+expr = "cache_raw_table2.haiku_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 307
+
+[[numbers.derive]]
+value = "20.75%"
+expr = "-cache_raw_table2.glm_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 319
+
+[[numbers.derive]]
+value = "44.30"
+expr = "-cache_raw_table2.glm_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 319
+
+[[numbers.derive]]
+value = "2.79"
+expr = "-cache_raw_table2.glm_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 319
+
+[[numbers.derive]]
+value = "8.90"
+expr = "-cache_raw_table2.deepseek_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 320
+
+[[numbers.derive]]
+value = "8.42"
+expr = "-cache_raw_table2.luna_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 321
+
+[[numbers.derive]]
+value = "0.08"
+expr = "-cache_raw_table2.sonnet_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 322
+
+[[numbers.derive]]
+value = "21%"
+expr = "-cache_coldbilled_table3.luna_cold_pct"
+file = "paper/PAPER.tex"
+line = 340
+
+[[numbers.derive]]
+value = "53.8%"
+expr = "cache_coldbilled_table3.haiku_billed_pct"
+file = "paper/PAPER.tex"
+line = 343
+
+[[numbers.derive]]
+value = "20.75%"
+expr = "-cache_coldbilled_table3.glm_billed_pct"
+file = "paper/PAPER.tex"
+line = 353
+
+[[numbers.derive]]
+value = "20.55%"
+expr = "-cache_coldbilled_table3.glm_cold_pct"
+file = "paper/PAPER.tex"
+line = 353
+
+[[numbers.derive]]
+value = "21.17%"
+expr = "-cache_coldbilled_table3.luna_cold_pct"
+file = "paper/PAPER.tex"
+line = 354
+
+[[numbers.derive]]
+value = "9.76%"
+expr = "-cache_coldbilled_table3.deepseek_cold_pct"
+file = "paper/PAPER.tex"
+line = 355
+
+[[numbers.derive]]
+value = "15.11%"
+expr = "-cache_coldbilled_table3.sonnet_cold_pct"
+file = "paper/PAPER.tex"
+line = 357
+
+[[numbers.allow]]
+value = "62"
+file = "paper/PAPER.tex"
+line = 287
+reason = "cell count of the 62-run Anthropic billing pilot, _ev/anthropic-pilot-2026-10-03.md RESULTS table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "35.5718"
+file = "paper/PAPER.tex"
+line = 288
+reason = "pilot cost computed from its gateway log, _ev/anthropic-pilot-2026-10-03.md CONSOLE RECONCILIATION; raw log not in the artifact"
+
+[[numbers.allow]]
+value = "35.58"
+file = "paper/PAPER.tex"
+line = 289
+reason = "Anthropic credit-balance delta read before/after the pilot, _ev/anthropic-pilot-2026-10-03.md CONSOLE RECONCILIATION"
+
+[[numbers.allow]]
+value = "1.00023"
+file = "paper/PAPER.tex"
+line = 289
+reason = "ratio 35.58/35.5718 of the two figures in _ev/anthropic-pilot-2026-10-03.md (the document rounds it to 1.0002)"
+
+[[numbers.allow]]
+value = "0.023%"
+file = "paper/PAPER.tex"
+line = 289
+reason = "relative gap (35.58/35.5718 - 1) of the two figures in _ev/anthropic-pilot-2026-10-03.md (the document rounds it to 0.02%)"
+
+[[numbers.allow]]
+value = "200"
+file = "paper/PAPER.tex"
+line = 298
+reason = "bootstrap resample count B = 200,000, protocol constant in METHODS.md section 7 (fixed in tools/stats.mjs); '{,}' splits it into two tokens"
+
+[[numbers.allow]]
+value = "000"
+file = "paper/PAPER.tex"
+line = 298
+reason = "bootstrap resample count B = 200,000, protocol constant in METHODS.md section 7 (fixed in tools/stats.mjs); '{,}' splits it into two tokens"
+
+[[numbers.allow]]
+value = "95%"
+file = "paper/PAPER.tex"
+line = 299
+reason = "confidence level of the percentile task-cluster bootstrap interval (2.5th-97.5th percentile), protocol constant in METHODS.md section 7 and PRE-REGISTRATION.md decision rules"
+
+[[numbers.allow]]
+value = "95%"
+file = "paper/PAPER.tex"
+line = 314
+reason = "confidence level of the percentile task-cluster bootstrap interval (2.5th-97.5th percentile), protocol constant in METHODS.md section 7 and PRE-REGISTRATION.md decision rules"
+
+[[numbers.allow]]
+value = "95%"
+file = "paper/PAPER.tex"
+line = 317
+reason = "confidence level of the percentile task-cluster bootstrap interval (2.5th-97.5th percentile), protocol constant in METHODS.md section 7 and PRE-REGISTRATION.md decision rules"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 306
+reason = "name of the task suite 'batch 1' (PAPER.tex section Task suites), not a quantity"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 313
+reason = "name of the task suite 'batch 1' (PAPER.tex section Task suites), not a quantity"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 342
+reason = "name of the task suite 'batch 1' (PAPER.tex section Task suites), not a quantity"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 346
+reason = "name of the task suite 'batch 1' (PAPER.tex section Task suites), not a quantity"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 415
+reason = "name of the task suite 'batch 1' (PAPER.tex section Task suites), not a quantity"
+
+[[numbers.allow]]
+value = "1"
+file = "paper/PAPER.tex"
+line = 331
+reason = "ordinal in the heading 'Pitfall 1', not a quantity"
+
+[[numbers.allow]]
+value = "2"
+file = "paper/PAPER.tex"
+line = 366
+reason = "ordinal in the heading 'Pitfall 2', not a quantity"
+
+[[numbers.allow]]
+value = "3"
+file = "paper/PAPER.tex"
+line = 409
+reason = "ordinal in the heading 'Pitfall 3', not a quantity"
+
+[[numbers.allow]]
+value = "5.3"
+file = "paper/PAPER.tex"
+line = 319
+reason = "version number in the model name GLM-5.3-Flash"
+
+[[numbers.allow]]
+value = "5.3"
+file = "paper/PAPER.tex"
+line = 353
+reason = "version number in the model name GLM-5.3-Flash"
+
+[[numbers.allow]]
+value = "6"
+file = "paper/PAPER.tex"
+line = 321
+reason = "version number in the model name gpt-6-luna"
+
+[[numbers.allow]]
+value = "6"
+file = "paper/PAPER.tex"
+line = 339
+reason = "version number in the model name gpt-6-luna"
+
+[[numbers.allow]]
+value = "6"
+file = "paper/PAPER.tex"
+line = 354
+reason = "version number in the model name gpt-6-luna"
+
+[[numbers.allow]]
+value = "5.5"
+file = "paper/PAPER.tex"
+line = 322
+reason = "version number in the model name Claude Sonnet 5.5"
+
+[[numbers.allow]]
+value = "5.5"
+file = "paper/PAPER.tex"
+line = 357
+reason = "version number in the model name Claude Sonnet 5.5"
+
+[[numbers.allow]]
+value = "4.5"
+file = "paper/PAPER.tex"
+line = 324
+reason = "version number in the model name Claude Haiku 4.5"
+
+[[numbers.allow]]
+value = "4.5"
+file = "paper/PAPER.tex"
+line = 356
+reason = "version number in the model name Claude Haiku 4.5"
+
+[[numbers.allow]]
+value = "4.5"
+file = "paper/PAPER.tex"
+line = 382
+reason = "version number in the model name Claude Haiku 4.5"
+
+[[numbers.allow]]
+value = "5"
+file = "paper/PAPER.tex"
+line = 336
+reason = "smallest miss/hit price-card discount (GLM-5.3-Flash 0.15/0.03, Table tab:models), price card saved in _ev/provider-pricing-2026-10-02.md"
+
+[[numbers.allow]]
+value = "50"
+file = "paper/PAPER.tex"
+line = 336
+reason = "largest miss/hit price-card discount (DeepSeek 0.15/0.003, Table tab:models), price card saved in _ev/deepseek-pricing.html and _ev/provider-pricing-2026-10-02.md"
+
+[[numbers.allow]]
+value = "4,096"
+file = "paper/PAPER.tex"
+line = 372
+reason = "Anthropic's minimum cacheable prompt length for Claude Haiku 4.5, provider documentation saved in _ev/anthropic-caching.md"
+
+[[numbers.allow]]
+value = "31"
+file = "paper/PAPER.tex"
+line = 374
+reason = "task count of the Anthropic cache A/B pilot, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.0%"
+file = "paper/PAPER.tex"
+line = 375
+reason = "PTC cache hit rate under static breakpoints, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "27.6%"
+file = "paper/PAPER.tex"
+line = 375
+reason = "native cache hit rate under static breakpoints, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "92%"
+file = "paper/PAPER.tex"
+line = 375
+reason = "PTC penalty +92.3% under static breakpoints, rounded, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "99.9%"
+file = "paper/PAPER.tex"
+line = 376
+reason = "cache hit rate of both arms with the top-level cache field, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "80%"
+file = "paper/PAPER.tex"
+line = 376
+reason = "PTC penalty +79.5% with the top-level cache field, rounded, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "62"
+file = "paper/PAPER.tex"
+line = 376
+reason = "run count of the cache A/B (31 tasks x 2 arms), _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "3.4"
+file = "paper/PAPER.tex"
+line = 376
+reason = "'3.4x cheaper' (34.96/10.42), _ev/anthropic-pilot-2026-10-03.md Finding 3; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "23.00"
+file = "paper/PAPER.tex"
+line = 377
+reason = "dsh:ptc cost under static breakpoints, _ev/anthropic-pilot-2026-10-03.md Finding 2 table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "11.96"
+file = "paper/PAPER.tex"
+line = 377
+reason = "dsh:native cost under static breakpoints, _ev/anthropic-pilot-2026-10-03.md Finding 2 table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "62"
+file = "paper/PAPER.tex"
+line = 378
+reason = "run count of the cache A/B, _ev/anthropic-pilot-2026-10-03.md; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "34.96"
+file = "paper/PAPER.tex"
+line = 378
+reason = "62-run total under static breakpoints, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "10.42"
+file = "paper/PAPER.tex"
+line = 378
+reason = "62-run total with the top-level cache field, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "3.4"
+file = "paper/PAPER.tex"
+line = 378
+reason = "'3.4x cheaper' (34.96/10.42), _ev/anthropic-pilot-2026-10-03.md Finding 3; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "79.5%"
+file = "paper/PAPER.tex"
+line = 378
+reason = "PTC penalty with the top-level cache field, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "23.00"
+file = "paper/PAPER.tex"
+line = 379
+reason = "dsh:ptc cost under static breakpoints, _ev/anthropic-pilot-2026-10-03.md Finding 2 table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "6.69"
+file = "paper/PAPER.tex"
+line = 379
+reason = "dsh:ptc total with the top-level cache field, 31 runs x $0.21593/run from _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table (product not printed in the document); development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "31"
+file = "paper/PAPER.tex"
+line = 382
+reason = "task count of the cache A/B pilot, _ev/anthropic-pilot-2026-10-03.md; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.0%"
+file = "paper/PAPER.tex"
+line = 389
+reason = "PTC hit rate, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "99.9%"
+file = "paper/PAPER.tex"
+line = 389
+reason = "PTC hit rate, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "27.6%"
+file = "paper/PAPER.tex"
+line = 390
+reason = "native hit rate, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "99.9%"
+file = "paper/PAPER.tex"
+line = 390
+reason = "native hit rate, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.74186"
+file = "paper/PAPER.tex"
+line = 391
+reason = "PTC $/run, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.21593"
+file = "paper/PAPER.tex"
+line = 391
+reason = "PTC $/run, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.38580"
+file = "paper/PAPER.tex"
+line = 392
+reason = "native $/run, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "0.12026"
+file = "paper/PAPER.tex"
+line = 392
+reason = "native $/run, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "92.3%"
+file = "paper/PAPER.tex"
+line = 393
+reason = "PTC penalty, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "79.5%"
+file = "paper/PAPER.tex"
+line = 393
+reason = "PTC penalty, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "62"
+file = "paper/PAPER.tex"
+line = 394
+reason = "run count of the cache A/B, _ev/anthropic-pilot-2026-10-03.md; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "34.96"
+file = "paper/PAPER.tex"
+line = 394
+reason = "62-run total, static, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "10.42"
+file = "paper/PAPER.tex"
+line = 394
+reason = "62-run total, auto-cache, _ev/anthropic-pilot-2026-10-03.md CACHE-TREATMENT A/B table; development pilot outside the checksummed artifact (PAPER.tex app:artifact, README Table 4 row)"
+
+[[numbers.allow]]
+value = "10"
+file = "paper/PAPER.tex"
+line = 340
+reason = "lower end of the percent range '10--21%': -cache_coldbilled_table3.deepseek_cold_pct = 9.757 (prefix-retention.json paired[0].coldDiffPct); osaudit's TeX reader parses it as a plain integer, so a derive cannot match"
+
+[[numbers.derive]]
+value = "24"
+expr = "cache_p2_tool_count.dsh_native_request_tools"
+file = "paper/PAPER.tex"
+line = 373
+
+[[numbers.derive]]
+value = "30.7%"
+expr = "cache_raw_table2.qwen_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 307
+
+[[numbers.derive]]
+value = "3.33"
+expr = "cache_raw_table2.glm_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 319
+
+[[numbers.derive]]
+value = "4.00"
+expr = "cache_raw_table2.deepseek_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 320
+
+[[numbers.derive]]
+value = "0.13%"
+expr = "cache_raw_table2.deepseek_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 320
+
+[[numbers.derive]]
+value = "9.76"
+expr = "cache_raw_table2.deepseek_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 320
+
+[[numbers.derive]]
+value = "5.00"
+expr = "cache_raw_table2.luna_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 321
+
+[[numbers.derive]]
+value = "1.20%"
+expr = "cache_raw_table2.luna_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 321
+
+[[numbers.derive]]
+value = "11.29"
+expr = "cache_raw_table2.luna_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 321
+
+[[numbers.derive]]
+value = "5.00"
+expr = "cache_raw_table2.sonnet_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 322
+
+[[numbers.derive]]
+value = "9.51%"
+expr = "cache_raw_table2.sonnet_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 322
+
+[[numbers.derive]]
+value = "18.01"
+expr = "cache_raw_table2.sonnet_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 322
+
+[[numbers.derive]]
+value = "3.13"
+expr = "cache_raw_table2.qwen_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 323
+
+[[numbers.derive]]
+value = "30.67%"
+expr = "cache_raw_table2.qwen_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 323
+
+[[numbers.derive]]
+value = "10.02"
+expr = "cache_raw_table2.qwen_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 323
+
+[[numbers.derive]]
+value = "53.79"
+expr = "cache_raw_table2.qwen_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 323
+
+[[numbers.derive]]
+value = "5.00"
+expr = "cache_raw_table2.haiku_out_in_ratio"
+file = "paper/PAPER.tex"
+line = 324
+
+[[numbers.derive]]
+value = "53.84%"
+expr = "cache_raw_table2.haiku_ptc_vs_native_pct"
+file = "paper/PAPER.tex"
+line = 324
+
+[[numbers.derive]]
+value = "31.25"
+expr = "cache_raw_table2.haiku_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 324
+
+[[numbers.derive]]
+value = "76.73"
+expr = "cache_raw_table2.haiku_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 324
+
+[[numbers.derive]]
+value = "18.7%"
+expr = "cache_coldbilled_table3.haiku_cold_pct"
+file = "paper/PAPER.tex"
+line = 343
+
+[[numbers.derive]]
+value = "30.67%"
+expr = "cache_coldbilled_table3.qwen_billed_pct"
+file = "paper/PAPER.tex"
+line = 352
+
+[[numbers.derive]]
+value = "20.98%"
+expr = "cache_coldbilled_table3.qwen_cold_pct"
+file = "paper/PAPER.tex"
+line = 352
+
+[[numbers.derive]]
+value = "1.20%"
+expr = "cache_coldbilled_table3.luna_billed_pct"
+file = "paper/PAPER.tex"
+line = 354
+
+[[numbers.derive]]
+value = "0.13%"
+expr = "cache_coldbilled_table3.deepseek_billed_pct"
+file = "paper/PAPER.tex"
+line = 355
+
+[[numbers.derive]]
+value = "53.84%"
+expr = "cache_coldbilled_table3.haiku_billed_pct"
+file = "paper/PAPER.tex"
+line = 356
+
+[[numbers.derive]]
+value = "18.67%"
+expr = "cache_coldbilled_table3.haiku_cold_pct"
+file = "paper/PAPER.tex"
+line = 356
+
+[[numbers.derive]]
+value = "9.51%"
+expr = "cache_coldbilled_table3.sonnet_billed_pct"
+file = "paper/PAPER.tex"
+line = 357
+
+[[numbers.derive]]
+value = "0.674"
+expr = "cache_coldbilled_table3.qwen_retention_ptc"
+file = "paper/PAPER.tex"
+line = 401
+
+[[numbers.derive]]
+value = "0.743"
+expr = "cache_coldbilled_table3.qwen_retention_native"
+file = "paper/PAPER.tex"
+line = 401
+
+[[numbers.derive]]
+value = "6,669"
+expr = "cache_p3_bracket.batch1_unrecorded_requests"
+file = "paper/PAPER.tex"
+line = 415
+
+[[numbers.derive]]
+value = "266.87"
+expr = "cache_p3_bracket.batch1_all_miss_usd"
+file = "paper/PAPER.tex"
+line = 418
+
+[[numbers.derive]]
+value = "144.33"
+expr = "cache_p3_bracket.ledger_usd"
+file = "paper/PAPER.tex"
+line = 418
+
+[[numbers.derive]]
+value = "143.35"
+expr = "cache_p3_bracket.haiku_all_miss_usd"
+file = "paper/PAPER.tex"
+line = 419
+
+[[numbers.derive]]
+value = "114.80"
+expr = "cache_p3_bracket.batch1_low_usd"
+file = "paper/PAPER.tex"
+line = 420
+
+[[numbers.derive]]
+value = "144.33"
+expr = "cache_p3_bracket.batch1_reconciled_high_usd"
+file = "paper/PAPER.tex"
+line = 420
+
+[[numbers.derive]]
+value = "19%"
+expr = "cache_p3_bracket.implied_cache_read_share"
+file = "paper/PAPER.tex"
+line = 421
+
+[[numbers.derive]]
+value = "93%"
+expr = "cache_p3_bracket.dsh_hit_share_pooled"
+file = "paper/PAPER.tex"
+line = 421
+
+[[numbers.derive]]
+value = "0.818"
+expr = "cache_p3_opencode_pilot.opencode_retention_ci_lo"
+file = "paper/PAPER.tex"
+line = 425
+
+[[numbers.derive]]
+value = "0.930"
+expr = "cache_p3_opencode_pilot.opencode_retention_ci_hi"
+file = "paper/PAPER.tex"
+line = 425
+
+[[numbers.derive]]
+value = "0.994"
+expr = "cache_p3_opencode_pilot.haiku_dsh_ptc_retention"
+file = "paper/PAPER.tex"
+line = 425
+
+[[numbers.derive]]
+value = "1.000"
+expr = "cache_p3_opencode_pilot.haiku_dsh_native_retention"
+file = "paper/PAPER.tex"
+line = 425
+
+# ---- paper lines 427-529: Tables 5-6 ----
+
+[[numbers.derive]]
+value = "79.56"
+expr = "order_table5_anthropic.ledger_usd - order_table5_anthropic.haiku_low_usd"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "0.1283"
+expr = "(order_table5_anthropic.ledger_usd - order_table5_anthropic.haiku_low_usd) / order_table5_anthropic.sonnet_cells"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "94.30"
+expr = "order_table5_anthropic.ledger_usd - order_table5_anthropic.sonnet_low_usd"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "0.1521"
+expr = "(order_table5_anthropic.ledger_usd - order_table5_anthropic.sonnet_low_usd) / order_table5_anthropic.haiku_cells"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "99.5%"
+expr = "order_table5_solved.glm_solved / order_table5_solved.glm_analysed_cells"
+file = "paper/PAPER.tex"
+line = 439
+
+[[numbers.derive]]
+value = "99.8%"
+expr = "order_table5_solved.deepseek_solved / order_table5_solved.deepseek_analysed_cells"
+file = "paper/PAPER.tex"
+line = 440
+
+[[numbers.derive]]
+value = "97.6%"
+expr = "order_table5_solved.qwen_solved / order_table5_solved.qwen_analysed_cells"
+file = "paper/PAPER.tex"
+line = 441
+
+[[numbers.derive]]
+value = "99.7%"
+expr = "order_table5_solved.sonnet_solved / order_table5_solved.sonnet_analysed_cells"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "83.7%"
+expr = "order_table5_solved.haiku_solved / order_table5_solved.haiku_analysed_cells"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "4.88"
+expr = "(order_table5_gateway.glm_chat_usd + order_table5_gateway.glm_messages_usd)"
+file = "paper/PAPER.tex"
+line = 439
+
+[[numbers.derive]]
+value = "0.0079"
+expr = "(order_table5_gateway.glm_chat_usd + order_table5_gateway.glm_messages_usd) / order_table5_solved.glm_analysed_cells"
+file = "paper/PAPER.tex"
+line = 439
+
+[[numbers.derive]]
+value = "12.44"
+expr = "(order_table5_gateway.qwen_a_chat_usd + order_table5_gateway.qwen_a_messages_usd + order_table5_gateway.qwen_b_chat_usd + order_table5_gateway.qwen_b_messages_usd)"
+file = "paper/PAPER.tex"
+line = 441
+
+[[numbers.derive]]
+value = "0.0201"
+expr = "(order_table5_gateway.qwen_a_chat_usd + order_table5_gateway.qwen_a_messages_usd + order_table5_gateway.qwen_b_chat_usd + order_table5_gateway.qwen_b_messages_usd) / order_table5_solved.qwen_analysed_cells"
+file = "paper/PAPER.tex"
+line = 441
+
+[[numbers.allow]]
+value = "6"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 438
+
+[[numbers.allow]]
+value = "5.3"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 439
+
+[[numbers.allow]]
+value = "5.5"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.allow]]
+value = "4.5"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.allow]]
+value = "5.3"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.allow]]
+value = "6"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.allow]]
+value = "5.5"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.allow]]
+value = "4.5"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.allow]]
+value = "4.5"
+reason = "part of a model name (version number in the provider model id), not a quantity"
+file = "paper/PAPER.tex"
+line = 514
+
+[[numbers.allow]]
+value = "1"
+reason = "part of the suite name \"batch 1\" (task suite identifier), not a quantity"
+file = "paper/PAPER.tex"
+line = 428
+
+[[numbers.allow]]
+value = "1"
+reason = "part of the suite name \"batch 1\" (task suite identifier), not a quantity"
+file = "paper/PAPER.tex"
+line = 489
+
+[[numbers.allow]]
+value = "1"
+reason = "part of the suite name \"batch 1\" (task suite identifier), not a quantity"
+file = "paper/PAPER.tex"
+line = 514
+
+[[numbers.allow]]
+value = "1"
+reason = "part of the suite name \"batch 1\" (task suite identifier), not a quantity"
+file = "paper/PAPER.tex"
+line = 523
+
+[[numbers.allow]]
+value = "1"
+reason = "part of the suite name \"batch 1\" (task suite identifier), not a quantity"
+file = "paper/PAPER.tex"
+line = 524
+
+[[numbers.allow]]
+value = "5.1523"
+reason = "development record outside the artifact: Anthropic pilot, recorded in _ev/anthropic-pilot-2026-10-03.md (RESULTS table and Finding 1)"
+file = "paper/PAPER.tex"
+line = 451
+
+[[numbers.allow]]
+value = "35.5718"
+reason = "development record outside the artifact: Anthropic pilot, recorded in _ev/anthropic-pilot-2026-10-03.md (RESULTS table and Finding 1)"
+file = "paper/PAPER.tex"
+line = 452
+
+[[numbers.allow]]
+value = "6.90"
+reason = "development pilot outside the artifact: Anthropic invoice 35.5718 USD over the cost tool's 5.1523 USD, both from _ev/anthropic-pilot-2026-10-03.md (raw logs not in artifact/MANIFEST.json)"
+file = "paper/PAPER.tex"
+line = 452
+
+[[numbers.allow]]
+value = "90%"
+reason = "development-record protocol constant: spend meter aborts at 90% of the ceiling, _ev/anthropic-pilot-2026-10-03.md design table"
+file = "paper/PAPER.tex"
+line = 452
+
+[[numbers.allow]]
+value = "32.40"
+reason = "development record: 90% abort of the $36 pilot ceiling, _ev/anthropic-pilot-2026-10-03.md design table"
+file = "paper/PAPER.tex"
+line = 452
+
+[[numbers.allow]]
+value = "220"
+reason = "development record: ceiling-permitted real spend under the undercount, _ev/anthropic-pilot-2026-10-03.md Finding 1"
+file = "paper/PAPER.tex"
+line = 453
+
+[[numbers.allow]]
+value = "2.00"
+reason = "development record: DeepSeek price card before/after correction, notes/records/FINDINGS.md:242 (current card in METHODS.md price table and _ev/deepseek-pricing.html)"
+file = "paper/PAPER.tex"
+line = 455
+
+[[numbers.allow]]
+value = "4.00"
+reason = "development record: DeepSeek price card before/after correction, notes/records/FINDINGS.md:242 (current card in METHODS.md price table and _ev/deepseek-pricing.html)"
+file = "paper/PAPER.tex"
+line = 455
+
+[[numbers.allow]]
+value = "5"
+reason = "development record: DeepSeek price card before/after correction, notes/records/FINDINGS.md:242 (current card in METHODS.md price table and _ev/deepseek-pricing.html)"
+file = "paper/PAPER.tex"
+line = 455
+
+[[numbers.allow]]
+value = "50"
+reason = "development record: DeepSeek price card before/after correction, notes/records/FINDINGS.md:242 (current card in METHODS.md price table and _ev/deepseek-pricing.html)"
+file = "paper/PAPER.tex"
+line = 456
+
+[[numbers.allow]]
+value = "632"
+reason = "development record outside the artifact: 632 misattributed records, METHODS.md:251 and notes/records/FINDINGS.md:956"
+file = "paper/PAPER.tex"
+line = 457
+
+[[numbers.allow]]
+value = "4"
+reason = "pitfall numbering label (Pitfall 4), not a quantity"
+file = "paper/PAPER.tex"
+line = 463
+
+[[numbers.derive]]
+value = "3.82"
+expr = "((order_slot_spread.glm_native_slot4_fetch_heavy_duration_parse_s2_usd + order_slot_spread.glm_native_slot4_fetch_heavy_json_pointer_patch_s2_usd + order_slot_spread.glm_native_slot4_multi_file_config_precedence_s2_usd + order_slot_spread.glm_native_slot4_repo_wide_log_event_migration_s1_usd + order_slot_spread.glm_native_slot4_single_step_parse_negative_s1_usd) / order_slot_spread.glm_native_slot4_blocks) / ((order_slot_spread.glm_native_slot0_long_horizon_webhook_dedup_s2_usd + order_slot_spread.glm_native_slot0_repo_wide_log_event_migration_s2_usd + order_slot_spread.glm_native_slot0_single_step_csv_quoting_s2_usd) / order_slot_spread.glm_native_slot0_blocks)"
+file = "paper/PAPER.tex"
+line = 473
+
+[[numbers.derive]]
+value = "1.75"
+expr = "((order_slot_spread.qwen_native_slot8_multi_file_cache_invalidation_s1_usd + order_slot_spread.qwen_native_slot8_multi_file_discount_stacking_s2_usd + order_slot_spread.qwen_native_slot8_multi_file_event_bus_ordering_s1_usd + order_slot_spread.qwen_native_slot8_multi_file_feature_flags_s1_usd + order_slot_spread.qwen_native_slot8_repo_wide_config_defaults_sweep_s2_usd + order_slot_spread.qwen_native_slot8_repo_wide_error_type_migration_s2_usd + order_slot_spread.qwen_native_slot8_repo_wide_money_formatting_s2_usd + order_slot_spread.qwen_native_slot8_repo_wide_timestamp_normalisation_s2_usd) / order_slot_spread.qwen_native_slot8_blocks) / ((order_slot_spread.qwen_native_slot6_example_fix_s2_usd + order_slot_spread.qwen_native_slot6_long_horizon_pagination_cursor_s2_usd + order_slot_spread.qwen_native_slot6_repo_wide_error_type_migration_s1_usd + order_slot_spread.qwen_native_slot6_single_step_rate_limit_window_s1_usd) / order_slot_spread.qwen_native_slot6_blocks)"
+file = "paper/PAPER.tex"
+line = 473
+
+[[numbers.derive]]
+value = "20"
+expr = "order_table6.bootstrap_iters / 1000"
+file = "paper/PAPER.tex"
+line = 480
+
+[[numbers.allow]]
+value = "000"
+reason = "thousands group of \"20{,}000\" (LaTeX {,} separator splits B = 20000 into two tokens; the leading group is derived from order_table6.bootstrap_iters)"
+file = "paper/PAPER.tex"
+line = 480
+
+[[numbers.derive]]
+value = "20.8%"
+expr = "-order_table6.glm_raw_pct"
+file = "paper/PAPER.tex"
+line = 481
+
+[[numbers.derive]]
+value = "20.8%"
+expr = "-order_table6.glm_raw_pct"
+file = "paper/PAPER.tex"
+line = 523
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the reported intervals (95%), a protocol constant, METHODS.md / PRE-REGISTRATION.md"
+file = "paper/PAPER.tex"
+line = 490
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the reported intervals (95%), a protocol constant, METHODS.md / PRE-REGISTRATION.md"
+file = "paper/PAPER.tex"
+line = 496
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the reported intervals (95%), a protocol constant, METHODS.md / PRE-REGISTRATION.md"
+file = "paper/PAPER.tex"
+line = 496
+occurrence = 2
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the reported intervals (95%), a protocol constant, METHODS.md / PRE-REGISTRATION.md"
+file = "paper/PAPER.tex"
+line = 496
+occurrence = 3
+
+[[numbers.allow]]
+value = "2"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.allow]]
+value = "3"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.allow]]
+value = "4"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.allow]]
+value = "5"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.allow]]
+value = "6"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.allow]]
+value = "7"
+reason = "LaTeX \\cmidrule column-span argument, typesetting"
+file = "paper/PAPER.tex"
+line = 495
+
+[[numbers.derive]]
+value = "20.75"
+expr = "-order_table6.glm_raw_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "44.30"
+expr = "-order_table6.glm_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "2.79"
+expr = "-order_table6.glm_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "8.92"
+expr = "-order_table6.glm_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "19.97"
+expr = "-order_table6.glm_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "17.27"
+expr = "-order_table6.glm_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "42.55"
+expr = "-order_table6.glm_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "8.90"
+expr = "-order_table6.deepseek_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "0.78"
+expr = "-order_table6.deepseek_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "10.02"
+expr = "-order_table6.deepseek_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "11.37"
+expr = "-order_table6.deepseek_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "8.42"
+expr = "-order_table6.luna_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "6.47"
+expr = "-order_table6.luna_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "9.90"
+expr = "-order_table6.luna_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "0.08"
+expr = "-order_table6.sonnet_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "5.07"
+expr = "-order_table6.sonnet_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "1,260"
+expr = "order_rerun.rerun_b1_ds_full_cells + order_rerun.rerun_b1_glm_flash_cells + order_rerun.rerun_b1_qwen_full_cells + order_rerun.rerun_b1_luna_full_cells + order_rerun.rerun_b1_haiku_full_cells + order_rerun.rerun_b_ds_full_cells + order_rerun.rerun_b_glm_flash_cells + order_rerun.rerun_b_qwen_full_cells + order_rerun.rerun_b_luna_full_cells"
+file = "paper/PAPER.tex"
+line = 514
+
+[[numbers.allow]]
+value = "5"
+reason = "pre-registered decision threshold (holds if true in at least 5 of 8 rows), notes/plans/RERUN-PLAN.md:110"
+file = "paper/PAPER.tex"
+line = 520
+
+[[numbers.allow]]
+value = "3"
+reason = "pre-registered decision threshold (fails if true in at most 3 of 8 rows), notes/plans/RERUN-PLAN.md:110"
+file = "paper/PAPER.tex"
+line = 521
+
+[[numbers.allow]]
+value = "1.3"
+reason = "rounded-up bound on the two smallest closer-to-adjusted margins (0.28 and 1.22 points, from analysis/rerun-compare-2026-10-11.json q2.detail), not a value"
+file = "paper/PAPER.tex"
+line = 522
+
+[[numbers.derive]]
+value = "49.0%"
+expr = "-order_rerun.haiku_b1_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 527
+
+[[numbers.derive]]
+value = "97.1"
+expr = "-order_rerun.haiku_b1_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 528
+
+[[numbers.derive]]
+value = "3.2"
+expr = "-order_rerun.haiku_b1_order_effect_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 528
+
+[[numbers.derive]]
+value = "619"
+expr = "order_table5_solved.luna_analysed_cells"
+file = "paper/PAPER.tex"
+line = 431
+
+[[numbers.derive]]
+value = "620"
+expr = "order_table5_solved.qwen_analysed_cells"
+file = "paper/PAPER.tex"
+line = 431
+occurrence = 1
+
+[[numbers.derive]]
+value = "620"
+expr = "order_table5_solved.glm_analysed_cells"
+file = "paper/PAPER.tex"
+line = 431
+occurrence = 2
+
+[[numbers.derive]]
+value = "589"
+expr = "order_table5_solved.luna_solved"
+file = "paper/PAPER.tex"
+line = 438
+
+[[numbers.derive]]
+value = "617"
+expr = "order_table5_solved.glm_solved"
+file = "paper/PAPER.tex"
+line = 439
+
+[[numbers.derive]]
+value = "619"
+expr = "order_table5_solved.deepseek_solved"
+file = "paper/PAPER.tex"
+line = 440
+
+[[numbers.derive]]
+value = "605"
+expr = "order_table5_solved.qwen_solved"
+file = "paper/PAPER.tex"
+line = 441
+
+[[numbers.derive]]
+value = "618"
+expr = "order_table5_solved.sonnet_solved"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "519"
+expr = "order_table5_solved.haiku_solved"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "50.03"
+expr = "order_table5_anthropic.sonnet_low_usd"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "0.0807"
+expr = "order_table5_anthropic.sonnet_per_run_low_usd"
+file = "paper/PAPER.tex"
+line = 442
+
+[[numbers.derive]]
+value = "64.77"
+expr = "order_table5_anthropic.haiku_low_usd"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "0.1045"
+expr = "order_table5_anthropic.haiku_per_run_low_usd"
+file = "paper/PAPER.tex"
+line = 443
+
+[[numbers.derive]]
+value = "2"
+expr = "order_slot_order.ptc_first_slot_blocks"
+file = "paper/PAPER.tex"
+line = 471
+
+[[numbers.derive]]
+value = "62"
+expr = "order_slot_order.ptc_blocks"
+file = "paper/PAPER.tex"
+line = 472
+
+[[numbers.derive]]
+value = "0.145"
+expr = "order_arm_specific.min_se_log"
+file = "paper/PAPER.tex"
+line = 486
+
+[[numbers.derive]]
+value = "0.710"
+expr = "order_arm_specific.max_se_log"
+file = "paper/PAPER.tex"
+line = 486
+
+[[numbers.derive]]
+value = "1.80"
+expr = "order_table6.glm_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "0.41"
+expr = "order_table6.glm_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 498
+
+[[numbers.derive]]
+value = "0.13"
+expr = "order_table6.deepseek_raw_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "9.76"
+expr = "order_table6.deepseek_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "9.63"
+expr = "order_table6.deepseek_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "0.34"
+expr = "order_table6.deepseek_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "11.59"
+expr = "order_table6.deepseek_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 499
+
+[[numbers.derive]]
+value = "1.20"
+expr = "order_table6.luna_raw_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "11.29"
+expr = "order_table6.luna_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "6.65"
+expr = "order_table6.luna_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "23.03"
+expr = "order_table6.luna_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "2.35"
+expr = "order_table6.luna_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "15.98"
+expr = "order_table6.luna_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 500
+
+[[numbers.derive]]
+value = "9.51"
+expr = "order_table6.sonnet_raw_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "18.01"
+expr = "order_table6.sonnet_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "17.02"
+expr = "order_table6.sonnet_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "5.05"
+expr = "order_table6.sonnet_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "28.41"
+expr = "order_table6.sonnet_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "6.85"
+expr = "order_table6.sonnet_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "16.82"
+expr = "order_table6.sonnet_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 501
+
+[[numbers.derive]]
+value = "30.67"
+expr = "order_table6.qwen_raw_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "10.02"
+expr = "order_table6.qwen_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "53.79"
+expr = "order_table6.qwen_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "35.35"
+expr = "order_table6.qwen_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "15.61"
+expr = "order_table6.qwen_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "58.32"
+expr = "order_table6.qwen_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "32.39"
+expr = "order_table6.qwen_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "12.94"
+expr = "order_table6.qwen_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "54.79"
+expr = "order_table6.qwen_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 502
+
+[[numbers.derive]]
+value = "53.84"
+expr = "order_table6.haiku_raw_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "31.25"
+expr = "order_table6.haiku_raw_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "76.73"
+expr = "order_table6.haiku_raw_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "66.13"
+expr = "order_table6.haiku_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "39.06"
+expr = "order_table6.haiku_adj_log_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "99.13"
+expr = "order_table6.haiku_adj_log_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "51.79"
+expr = "order_table6.haiku_adj_additive_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "28.44"
+expr = "order_table6.haiku_adj_additive_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "75.63"
+expr = "order_table6.haiku_adj_additive_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 503
+
+[[numbers.derive]]
+value = "8"
+expr = "order_rerun.q2_rows"
+file = "paper/PAPER.tex"
+line = 520
+
+[[numbers.derive]]
+value = "5"
+expr = "order_rerun.q2_closer_to_adjusted"
+file = "paper/PAPER.tex"
+line = 521
+
+[[numbers.derive]]
+value = "15.4%"
+expr = "order_rerun.glm_b1_rerun_pct"
+file = "paper/PAPER.tex"
+line = 524
+
+[[numbers.derive]]
+value = "1.0"
+expr = "order_rerun.glm_b1_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 524
+
+[[numbers.derive]]
+value = "95.2%"
+expr = "order_table5_solved.luna_solved / order_table5_solved.luna_analysed_cells"
+file = "paper/PAPER.tex"
+line = 438
+
+# ---- paper lines 530-582: Table 7, counterbalanced re-run ----
+
+[[numbers.derive]]
+value = "0.8"
+expr = "-rerun_table7.b1_deepseek_filed_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 540
+occurrence = 1
+
+[[numbers.derive]]
+value = "10.0"
+expr = "-rerun_table7.b1_deepseek_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 540
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.2"
+expr = "-rerun_table7.b1_deepseek_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 540
+occurrence = 1
+
+[[numbers.derive]]
+value = "20.8"
+expr = "-rerun_table7.b1_glm_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 541
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.9"
+expr = "-rerun_table7.b1_glm_filed_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 541
+occurrence = 1
+
+[[numbers.derive]]
+value = "10.8"
+expr = "-rerun_table7.b1_glm_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 541
+occurrence = 1
+
+[[numbers.derive]]
+value = "49.4"
+expr = "-rerun_table7.b1_glm_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 541
+occurrence = 1
+
+[[numbers.derive]]
+value = "4.8"
+expr = "-rerun_table7.b1_qwen_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 542
+occurrence = 1
+
+[[numbers.derive]]
+value = "32.7"
+expr = "-rerun_table7.b1_qwen_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 542
+occurrence = 1
+
+[[numbers.derive]]
+value = "2.1"
+expr = "-rerun_table7.b1_luna_rerun_pct"
+file = "paper/PAPER.tex"
+line = 543
+occurrence = 1
+
+[[numbers.derive]]
+value = "2.5"
+expr = "-rerun_table7.b1_luna_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 543
+occurrence = 1
+
+[[numbers.derive]]
+value = "25.7"
+expr = "-rerun_table7.b1_luna_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 543
+occurrence = 1
+
+[[numbers.derive]]
+value = "49.0"
+expr = "-rerun_table7.b1_haiku_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 544
+occurrence = 1
+
+[[numbers.derive]]
+value = "97.1"
+expr = "-rerun_table7.b1_haiku_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 544
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.2"
+expr = "-rerun_table7.b1_haiku_order_effect_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 544
+occurrence = 1
+
+[[numbers.derive]]
+value = "21.8"
+expr = "-rerun_table7.b_deepseek_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "17.0"
+expr = "-rerun_table7.b_deepseek_filed_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "16.8"
+expr = "-rerun_table7.b_deepseek_rerun_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "29.8"
+expr = "-rerun_table7.b_deepseek_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "6.3"
+expr = "-rerun_table7.b_deepseek_rerun_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "15.8"
+expr = "-rerun_table7.b_deepseek_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 546
+occurrence = 1
+
+[[numbers.derive]]
+value = "10.1"
+expr = "-rerun_table7.b_glm_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 547
+occurrence = 1
+
+[[numbers.derive]]
+value = "6.2"
+expr = "-rerun_table7.b_glm_filed_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 547
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.8"
+expr = "-rerun_table7.b_glm_rerun_pct"
+file = "paper/PAPER.tex"
+line = 547
+occurrence = 1
+
+[[numbers.derive]]
+value = "16.1"
+expr = "-rerun_table7.b_glm_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 547
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.6"
+expr = "-rerun_table7.b_qwen_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 548
+occurrence = 1
+
+[[numbers.derive]]
+value = "16.6"
+expr = "-rerun_table7.b_luna_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "16.2"
+expr = "-rerun_table7.b_luna_filed_adj_log_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "19.0"
+expr = "-rerun_table7.b_luna_rerun_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "29.0"
+expr = "-rerun_table7.b_luna_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.4"
+expr = "-rerun_table7.b_luna_rerun_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.4"
+expr = "-rerun_table7.b_luna_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "20.0"
+expr = "-rerun_table7.b_luna_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.1%"
+expr = "-rerun_drift.b1_glm_native_drift_pct"
+file = "paper/PAPER.tex"
+line = 557
+occurrence = 1
+
+[[numbers.derive]]
+value = "20.8%"
+expr = "-rerun_table7.b1_glm_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 558
+occurrence = 1
+
+[[numbers.derive]]
+value = "7.35"
+expr = "-rerun_p5_quality_guard.tb_haiku_per_task_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 575
+occurrence = 1
+
+[[numbers.derive]]
+value = "11.27"
+expr = "-rerun_p5_quality_guard.tb_haiku_both_solved_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 576
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the percentile task-cluster bootstrap intervals (2.5th/97.5th), METHODS.md section 7 Statistical analysis"
+file = "paper/PAPER.tex"
+line = 531
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the percentile task-cluster bootstrap intervals (2.5th/97.5th), METHODS.md section 7 Statistical analysis"
+file = "paper/PAPER.tex"
+line = 538
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the percentile task-cluster bootstrap intervals (2.5th/97.5th), METHODS.md section 7 Statistical analysis"
+file = "paper/PAPER.tex"
+line = 538
+occurrence = 2
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (rerun-b1 in analysis/rerun-compare-2026-10-11.json), a label not a quantity"
+file = "paper/PAPER.tex"
+line = 540
+occurrence = 1
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model version in the model name GLM-5.3-Flash (model id glm-5.3-flash)"
+file = "paper/PAPER.tex"
+line = 541
+occurrence = 1
+
+[[numbers.allow]]
+value = "6"
+reason = "model version in the model name gpt-6-luna (model id gpt-6-luna)"
+file = "paper/PAPER.tex"
+line = 543
+occurrence = 1
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model version in the model name Claude Haiku 4.5 (model id claude-haiku-4.5)"
+file = "paper/PAPER.tex"
+line = 544
+occurrence = 1
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model version in the model name GLM-5.3-Flash (model id glm-5.3-flash)"
+file = "paper/PAPER.tex"
+line = 547
+occurrence = 1
+
+[[numbers.allow]]
+value = "6"
+reason = "model version in the model name gpt-6-luna (model id gpt-6-luna)"
+file = "paper/PAPER.tex"
+line = 549
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (rerun-b1 in analysis/rerun-compare-2026-10-11.json), a label not a quantity"
+file = "paper/PAPER.tex"
+line = 554
+occurrence = 1
+
+[[numbers.allow]]
+value = "6"
+reason = "the paper's own numbering of its pitfalls (Pitfall 6, section label), not a quantity"
+file = "paper/PAPER.tex"
+line = 556
+occurrence = 1
+
+[[numbers.allow]]
+value = "5"
+reason = "the paper's own numbering of its pitfalls (Pitfall 5, subsection title), not a quantity"
+file = "paper/PAPER.tex"
+line = 563
+occurrence = 1
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model version in the model name Claude Haiku 4.5 (model id claude-haiku-4.5)"
+file = "paper/PAPER.tex"
+line = 570
+occurrence = 1
+
+[[numbers.allow]]
+value = "4"
+reason = "the paper's own numbering of its pitfalls (Pitfall 4, section label), not a quantity"
+file = "paper/PAPER.tex"
+line = 577
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (rerun-b1 in analysis/rerun-compare-2026-10-11.json), a label not a quantity"
+file = "paper/PAPER.tex"
+line = 577
+occurrence = 1
+
+# ---- paper lines 583-625: Table 8, quality ----
+
+# PART D2: tab:quality (Table 8) and "Graded on edited tests", PAPER.tex lines 583-625
+# Negative contrasts and CI bounds print unsigned; each is the negation of the mapped quality-guard value.
+
+[[numbers.derive]]
+value = "8.90"
+expr = "-quality_table8.b1_ds_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 593
+
+[[numbers.derive]]
+value = "16.03%"
+expr = "-quality_table8.b1_glm_both_pct"
+file = "paper/PAPER.tex"
+line = 594
+
+[[numbers.derive]]
+value = "30.47"
+expr = "-quality_table8.b1_glm_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 594
+
+[[numbers.derive]]
+value = "2.20"
+expr = "-quality_table8.b1_glm_both_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 594
+
+[[numbers.derive]]
+value = "3.68%"
+expr = "-quality_table8.b1_luna_both_pct"
+file = "paper/PAPER.tex"
+line = 596
+
+[[numbers.derive]]
+value = "13.32"
+expr = "-quality_table8.b1_luna_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 596
+
+[[numbers.derive]]
+value = "0.08"
+expr = "-quality_table8.b1_sonnet_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 597
+
+[[numbers.derive]]
+value = "22.64%"
+expr = "-quality_table8.tb_ds_both_pct"
+file = "paper/PAPER.tex"
+line = 600
+
+[[numbers.derive]]
+value = "39.77"
+expr = "-quality_table8.tb_ds_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 600
+
+[[numbers.derive]]
+value = "9.19"
+expr = "-quality_table8.tb_ds_both_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 600
+
+[[numbers.derive]]
+value = "13.87%"
+expr = "-quality_table8.tb_glm_both_pct"
+file = "paper/PAPER.tex"
+line = 601
+
+[[numbers.derive]]
+value = "32.60"
+expr = "-quality_table8.tb_glm_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 601
+
+[[numbers.derive]]
+value = "1.36"
+expr = "-quality_table8.tb_qwen_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 602
+
+[[numbers.derive]]
+value = "18.01%"
+expr = "-quality_table8.tb_luna_both_pct"
+file = "paper/PAPER.tex"
+line = 603
+
+[[numbers.derive]]
+value = "25.14"
+expr = "-quality_table8.tb_luna_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 603
+
+[[numbers.derive]]
+value = "10.61"
+expr = "-quality_table8.tb_luna_both_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 603
+
+[[numbers.derive]]
+value = "0.54%"
+expr = "-quality_table8.tb_sonnet_both_pct"
+file = "paper/PAPER.tex"
+line = 604
+
+[[numbers.derive]]
+value = "8.20"
+expr = "-quality_table8.tb_sonnet_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 604
+
+[[numbers.derive]]
+value = "11.27"
+expr = "-quality_table8.tb_haiku_both_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 605
+
+# Luna batch-1 rates are on the 619 analysed runs (panel meta: 620 rows, 1 rule-9 exclusion, an unsolved
+# unedited opencode run), so solved and edited counts are the same on 620 rows and on 619.
+
+# B = 200{,}000 is tokenized as 200 and 000; 200 is the thousands of bothSolved.iters
+[[numbers.derive]]
+value = "200"
+expr = "quality_table8.bootstrap_iters / 1000"
+file = "paper/PAPER.tex"
+line = 587
+
+[[numbers.derive]]
+value = "13.1%"
+expr = "quality_edited_tests.luna_b1_edited / quality_edited_tests.luna_b1_analysed_runs"
+file = "paper/PAPER.tex"
+line = 612
+
+[[numbers.derive]]
+value = "95.2%"
+expr = "quality_edited_tests.luna_b1_solved / quality_edited_tests.luna_b1_analysed_runs"
+file = "paper/PAPER.tex"
+line = 613
+
+[[numbers.derive]]
+value = "94.8%"
+expr = "quality_edited_tests.luna_b1_unedited_solved / (quality_edited_tests.luna_b1_analysed_runs - quality_edited_tests.luna_b1_edited)"
+file = "paper/PAPER.tex"
+line = 614
+
+[[numbers.derive]]
+value = "82.4%"
+expr = "quality_edited_tests.luna_b1_unedited_solved / quality_edited_tests.luna_b1_analysed_runs"
+file = "paper/PAPER.tex"
+line = 614
+
+[[numbers.derive]]
+value = "56.9%"
+expr = "quality_edited_tests.luna_tb_edited / quality_edited_tests.luna_tb_runs"
+file = "paper/PAPER.tex"
+line = 616
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the percentile bootstrap: tools/stats.mjs clusterBootstrap probs [0.025, 0.975], PRE-REGISTRATION.md decision rule (bootstrap 95% CI)"
+file = "paper/PAPER.tex"
+line = 586
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model version inside the product name GLM-5.3-Flash, not a measurement"
+file = "paper/PAPER.tex"
+line = 594
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model version inside the product name Claude Haiku 4.5, not a measurement"
+file = "paper/PAPER.tex"
+line = 598
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model version inside the product name GLM-5.3-Flash, not a measurement"
+file = "paper/PAPER.tex"
+line = 601
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model version inside the product name Claude Haiku 4.5, not a measurement"
+file = "paper/PAPER.tex"
+line = 605
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', a label, not a measurement"
+file = "paper/PAPER.tex"
+line = 585
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' in the table row label, not a measurement"
+file = "paper/PAPER.tex"
+line = 593
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'Batch 1', a label, not a measurement"
+file = "paper/PAPER.tex"
+line = 610
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1', a label, not a measurement"
+file = "paper/PAPER.tex"
+line = 611
+
+[[numbers.allow]]
+value = "000"
+reason = "thousands group of B = 200{,}000, tokenized apart from 200; the whole value is quality-guard bothSolved.iters = 200000"
+file = "paper/PAPER.tex"
+line = 587
+
+[[numbers.allow]]
+value = "6"
+reason = "model version inside the product name gpt-6-luna, not a measurement"
+file = "paper/PAPER.tex"
+line = 596
+
+[[numbers.allow]]
+value = "6"
+reason = "model version inside the product name gpt-6-luna, not a measurement"
+file = "paper/PAPER.tex"
+line = 603
+
+[[numbers.allow]]
+value = "6"
+reason = "model version inside the product name gpt-6-luna, not a measurement"
+file = "paper/PAPER.tex"
+line = 611
+
+[[numbers.allow]]
+value = "5.5"
+reason = "model version inside the product name Claude Sonnet 5.5, not a measurement"
+file = "paper/PAPER.tex"
+line = 597
+
+[[numbers.allow]]
+value = "5.5"
+reason = "model version inside the product name Claude Sonnet 5.5, not a measurement"
+file = "paper/PAPER.tex"
+line = 604
+
+[[numbers.allow]]
+value = "6"
+reason = "section label 'Pitfall 6' in a subsection title, not a measurement"
+file = "paper/PAPER.tex"
+line = 621
+
+# ---- paper lines 626-756: noise floor, replication, Table 9, figures ----
+
+# Part E: paper/PAPER.tex lines 626-756 (noise floor, interval resolution, replication, Table 9, discussion).
+# Values come from paper-numbers/map/floor.json (stems floor_*).
+
+[[numbers.derive]]
+value = "31"
+expr = "floor_aa.billed_tasks"
+file = "paper/PAPER.tex"
+line = 627
+occurrence = 1
+
+[[numbers.derive]]
+value = "62"
+expr = "floor_aa.pass1_cells"
+file = "paper/PAPER.tex"
+line = 627
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.75%"
+expr = "-floor_aa.billed_mean_diff / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 628
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "95% is the confidence level of every percentile-bootstrap interval (2.5th/97.5th percentiles), METHODS.md section 7"
+file = "paper/PAPER.tex"
+line = 628
+occurrence = 1
+
+[[numbers.derive]]
+value = "15.6%"
+expr = "-floor_aa.billed_ci_lo / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 628
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.4%"
+expr = "floor_aa.billed_ci_hi / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 628
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.5%"
+expr = "(floor_aa.billed_ci_hi - floor_aa.billed_ci_lo) / 2 / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 629
+occurrence = 1
+
+[[numbers.derive]]
+value = "26.8%"
+expr = "floor_aa.billed_sd / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 629
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.75%"
+expr = "-floor_aa.billed_mean_diff / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 630
+occurrence = 1
+
+[[numbers.derive]]
+value = "95.7%"
+expr = "floor_aa.pass2_cache_hit_share"
+file = "paper/PAPER.tex"
+line = 632
+occurrence = 1
+
+[[numbers.derive]]
+value = "93.3%"
+expr = "floor_aa.pass1_cache_hit_share"
+file = "paper/PAPER.tex"
+line = 632
+occurrence = 1
+
+[[numbers.derive]]
+value = "34%"
+expr = "1 - floor_aa.pass2_fresh_tokens / floor_aa.pass1_fresh_tokens"
+file = "paper/PAPER.tex"
+line = 632
+occurrence = 1
+
+[[numbers.allow]]
+value = "4"
+reason = "pitfall number, a cross-reference to the paper's numbered Pitfall sections"
+file = "paper/PAPER.tex"
+line = 634
+occurrence = 1
+
+[[numbers.derive]]
+value = "62"
+expr = "floor_interleaved.twin_runs"
+file = "paper/PAPER.tex"
+line = 636
+occurrence = 1
+
+[[numbers.allow]]
+value = "2%"
+reason = "prediction threshold filed before the run in notes/plans/RERUN-PLAN.md (Q5: the copies differ by less than 2% of per-cell cost)"
+file = "paper/PAPER.tex"
+line = 637
+occurrence = 1
+
+[[numbers.derive]]
+value = "95.5%"
+expr = "floor_interleaved.hit_share_native"
+file = "paper/PAPER.tex"
+line = 638
+occurrence = 1
+
+[[numbers.derive]]
+value = "95.2%"
+expr = "floor_interleaved.hit_share_twin"
+file = "paper/PAPER.tex"
+line = 638
+occurrence = 1
+
+[[numbers.derive]]
+value = "1.7%"
+expr = "floor_interleaved.carry_over_pct"
+file = "paper/PAPER.tex"
+line = 639
+occurrence = 1
+
+[[numbers.derive]]
+value = "7.9"
+expr = "-floor_interleaved.carry_over_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 639
+occurrence = 1
+
+[[numbers.derive]]
+value = "13.7"
+expr = "floor_interleaved.carry_over_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 639
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.3%"
+expr = "-floor_interleaved.label_pct"
+file = "paper/PAPER.tex"
+line = 639
+occurrence = 1
+
+[[numbers.derive]]
+value = "17.7"
+expr = "-floor_interleaved.label_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 640
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.6"
+expr = "floor_interleaved.label_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 640
+occurrence = 1
+
+[[numbers.derive]]
+value = "11.6%"
+expr = "floor_interleaved.half_width_pct"
+file = "paper/PAPER.tex"
+line = 640
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "the constant 1 in the 1/sqrt(n) scaling of an interval half-width"
+file = "paper/PAPER.tex"
+line = 642
+occurrence = 1
+
+[[numbers.allow]]
+value = "5%"
+reason = "illustrative target resolution chosen in the text; the paired-task count is the projection for it"
+file = "paper/PAPER.tex"
+line = 642
+occurrence = 1
+
+[[numbers.allow]]
+value = "3%"
+reason = "illustrative target resolution chosen in the text; the paired-task count is the projection for it"
+file = "paper/PAPER.tex"
+line = 643
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 643
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 647
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "95% is the confidence level of every percentile-bootstrap interval (2.5th/97.5th percentiles), METHODS.md section 7"
+file = "paper/PAPER.tex"
+line = 647
+occurrence = 1
+
+[[numbers.derive]]
+value = "31"
+expr = "floor_batch1_adjusted.tasks_per_model"
+file = "paper/PAPER.tex"
+line = 648
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.5%"
+expr = "(floor_aa.billed_ci_hi - floor_aa.billed_ci_lo) / 2 / floor_aa.pass1_mean_billed"
+file = "paper/PAPER.tex"
+line = 649
+occurrence = 1
+
+[[numbers.derive]]
+value = "11.6%"
+expr = "floor_interleaved.half_width_pct"
+file = "paper/PAPER.tex"
+line = 649
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.9%"
+expr = "-floor_batch1_adjusted.glm_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 650
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.5%"
+expr = "floor_batch1_adjusted.sonnet_raw_pct"
+file = "paper/PAPER.tex"
+line = 650
+occurrence = 1
+
+[[numbers.allow]]
+value = "5"
+reason = "B = 5,000, the bootstrap resample count that was the tools/stats.mjs default until 2026-10-09 (METHODS.md section 7); osaudit splits 5{,}000 at the thousands separator"
+file = "paper/PAPER.tex"
+line = 653
+occurrence = 1
+
+[[numbers.allow]]
+value = "000"
+reason = "thousands group of B = 5,000 (METHODS.md section 7); osaudit splits 5{,}000 at the thousands separator"
+file = "paper/PAPER.tex"
+line = 653
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.28%"
+expr = "floor_bootstrap.sonnet_ci_lo_pct_b5000"
+file = "paper/PAPER.tex"
+line = 654
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.08%"
+expr = "-floor_bootstrap.sonnet_ci_lo_pct_b200000"
+file = "paper/PAPER.tex"
+line = 655
+occurrence = 1
+
+[[numbers.allow]]
+value = "200"
+reason = "B = 200,000, the bootstrap resample count fixed in tools/stats.mjs (METHODS.md section 7); osaudit splits 200{,}000 at the thousands separator"
+file = "paper/PAPER.tex"
+line = 655
+occurrence = 1
+
+[[numbers.allow]]
+value = "000"
+reason = "thousands group of B = 200,000 (METHODS.md section 7); osaudit splits 200{,}000 at the thousands separator"
+file = "paper/PAPER.tex"
+line = 655
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 658
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 659
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "floor_replication.r1_matched"
+file = "paper/PAPER.tex"
+line = 662
+occurrence = 1
+
+[[numbers.derive]]
+value = "4"
+expr = "floor_replication.r1_of"
+file = "paper/PAPER.tex"
+line = 662
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "floor_seed_stability.qwen_seeds_matching_r1 + floor_seed_stability.glm_seeds_matching_r1 + floor_seed_stability.luna_seeds_matching_r1 + floor_seed_stability.deepseek_seeds_matching_r1"
+file = "paper/PAPER.tex"
+line = 662
+occurrence = 2
+
+[[numbers.derive]]
+value = "4"
+expr = "floor_seed_stability.providers"
+file = "paper/PAPER.tex"
+line = 662
+occurrence = 2
+
+[[numbers.derive]]
+value = "20"
+expr = "floor_seed_stability.seeds"
+file = "paper/PAPER.tex"
+line = 662
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.14"
+expr = "floor_replication.glm_tasksb_bound_to_zero_pp"
+file = "paper/PAPER.tex"
+line = 664
+occurrence = 1
+
+[[numbers.derive]]
+value = "75.1"
+expr = "floor_batch1_adjusted.haiku_adjusted_log_pct - floor_batch1_adjusted.glm_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 665
+occurrence = 1
+
+[[numbers.derive]]
+value = "28.8"
+expr = "floor_tasksb_adjusted.haiku_adjusted_log_pct - floor_tasksb_adjusted.deepseek_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 666
+occurrence = 1
+
+[[numbers.derive]]
+value = "24.0"
+expr = "floor_tasksb_adjusted.qwen_adjusted_log_pct - floor_tasksb_adjusted.deepseek_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 666
+occurrence = 1
+
+[[numbers.derive]]
+value = "4"
+expr = "floor_replication.r1_of"
+file = "paper/PAPER.tex"
+line = 667
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 671
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 674
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "95% is the confidence level of every percentile-bootstrap interval (2.5th/97.5th percentiles), METHODS.md section 7"
+file = "paper/PAPER.tex"
+line = 675
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 678
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "95% is the confidence level of every percentile-bootstrap interval (2.5th/97.5th percentiles), METHODS.md section 7"
+file = "paper/PAPER.tex"
+line = 678
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.93"
+expr = "-floor_table9.qwen_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 680
+occurrence = 1
+
+[[numbers.derive]]
+value = "15.01"
+expr = "floor_table9.qwen_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 680
+occurrence = 1
+
+[[numbers.allow]]
+value = "5.3"
+reason = "digit of a model's product name (Table tab:models), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 681
+occurrence = 1
+
+[[numbers.derive]]
+value = "21.12"
+expr = "-floor_table9.glm_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 681
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.14"
+expr = "floor_table9.glm_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 681
+occurrence = 1
+
+[[numbers.allow]]
+value = "6"
+reason = "digit of a model's product name (Table tab:models), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 682
+occurrence = 1
+
+[[numbers.derive]]
+value = "24.35"
+expr = "-floor_table9.luna_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 682
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.55"
+expr = "-floor_table9.luna_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 682
+occurrence = 1
+
+[[numbers.derive]]
+value = "37.46"
+expr = "-floor_table9.deepseek_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 683
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.38"
+expr = "-floor_table9.deepseek_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 683
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 689
+occurrence = 1
+
+[[numbers.allow]]
+value = "95%"
+reason = "95% is the confidence level of every percentile-bootstrap interval (2.5th/97.5th percentiles), METHODS.md section 7"
+file = "paper/PAPER.tex"
+line = 690
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 690
+occurrence = 1
+
+[[numbers.derive]]
+value = "31"
+expr = "floor_batch1_adjusted.tasks_per_model"
+file = "paper/PAPER.tex"
+line = 690
+occurrence = 1
+
+[[numbers.derive]]
+value = "40"
+expr = "floor_tasksb_adjusted.tasks_per_model"
+file = "paper/PAPER.tex"
+line = 690
+occurrence = 1
+
+[[numbers.derive]]
+value = "24.0"
+expr = "floor_tasksb_adjusted.qwen_adjusted_log_pct - floor_tasksb_adjusted.deepseek_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 691
+occurrence = 1
+
+[[numbers.derive]]
+value = "6.96"
+expr = "floor_tasksb_adjusted.qwen_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 692
+occurrence = 1
+
+[[numbers.derive]]
+value = "17.04"
+expr = "-floor_tasksb_adjusted.deepseek_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 692
+occurrence = 1
+
+[[numbers.derive]]
+value = "6.2%"
+expr = "floor_replication.haiku_extension_pct"
+file = "paper/PAPER.tex"
+line = 695
+occurrence = 1
+
+[[numbers.derive]]
+value = "18"
+expr = "floor_replication.haiku_extension_tasks"
+file = "paper/PAPER.tex"
+line = 695
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.5%"
+expr = "-floor_replication.sonnet_extension_pct"
+file = "paper/PAPER.tex"
+line = 695
+occurrence = 1
+
+[[numbers.derive]]
+value = "40"
+expr = "floor_replication.sonnet_extension_tasks"
+file = "paper/PAPER.tex"
+line = 695
+occurrence = 1
+
+[[numbers.allow]]
+value = "4"
+reason = "pitfall number, a cross-reference to the paper's numbered Pitfall sections"
+file = "paper/PAPER.tex"
+line = 696
+occurrence = 1
+
+[[numbers.allow]]
+value = "5"
+reason = "pitfall number, a cross-reference to the paper's numbered Pitfall sections"
+file = "paper/PAPER.tex"
+line = 697
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 705
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.9%"
+expr = "-floor_batch1_adjusted.glm_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 705
+occurrence = 1
+
+[[numbers.derive]]
+value = "66.1%"
+expr = "floor_batch1_adjusted.haiku_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 705
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 706
+occurrence = 1
+
+[[numbers.derive]]
+value = "16.8%"
+expr = "-floor_survives.rerun_tasksb_deepseek_pct"
+file = "paper/PAPER.tex"
+line = 707
+occurrence = 1
+
+[[numbers.derive]]
+value = "19.0%"
+expr = "-floor_survives.rerun_tasksb_luna_pct"
+file = "paper/PAPER.tex"
+line = 707
+occurrence = 1
+
+[[numbers.allow]]
+value = "4.5"
+reason = "digit of a model's product name (Table tab:models), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 709
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 709
+occurrence = 1
+
+[[numbers.derive]]
+value = "78.4%"
+expr = "floor_survives.rerun_batch1_haiku_per_cell_pct"
+file = "paper/PAPER.tex"
+line = 710
+occurrence = 1
+
+[[numbers.derive]]
+value = "48"
+expr = "floor_survives.rerun_batch1_haiku_ptc_solved"
+file = "paper/PAPER.tex"
+line = 710
+occurrence = 1
+
+[[numbers.derive]]
+value = "62"
+expr = "floor_survives.rerun_batch1_haiku_native_solved"
+file = "paper/PAPER.tex"
+line = 710
+occurrence = 1
+
+[[numbers.derive]]
+value = "62.4%"
+expr = "floor_survives.tasksb_haiku_per_solved_pct"
+file = "paper/PAPER.tex"
+line = 711
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.00467"
+expr = "floor_ratio.h1_b1_pooled"
+file = "paper/PAPER.tex"
+line = 717
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.00566"
+expr = "-floor_ratio.h1_ci_lo"
+file = "paper/PAPER.tex"
+line = 717
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.01579"
+expr = "floor_ratio.h1_ci_hi"
+file = "paper/PAPER.tex"
+line = 717
+occurrence = 1
+
+[[numbers.allow]]
+value = "5"
+reason = "pre-registered threshold of the H1 secondary (a ratio-5.0 gap of more than 5pp), PRE-REGISTRATION.md section 8"
+file = "paper/PAPER.tex"
+line = 718
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.00"
+expr = "floor_ratio.haiku_price_ratio"
+file = "paper/PAPER.tex"
+line = 718
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.33"
+expr = "floor_ratio.glm_price_ratio"
+file = "paper/PAPER.tex"
+line = 718
+occurrence = 1
+
+[[numbers.derive]]
+value = "42.3"
+expr = "floor_ratio.secondary_gap_pp"
+file = "paper/PAPER.tex"
+line = 719
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.33"
+expr = "floor_ratio.glm_price_ratio"
+file = "paper/PAPER.tex"
+line = 719
+occurrence = 1
+
+[[numbers.derive]]
+value = "5.00"
+expr = "floor_ratio.haiku_price_ratio"
+file = "paper/PAPER.tex"
+line = 719
+occurrence = 1
+
+[[numbers.derive]]
+value = "59.5"
+expr = "floor_batch1_adjusted.haiku_adjusted_log_pct - floor_batch1_adjusted.luna_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 720
+occurrence = 1
+
+[[numbers.derive]]
+value = "75.1"
+expr = "floor_batch1_adjusted.haiku_adjusted_log_pct - floor_batch1_adjusted.glm_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 720
+occurrence = 1
+
+[[numbers.derive]]
+value = "79.2%"
+expr = "(floor_batch1_adjusted.haiku_adjusted_log_pct - floor_batch1_adjusted.luna_adjusted_log_pct) / (floor_batch1_adjusted.haiku_adjusted_log_pct - floor_batch1_adjusted.glm_adjusted_log_pct)"
+file = "paper/PAPER.tex"
+line = 720
+occurrence = 1
+
+[[numbers.derive]]
+value = "2.228"
+expr = "floor_requests.h3_batch1_b1"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.derive]]
+value = "1.228"
+expr = "floor_requests.h3_batch1_ci_lo"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.derive]]
+value = "3.360"
+expr = "floor_requests.h3_batch1_ci_hi"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.derive]]
+value = "8.378"
+expr = "floor_requests.h3_tasksb_b1"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.derive]]
+value = "7.244"
+expr = "floor_requests.h3_tasksb_ci_lo"
+file = "paper/PAPER.tex"
+line = 725
+occurrence = 1
+
+[[numbers.derive]]
+value = "9.606"
+expr = "floor_requests.h3_tasksb_ci_hi"
+file = "paper/PAPER.tex"
+line = 726
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 726
+occurrence = 1
+
+[[numbers.allow]]
+value = "6"
+reason = "digit of a model's product name (Table tab:models), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 726
+occurrence = 1
+
+[[numbers.derive]]
+value = "20.4"
+expr = "floor_requests.luna_batch1_native_requests_per_run"
+file = "paper/PAPER.tex"
+line = 726
+occurrence = 1
+
+[[numbers.derive]]
+value = "12.1"
+expr = "floor_requests.luna_batch1_ptc_requests_per_run"
+file = "paper/PAPER.tex"
+line = 727
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 730
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.065"
+expr = "-floor_retention.qwen_diff"
+file = "paper/PAPER.tex"
+line = 733
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.078"
+expr = "-floor_retention.qwen_ci_lo"
+file = "paper/PAPER.tex"
+line = 733
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.052"
+expr = "-floor_retention.qwen_ci_hi"
+file = "paper/PAPER.tex"
+line = 733
+occurrence = 1
+
+[[numbers.allow]]
+value = "2"
+reason = "pitfall number, a cross-reference to the paper's numbered Pitfall sections"
+file = "paper/PAPER.tex"
+line = 734
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.005"
+expr = "-floor_retention.haiku_diff"
+file = "paper/PAPER.tex"
+line = 735
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.99"
+expr = "floor_retention.lowest_other_retention_glm_native"
+file = "paper/PAPER.tex"
+line = 735
+occurrence = 1
+
+[[numbers.derive]]
+value = "1.00"
+expr = "floor_retention.highest_other_retention_sonnet_ptc"
+file = "paper/PAPER.tex"
+line = 735
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.238"
+expr = "floor_rankings.batch1_median_rho"
+file = "paper/PAPER.tex"
+line = 738
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 738
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.047"
+expr = "floor_rankings.batch1_permutation_p"
+file = "paper/PAPER.tex"
+line = 739
+occurrence = 1
+
+[[numbers.derive]]
+value = "0.024"
+expr = "floor_rankings.tasksb_median_rho"
+file = "paper/PAPER.tex"
+line = 739
+occurrence = 1
+
+[[numbers.derive]]
+value = "74%"
+expr = "floor_rankings.batch1_tie_fraction"
+file = "paper/PAPER.tex"
+line = 740
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 740
+occurrence = 1
+
+[[numbers.derive]]
+value = "61%"
+expr = "floor_rankings.tasksb_tie_fraction"
+file = "paper/PAPER.tex"
+line = 741
+occurrence = 1
+
+[[numbers.derive]]
+value = "54"
+expr = "floor_rankings.batch1_adjacent_pairs"
+file = "paper/PAPER.tex"
+line = 741
+occurrence = 1
+
+[[numbers.allow]]
+value = "3"
+reason = "pitfall number, a cross-reference to the paper's numbered Pitfall sections"
+file = "paper/PAPER.tex"
+line = 742
+occurrence = 1
+
+[[numbers.derive]]
+value = "18"
+expr = "floor_rankings.b1_dsh_ties_native__ptc + floor_rankings.b1_dsh_ties_native__native_opt + floor_rankings.b1_dsh_ties_native__ptc_opt + floor_rankings.b1_dsh_ties_native__native_terse + floor_rankings.b1_dsh_ties_native__ptc_terse + floor_rankings.b1_dsh_ties_ptc__native + floor_rankings.b1_dsh_ties_ptc__native_opt + floor_rankings.b1_dsh_ties_ptc__ptc_opt + floor_rankings.b1_dsh_ties_ptc__native_terse + floor_rankings.b1_dsh_ties_ptc__ptc_terse + floor_rankings.b1_dsh_ties_native_opt__native + floor_rankings.b1_dsh_ties_native_opt__ptc + floor_rankings.b1_dsh_ties_native_opt__ptc_opt + floor_rankings.b1_dsh_ties_native_opt__native_terse + floor_rankings.b1_dsh_ties_native_opt__ptc_terse + floor_rankings.b1_dsh_ties_ptc_opt__native + floor_rankings.b1_dsh_ties_ptc_opt__ptc + floor_rankings.b1_dsh_ties_ptc_opt__native_opt + floor_rankings.b1_dsh_ties_ptc_opt__native_terse + floor_rankings.b1_dsh_ties_ptc_opt__ptc_terse + floor_rankings.b1_dsh_ties_native_terse__native + floor_rankings.b1_dsh_ties_native_terse__ptc + floor_rankings.b1_dsh_ties_native_terse__native_opt + floor_rankings.b1_dsh_ties_native_terse__ptc_opt + floor_rankings.b1_dsh_ties_native_terse__ptc_terse + floor_rankings.b1_dsh_ties_ptc_terse__native + floor_rankings.b1_dsh_ties_ptc_terse__ptc + floor_rankings.b1_dsh_ties_ptc_terse__native_opt + floor_rankings.b1_dsh_ties_ptc_terse__ptc_opt + floor_rankings.b1_dsh_ties_ptc_terse__native_terse"
+file = "paper/PAPER.tex"
+line = 742
+occurrence = 1
+
+[[numbers.derive]]
+value = "24"
+expr = "floor_rankings.b1_dsh_pairs_native__ptc + floor_rankings.b1_dsh_pairs_native__native_opt + floor_rankings.b1_dsh_pairs_native__ptc_opt + floor_rankings.b1_dsh_pairs_native__native_terse + floor_rankings.b1_dsh_pairs_native__ptc_terse + floor_rankings.b1_dsh_pairs_ptc__native + floor_rankings.b1_dsh_pairs_ptc__native_opt + floor_rankings.b1_dsh_pairs_ptc__ptc_opt + floor_rankings.b1_dsh_pairs_ptc__native_terse + floor_rankings.b1_dsh_pairs_ptc__ptc_terse + floor_rankings.b1_dsh_pairs_native_opt__native + floor_rankings.b1_dsh_pairs_native_opt__ptc + floor_rankings.b1_dsh_pairs_native_opt__ptc_opt + floor_rankings.b1_dsh_pairs_native_opt__native_terse + floor_rankings.b1_dsh_pairs_native_opt__ptc_terse + floor_rankings.b1_dsh_pairs_ptc_opt__native + floor_rankings.b1_dsh_pairs_ptc_opt__ptc + floor_rankings.b1_dsh_pairs_ptc_opt__native_opt + floor_rankings.b1_dsh_pairs_ptc_opt__native_terse + floor_rankings.b1_dsh_pairs_ptc_opt__ptc_terse + floor_rankings.b1_dsh_pairs_native_terse__native + floor_rankings.b1_dsh_pairs_native_terse__ptc + floor_rankings.b1_dsh_pairs_native_terse__native_opt + floor_rankings.b1_dsh_pairs_native_terse__ptc_opt + floor_rankings.b1_dsh_pairs_native_terse__ptc_terse + floor_rankings.b1_dsh_pairs_ptc_terse__native + floor_rankings.b1_dsh_pairs_ptc_terse__ptc + floor_rankings.b1_dsh_pairs_ptc_terse__native_opt + floor_rankings.b1_dsh_pairs_ptc_terse__ptc_opt + floor_rankings.b1_dsh_pairs_ptc_terse__native_terse"
+file = "paper/PAPER.tex"
+line = 742
+occurrence = 1
+
+[[numbers.derive]]
+value = "54"
+expr = "floor_rankings.batch1_adjacent_pairs"
+file = "paper/PAPER.tex"
+line = 749
+occurrence = 1
+
+[[numbers.derive]]
+value = "54"
+expr = "floor_rankings.batch1_adjacent_pairs"
+file = "paper/PAPER.tex"
+line = 749
+occurrence = 2
+
+# ---- paper lines 757-903: checklist, limitations, Table 11, robustness ----
+
+[[numbers.derive]]
+value = "8%"
+expr = "-limits_text.rerun_b1_glm_native_drift_pct"
+file = "paper/PAPER.tex"
+line = 799
+
+[[numbers.derive]]
+value = "353"
+expr = "limits_text.tasksb_haiku_cells"
+file = "paper/PAPER.tex"
+line = 800
+
+[[numbers.derive]]
+value = "18"
+expr = "limits_text.tasksb_haiku_tasks"
+file = "paper/PAPER.tex"
+line = 800
+
+[[numbers.derive]]
+value = "40"
+expr = "limits_text.tasksb_tasks"
+file = "paper/PAPER.tex"
+line = 800
+
+[[numbers.derive]]
+value = "6"
+expr = "limits_text.coldbilled_models"
+file = "paper/PAPER.tex"
+line = 815
+
+[[numbers.derive]]
+value = "9"
+expr = "limits_text.rerun_b1_rows + limits_text.rerun_b_rows"
+file = "paper/PAPER.tex"
+line = 818
+
+[[numbers.derive]]
+value = "54%"
+expr = "limits_text.batch1_haiku_per_cell_pct"
+file = "paper/PAPER.tex"
+line = 819
+
+[[numbers.derive]]
+value = "0.00467"
+expr = "limits_hypotheses.h1_b1"
+file = "paper/PAPER.tex"
+line = 838
+
+[[numbers.derive]]
+value = "0.00566"
+expr = "-limits_hypotheses.h1_ci_lo"
+file = "paper/PAPER.tex"
+line = 838
+
+[[numbers.derive]]
+value = "0.01579"
+expr = "limits_hypotheses.h1_ci_hi"
+file = "paper/PAPER.tex"
+line = 838
+
+[[numbers.derive]]
+value = "186"
+expr = "limits_hypotheses.h1_n"
+file = "paper/PAPER.tex"
+line = 838
+
+[[numbers.derive]]
+value = "0.00151"
+expr = "limits_hypotheses.h2_mean_d"
+file = "paper/PAPER.tex"
+line = 839
+
+[[numbers.derive]]
+value = "0.80"
+expr = "limits_hypotheses.h2_wilcoxon_p"
+file = "paper/PAPER.tex"
+line = 839
+
+[[numbers.derive]]
+value = "2.228"
+expr = "limits_hypotheses.h3_b1"
+file = "paper/PAPER.tex"
+line = 840
+
+[[numbers.derive]]
+value = "1.228"
+expr = "limits_hypotheses.h3_ci_lo"
+file = "paper/PAPER.tex"
+line = 840
+
+[[numbers.derive]]
+value = "3.360"
+expr = "limits_hypotheses.h3_ci_hi"
+file = "paper/PAPER.tex"
+line = 840
+
+[[numbers.derive]]
+value = "0.11157"
+expr = "limits_hypotheses.h4_b_c"
+file = "paper/PAPER.tex"
+line = 841
+
+[[numbers.derive]]
+value = "0.06235"
+expr = "limits_hypotheses.h4_ci_lo"
+file = "paper/PAPER.tex"
+line = 841
+
+[[numbers.derive]]
+value = "0.17140"
+expr = "limits_hypotheses.h4_ci_hi"
+file = "paper/PAPER.tex"
+line = 841
+
+[[numbers.derive]]
+value = "0.0125"
+expr = "-limits_prereg.tasksb_four_h1_b1"
+file = "paper/PAPER.tex"
+line = 853
+
+[[numbers.derive]]
+value = "12"
+expr = "limits_prereg.filed_family_m"
+file = "paper/PAPER.tex"
+line = 854
+
+[[numbers.derive]]
+value = "4"
+expr = "limits_prereg.filed_family_cost_rows"
+file = "paper/PAPER.tex"
+line = 854
+
+[[numbers.derive]]
+value = "8"
+expr = "limits_prereg.filed_family_solve_rows"
+file = "paper/PAPER.tex"
+line = 854
+
+[[numbers.derive]]
+value = "18"
+expr = "limits_prereg.six_model_family_m"
+file = "paper/PAPER.tex"
+line = 854
+
+[[numbers.derive]]
+value = "18"
+expr = "limits_prereg.six_model_family_m"
+file = "paper/PAPER.tex"
+line = 855
+
+[[numbers.derive]]
+value = "0.00005"
+expr = "limits_prereg.haiku_ptc_cost_p"
+file = "paper/PAPER.tex"
+line = 856
+
+[[numbers.derive]]
+value = "0.00014"
+expr = "limits_prereg.haiku_ptc_terse_solve_p"
+file = "paper/PAPER.tex"
+line = 856
+
+[[numbers.derive]]
+value = "0.0056"
+expr = "limits_prereg.qwen_ptc_cost_p"
+file = "paper/PAPER.tex"
+line = 857
+
+[[numbers.derive]]
+value = "12"
+expr = "limits_prereg.tasksb_family_m"
+file = "paper/PAPER.tex"
+line = 857
+
+[[numbers.derive]]
+value = "0.0001"
+expr = "limits_prereg.tasksb_deepseek_cost_p"
+file = "paper/PAPER.tex"
+line = 858
+
+[[numbers.derive]]
+value = "0.0003"
+expr = "limits_prereg.tasksb_luna_cost_p"
+file = "paper/PAPER.tex"
+line = 858
+
+[[numbers.derive]]
+value = "5"
+expr = "limits_prereg.rerun_q2_closer_to_adjusted"
+file = "paper/PAPER.tex"
+line = 866
+
+[[numbers.derive]]
+value = "8"
+expr = "limits_prereg.rerun_q2_rows"
+file = "paper/PAPER.tex"
+line = 866
+
+[[numbers.derive]]
+value = "9"
+expr = "limits_robust_scale.batch1_log_wins + limits_robust_scale.tasksb_log_wins"
+file = "paper/PAPER.tex"
+line = 872
+
+[[numbers.derive]]
+value = "12"
+expr = "limits_robust_scale.batch1_models + limits_robust_scale.tasksb_models"
+file = "paper/PAPER.tex"
+line = 872
+
+[[numbers.derive]]
+value = "1.8"
+expr = "limits_robust_scale.batch1_glm_rmse_ratio"
+file = "paper/PAPER.tex"
+line = 873
+
+[[numbers.derive]]
+value = "19.4%"
+expr = "-limits_robust_arm.tasksb_deepseek_opt_pct"
+file = "paper/PAPER.tex"
+line = 878
+
+[[numbers.derive]]
+value = "7.0%"
+expr = "-limits_robust_arm.tasksb_glm_opt_pct"
+file = "paper/PAPER.tex"
+line = 878
+
+[[numbers.derive]]
+value = "3.9%"
+expr = "limits_robust_arm.tasksb_qwen_opt_pct"
+file = "paper/PAPER.tex"
+line = 878
+
+[[numbers.derive]]
+value = "10.2%"
+expr = "limits_robust_arm.tasksb_haiku_opt_pct"
+file = "paper/PAPER.tex"
+line = 878
+
+[[numbers.derive]]
+value = "1.4%"
+expr = "limits_robust_arm.tasksb_sonnet_opt_pct"
+file = "paper/PAPER.tex"
+line = 879
+
+[[numbers.derive]]
+value = "8.8%"
+expr = "-limits_robust_arm.tasksb_luna_opt_pct"
+file = "paper/PAPER.tex"
+line = 879
+
+[[numbers.derive]]
+value = "53.8%"
+expr = "limits_robust_arm.batch1_haiku_primary_pct"
+file = "paper/PAPER.tex"
+line = 880
+
+[[numbers.derive]]
+value = "79.0%"
+expr = "limits_robust_arm.batch1_haiku_opt_pct"
+file = "paper/PAPER.tex"
+line = 880
+
+[[numbers.derive]]
+value = "20.8%"
+expr = "-limits_robust_arm.batch1_glm_primary_pct"
+file = "paper/PAPER.tex"
+line = 880
+
+[[numbers.derive]]
+value = "12.7%"
+expr = "-limits_robust_arm.batch1_glm_opt_pct"
+file = "paper/PAPER.tex"
+line = 880
+
+[[numbers.derive]]
+value = "0.1%"
+expr = "limits_robust_arm.batch1_deepseek_primary_pct"
+file = "paper/PAPER.tex"
+line = 881
+
+[[numbers.derive]]
+value = "10.1%"
+expr = "-limits_robust_arm.batch1_deepseek_opt_pct"
+file = "paper/PAPER.tex"
+line = 881
+
+[[numbers.derive]]
+value = "37.4%"
+expr = "limits_robust_seeds.batch1_qwen_seed1_pct"
+file = "paper/PAPER.tex"
+line = 884
+
+[[numbers.derive]]
+value = "18.7"
+expr = "limits_robust_seeds.batch1_qwen_seed1_lo"
+file = "paper/PAPER.tex"
+line = 884
+
+[[numbers.derive]]
+value = "57.3"
+expr = "limits_robust_seeds.batch1_qwen_seed1_hi"
+file = "paper/PAPER.tex"
+line = 884
+
+[[numbers.derive]]
+value = "24.0%"
+expr = "limits_robust_seeds.batch1_qwen_seed2_pct"
+file = "paper/PAPER.tex"
+line = 885
+
+[[numbers.derive]]
+value = "3.5"
+expr = "-limits_robust_seeds.batch1_qwen_seed2_lo"
+file = "paper/PAPER.tex"
+line = 885
+
+[[numbers.derive]]
+value = "58.3"
+expr = "limits_robust_seeds.batch1_qwen_seed2_hi"
+file = "paper/PAPER.tex"
+line = 885
+
+[[numbers.derive]]
+value = "71.1"
+expr = "100 * limits_robust_loo.batch1_tie_fraction_min"
+file = "paper/PAPER.tex"
+line = 888
+
+[[numbers.derive]]
+value = "80.0%"
+expr = "limits_robust_loo.batch1_tie_fraction_max"
+file = "paper/PAPER.tex"
+line = 888
+
+[[numbers.derive]]
+value = "57.8"
+expr = "100 * limits_robust_loo.tasksb_tie_fraction_min"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "64.4%"
+expr = "limits_robust_loo.tasksb_tie_fraction_max"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "0.119"
+expr = "limits_robust_loo.batch1_median_rho_min"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "0.262"
+expr = "limits_robust_loo.batch1_median_rho_max"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "0.190"
+expr = "-limits_robust_loo.tasksb_median_rho_min"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "0.071"
+expr = "limits_robust_loo.tasksb_median_rho_max"
+file = "paper/PAPER.tex"
+line = 889
+
+[[numbers.derive]]
+value = "2.206"
+expr = "limits_robust_loo.batch1_h3_drop_deepseek"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.derive]]
+value = "2.703"
+expr = "limits_robust_loo.batch1_h3_drop_haiku"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.derive]]
+value = "1.010"
+expr = "limits_robust_loo.batch1_h3_drop_luna"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.derive]]
+value = "0.081"
+expr = "-limits_robust_loo.batch1_h3_drop_luna_lo"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.derive]]
+value = "2.223"
+expr = "limits_robust_loo.batch1_h3_drop_luna_hi"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.derive]]
+value = "6.379"
+expr = "limits_robust_loo.tasksb_h3_drop_luna"
+file = "paper/PAPER.tex"
+line = 891
+
+[[numbers.derive]]
+value = "9.642"
+expr = "limits_robust_loo.tasksb_h3_drop_qwen"
+file = "paper/PAPER.tex"
+line = 891
+
+[[numbers.derive]]
+value = "31"
+expr = "limits_fig_penalty.tasks"
+file = "paper/PAPER.tex"
+line = 895
+
+[[numbers.derive]]
+value = "5.00"
+expr = "limits_fig_penalty.haiku_output_input_price_ratio"
+file = "paper/PAPER.tex"
+line = 895
+
+[[numbers.derive]]
+value = "59.5"
+expr = "limits_text.batch1_haiku_adjusted_log_pct - limits_fig_penalty.luna_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 896
+
+[[numbers.derive]]
+value = "75.1"
+expr = "limits_text.batch1_haiku_adjusted_log_pct - limits_fig_penalty.glm_adjusted_log_pct"
+file = "paper/PAPER.tex"
+line = 896
+
+[[numbers.derive]]
+value = "79.2%"
+expr = "(limits_text.batch1_haiku_adjusted_log_pct - limits_fig_penalty.luna_adjusted_log_pct) / (limits_text.batch1_haiku_adjusted_log_pct - limits_fig_penalty.glm_adjusted_log_pct)"
+file = "paper/PAPER.tex"
+line = 896
+
+[[numbers.derive]]
+value = "6.7%"
+expr = "limits_replication.batch1_luna_pct"
+file = "paper/PAPER.tex"
+line = 898
+
+[[numbers.derive]]
+value = "16.2%"
+expr = "-limits_replication.tasksb_luna_pct"
+file = "paper/PAPER.tex"
+line = 899
+
+[[numbers.derive]]
+value = "0.8%"
+expr = "-limits_replication.batch1_deepseek_pct"
+file = "paper/PAPER.tex"
+line = 899
+
+[[numbers.derive]]
+value = "17.0%"
+expr = "-limits_replication.tasksb_deepseek_pct"
+file = "paper/PAPER.tex"
+line = 899
+
+[[numbers.derive]]
+value = "0.6"
+expr = "limits_replication.batch1_luna_ci_lo - limits_replication.tasksb_luna_ci_hi"
+file = "paper/PAPER.tex"
+line = 899
+
+[[numbers.derive]]
+value = "0.7"
+expr = "limits_replication.batch1_deepseek_ci_lo - limits_replication.tasksb_deepseek_ci_hi"
+file = "paper/PAPER.tex"
+line = 899
+
+[[numbers.derive]]
+value = "35.3%"
+expr = "limits_replication.batch1_qwen_pct"
+file = "paper/PAPER.tex"
+line = 900
+
+[[numbers.derive]]
+value = "7.0%"
+expr = "limits_replication.tasksb_qwen_pct"
+file = "paper/PAPER.tex"
+line = 900
+
+[[numbers.derive]]
+value = "8.9%"
+expr = "-limits_replication.batch1_glm_pct"
+file = "paper/PAPER.tex"
+line = 900
+
+[[numbers.derive]]
+value = "6.2%"
+expr = "-limits_replication.tasksb_glm_pct"
+file = "paper/PAPER.tex"
+line = 900
+
+[[numbers.allow]]
+value = "1"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 763
+
+[[numbers.allow]]
+value = "2"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 764
+
+[[numbers.allow]]
+value = "3"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 765
+
+[[numbers.allow]]
+value = "4"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 766
+
+[[numbers.allow]]
+value = "5"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 767
+
+[[numbers.allow]]
+value = "6"
+reason = "pitfall number in the Table 10 row label (pitfalls 1-6, the paper's own section structure), not a quantity"
+file = "paper/PAPER.tex"
+line = 768
+
+[[numbers.allow]]
+value = "23"
+reason = "number of filed amendments: PRE-REGISTRATION.md section 12 numbers them, the last is Amendment 23 (section 12.10)"
+file = "paper/PAPER.tex"
+line = 801
+
+[[numbers.allow]]
+value = "23"
+reason = "number of filed amendments: PRE-REGISTRATION.md section 12 numbers them, the last is Amendment 23 (section 12.10)"
+file = "paper/PAPER.tex"
+line = 811
+
+[[numbers.allow]]
+value = "23"
+reason = "number of filed amendments: PRE-REGISTRATION.md section 12 numbers them, the last is Amendment 23 (section 12.10)"
+file = "paper/PAPER.tex"
+line = 849
+
+[[numbers.allow]]
+value = "2"
+reason = "section name 'Pitfall 2' (sec:p2), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 803
+
+[[numbers.allow]]
+value = "3"
+reason = "section name 'Pitfall 3' (sec:p3), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 803
+
+[[numbers.allow]]
+value = "2026"
+reason = "date the results tree was destroyed (2026-10-02), documented in ARTIFACT.md 'What CANNOT be re-derived, and why'"
+file = "paper/PAPER.tex"
+line = 806
+
+[[numbers.allow]]
+value = "10"
+reason = "date the results tree was destroyed (2026-10-02), documented in ARTIFACT.md 'What CANNOT be re-derived, and why'"
+file = "paper/PAPER.tex"
+line = 806
+
+[[numbers.allow]]
+value = "02"
+reason = "date the results tree was destroyed (2026-10-02), documented in ARTIFACT.md 'What CANNOT be re-derived, and why'"
+file = "paper/PAPER.tex"
+line = 806
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 813
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch-1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 813
+occurrence = 2
+
+[[numbers.allow]]
+value = "6"
+reason = "part of the model name gpt-6-luna, not a quantity"
+file = "paper/PAPER.tex"
+line = 813
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 816
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 832
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 879
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch-1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 881
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 884
+occurrence = 1
+
+[[numbers.allow]]
+value = "1"
+reason = "seed label (seed 1 / seed 2, the two collection seeds per cell), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 884
+occurrence = 2
+
+[[numbers.allow]]
+value = "2"
+reason = "seed label (seed 1 / seed 2, the two collection seeds per cell), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 884
+
+[[numbers.allow]]
+value = "2"
+reason = "seed label (seed 1 / seed 2, the two collection seeds per cell), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 885
+
+[[numbers.allow]]
+value = "1"
+reason = "seed label (seed 1 / seed 2, the two collection seeds per cell), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 886
+
+[[numbers.allow]]
+value = "2"
+reason = "seed label (seed 1 / seed 2, the two collection seeds per cell), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 886
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 888
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 890
+
+[[numbers.allow]]
+value = "1"
+reason = "suite name 'batch 1' (the first task suite), an identifier, not a quantity"
+file = "paper/PAPER.tex"
+line = 894
+
+[[numbers.allow]]
+value = "24"
+reason = "H3 design constant: the native arm presents 24 tool schemas, PRE-REGISTRATION.md section 4 (H3 model definition)"
+file = "paper/PAPER.tex"
+line = 840
+
+[[numbers.allow]]
+value = "1"
+reason = "H3 design constant: the PTC arm presents 1 tool schema, PRE-REGISTRATION.md section 4 (H3 model definition)"
+file = "paper/PAPER.tex"
+line = 840
+
+[[numbers.allow]]
+value = "1"
+reason = "pre-registration version number v1.0, PRE-REGISTRATION.md 'Freeze status' table, an identifier"
+file = "paper/PAPER.tex"
+line = 849
+
+[[numbers.allow]]
+value = "3"
+reason = "pre-registration version number v3.0, PRE-REGISTRATION.md 'Freeze status' table, an identifier"
+file = "paper/PAPER.tex"
+line = 849
+
+[[numbers.allow]]
+value = "4"
+reason = "pre-registration version number v4.0 (tag prereg-v4), PRE-REGISTRATION.md section 12.7, an identifier"
+file = "paper/PAPER.tex"
+line = 850
+
+[[numbers.allow]]
+value = "21"
+reason = "amendment number 21, PRE-REGISTRATION.md section 12.8 ('Amendment 21, appended after the prereg-v5 tag'), an identifier"
+file = "paper/PAPER.tex"
+line = 850
+
+[[numbers.allow]]
+value = "23"
+reason = "amendment number 23, PRE-REGISTRATION.md section 12.10 ('Amendment 23, appended after the prereg-v5 tag'), an identifier"
+file = "paper/PAPER.tex"
+line = 850
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the bootstrap intervals, fixed by the decision rules in PRE-REGISTRATION.md section 4"
+file = "paper/PAPER.tex"
+line = 895
+
+# ---- paper lines 904-1045: Tables 12-13, availability ----
+
+# Part G: paper/PAPER.tex lines 904-1045 (Table 12 tab:extension, re-run appendix, Table 13
+# tab:rerunquality, corrections, artifact appendix, tab:files, code and data availability).
+
+# ---- Table 12 (tab:extension): solved share = solved / cells
+[[numbers.derive]]
+value = "72.2%"
+expr = "appx_extension.haiku_native_solved / appx_extension.haiku_native_cells"
+file = "paper/PAPER.tex"
+line = 911
+
+[[numbers.derive]]
+value = "47.2%"
+expr = "appx_extension.haiku_ptc_solved / appx_extension.haiku_ptc_cells"
+file = "paper/PAPER.tex"
+line = 912
+
+[[numbers.derive]]
+value = "97.5%"
+expr = "appx_extension.sonnet_native_solved / appx_extension.sonnet_native_cells"
+file = "paper/PAPER.tex"
+line = 913
+
+[[numbers.derive]]
+value = "96.3%"
+expr = "appx_extension.sonnet_ptc_solved / appx_extension.sonnet_ptc_cells"
+file = "paper/PAPER.tex"
+line = 914
+
+# ---- tasks-b intervals: printed lower bounds are negative values
+[[numbers.derive]]
+value = "7.35"
+expr = "-appx_extension.haiku_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 922
+
+[[numbers.derive]]
+value = "7.92"
+expr = "-appx_extension.sonnet_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 922
+
+# ---- re-run prose
+[[numbers.derive]]
+value = "124"
+expr = "appx_rerun.qwen_b_records - appx_rerun.qwen_b_resume_planned_runs"
+file = "paper/PAPER.tex"
+line = 966
+
+[[numbers.allow]]
+value = "20.61"
+reason = "provider-console reading, not in a committed file: credit balance 57.90 USD (notes/plans/RERUN-PLAN.md credits table) minus 37.29 USD read after the run"
+file = "paper/PAPER.tex"
+line = 931
+
+# ---- Table 13 (tab:rerunquality): negative contrasts and bounds printed with \mi{}
+[[numbers.derive]]
+value = "9.96"
+expr = "-appx_rerunquality.b1_deepseek_both_lo_pct"
+file = "paper/PAPER.tex"
+line = 945
+
+[[numbers.derive]]
+value = "1.31%"
+expr = "-appx_rerunquality.b1_luna_both_pct"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.derive]]
+value = "11.29"
+expr = "-appx_rerunquality.b1_luna_both_lo_pct"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.derive]]
+value = "19.08%"
+expr = "-appx_rerunquality.b_deepseek_both_pct"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "34.61"
+expr = "-appx_rerunquality.b_deepseek_both_lo_pct"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "6.65"
+expr = "-appx_rerunquality.b_deepseek_both_hi_pct"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "2.29%"
+expr = "-appx_rerunquality.b_glm_both_pct"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "17.25"
+expr = "-appx_rerunquality.b_glm_both_lo_pct"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "23.59%"
+expr = "-appx_rerunquality.b_luna_both_pct"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "32.82"
+expr = "-appx_rerunquality.b_luna_both_lo_pct"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "14.93"
+expr = "-appx_rerunquality.b_luna_both_hi_pct"
+file = "paper/PAPER.tex"
+line = 954
+
+# ---- B = 200{,}000 is typeset in two digit groups; the leading group is iters / 1000
+[[numbers.derive]]
+value = "200"
+expr = "appx_rerunquality.iters / 1000"
+file = "paper/PAPER.tex"
+line = 939
+
+[[numbers.derive]]
+value = "200"
+expr = "appx_corrections.batch1_iters / 1000"
+file = "paper/PAPER.tex"
+line = 987
+
+[[numbers.derive]]
+value = "200"
+expr = "appx_corrections.batch1_iters / 1000"
+file = "paper/PAPER.tex"
+line = 1001
+
+# ---- artifact appendix
+[[numbers.derive]]
+value = "126"
+expr = "appx_artifact.manifest_inputs + appx_artifact.manifest_outputs"
+file = "paper/PAPER.tex"
+line = 997
+
+# ---- integer counts named explicitly (small integers match many results values by chance)
+
+[[numbers.derive]]
+value = "353"
+expr = "appx_extension.haiku_cells_analysed"
+file = "paper/PAPER.tex"
+line = 906
+
+[[numbers.derive]]
+value = "18"
+expr = "appx_extension.haiku_tasks"
+file = "paper/PAPER.tex"
+line = 906
+
+[[numbers.derive]]
+value = "40"
+expr = "appx_extension.design_tasks"
+file = "paper/PAPER.tex"
+line = 906
+
+[[numbers.derive]]
+value = "36"
+expr = "appx_extension.haiku_native_cells"
+file = "paper/PAPER.tex"
+line = 911
+
+[[numbers.derive]]
+value = "26"
+expr = "appx_extension.haiku_native_solved"
+file = "paper/PAPER.tex"
+line = 911
+
+[[numbers.derive]]
+value = "36"
+expr = "appx_extension.haiku_ptc_cells"
+file = "paper/PAPER.tex"
+line = 912
+
+[[numbers.derive]]
+value = "17"
+expr = "appx_extension.haiku_ptc_solved"
+file = "paper/PAPER.tex"
+line = 912
+
+[[numbers.derive]]
+value = "80"
+expr = "appx_extension.sonnet_native_cells"
+file = "paper/PAPER.tex"
+line = 913
+
+[[numbers.derive]]
+value = "78"
+expr = "appx_extension.sonnet_native_solved"
+file = "paper/PAPER.tex"
+line = 913
+
+[[numbers.derive]]
+value = "80"
+expr = "appx_extension.sonnet_ptc_cells"
+file = "paper/PAPER.tex"
+line = 914
+
+[[numbers.derive]]
+value = "77"
+expr = "appx_extension.sonnet_ptc_solved"
+file = "paper/PAPER.tex"
+line = 914
+
+[[numbers.derive]]
+value = "40"
+expr = "appx_extension.design_tasks"
+file = "paper/PAPER.tex"
+line = 920
+
+[[numbers.derive]]
+value = "10"
+expr = "appx_extension.haiku_native_only"
+file = "paper/PAPER.tex"
+line = 920
+
+[[numbers.derive]]
+value = "1"
+expr = "appx_extension.haiku_ptc_only"
+file = "paper/PAPER.tex"
+line = 921
+
+[[numbers.derive]]
+value = "31"
+expr = "appx_rerun.b1_tasks"
+file = "paper/PAPER.tex"
+line = 927
+
+[[numbers.derive]]
+value = "2"
+expr = "appx_rerun.b1_seeds"
+file = "paper/PAPER.tex"
+line = 927
+
+[[numbers.derive]]
+value = "124"
+expr = "appx_rerun.b1_cells"
+file = "paper/PAPER.tex"
+line = 927
+
+[[numbers.derive]]
+value = "40"
+expr = "appx_rerun.b_tasks"
+file = "paper/PAPER.tex"
+line = 928
+
+[[numbers.derive]]
+value = "2"
+expr = "appx_rerun.b_seeds"
+file = "paper/PAPER.tex"
+line = 928
+
+[[numbers.derive]]
+value = "160"
+expr = "appx_rerun.b_cells"
+file = "paper/PAPER.tex"
+line = 928
+
+[[numbers.derive]]
+value = "124"
+expr = "appx_rerun.aa_cells"
+file = "paper/PAPER.tex"
+line = 929
+
+[[numbers.derive]]
+value = "160"
+expr = "appx_rerun.qwen_b_cells"
+file = "paper/PAPER.tex"
+line = 966
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_native_cells"
+file = "paper/PAPER.tex"
+line = 937
+
+[[numbers.derive]]
+value = "80"
+expr = "appx_rerunquality.b_native_cells"
+file = "paper/PAPER.tex"
+line = 937
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_deepseek_native_solved"
+file = "paper/PAPER.tex"
+line = 945
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_deepseek_discordant"
+file = "paper/PAPER.tex"
+line = 945
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_deepseek_discordant"
+file = "paper/PAPER.tex"
+line = 945
+occurrence = 2
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_deepseek_both_cells"
+file = "paper/PAPER.tex"
+line = 945
+occurrence = 2
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b1_deepseek_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 945
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_glm_native_solved"
+file = "paper/PAPER.tex"
+line = 946
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_glm_discordant"
+file = "paper/PAPER.tex"
+line = 946
+occurrence = 1
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_glm_discordant"
+file = "paper/PAPER.tex"
+line = 946
+occurrence = 2
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_glm_both_cells"
+file = "paper/PAPER.tex"
+line = 946
+occurrence = 2
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b1_glm_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 946
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_qwen_native_solved"
+file = "paper/PAPER.tex"
+line = 947
+
+[[numbers.derive]]
+value = "2"
+expr = "appx_rerunquality.b1_qwen_native_only"
+file = "paper/PAPER.tex"
+line = 947
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_qwen_ptc_only"
+file = "paper/PAPER.tex"
+line = 947
+
+[[numbers.derive]]
+value = "60"
+expr = "appx_rerunquality.b1_qwen_both_cells"
+file = "paper/PAPER.tex"
+line = 947
+
+[[numbers.derive]]
+value = "0.50"
+expr = "appx_rerunquality.b1_qwen_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 947
+
+[[numbers.derive]]
+value = "61"
+expr = "appx_rerunquality.b1_luna_native_solved"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.derive]]
+value = "1"
+expr = "appx_rerunquality.b1_luna_native_only"
+file = "paper/PAPER.tex"
+line = 948
+occurrence = 1
+
+[[numbers.derive]]
+value = "1"
+expr = "appx_rerunquality.b1_luna_ptc_only"
+file = "paper/PAPER.tex"
+line = 948
+occurrence = 2
+
+[[numbers.derive]]
+value = "60"
+expr = "appx_rerunquality.b1_luna_both_cells"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b1_luna_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.derive]]
+value = "62"
+expr = "appx_rerunquality.b1_haiku_native_solved"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.derive]]
+value = "14"
+expr = "appx_rerunquality.b1_haiku_native_only"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.derive]]
+value = "0"
+expr = "appx_rerunquality.b1_haiku_ptc_only"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.derive]]
+value = "48"
+expr = "appx_rerunquality.b1_haiku_both_cells"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.derive]]
+value = "0.00012"
+expr = "appx_rerunquality.b1_haiku_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.derive]]
+value = "78"
+expr = "appx_rerunquality.b_deepseek_native_solved"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "2"
+expr = "appx_rerunquality.b_deepseek_native_only"
+file = "paper/PAPER.tex"
+line = 951
+occurrence = 1
+
+[[numbers.derive]]
+value = "2"
+expr = "appx_rerunquality.b_deepseek_ptc_only"
+file = "paper/PAPER.tex"
+line = 951
+occurrence = 2
+
+[[numbers.derive]]
+value = "76"
+expr = "appx_rerunquality.b_deepseek_both_cells"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b_deepseek_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 951
+
+[[numbers.derive]]
+value = "78"
+expr = "appx_rerunquality.b_glm_native_solved"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "8"
+expr = "appx_rerunquality.b_glm_native_only"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "1"
+expr = "appx_rerunquality.b_glm_ptc_only"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "70"
+expr = "appx_rerunquality.b_glm_both_cells"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "0.039"
+expr = "appx_rerunquality.b_glm_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.derive]]
+value = "74"
+expr = "appx_rerunquality.b_qwen_native_solved"
+file = "paper/PAPER.tex"
+line = 953
+
+[[numbers.derive]]
+value = "3"
+expr = "appx_rerunquality.b_qwen_native_only"
+file = "paper/PAPER.tex"
+line = 953
+occurrence = 1
+
+[[numbers.derive]]
+value = "3"
+expr = "appx_rerunquality.b_qwen_ptc_only"
+file = "paper/PAPER.tex"
+line = 953
+occurrence = 2
+
+[[numbers.derive]]
+value = "71"
+expr = "appx_rerunquality.b_qwen_both_cells"
+file = "paper/PAPER.tex"
+line = 953
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b_qwen_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 953
+
+[[numbers.derive]]
+value = "76"
+expr = "appx_rerunquality.b_luna_native_solved"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "5"
+expr = "appx_rerunquality.b_luna_native_only"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "4"
+expr = "appx_rerunquality.b_luna_ptc_only"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "71"
+expr = "appx_rerunquality.b_luna_both_cells"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.derive]]
+value = "1.00"
+expr = "appx_rerunquality.b_luna_mcnemar_p"
+file = "paper/PAPER.tex"
+line = 954
+
+# ---- numbers the study does not produce
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch 1' (name of the first task suite, not a quantity)"
+file = "paper/PAPER.tex"
+line = 927
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch 1' in the table caption (name of the first task suite)"
+file = "paper/PAPER.tex"
+line = 937
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch 1' in the suite column of Table 13"
+file = "paper/PAPER.tex"
+line = 945
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model name GLM-5.3-Flash (version string)"
+file = "paper/PAPER.tex"
+line = 946
+
+[[numbers.allow]]
+value = "5.3"
+reason = "model name GLM-5.3-Flash (version string)"
+file = "paper/PAPER.tex"
+line = 952
+
+[[numbers.allow]]
+value = "4.5"
+reason = "model name Claude Haiku 4.5 (version string)"
+file = "paper/PAPER.tex"
+line = 949
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna (version string)"
+file = "paper/PAPER.tex"
+line = 948
+
+[[numbers.allow]]
+value = "6"
+reason = "model name gpt-6-luna (version string)"
+file = "paper/PAPER.tex"
+line = 954
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch-1' (name of the first task suite)"
+file = "paper/PAPER.tex"
+line = 986
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch-1' (name of the first task suite)"
+file = "paper/PAPER.tex"
+line = 997
+
+[[numbers.allow]]
+value = "1"
+reason = "suite label 'batch-1' (name of the first task suite)"
+file = "paper/PAPER.tex"
+line = 1001
+
+[[numbers.allow]]
+value = "70"
+reason = "filed spending stop of the re-run, a protocol constant in notes/plans/RERUN-PLAN.md (budget: the whole re-run stops at 70 USD)"
+file = "paper/PAPER.tex"
+line = 930
+
+[[numbers.allow]]
+value = "57.90"
+reason = "Anthropic account balance read from the provider console before the re-run, recorded in notes/plans/RERUN-PLAN.md credits table (Anthropic row)"
+file = "paper/PAPER.tex"
+line = 931
+
+[[numbers.allow]]
+value = "37.29"
+reason = "Anthropic account balance read from the provider console after the re-run (the sentence says so); a console reading not recorded in any artifact file"
+file = "paper/PAPER.tex"
+line = 932
+
+[[numbers.allow]]
+value = "95%"
+reason = "confidence level of the percentile bootstrap (2.5th and 97.5th percentiles), a protocol constant in METHODS.md bootstrap section and PRE-REGISTRATION.md decision rules"
+file = "paper/PAPER.tex"
+line = 939
+
+[[numbers.allow]]
+value = "000"
+reason = "trailing digit group of B = 200{,}000 split at the thousands separator; the leading group 200 is derived from iters in rerun-compare-2026-10-11.json"
+file = "paper/PAPER.tex"
+line = 939
+
+[[numbers.allow]]
+value = "000"
+reason = "trailing digit group of B = 200{,}000 split at the thousands separator; the leading group 200 is derived from iters in panel-analysis-6model-2026-10-09.json"
+file = "paper/PAPER.tex"
+line = 987
+
+[[numbers.allow]]
+value = "000"
+reason = "trailing digit group of B = 200{,}000 split at the thousands separator; the leading group 200 is derived from iters in panel-analysis-6model-2026-10-09.json"
+file = "paper/PAPER.tex"
+line = 1001
+
+[[numbers.allow]]
+value = "5"
+reason = "leading digit group of B = 5{,}000, the bootstrap default before 2026-10-09, a protocol constant recorded in METHODS.md bootstrap section and ARTIFACT.md"
+file = "paper/PAPER.tex"
+line = 986
+
+[[numbers.allow]]
+value = "000"
+reason = "trailing digit group of B = 5{,}000, the bootstrap default before 2026-10-09 (METHODS.md bootstrap section)"
+file = "paper/PAPER.tex"
+line = 986
+
+[[numbers.allow]]
+value = "20"
+reason = "withdrawn A/A pair: arm-id byte difference of its first requests, recorded in notes/plans/AA-PLACEBO-PLAN.md (30 and 20 bytes); not a results value"
+file = "paper/PAPER.tex"
+line = 979
+
+[[numbers.allow]]
+value = "30"
+reason = "withdrawn A/A pair: arm-id byte difference of its first requests, recorded in notes/plans/AA-PLACEBO-PLAN.md (30 and 20 bytes); not a results value"
+file = "paper/PAPER.tex"
+line = 979
+
+[[numbers.allow]]
+value = "46.2%"
+reason = "withdrawn earlier-draft A/A floor; its A7 output is no longer in the data (notes/records/STEP2-RECONCILIATION.md section 7.6, PAPER.md item 9)"
+file = "paper/PAPER.tex"
+line = 980
+
+[[numbers.allow]]
+value = "0"
+reason = "coding convention: unmeasured external arms were coded as retention 0 by tools/prefix-retention.mjs (PAPER.md section 3.3)"
+file = "paper/PAPER.tex"
+line = 983
+
+[[numbers.allow]]
+value = "0.105"
+reason = "withdrawn earlier-draft unreconciled per-run Anthropic bound, recorded in METHODS.md (Anthropic cost bracket paragraph); no shipped analysis output holds it"
+file = "paper/PAPER.tex"
+line = 984
+
+[[numbers.allow]]
+value = "0.233"
+reason = "withdrawn earlier-draft unreconciled per-run Anthropic bound, recorded in METHODS.md (Anthropic cost bracket paragraph); no shipped analysis output holds it"
+file = "paper/PAPER.tex"
+line = 984
+
+[[numbers.allow]]
+value = "0.082"
+reason = "withdrawn earlier-draft unreconciled per-run Anthropic bound, recorded in METHODS.md (Anthropic cost bracket paragraph); no shipped analysis output holds it"
+file = "paper/PAPER.tex"
+line = 984
+
+[[numbers.allow]]
+value = "0.202"
+reason = "withdrawn earlier-draft unreconciled per-run Anthropic bound, recorded in METHODS.md (Anthropic cost bracket paragraph); no shipped analysis output holds it"
+file = "paper/PAPER.tex"
+line = 984
+
+[[numbers.allow]]
+value = "2026"
+reason = "sign-off date 2026-10-04 of the first artifact scope (artifact/MANIFEST.json generated, ARTIFACT.md)"
+file = "paper/PAPER.tex"
+line = 998
+
+[[numbers.allow]]
+value = "10"
+reason = "sign-off date 2026-10-04 of the first artifact scope (artifact/MANIFEST.json generated, ARTIFACT.md)"
+file = "paper/PAPER.tex"
+line = 998
+
+[[numbers.allow]]
+value = "04"
+reason = "sign-off date 2026-10-04 of the first artifact scope (artifact/MANIFEST.json generated, ARTIFACT.md)"
+file = "paper/PAPER.tex"
+line = 998
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1015
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1015
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1015
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1015
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1016
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1016
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1016
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1016
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1017
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1017
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1018
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1018
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1019
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1019
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1019
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1019
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1020
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1020
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1020
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1020
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1021
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1021
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1021
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1021
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1022
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1022
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1022
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1022
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1023
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1023
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1024
+occurrence = 1
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1024
+occurrence = 1
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1024
+occurrence = 2
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1024
+occurrence = 2
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1025
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1025
+
+[[numbers.allow]]
+value = "2026"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1026
+
+[[numbers.allow]]
+value = "10"
+reason = "date stamp inside an analysis/ file name in Table 14 (tab:files)"
+file = "paper/PAPER.tex"
+line = 1026
+
+[[numbers.allow]]
+value = "2026"
+reason = "copyright year of the MIT License (LICENSE)"
+file = "paper/PAPER.tex"
+line = 1040
+
+[[numbers.allow]]
+value = "10.5281"
+reason = "Zenodo DOI registrant prefix of doi:10.5281/zenodo.24039669"
+file = "paper/PAPER.tex"
+line = 1041
+
+# ---- paper lines all: quantities computed by paper-numbers/derived.py, and integration ----
+
+# Quantities computed by paper-numbers/derived.py from committed data (no analysis file stores them).
+
+[[numbers.derive]]
+value = "1.75"
+expr = "derived.slot_spread[\"qwen-full\"]"
+file = "paper/PAPER.tex"
+line = 74
+
+[[numbers.derive]]
+value = "3.82"
+expr = "derived.slot_spread[\"glm-flash\"]"
+file = "paper/PAPER.tex"
+line = 74
+
+[[numbers.derive]]
+value = "1"
+expr = "derived.order_effect.rows_excluding_zero"
+file = "paper/PAPER.tex"
+line = 74
+
+[[numbers.derive]]
+value = "1"
+expr = "derived.r1_adjusted.matches"
+file = "paper/PAPER.tex"
+line = 667
+
+[[numbers.derive]]
+value = "4"
+expr = "derived.cold_cheaper"
+file = "paper/PAPER.tex"
+line = 815
+
+[[numbers.derive]]
+value = "1"
+expr = "derived.order_effect.rows_excluding_zero"
+file = "paper/PAPER.tex"
+line = 818
+
+[[numbers.derive]]
+value = "3.89"
+expr = "derived.gateway_usd[\"luna-full\"]"
+file = "paper/PAPER.tex"
+line = 438
+
+[[numbers.derive]]
+value = "0.0063"
+expr = "derived.gateway_usd[\"luna-full\"] / front_population.batch1_luna_cells"
+file = "paper/PAPER.tex"
+line = 438
+
+[[numbers.derive]]
+value = "4.95"
+expr = "derived.gateway_usd[\"ds-full\"]"
+file = "paper/PAPER.tex"
+line = 440
+
+[[numbers.derive]]
+value = "0.0080"
+expr = "derived.gateway_usd[\"ds-full\"] / front_population.batch1_deepseek_cells"
+file = "paper/PAPER.tex"
+line = 440
+
+# Table 7 and Table 8 cells that became chance matches once every slice's values were pooled.
+
+[[numbers.derive]]
+value = "0.1"
+expr = "rerun_table7.b1_deepseek_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 540
+
+[[numbers.derive]]
+value = "0.9"
+expr = "rerun_table7.b1_deepseek_rerun_pct"
+file = "paper/PAPER.tex"
+line = 540
+
+[[numbers.derive]]
+value = "1.0"
+expr = "rerun_table7.b1_glm_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 541
+
+[[numbers.derive]]
+value = "1.2"
+expr = "rerun_table7.b1_luna_filed_raw_pct"
+file = "paper/PAPER.tex"
+line = 543
+
+[[numbers.derive]]
+value = "2.9"
+expr = "rerun_table7.b_deepseek_order_effect_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 546
+
+[[numbers.derive]]
+value = "1.0"
+expr = "rerun_table7.b_glm_order_effect_pct"
+file = "paper/PAPER.tex"
+line = 547
+
+[[numbers.derive]]
+value = "0.6"
+expr = "rerun_table7.b_qwen_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 548
+
+[[numbers.derive]]
+value = "0.13%"
+expr = "quality_table8.b1_ds_both_pct"
+file = "paper/PAPER.tex"
+line = 593
+
+# Study numbers printed as rounded approximations; each reason gives the exact traced value.
+
+[[numbers.allow]]
+value = "170"
+reason = "'about 170' tasks: rounded projection 31 * (floor_interleaved.half_width_pct / 5)^2 = 168.1, from rerun-compare aa.label.halfWidthPct = 11.644"
+file = "paper/PAPER.tex"
+line = 642
+
+[[numbers.allow]]
+value = "470"
+reason = "'about 470' tasks: rounded projection 31 * (floor_interleaved.half_width_pct / 3)^2 = 467.0, from rerun-compare aa.label.halfWidthPct = 11.644"
+file = "paper/PAPER.tex"
+line = 643
+
+[[numbers.allow]]
+value = "49"
+reason = "whole-point rounding of 49.12 = Haiku minus Sonnet log-adjusted batch-1 effect, analysis/position-adjust-6model-2026-10-09.json models[3].adjustedLog.pct - models[4].adjustedLog.pct"
+file = "paper/PAPER.tex"
+line = 793
+
+# Study numbers whose data are not in a committed data file.
+
+[[numbers.allow]]
+value = "25"
+reason = "reseed experiment (25 of 40 reseeds) recorded only in prose, METHODS.md section 7 and tools/stats.mjs; its per-seed outputs were not committed"
+file = "paper/PAPER.tex"
+line = 655
+
+[[numbers.allow]]
+value = "40"
+reason = "reseed experiment (25 of 40 reseeds) recorded only in prose, METHODS.md section 7 and tools/stats.mjs; its per-seed outputs were not committed"
+file = "paper/PAPER.tex"
+line = 655
+
+# ---- paper lines all: paper errata: each fails until the paper prints the value the data give ----
+
+# Paper errata. Each entry names the value the printed number reports; osaudit reports the
+# mismatch (numbers/derive-mismatch) until paper/PAPER.tex prints the value the data give.
+
+# analysis/retention-pilot-2026-10-10.json arms[0].meanRetention = 0.87349, prints 0.873
+[[numbers.derive]]
+value = "0.874"
+expr = "cache_p3_opencode_pilot.opencode_retention_mean"
+file = "paper/PAPER.tex"
+line = 425
+
+# rerun-compare rerun-b1 GLM rerun.ciHiPct = 32.949, prints 32.9 (double rounding via 32.95)
+[[numbers.derive]]
+value = "33.0"
+expr = "rerun_table7.b1_glm_rerun_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 524
+
+# same cell as line 524, prints 32.9
+[[numbers.derive]]
+value = "33.0"
+expr = "rerun_table7.b1_glm_rerun_ci_hi_pct"
+file = "paper/PAPER.tex"
+line = 541
+
+# rerun-compare rerun-b1 gpt-6-luna rerun.ciLoPct = -13.548, prints -13.5
+[[numbers.derive]]
+value = "13.6"
+expr = "-rerun_table7.b1_luna_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 543
+
+# rerun-compare rerun-b1 Haiku rerun.ciLoPct = 56.947, prints 56.9
+[[numbers.derive]]
+value = "57.0"
+expr = "rerun_table7.b1_haiku_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 544
+
+# rerun-compare rerun-b DeepSeek orderEffect.ciLoPct = -38.848, prints -38.8
+[[numbers.derive]]
+value = "38.9"
+expr = "-rerun_table7.b_deepseek_order_effect_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 546
+
+# rerun-compare rerun-b GLM rerun.ciLoPct = -16.447, prints -16.4
+[[numbers.derive]]
+value = "16.5"
+expr = "-rerun_table7.b_glm_rerun_ci_lo_pct"
+file = "paper/PAPER.tex"
+line = 547
+
+# hypotheses-6model-2026-10-09 H2 ciD.lo = -0.0000893, prints -0.00009; 0.00010 is the B = 5,000 bound of the 10-03 file
+[[numbers.derive]]
+value = "0.00010"
+expr = "-limits_hypotheses.h2_ci_lo"
+file = "paper/PAPER.tex"
+line = 839
+
+# hypotheses-6model-2026-10-09 H2 ciD.hi = 0.0035595, prints 0.00356; 0.00354 is the B = 5,000 bound of the 10-03 file
+[[numbers.derive]]
+value = "0.00354"
+expr = "limits_hypotheses.h2_ci_hi"
+file = "paper/PAPER.tex"
+line = 839
+
+# hypotheses-batchb-four-2026-10-09 H1 ciPooled.lo = -0.020227, prints -0.0202
+[[numbers.derive]]
+value = "0.0203"
+expr = "-limits_prereg.tasksb_four_h1_ci_lo"
+file = "paper/PAPER.tex"
+line = 853
+
+# hypotheses-batchb-four-2026-10-09 H1 ciPooled.hi = -0.0050628, prints -0.0051
+[[numbers.derive]]
+value = "0.0050"
+expr = "-limits_prereg.tasksb_four_h1_ci_hi"
+file = "paper/PAPER.tex"
+line = 853
