@@ -470,7 +470,7 @@ on task and seed only, so \emph{every matrix, including the replication suite, u
 permutation}. The assignment is balanced across blocks, but it is not randomised independently per
 matrix, and it is not balanced for any one contrast: \texttt{dsh:ptc} occupied the first slot in 2 of
 62 blocks. Execution order turned out to matter. Within a single arm, mean cost varied by a factor of
-1.75 to 3.82 across the ten slots, and the first slot was the cheapest in three of six models (GLM, luna and Sonnet). We do
+1.75 to 3.82 across the ten slots, and the first slot was cheapest in three of six models. We do
 not know why. Provider-side caching shared between arms, rate limiting and drift over the collection
 window are all candidates. A warming account alone does not predict a cheap first slot.
 
