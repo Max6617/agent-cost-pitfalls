@@ -5911,6 +5911,19 @@ expr = "derived.rerun_gateway_usd"
 file = "paper/PAPER.tex"
 line = 930
 
+# H3 p of about 1e-4: mantissa and exponent of the two-sided normal p of the mixed-effects fit.
+[[numbers.derive]]
+value = "1"
+expr = "derived.h3_mixed.p_sci_mantissa"
+file = "paper/PAPER.tex"
+line = 860
+
+[[numbers.derive]]
+value = "4"
+expr = "-derived.h3_mixed.p_sci_exponent"
+file = "paper/PAPER.tex"
+line = 860
+
 # Table 7 and Table 8 cells that became chance matches once every slice's values were pooled.
 
 [[numbers.derive]]

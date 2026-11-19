@@ -470,7 +470,7 @@ on task and seed only, so \emph{every matrix, including the replication suite, u
 permutation}. The assignment is balanced across blocks, but it is not randomised independently per
 matrix, and it is not balanced for any one contrast: \texttt{dsh:ptc} occupied the first slot in 2 of
 62 blocks. Execution order turned out to matter. Within a single arm, mean cost varied by a factor of
-1.75 to 3.82 across the ten slots, and the first slot was the cheapest in three of six models. We do
+1.75 to 3.82 across the ten slots, and the first slot was the cheapest in three of six models (GLM, luna and Sonnet). We do
 not know why. Provider-side caching shared between arms, rate limiting and drift over the collection
 window are all candidates. A warming account alone does not predict a cheap first slot.
 
@@ -857,7 +857,7 @@ cost contrast ($p = 0.00005$) and the PTC-to-PTC-terse solve-rate contrast ($p =
 cost contrast ($p = 0.0056$) fails only through the correction. On tasks-b the filed family of 12
 has two survivors, DeepSeek ($p = 0.0001$) and luna ($p = 0.0003$), both saying PTC is cheaper.
 \item The filing exempts only H1 and H2 from correction by name. H3 is reported uncorrected, and its
-$p$ of about $3\times10^{-5}$ survives any family we could construct.
+$p$ of about $1\times10^{-4}$ survives any family we could construct.
 \item The test-editing rule (report as measured, exclude nothing, publish two sensitivities) was
 committed before its effect was computed. The replication criterion and the Anthropic extension
 verdict were filed before any tasks-b record existed.

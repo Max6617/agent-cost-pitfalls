@@ -14,6 +14,9 @@
 - gateway_usd.<dataset>: billed USD summed over a batch-1 gateway log, skipping records the
   gateway could not price (cost null) and, for luna, records at or after the sign-off cut-off
   that tools/study-window.mjs declares (2026-10-04T06:01:57Z, a runaway process).
+- h3_mixed: H3 from the filed mixed-effects fit (analysis/mixed-effects-6model-2026-10-04.json):
+  z = b1Mixed / seMixed, the two-sided normal p, and p in scientific notation to one significant
+  figure (mantissa, exponent), as the paper prints it.
 - rerun_gateway_usd: billed USD over every gateway log of the counterbalanced re-run, the spend
   its $70 stop counted (notes/plans/RERUN-PLAN.md): the ten matrices of artifact/MANIFEST.json
   `matrices` (rerun-b1, rerun-b, rerun-aa), the two smoke matrices (rerun-smoke, rerun-aa-smoke)
@@ -23,6 +26,7 @@
 """
 
 import json
+import math
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -30,6 +34,7 @@ from pathlib import Path
 PANEL = "analysis/cost-panel-6model-2026-10-03.json"
 RERUN = "analysis/rerun-compare-2026-10-11.json"
 PREFIX = "analysis/prefix-retention.json"
+MIXED = "analysis/mixed-effects-6model-2026-10-04.json"
 ARM = "dsh:native"
 GATEWAYS = {
     "luna-full": ("results/cmure98qw-openai-gateway.jsonl", "2026-10-04T06:01:57+00:00"),
@@ -72,6 +77,17 @@ def slot_spread(panel: list, dataset: str) -> float:
     return max(means) / min(means)
 
 
+def h3_mixed() -> dict:
+    fit = read_json(MIXED)["sections"]["H3"]
+    z = fit["b1Mixed"] / fit["seMixed"]
+    p = math.erfc(z / math.sqrt(2))
+    exponent = math.floor(math.log10(p))
+    mantissa = round(p / 10 ** exponent)
+    if mantissa == 10:
+        mantissa, exponent = 1, exponent + 1
+    return {"z": z, "p": p, "p_sci_mantissa": mantissa, "p_sci_exponent": exponent}
+
+
 def main() -> None:
     panel = read_json(PANEL)["panel"]
     datasets = sorted({c["dataset"] for c in panel})
@@ -87,6 +103,7 @@ def main() -> None:
         "r1_adjusted": {"providers": len(both), "matches": sum(b1[m] == tb[m] for m in both)},
         "slot_spread": {d: slot_spread(panel, d) for d in datasets},
         "order_effect": {"rows": len(rows), "rows_excluding_zero": len(excluding)},
+        "h3_mixed": h3_mixed(),
         "cold_cheaper": sum(p["coldDiffPct"] < 0 for p in read_json(PREFIX)["paired"]),
         "gateway_usd": {d: gateway_usd(*g) for d, g in GATEWAYS.items()},
         "rerun_gateway_usd": sum(gateway_usd(p, None) for p in RERUN_LOGS),

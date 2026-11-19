@@ -19,7 +19,7 @@ PY
   done
 done
 derived=(--input analysis/cost-panel-6model-2026-10-03.json --input analysis/rerun-compare-2026-10-11.json
-  --input analysis/prefix-retention.json)
+  --input analysis/prefix-retention.json --input analysis/mixed-effects-6model-2026-10-04.json)
 for d in ds-full glm-flash haiku-full luna-full qwen-full sonnet-full; do
   derived+=(--input "results/$d/runs.jsonl")
 done
