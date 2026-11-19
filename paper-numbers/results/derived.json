@@ -15,6 +15,12 @@
   "rows": 9,
   "rows_excluding_zero": 1
  },
+ "h3_mixed": {
+  "z": 3.876326317620456,
+  "p": 0.00010604544370662035,
+  "p_sci_mantissa": 1,
+  "p_sci_exponent": -4
+ },
  "cold_cheaper": 4,
  "gateway_usd": {
   "luna-full": 3.8889099999999877,
@@ -40,6 +46,10 @@
    {
     "path": "analysis/prefix-retention.json",
     "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+   },
+   {
+    "path": "analysis/mixed-effects-6model-2026-10-04.json",
+    "sha256": "a9d2c2637da2e70a7fc725786b3290d91927543fd4635cbaa01d3f138f9a69c6"
    },
    {
     "path": "results/ds-full/runs.jsonl",
@@ -130,8 +140,8 @@
     "sha256": "18f5ee5289cb15d06e6f498598d0047908650df9711cc13a9f672b89ff5cd41f"
    }
   ],
-  "commit": "09da330d07c7ce1f7fd94c69dd54b51b220892f4",
-  "now": "2026-11-19T18:24:22+00:00",
+  "commit": "200b38ca786149343333cef218ce0ae2da68311a",
+  "now": "2026-11-19T19:17:58+00:00",
   "osaudit": "0.7.0"
  }
 }
