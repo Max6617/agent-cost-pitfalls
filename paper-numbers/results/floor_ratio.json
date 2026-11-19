@@ -1,0 +1,39 @@
+{
+ "h1_b1_pooled": 0.004672676577217252,
+ "h1_ci_lo": -0.005663805700693583,
+ "h1_ci_hi": 0.015785735064274248,
+ "secondary_gap_pp": 42.26741753710617,
+ "haiku_price_ratio": 5,
+ "glm_price_ratio": 3.3333333333333335,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/floor.json",
+   "floor_ratio"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/floor.json",
+    "sha256": "3491f00f92ff29dbf12f0e53bf8441911dd20e60c04cd6baa892ee00729557d6"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/hypotheses-6model-2026-10-09.json",
+    "sha256": "0d2d0938282d3bd6ff72eb0996bfe8ea60f548f7fe3b470dc02576e01c4c9d67"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:21+00:00",
+  "osaudit": "0.7.0"
+ }
+}

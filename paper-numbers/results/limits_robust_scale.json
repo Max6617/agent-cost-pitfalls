@@ -1,0 +1,38 @@
+{
+ "batch1_log_wins": 3,
+ "tasksb_log_wins": 6,
+ "batch1_models": 6,
+ "tasksb_models": 6,
+ "batch1_glm_rmse_ratio": 1.8170892392536973,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_robust_scale"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/position-adjust-6model-2026-10-09.json",
+    "sha256": "2387fadb2f9f185ecc1bf43d97b19f8ff6910a7845368fab8e96934fa22c0294"
+   },
+   {
+    "path": "analysis/position-adjust-batchb-2026-10-09.json",
+    "sha256": "92a6d44d4b9d6cc8d7a85a6b73a485ab64694e0f3ad254dc4e1ec229ea7e9505"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:25+00:00",
+  "osaudit": "0.7.0"
+ }
+}

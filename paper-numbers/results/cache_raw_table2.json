@@ -1,0 +1,53 @@
+{
+ "deepseek_out_in_ratio": 4,
+ "deepseek_ptc_vs_native_pct": 0.12594372547675967,
+ "deepseek_ci_lo_pct": -8.898534439895037,
+ "deepseek_ci_hi_pct": 9.76010954913175,
+ "glm_out_in_ratio": 3.3333333333333335,
+ "glm_ptc_vs_native_pct": -20.75183285570261,
+ "glm_ci_lo_pct": -44.29844542338426,
+ "glm_ci_hi_pct": -2.793193005906967,
+ "qwen_out_in_ratio": 3.1333333333333333,
+ "qwen_ptc_vs_native_pct": 30.669685095033394,
+ "qwen_ci_lo_pct": 10.022270632353246,
+ "qwen_ci_hi_pct": 53.78834004726409,
+ "haiku_out_in_ratio": 5,
+ "haiku_ptc_vs_native_pct": 53.838742137015714,
+ "haiku_ci_lo_pct": 31.252882542938664,
+ "haiku_ci_hi_pct": 76.73177992356119,
+ "sonnet_out_in_ratio": 5,
+ "sonnet_ptc_vs_native_pct": 9.509946993348883,
+ "sonnet_ci_lo_pct": -0.08346600508117251,
+ "sonnet_ci_hi_pct": 18.007160258900868,
+ "luna_out_in_ratio": 5,
+ "luna_ptc_vs_native_pct": 1.1980649138460746,
+ "luna_ci_lo_pct": -8.418191689364738,
+ "luna_ci_hi_pct": 11.285952800609214,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/cache.json",
+   "cache_raw_table2"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/cache.json",
+    "sha256": "e35aaca3306b8aa9190886c5b94ea12c82c934d2ea88755336e030b2196a0d3e"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:18+00:00",
+  "osaudit": "0.7.0"
+ }
+}

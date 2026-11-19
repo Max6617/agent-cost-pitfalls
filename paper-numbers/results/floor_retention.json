@@ -1,0 +1,35 @@
+{
+ "qwen_diff": -0.06460391760487288,
+ "qwen_ci_lo": -0.07814579767902032,
+ "qwen_ci_hi": -0.051558490311721335,
+ "haiku_diff": -0.005127806169298514,
+ "lowest_other_retention_glm_native": 0.9934495315444997,
+ "highest_other_retention_sonnet_ptc": 0.9998197443999202,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/floor.json",
+   "floor_retention"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/floor.json",
+    "sha256": "3491f00f92ff29dbf12f0e53bf8441911dd20e60c04cd6baa892ee00729557d6"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/prefix-retention-ci-2026-10-10.json",
+    "sha256": "39eafa49f9004278b32faac90ccff8b6d8634abb824f51194f5aeba8baf0950e"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:22+00:00",
+  "osaudit": "0.7.0"
+ }
+}

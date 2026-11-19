@@ -1,0 +1,67 @@
+{
+ "haiku_cells_analysed": 353,
+ "haiku_tasks": 18,
+ "design_tasks": 40,
+ "haiku_native_cells": 36,
+ "haiku_native_solved": 26,
+ "haiku_native_cost_per_cell": 0.2851098638888889,
+ "haiku_native_cost_per_solved": 0.3947675038461539,
+ "haiku_ptc_cells": 36,
+ "haiku_ptc_solved": 17,
+ "haiku_ptc_cost_per_cell": 0.3028079125,
+ "haiku_ptc_cost_per_solved": 0.6412402852941177,
+ "sonnet_native_cells": 80,
+ "sonnet_native_solved": 78,
+ "sonnet_native_cost_per_cell": 0.13633031875000004,
+ "sonnet_native_cost_per_solved": 0.139825967948718,
+ "sonnet_ptc_cells": 80,
+ "sonnet_ptc_solved": 77,
+ "sonnet_ptc_cost_per_cell": 0.13561097,
+ "sonnet_ptc_cost_per_solved": 0.14089451428571428,
+ "haiku_native_only": 10,
+ "haiku_ptc_only": 1,
+ "haiku_mcnemar_p": 0.01171875,
+ "haiku_ci_lo_pct": -7.349853371825447,
+ "haiku_ci_hi_pct": 19.665902961715027,
+ "sonnet_ci_lo_pct": -7.921625650860584,
+ "sonnet_ci_hi_pct": 5.980898141192091,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/appendix.json",
+   "appx_extension"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/appendix.json",
+    "sha256": "2a2b551cd8d36a9fca28f95b3d0f8206c082a6339b2e8d8163775e94a1c4d601"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-batchb-2026-10-09.json",
+    "sha256": "5916e990fce28314567449e5ad999e4643d6b424ca1399acb96f792e04551df0"
+   },
+   {
+    "path": "analysis/quality-guard-2026-10-10.json",
+    "sha256": "63e1971afc7089a3ae6afae8c1997ccb50f6088144970dfaae74dca774d0d762"
+   },
+   {
+    "path": "analysis/replication-verdict-batchb-2026-10-09.json",
+    "sha256": "1da2fcedb2d3c5818b424d449091132ad965bbd961892eb685e8f99f832b6d3d"
+   },
+   {
+    "path": "results/batchb-haiku-full/matrix.json",
+    "sha256": "143117e8e1b55fe992543d98a2c56e086540fe056fba2cc8826d66227eea4d02"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:17+00:00",
+  "osaudit": "0.7.0"
+ }
+}

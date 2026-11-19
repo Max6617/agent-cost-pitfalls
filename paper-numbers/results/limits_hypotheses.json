@@ -1,0 +1,43 @@
+{
+ "h1_n": 186,
+ "h1_b1": 0.004672676577217252,
+ "h1_ci_lo": -0.005663805700693583,
+ "h1_ci_hi": 0.015785735064274248,
+ "h2_mean_d": 0.0015075275806451618,
+ "h2_wilcoxon_p": 0.8003973951563239,
+ "h3_b1": 2.228494623655914,
+ "h3_ci_lo": 1.228494623655914,
+ "h3_ci_hi": 3.360215053763441,
+ "h4_b_c": 0.1115692282308979,
+ "h4_ci_lo": 0.06234946432763855,
+ "h4_ci_hi": 0.1713968443969318,
+ "h2_ci_lo": -8.933403225806453e-05,
+ "h2_ci_hi": 0.003559468870967742,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_hypotheses"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/hypotheses-6model-2026-10-09.json",
+    "sha256": "0d2d0938282d3bd6ff72eb0996bfe8ea60f548f7fe3b470dc02576e01c4c9d67"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:24+00:00",
+  "osaudit": "0.7.0"
+ }
+}

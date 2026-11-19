@@ -1,0 +1,41 @@
+{
+ "luna_analysed_cells": 619,
+ "luna_solved": 589,
+ "glm_analysed_cells": 620,
+ "glm_solved": 617,
+ "deepseek_analysed_cells": 620,
+ "deepseek_solved": 619,
+ "qwen_analysed_cells": 620,
+ "qwen_solved": 605,
+ "sonnet_analysed_cells": 620,
+ "sonnet_solved": 618,
+ "haiku_analysed_cells": 620,
+ "haiku_solved": 519,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_table5_solved"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/cost-panel-6model-2026-10-03.json",
+    "sha256": "b6d309e6a6dd9980db48c75cf0887436598be3335d9cc74aef3ac45503b1493e"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:26+00:00",
+  "osaudit": "0.7.0"
+ }
+}

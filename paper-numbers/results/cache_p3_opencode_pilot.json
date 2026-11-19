@@ -1,0 +1,38 @@
+{
+ "opencode_retention_mean": 0.8734946766901848,
+ "opencode_retention_ci_lo": 0.8176429548908325,
+ "opencode_retention_ci_hi": 0.9299168818331489,
+ "haiku_dsh_ptc_retention": 0.99411371715056,
+ "haiku_dsh_native_retention": 0.9996018813752748,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/cache.json",
+   "cache_p3_opencode_pilot"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/cache.json",
+    "sha256": "e35aaca3306b8aa9190886c5b94ea12c82c934d2ea88755336e030b2196a0d3e"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/prefix-retention.json",
+    "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+   },
+   {
+    "path": "analysis/retention-pilot-2026-10-10.json",
+    "sha256": "c2267ba82ffb100ab410bcadfcff691f4b1fc4e19a11803fc7b75ddf5ee6b4c3"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:19+00:00",
+  "osaudit": "0.7.0"
+ }
+}

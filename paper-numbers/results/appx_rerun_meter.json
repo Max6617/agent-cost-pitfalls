@@ -1,0 +1,30 @@
+{
+ "haiku_b1_billed_usd": 20.59656415,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/appendix.json",
+   "appx_rerun_meter"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/appendix.json",
+    "sha256": "2a2b551cd8d36a9fca28f95b3d0f8206c082a6339b2e8d8163775e94a1c4d601"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "results/cmv45au5r-anthropic-gateway.jsonl",
+    "sha256": "25a2e27a54c6a8412fa3a4b6c473e08e55f3447ca2d55c2a73e4c669972b6a9e"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:17+00:00",
+  "osaudit": "0.7.0"
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "glm_chat_usd": 2.1085432699999997,
+ "glm_messages_usd": 2.76796019,
+ "qwen_a_chat_usd": 5.296480824,
+ "qwen_a_messages_usd": 5.502517176,
+ "qwen_b_chat_usd": 0.441526254,
+ "qwen_b_messages_usd": 1.203402184,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_table5_gateway"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "results/cmur3dilf-zai-gateway.jsonl",
+    "sha256": "aaa9831ac56bc29a44738e9dcced066f9a32a3b4fd40b1ba01a99e1f66c177ce"
+   },
+   {
+    "path": "results/cmurlrmga-qwen-gateway.jsonl",
+    "sha256": "931e41d8afa9f2166ba24d5d7271f43709d9a77d8f8e8633900a8ea65e496469"
+   },
+   {
+    "path": "results/cmurygosn-qwen-gateway.jsonl",
+    "sha256": "b25320c65242d95fb773b8cedbf0a1c0cc19488b6751e5dade25a3b962f025d6"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:26+00:00",
+  "osaudit": "0.7.0"
+ }
+}

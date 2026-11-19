@@ -1,0 +1,35 @@
+{
+ "deepseek_pct": -22.64330631140079,
+ "deepseek_ci_lo_pct": -39.76502614841465,
+ "deepseek_ci_hi_pct": -9.1861085903956,
+ "luna_pct": -18.0140036993498,
+ "luna_ci_lo_pct": -25.13562097277336,
+ "luna_ci_hi_pct": -10.609021561883152,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/front.json",
+   "front_tasksb_both_solved"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/front.json",
+    "sha256": "2b1911a19d547dcf3eeab781982989376dfba9f907771a6a6ab21ca276c47e08"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/quality-guard-2026-10-10.json",
+    "sha256": "63e1971afc7089a3ae6afae8c1997ccb50f6088144970dfaae74dca774d0d762"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:23+00:00",
+  "osaudit": "0.7.0"
+ }
+}

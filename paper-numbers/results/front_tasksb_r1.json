@@ -1,0 +1,35 @@
+{
+ "deepseek_rel_pct": -21.758870744592134,
+ "deepseek_ci_lo_pct": -37.46364252855195,
+ "deepseek_ci_hi_pct": -9.384377880751053,
+ "luna_rel_pct": -16.576828106555052,
+ "luna_ci_lo_pct": -24.34527376842558,
+ "luna_ci_hi_pct": -8.549859296234898,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/front.json",
+   "front_tasksb_r1"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/front.json",
+    "sha256": "2b1911a19d547dcf3eeab781982989376dfba9f907771a6a6ab21ca276c47e08"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+    "sha256": "ed6f69e886a7811748a0119e15013b66eced18859172d954aa9c0d07eca2daa1"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:22+00:00",
+  "osaudit": "0.7.0"
+ }
+}

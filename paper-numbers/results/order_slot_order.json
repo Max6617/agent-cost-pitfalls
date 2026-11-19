@@ -1,0 +1,31 @@
+{
+ "ptc_first_slot_blocks": 2,
+ "ptc_blocks": 62,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_slot_order"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "results/ds-full/runs.jsonl",
+    "sha256": "249929dca4df02585f437282782b405092e39972488d045d406d52a2a3fb729d"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:27+00:00",
+  "osaudit": "0.7.0"
+ }
+}

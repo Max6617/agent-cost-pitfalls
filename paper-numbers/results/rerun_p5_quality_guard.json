@@ -1,0 +1,52 @@
+{
+ "b1_haiku_native_solved": 60,
+ "b1_haiku_native_cells": 62,
+ "b1_haiku_ptc_solved": 46,
+ "b1_haiku_native_only": 16,
+ "b1_haiku_ptc_only": 2,
+ "b1_haiku_mcnemar_p": 0.001312255859375,
+ "b1_haiku_per_cell_pct": 53.83874213701576,
+ "b1_haiku_per_solved_pct": 100.65922887436835,
+ "b1_haiku_both_solved_cells": 44,
+ "b1_haiku_both_solved_pct": 67.77452022699339,
+ "b1_haiku_both_solved_ci_lo_pct": 36.67271982490447,
+ "b1_haiku_both_solved_ci_hi_pct": 99.65953375850319,
+ "tb_haiku_per_cell_pct": 6.2074487251020605,
+ "tb_haiku_per_solved_pct": 62.43492157956789,
+ "tb_haiku_per_task_ci_lo_pct": -7.349853371825447,
+ "tb_haiku_per_task_ci_hi_pct": 19.665902961715027,
+ "tb_haiku_both_solved_pct": 8.516852799368191,
+ "tb_haiku_both_solved_ci_lo_pct": -11.27054659864768,
+ "tb_haiku_both_solved_ci_hi_pct": 27.221548282754167,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/rerun.json",
+   "rerun_p5_quality_guard"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/rerun.json",
+    "sha256": "d908ff590199f763a083daa938c939e63b4fdb45ffcc87ada522b8bd96c2ca34"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/position-adjust-batchb-2026-10-09.json",
+    "sha256": "92a6d44d4b9d6cc8d7a85a6b73a485ab64694e0f3ad254dc4e1ec229ea7e9505"
+   },
+   {
+    "path": "analysis/quality-guard-2026-10-10.json",
+    "sha256": "63e1971afc7089a3ae6afae8c1997ccb50f6088144970dfaae74dca774d0d762"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:29+00:00",
+  "osaudit": "0.7.0"
+ }
+}

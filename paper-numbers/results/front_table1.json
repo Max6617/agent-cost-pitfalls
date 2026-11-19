@@ -1,0 +1,42 @@
+{
+ "deepseek_out_in": 4,
+ "glm_out_in": 3.3333333333333335,
+ "qwen_out_in": 3.1333333333333333,
+ "haiku_out_in": 5,
+ "sonnet_out_in": 5,
+ "luna_out_in": 5,
+ "haiku_miss_usd_per_m": 1,
+ "haiku_hit_usd_per_m": 0.1,
+ "haiku_out_usd_per_m": 5,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/front.json",
+   "front_table1"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/front.json",
+    "sha256": "2b1911a19d547dcf3eeab781982989376dfba9f907771a6a6ab21ca276c47e08"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   },
+   {
+    "path": "analysis/retention-pilot-2026-10-10.json",
+    "sha256": "c2267ba82ffb100ab410bcadfcff691f4b1fc4e19a11803fc7b75ddf5ee6b4c3"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:24+00:00",
+  "osaudit": "0.7.0"
+ }
+}

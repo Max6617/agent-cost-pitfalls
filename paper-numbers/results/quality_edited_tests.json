@@ -1,0 +1,46 @@
+{
+ "luna_b1_analysed_runs": 619,
+ "luna_b1_edited": 81,
+ "haiku_b1_edited": 5,
+ "glm_b1_edited": 2,
+ "qwen_b1_edited": 1,
+ "luna_b1_solved": 589,
+ "luna_b1_unedited_solved": 510,
+ "luna_tb_runs": 800,
+ "luna_tb_edited": 455,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/quality.json",
+   "quality_edited_tests"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/quality.json",
+    "sha256": "d0479d307587dc9e3aed88cc5996fbdda357e5ac7ae0ef77c0da0c41fe270366"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   },
+   {
+    "path": "analysis/test-edit-incidence-2026-10-10.json",
+    "sha256": "ac48b8bb778ae9df47d478a7d87b1214b5fc2c8b0327f6fb4f2606c0b5abbd13"
+   },
+   {
+    "path": "analysis/test-edit-sensitivity-6model-2026-10-04.json",
+    "sha256": "0fd7d056d397e909a8035326aec60ad276a2e109ce62b323603f233b10c6c060"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:28+00:00",
+  "osaudit": "0.7.0"
+ }
+}

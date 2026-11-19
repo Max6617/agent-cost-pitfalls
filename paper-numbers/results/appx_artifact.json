@@ -1,0 +1,31 @@
+{
+ "manifest_inputs": 100,
+ "manifest_outputs": 26,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/appendix.json",
+   "appx_artifact"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/appendix.json",
+    "sha256": "2a2b551cd8d36a9fca28f95b3d0f8206c082a6339b2e8d8163775e94a1c4d601"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:18+00:00",
+  "osaudit": "0.7.0"
+ }
+}

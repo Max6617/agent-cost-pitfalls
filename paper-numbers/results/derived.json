@@ -1,0 +1,80 @@
+{
+ "r1_adjusted": {
+  "providers": 4,
+  "matches": 1
+ },
+ "slot_spread": {
+  "ds-full": 2.0460153482178662,
+  "glm-flash": 3.8185685809083876,
+  "haiku-full": 2.877518084719795,
+  "luna-full": 2.1381536810763646,
+  "qwen-full": 1.7496240814589736,
+  "sonnet-full": 1.9019421220933215
+ },
+ "order_effect": {
+  "rows": 9,
+  "rows_excluding_zero": 1
+ },
+ "cold_cheaper": 4,
+ "gateway_usd": {
+  "luna-full": 3.8889099999999877,
+  "ds-full": 4.954023894000001
+ },
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/derived.py"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "analysis/cost-panel-6model-2026-10-03.json",
+    "sha256": "b6d309e6a6dd9980db48c75cf0887436598be3335d9cc74aef3ac45503b1493e"
+   },
+   {
+    "path": "analysis/rerun-compare-2026-10-11.json",
+    "sha256": "873d7da2998a95e95975871d1ca0e41a9fe2425801fb45c8ca7a1b84ad510bac"
+   },
+   {
+    "path": "analysis/prefix-retention.json",
+    "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+   },
+   {
+    "path": "results/ds-full/runs.jsonl",
+    "sha256": "249929dca4df02585f437282782b405092e39972488d045d406d52a2a3fb729d"
+   },
+   {
+    "path": "results/glm-flash/runs.jsonl",
+    "sha256": "64797b8b46d1b7257555e8cce1594bd19785c429411184d9702bd91b581741b5"
+   },
+   {
+    "path": "results/haiku-full/runs.jsonl",
+    "sha256": "bf07e20f5de729289f091d515733433548b7730edfc0d0833316c0a418efe661"
+   },
+   {
+    "path": "results/luna-full/runs.jsonl",
+    "sha256": "637208d97961e9f4790725e29f7615b02ab5c979ded474e14d3da90a573e7b5f"
+   },
+   {
+    "path": "results/qwen-full/runs.jsonl",
+    "sha256": "2ed4dc175d043cd3fdeee6ec26820eea4387b9b6d8475b1264f452b0c8f00ca7"
+   },
+   {
+    "path": "results/sonnet-full/runs.jsonl",
+    "sha256": "eb2c8d57035c1ac1a607a5979c2e579bf004977526baa71ae1e134bbe37b0b41"
+   },
+   {
+    "path": "results/cmure98qw-openai-gateway.jsonl",
+    "sha256": "f00f69b922ab6dd52c60a7e239a341b91d5ca5325a0388f366577a411356f65e"
+   },
+   {
+    "path": "results/cmuquohyu-deepseek-gateway.jsonl",
+    "sha256": "c3c014912898d44c1b9d3d31c7fb5354f8bb7f0458e7da094b6bc85bf6c23e4a"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:29+00:00",
+  "osaudit": "0.7.0"
+ }
+}

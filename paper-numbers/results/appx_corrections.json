@@ -1,0 +1,52 @@
+{
+ "haiku_withdrawn_standardised_pct": 25.41,
+ "haiku_slot_fe_pct": 52.9659,
+ "haiku_paired_additive_pct": 51.78958057953924,
+ "withdrawn_placebo_floor_pct": 7.685811738178333,
+ "haiku_external_retention_withdrawn": 0.5595026521016987,
+ "sonnet_external_retention_withdrawn": 0.4514633251826254,
+ "batch1_iters": 200000,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/appendix.json",
+   "appx_corrections"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/appendix.json",
+    "sha256": "2a2b551cd8d36a9fca28f95b3d0f8206c082a6339b2e8d8163775e94a1c4d601"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/mixed-effects-6model-2026-10-04.json",
+    "sha256": "a9d2c2637da2e70a7fc725786b3290d91927543fd4635cbaa01d3f138f9a69c6"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   },
+   {
+    "path": "analysis/panel-analysis.json",
+    "sha256": "02b2c4e2b2f1d5658336354a7fc2cb19143684b0b81c2db169df11b15cee2ffa"
+   },
+   {
+    "path": "analysis/position-adjust-6model-2026-10-09.json",
+    "sha256": "2387fadb2f9f185ecc1bf43d97b19f8ff6910a7845368fab8e96934fa22c0294"
+   },
+   {
+    "path": "analysis/prefix-retention.json",
+    "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:18+00:00",
+  "osaudit": "0.7.0"
+ }
+}

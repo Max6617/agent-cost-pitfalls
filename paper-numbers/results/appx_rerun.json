@@ -1,0 +1,67 @@
+{
+ "b1_tasks": 31,
+ "b1_seeds": 2,
+ "b1_cells": 124,
+ "b_tasks": 40,
+ "b_seeds": 2,
+ "b_cells": 160,
+ "aa_cells": 124,
+ "qwen_b_cells": 160,
+ "qwen_b_records": 161,
+ "qwen_b_resume_planned_runs": 37,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/appendix.json",
+   "appx_rerun"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/appendix.json",
+    "sha256": "2a2b551cd8d36a9fca28f95b3d0f8206c082a6339b2e8d8163775e94a1c4d601"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "results/rerun-aa-ds-full/collection.json",
+    "sha256": "ec514c2cda2197b6cdb38b0933e5d951bd41f271d4eda25d40055d95cfb88611"
+   },
+   {
+    "path": "results/rerun-b-ds-full/collection.json",
+    "sha256": "212e7f38e70df94417a2a3a4ddd01e47d8ce09deda3fa667a99397ba180e1930"
+   },
+   {
+    "path": "results/rerun-b-ds-full/matrix.json",
+    "sha256": "80638bbfb0014a64061f2bd1b68ae3b8099a8056c1547d948f70cf28a4e67e47"
+   },
+   {
+    "path": "results/rerun-b-qwen-full/collection.json",
+    "sha256": "549d9a430697c028f470e6174e02d563cbf0a34bfbecf6a7ad83c8956070a15d"
+   },
+   {
+    "path": "results/rerun-b-qwen-full/matrix.json",
+    "sha256": "8c4a71a1c99d0faad06a4f4c5669fe0ab9e9eda85143f5be5d351373f2f10e74"
+   },
+   {
+    "path": "results/rerun-b-qwen-full/runs.jsonl",
+    "sha256": "331ad6f4c06b8811812b730148e8fbc5eb0a1fc1e650c3e3520447ecfca91c97"
+   },
+   {
+    "path": "results/rerun-b1-ds-full/collection.json",
+    "sha256": "62f39509ad6c2197db978a076214afa6da4528ba3d9b23e8a390f1edf4c4d1dc"
+   },
+   {
+    "path": "results/rerun-b1-ds-full/matrix.json",
+    "sha256": "bdec0e6ecd0da61fbe16bff30413b2c87ce051dcba9988858aeb0df08a94db19"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:17+00:00",
+  "osaudit": "0.7.0"
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "rerun_b1_ds_full_cells": 124,
+ "rerun_b1_glm_flash_cells": 124,
+ "rerun_b1_qwen_full_cells": 124,
+ "rerun_b1_luna_full_cells": 124,
+ "rerun_b1_haiku_full_cells": 124,
+ "rerun_b_ds_full_cells": 160,
+ "rerun_b_glm_flash_cells": 160,
+ "rerun_b_qwen_full_cells": 160,
+ "rerun_b_luna_full_cells": 160,
+ "q2_rows": 8,
+ "q2_closer_to_adjusted": 5,
+ "glm_b1_rerun_pct": 15.384447387962735,
+ "haiku_b1_order_effect_pct": -49.03142922649751,
+ "glm_b1_rerun_ci_lo_pct": 0.9695092813284315,
+ "haiku_b1_order_effect_ci_lo_pct": -97.12298031097221,
+ "glm_b1_rerun_ci_hi_pct": 32.948835661167514,
+ "haiku_b1_order_effect_ci_hi_pct": -3.209442514943841,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_rerun"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/rerun-compare-2026-10-11.json",
+    "sha256": "873d7da2998a95e95975871d1ca0e41a9fe2425801fb45c8ca7a1b84ad510bac"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:28+00:00",
+  "osaudit": "0.7.0"
+ }
+}

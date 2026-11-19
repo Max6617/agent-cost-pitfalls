@@ -1,0 +1,61 @@
+{
+ "glm_native_slot0_blocks": 3,
+ "glm_native_slot0_long_horizon_webhook_dedup_s2_usd": 0.00301521,
+ "glm_native_slot0_repo_wide_log_event_migration_s2_usd": 0.00645647,
+ "glm_native_slot0_single_step_csv_quoting_s2_usd": 0.00435921,
+ "glm_native_slot4_blocks": 5,
+ "glm_native_slot4_fetch_heavy_duration_parse_s2_usd": 0.01046373,
+ "glm_native_slot4_fetch_heavy_json_pointer_patch_s2_usd": 0.01138825,
+ "glm_native_slot4_multi_file_config_precedence_s2_usd": 0.05683018,
+ "glm_native_slot4_repo_wide_log_event_migration_s1_usd": 0.00558212,
+ "glm_native_slot4_single_step_parse_negative_s1_usd": 0.00375939,
+ "qwen_native_slot6_blocks": 4,
+ "qwen_native_slot6_example_fix_s2_usd": 0.00664013,
+ "qwen_native_slot6_long_horizon_pagination_cursor_s2_usd": 0.00853029,
+ "qwen_native_slot6_repo_wide_error_type_migration_s1_usd": 0.02435473,
+ "qwen_native_slot6_single_step_rate_limit_window_s1_usd": 0.00952138,
+ "qwen_native_slot8_blocks": 8,
+ "qwen_native_slot8_multi_file_cache_invalidation_s1_usd": 0.02024889,
+ "qwen_native_slot8_multi_file_discount_stacking_s2_usd": 0.00961286,
+ "qwen_native_slot8_multi_file_event_bus_ordering_s1_usd": 0.00777339,
+ "qwen_native_slot8_multi_file_feature_flags_s1_usd": 0.01773453,
+ "qwen_native_slot8_repo_wide_config_defaults_sweep_s2_usd": 0.01714304,
+ "qwen_native_slot8_repo_wide_error_type_migration_s2_usd": 0.0495659,
+ "qwen_native_slot8_repo_wide_money_formatting_s2_usd": 0.03254885,
+ "qwen_native_slot8_repo_wide_timestamp_normalisation_s2_usd": 0.01699852,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_slot_spread"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/cost-panel-6model-2026-10-03.json",
+    "sha256": "b6d309e6a6dd9980db48c75cf0887436598be3335d9cc74aef3ac45503b1493e"
+   },
+   {
+    "path": "results/glm-flash/runs.jsonl",
+    "sha256": "64797b8b46d1b7257555e8cce1594bd19785c429411184d9702bd91b581741b5"
+   },
+   {
+    "path": "results/qwen-full/runs.jsonl",
+    "sha256": "2ed4dc175d043cd3fdeee6ec26820eea4387b9b6d8475b1264f452b0c8f00ca7"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:27+00:00",
+  "osaudit": "0.7.0"
+ }
+}

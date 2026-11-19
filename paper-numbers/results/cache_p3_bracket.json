@@ -1,0 +1,37 @@
+{
+ "batch1_unrecorded_requests": 6669,
+ "batch1_all_miss_usd": 266.8673,
+ "ledger_usd": 144.33,
+ "haiku_all_miss_usd": 143.3512,
+ "batch1_low_usd": 114.7976,
+ "batch1_reconciled_high_usd": 144.33,
+ "implied_cache_read_share": 0.1942,
+ "dsh_hit_share_pooled": 0.9292,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/cache.json",
+   "cache_p3_bracket"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/cache.json",
+    "sha256": "e35aaca3306b8aa9190886c5b94ea12c82c934d2ea88755336e030b2196a0d3e"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/anthropic-cost-bracket-2026-10-10.json",
+    "sha256": "09d7f61e0cc763e999939d8f37e0afb4d672eaf20487099300557e5bf5c183e1"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:19+00:00",
+  "osaudit": "0.7.0"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "batch1_median_rho": 0.23809523809523814,
+ "batch1_permutation_p": 0.046747662616869155,
+ "tasksb_median_rho": 0.023809523809523836,
+ "batch1_adjacent_pairs": 54,
+ "batch1_tie_fraction": 0.7407407407407407,
+ "tasksb_tie_fraction": 0.6111111111111112,
+ "b1_dsh_pairs_native__ptc": 3,
+ "b1_dsh_ties_native__ptc": 2,
+ "b1_dsh_pairs_native__native_opt": 1,
+ "b1_dsh_ties_native__native_opt": 1,
+ "b1_dsh_pairs_native__ptc_opt": 0,
+ "b1_dsh_ties_native__ptc_opt": 0,
+ "b1_dsh_pairs_native__native_terse": 0,
+ "b1_dsh_ties_native__native_terse": 0,
+ "b1_dsh_pairs_native__ptc_terse": 0,
+ "b1_dsh_ties_native__ptc_terse": 0,
+ "b1_dsh_pairs_ptc__native": 0,
+ "b1_dsh_ties_ptc__native": 0,
+ "b1_dsh_pairs_ptc__native_opt": 0,
+ "b1_dsh_ties_ptc__native_opt": 0,
+ "b1_dsh_pairs_ptc__ptc_opt": 4,
+ "b1_dsh_ties_ptc__ptc_opt": 3,
+ "b1_dsh_pairs_ptc__native_terse": 0,
+ "b1_dsh_ties_ptc__native_terse": 0,
+ "b1_dsh_pairs_ptc__ptc_terse": 0,
+ "b1_dsh_ties_ptc__ptc_terse": 0,
+ "b1_dsh_pairs_native_opt__native": 3,
+ "b1_dsh_ties_native_opt__native": 3,
+ "b1_dsh_pairs_native_opt__ptc": 0,
+ "b1_dsh_ties_native_opt__ptc": 0,
+ "b1_dsh_pairs_native_opt__ptc_opt": 0,
+ "b1_dsh_ties_native_opt__ptc_opt": 0,
+ "b1_dsh_pairs_native_opt__native_terse": 0,
+ "b1_dsh_ties_native_opt__native_terse": 0,
+ "b1_dsh_pairs_native_opt__ptc_terse": 1,
+ "b1_dsh_ties_native_opt__ptc_terse": 1,
+ "b1_dsh_pairs_ptc_opt__native": 1,
+ "b1_dsh_ties_ptc_opt__native": 1,
+ "b1_dsh_pairs_ptc_opt__ptc": 0,
+ "b1_dsh_ties_ptc_opt__ptc": 0,
+ "b1_dsh_pairs_ptc_opt__native_opt": 2,
+ "b1_dsh_ties_ptc_opt__native_opt": 2,
+ "b1_dsh_pairs_ptc_opt__native_terse": 0,
+ "b1_dsh_ties_ptc_opt__native_terse": 0,
+ "b1_dsh_pairs_ptc_opt__ptc_terse": 0,
+ "b1_dsh_ties_ptc_opt__ptc_terse": 0,
+ "b1_dsh_pairs_native_terse__native": 1,
+ "b1_dsh_ties_native_terse__native": 1,
+ "b1_dsh_pairs_native_terse__ptc": 0,
+ "b1_dsh_ties_native_terse__ptc": 0,
+ "b1_dsh_pairs_native_terse__native_opt": 0,
+ "b1_dsh_ties_native_terse__native_opt": 0,
+ "b1_dsh_pairs_native_terse__ptc_opt": 1,
+ "b1_dsh_ties_native_terse__ptc_opt": 0,
+ "b1_dsh_pairs_native_terse__ptc_terse": 3,
+ "b1_dsh_ties_native_terse__ptc_terse": 2,
+ "b1_dsh_pairs_ptc_terse__native": 1,
+ "b1_dsh_ties_ptc_terse__native": 1,
+ "b1_dsh_pairs_ptc_terse__ptc": 1,
+ "b1_dsh_ties_ptc_terse__ptc": 0,
+ "b1_dsh_pairs_ptc_terse__native_opt": 1,
+ "b1_dsh_ties_ptc_terse__native_opt": 0,
+ "b1_dsh_pairs_ptc_terse__ptc_opt": 0,
+ "b1_dsh_ties_ptc_terse__ptc_opt": 0,
+ "b1_dsh_pairs_ptc_terse__native_terse": 1,
+ "b1_dsh_ties_ptc_terse__native_terse": 1,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/floor.json",
+   "floor_rankings"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/floor.json",
+    "sha256": "3491f00f92ff29dbf12f0e53bf8441911dd20e60c04cd6baa892ee00729557d6"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   },
+   {
+    "path": "analysis/panel-analysis-batchb-2026-10-09.json",
+    "sha256": "5916e990fce28314567449e5ad999e4643d6b424ca1399acb96f792e04551df0"
+   },
+   {
+    "path": "analysis/ranking-adjusted-2026-10-10.json",
+    "sha256": "9ca42b2f73689cd5b73ff155b124a821657c9e93a8ed20bc0b5d93f333fa226e"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:22+00:00",
+  "osaudit": "0.7.0"
+ }
+}

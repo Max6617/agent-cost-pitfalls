@@ -1,0 +1,35 @@
+{
+ "seeds": 20,
+ "providers": 4,
+ "qwen_seeds_matching_r1": 0,
+ "glm_seeds_matching_r1": 0,
+ "luna_seeds_matching_r1": 0,
+ "deepseek_seeds_matching_r1": 0,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/floor.json",
+   "floor_seed_stability"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/floor.json",
+    "sha256": "3491f00f92ff29dbf12f0e53bf8441911dd20e60c04cd6baa892ee00729557d6"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/verdict-seed-stability-2026-10-10.json",
+    "sha256": "0804afc53b543ce2648e7064ec87dc517b50dcdff7dfb11879fa7b69ba70f426"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:21+00:00",
+  "osaudit": "0.7.0"
+ }
+}

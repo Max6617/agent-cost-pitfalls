@@ -1,0 +1,58 @@
+{
+ "batch1_haiku_adjusted_log_pct": 66.13247369898063,
+ "rerun_b1_glm_native_drift_pct": -8.098681955286235,
+ "tasksb_haiku_cells": 353,
+ "tasksb_haiku_tasks": 18,
+ "tasksb_tasks": 40,
+ "coldbilled_models": 6,
+ "rerun_b1_rows": 5,
+ "rerun_b_rows": 4,
+ "batch1_haiku_per_cell_pct": 53.83874213701576,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_text"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/ablations-2026-10-09.json",
+    "sha256": "c8d6dc38f43874c6fda3f5a7b4fe3f82354b5b22239d49af0ca17a1d2e6bd4df"
+   },
+   {
+    "path": "analysis/panel-analysis-batchb-2026-10-09.json",
+    "sha256": "5916e990fce28314567449e5ad999e4643d6b424ca1399acb96f792e04551df0"
+   },
+   {
+    "path": "analysis/position-adjust-6model-2026-10-09.json",
+    "sha256": "2387fadb2f9f185ecc1bf43d97b19f8ff6910a7845368fab8e96934fa22c0294"
+   },
+   {
+    "path": "analysis/prefix-retention.json",
+    "sha256": "3012b6f55060e6eb163a544e4d8c59e08336dce0444a4a5596eec854b9200cd5"
+   },
+   {
+    "path": "analysis/quality-guard-2026-10-10.json",
+    "sha256": "63e1971afc7089a3ae6afae8c1997ccb50f6088144970dfaae74dca774d0d762"
+   },
+   {
+    "path": "analysis/rerun-compare-2026-10-11.json",
+    "sha256": "873d7da2998a95e95975871d1ca0e41a9fe2425801fb45c8ca7a1b84ad510bac"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:24+00:00",
+  "osaudit": "0.7.0"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "batch1_qwen_seed1_pct": 37.43307781861849,
+ "batch1_qwen_seed1_lo": 18.749000901192474,
+ "batch1_qwen_seed1_hi": 57.27941990976505,
+ "batch1_qwen_seed2_pct": 24.036122702802167,
+ "batch1_qwen_seed2_lo": -3.4752507621578284,
+ "batch1_qwen_seed2_hi": 58.27781842890344,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_robust_seeds"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/ablations-2026-10-09.json",
+    "sha256": "c8d6dc38f43874c6fda3f5a7b4fe3f82354b5b22239d49af0ca17a1d2e6bd4df"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:25+00:00",
+  "osaudit": "0.7.0"
+ }
+}

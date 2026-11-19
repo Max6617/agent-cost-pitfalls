@@ -1,0 +1,36 @@
+{
+ "ledger_usd": 144.33,
+ "haiku_low_usd": 64.7656,
+ "haiku_per_run_low_usd": 0.1045,
+ "haiku_cells": 620,
+ "sonnet_low_usd": 50.032,
+ "sonnet_per_run_low_usd": 0.0807,
+ "sonnet_cells": 620,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/order.json",
+   "order_table5_anthropic"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/order.json",
+    "sha256": "32395036c69dca370d2088decd748ca64a4ab8f5f1904400bb232dabee451f84"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/anthropic-cost-bracket-2026-10-10.json",
+    "sha256": "09d7f61e0cc763e999939d8f37e0afb4d672eaf20487099300557e5bf5c183e1"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:26+00:00",
+  "osaudit": "0.7.0"
+ }
+}

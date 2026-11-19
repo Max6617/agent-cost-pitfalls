@@ -1,0 +1,44 @@
+{
+ "batch1_tie_fraction_min": 0.7111111111111111,
+ "batch1_tie_fraction_max": 0.8,
+ "tasksb_tie_fraction_min": 0.5777777777777777,
+ "tasksb_tie_fraction_max": 0.6444444444444445,
+ "batch1_median_rho_min": 0.11904761904761907,
+ "batch1_median_rho_max": 0.2619047619047619,
+ "tasksb_median_rho_min": -0.19047619047619047,
+ "tasksb_median_rho_max": 0.07142857142857145,
+ "batch1_h3_drop_deepseek": 2.206451612903226,
+ "batch1_h3_drop_haiku": 2.703225806451613,
+ "batch1_h3_drop_luna": 1.0096774193548388,
+ "batch1_h3_drop_luna_lo": -0.08064516129032256,
+ "batch1_h3_drop_luna_hi": 2.22258064516129,
+ "tasksb_h3_drop_luna": 6.379166666666666,
+ "tasksb_h3_drop_qwen": 9.641666666666667,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_robust_loo"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/ablations-2026-10-09.json",
+    "sha256": "c8d6dc38f43874c6fda3f5a7b4fe3f82354b5b22239d49af0ca17a1d2e6bd4df"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:25+00:00",
+  "osaudit": "0.7.0"
+ }
+}

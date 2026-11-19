@@ -1,0 +1,60 @@
+{
+ "tasksb_four_h1_b1": -0.012466480214964689,
+ "filed_family_m": 12,
+ "filed_family_cost_rows": 4,
+ "filed_family_solve_rows": 8,
+ "six_model_family_m": 18,
+ "haiku_ptc_cost_p": 4.9999750001249995e-05,
+ "haiku_ptc_terse_solve_p": 0.00014495849609375,
+ "qwen_ptc_cost_p": 0.005604971975140124,
+ "tasksb_family_m": 12,
+ "tasksb_deepseek_cost_p": 0.00010499947500262499,
+ "tasksb_luna_cost_p": 0.00029499852500737496,
+ "rerun_q2_closer_to_adjusted": 5,
+ "rerun_q2_rows": 8,
+ "tasksb_four_h1_ci_lo": -0.02022689818359349,
+ "tasksb_four_h1_ci_hi": -0.00506275536234971,
+ "provenance": {
+  "schema": "https://github.com/ASSERT-KTH/assert-research-agent/blob/main/schemas/provenance-v1.json",
+  "command": [
+   "python3",
+   "paper-numbers/extract.py",
+   "paper-numbers/map/limits.json",
+   "limits_prereg"
+  ],
+  "cwd": ".",
+  "inputs": [
+   {
+    "path": "paper-numbers/map/limits.json",
+    "sha256": "40143810f1d88249ae043e063f84351f7e4babc674ec91dc3a97048bc3ef2411"
+   },
+   {
+    "path": "artifact/MANIFEST.json",
+    "sha256": "4fb06131e121249251150e0c0c698260647368ff35aae705dcd5addb3c62cf68"
+   },
+   {
+    "path": "analysis/hypotheses-batchb-four-2026-10-09.json",
+    "sha256": "3ccd4a5f92d5abc0470e731f650acf4d1cbab76a2095d0cd20643e18290f1897"
+   },
+   {
+    "path": "analysis/panel-analysis-4model-2026-10-03.json",
+    "sha256": "7821e531a121db8483c21513a8e322f97e45e9b76e21dd087ad2e67bd07ef4da"
+   },
+   {
+    "path": "analysis/panel-analysis-6model-2026-10-09.json",
+    "sha256": "db66ae6b878b5e6c860d797ae8bac191d974d5238072a331eab924a3ea7cb27c"
+   },
+   {
+    "path": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+    "sha256": "ed6f69e886a7811748a0119e15013b66eced18859172d954aa9c0d07eca2daa1"
+   },
+   {
+    "path": "analysis/rerun-compare-2026-10-11.json",
+    "sha256": "873d7da2998a95e95975871d1ca0e41a9fe2425801fb45c8ca7a1b84ad510bac"
+   }
+  ],
+  "commit": "d62c52096ab56601180367564d118b968a4ac71e",
+  "now": "2026-11-19T17:52:24+00:00",
+  "osaudit": "0.7.0"
+ }
+}
