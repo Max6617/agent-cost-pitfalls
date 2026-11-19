@@ -102,6 +102,24 @@
     "ciC",
     "hi"
    ]
+  },
+  "h2_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H2",
+    "ciD",
+    "lo"
+   ]
+  },
+  "h2_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H2",
+    "ciD",
+    "hi"
+   ]
   }
  },
  "limits_prereg": {
@@ -223,6 +241,24 @@
    "path": [
     "q2",
     "rows"
+   ]
+  },
+  "tasksb_four_h1_ci_lo": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "tasksb_four_h1_ci_hi": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "hi"
    ]
   }
  },
