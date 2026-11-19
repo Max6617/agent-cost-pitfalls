@@ -1,0 +1,443 @@
+{
+ "cache_raw_table2": {
+  "deepseek_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "ratio"
+   ]
+  },
+  "deepseek_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "relDiffPct"
+   ]
+  },
+  "deepseek_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "ciLoPct"
+   ]
+  },
+  "deepseek_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "ciHiPct"
+   ]
+  },
+  "glm_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ratio"
+   ]
+  },
+  "glm_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "relDiffPct"
+   ]
+  },
+  "glm_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ciLoPct"
+   ]
+  },
+  "glm_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ciHiPct"
+   ]
+  },
+  "qwen_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "ratio"
+   ]
+  },
+  "qwen_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "relDiffPct"
+   ]
+  },
+  "qwen_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "ciLoPct"
+   ]
+  },
+  "qwen_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "ciHiPct"
+   ]
+  },
+  "haiku_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ratio"
+   ]
+  },
+  "haiku_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "relDiffPct"
+   ]
+  },
+  "haiku_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ciLoPct"
+   ]
+  },
+  "haiku_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ciHiPct"
+   ]
+  },
+  "sonnet_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "ratio"
+   ]
+  },
+  "sonnet_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "relDiffPct"
+   ]
+  },
+  "sonnet_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "ciLoPct"
+   ]
+  },
+  "sonnet_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "ciHiPct"
+   ]
+  },
+  "luna_out_in_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    5,
+    "ratio"
+   ]
+  },
+  "luna_ptc_vs_native_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    5,
+    "relDiffPct"
+   ]
+  },
+  "luna_ci_lo_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    5,
+    "ciLoPct"
+   ]
+  },
+  "luna_ci_hi_pct": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    5,
+    "ciHiPct"
+   ]
+  }
+ },
+ "cache_coldbilled_table3": {
+  "deepseek_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    0,
+    "billedDiffPct"
+   ]
+  },
+  "deepseek_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    0,
+    "coldDiffPct"
+   ]
+  },
+  "glm_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    1,
+    "billedDiffPct"
+   ]
+  },
+  "glm_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    1,
+    "coldDiffPct"
+   ]
+  },
+  "luna_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    2,
+    "billedDiffPct"
+   ]
+  },
+  "luna_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    2,
+    "coldDiffPct"
+   ]
+  },
+  "qwen_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    3,
+    "billedDiffPct"
+   ]
+  },
+  "qwen_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    3,
+    "coldDiffPct"
+   ]
+  },
+  "haiku_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    4,
+    "billedDiffPct"
+   ]
+  },
+  "haiku_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    4,
+    "coldDiffPct"
+   ]
+  },
+  "sonnet_billed_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    5,
+    "billedDiffPct"
+   ]
+  },
+  "sonnet_cold_pct": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    5,
+    "coldDiffPct"
+   ]
+  },
+  "qwen_retention_ptc": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    3,
+    "retentionPtc"
+   ]
+  },
+  "qwen_retention_native": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired",
+    3,
+    "retentionNative"
+   ]
+  }
+ },
+ "cache_p3_bracket": {
+  "batch1_unrecorded_requests": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "batch1",
+    "unknownRequests"
+   ]
+  },
+  "batch1_all_miss_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "batch1",
+    "highUsd"
+   ]
+  },
+  "ledger_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "ledger",
+    "usd"
+   ]
+  },
+  "haiku_all_miss_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    0,
+    "highUsd"
+   ]
+  },
+  "batch1_low_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "batch1",
+    "lowUsd"
+   ]
+  },
+  "batch1_reconciled_high_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "batch1",
+    "reconciledHighUsd"
+   ]
+  },
+  "implied_cache_read_share": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "batch1",
+    "impliedCacheReadShare"
+   ]
+  },
+  "dsh_hit_share_pooled": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "dshHitSharePooled"
+   ]
+  }
+ },
+ "cache_p3_opencode_pilot": {
+  "opencode_retention_mean": {
+   "from": "analysis/retention-pilot-2026-10-10.json",
+   "path": [
+    "arms",
+    0,
+    "meanRetention"
+   ]
+  },
+  "opencode_retention_ci_lo": {
+   "from": "analysis/retention-pilot-2026-10-10.json",
+   "path": [
+    "arms",
+    0,
+    "ciLo"
+   ]
+  },
+  "opencode_retention_ci_hi": {
+   "from": "analysis/retention-pilot-2026-10-10.json",
+   "path": [
+    "arms",
+    0,
+    "ciHi"
+   ]
+  },
+  "haiku_dsh_ptc_retention": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "aggregate",
+    "claude-haiku-4.5|ptc",
+    "meanRetention"
+   ]
+  },
+  "haiku_dsh_native_retention": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "aggregate",
+    "claude-haiku-4.5|native",
+    "meanRetention"
+   ]
+  }
+ },
+ "cache_p2_tool_count": {
+  "dsh_native_request_tools": {
+   "from": "results/cmur3dilf-zai-gateway.jsonl",
+   "path": [
+    168,
+    "tools"
+   ]
+  }
+ }
+}

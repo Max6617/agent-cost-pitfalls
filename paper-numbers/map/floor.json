@@ -1,0 +1,1753 @@
+{
+ "floor_aa": {
+  "pass1_mean_billed": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass1",
+    "meanBilled"
+   ]
+  },
+  "pass1_cells": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass1",
+    "cells"
+   ]
+  },
+  "pass1_cache_hit_share": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass1",
+    "cacheHitShare"
+   ]
+  },
+  "pass2_cache_hit_share": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass2",
+    "cacheHitShare"
+   ]
+  },
+  "pass1_fresh_tokens": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass1",
+    "freshTokens"
+   ]
+  },
+  "pass2_fresh_tokens": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "passes",
+    "aa-pass2",
+    "freshTokens"
+   ]
+  },
+  "billed_tasks": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "metrics",
+    "billed",
+    "tasks"
+   ]
+  },
+  "billed_mean_diff": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "metrics",
+    "billed",
+    "mean"
+   ]
+  },
+  "billed_sd": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "metrics",
+    "billed",
+    "sd"
+   ]
+  },
+  "billed_ci_lo": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "metrics",
+    "billed",
+    "ciLo"
+   ]
+  },
+  "billed_ci_hi": {
+   "from": "analysis/aa-placebo-2026-10-10.json",
+   "path": [
+    "metrics",
+    "billed",
+    "ciHi"
+   ]
+  }
+ },
+ "floor_interleaved": {
+  "twin_runs": {
+   "from": "results/rerun-aa-ds-full/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:native-twin"
+   }
+  },
+  "label_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "label",
+    "pct"
+   ]
+  },
+  "label_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "label",
+    "ciLoPct"
+   ]
+  },
+  "label_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "label",
+    "ciHiPct"
+   ]
+  },
+  "half_width_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "label",
+    "halfWidthPct"
+   ]
+  },
+  "carry_over_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "carryOver",
+    "pct"
+   ]
+  },
+  "carry_over_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "carryOver",
+    "ciLoPct"
+   ]
+  },
+  "carry_over_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "carryOver",
+    "ciHiPct"
+   ]
+  },
+  "hit_share_native": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "hitShare",
+    "native"
+   ]
+  },
+  "hit_share_twin": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "aa",
+    "hitShare",
+    "twin"
+   ]
+  }
+ },
+ "floor_batch1_adjusted": {
+  "tasks_per_model": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "tasks"
+   ]
+  },
+  "sonnet_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "raw",
+    "pct"
+   ]
+  },
+  "deepseek_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "glm_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "qwen_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "haiku_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "sonnet_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "luna_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  }
+ },
+ "floor_tasksb_adjusted": {
+  "tasks_per_model": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "tasks"
+   ]
+  },
+  "deepseek_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "glm_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "qwen_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "haiku_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "sonnet_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "luna_adjusted_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  }
+ },
+ "floor_bootstrap": {
+  "sonnet_ci_lo_pct_b5000": {
+   "from": "analysis/panel-analysis-6model-2026-10-03.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "ciLoPct"
+   ]
+  },
+  "sonnet_ci_lo_pct_b200000": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    4,
+    "ciLoPct"
+   ]
+  }
+ },
+ "floor_seed_stability": {
+  "seeds": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "seeds"
+   ],
+   "op": "len"
+  },
+  "providers": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "providers"
+   ],
+   "op": "len"
+  },
+  "qwen_seeds_matching_r1": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "providers",
+    "qwen3.8-flash",
+    "bySeed"
+   ],
+   "op": "count",
+   "where": {
+    "match": true
+   }
+  },
+  "glm_seeds_matching_r1": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "providers",
+    "glm-5.3-flash",
+    "bySeed"
+   ],
+   "op": "count",
+   "where": {
+    "match": true
+   }
+  },
+  "luna_seeds_matching_r1": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "providers",
+    "gpt-6-luna",
+    "bySeed"
+   ],
+   "op": "count",
+   "where": {
+    "match": true
+   }
+  },
+  "deepseek_seeds_matching_r1": {
+   "from": "analysis/verdict-seed-stability-2026-10-10.json",
+   "path": [
+    "providers",
+    "deepseek-flash",
+    "bySeed"
+   ],
+   "op": "count",
+   "where": {
+    "match": true
+   }
+  }
+ },
+ "floor_replication": {
+  "r1_matched": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "R1",
+    "matched"
+   ]
+  },
+  "r1_of": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "R1",
+    "of"
+   ]
+  },
+  "glm_tasksb_bound_to_zero_pp": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "providers",
+    1,
+    "nearestBoundToZeroPp"
+   ]
+  },
+  "haiku_extension_pct": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "extension",
+    0,
+    "relDiffPct"
+   ]
+  },
+  "haiku_extension_tasks": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "extension",
+    0,
+    "tasks"
+   ]
+  },
+  "sonnet_extension_pct": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "extension",
+    1,
+    "relDiffPct"
+   ]
+  },
+  "sonnet_extension_tasks": {
+   "from": "analysis/replication-verdict-batchb-2026-10-09.json",
+   "path": [
+    "extension",
+    1,
+    "tasks"
+   ]
+  }
+ },
+ "floor_table9": {
+  "qwen_ci_lo_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "ciLoPct"
+   ]
+  },
+  "qwen_ci_hi_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    2,
+    "ciHiPct"
+   ]
+  },
+  "glm_ci_lo_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ciLoPct"
+   ]
+  },
+  "glm_ci_hi_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ciHiPct"
+   ]
+  },
+  "luna_ci_lo_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ciLoPct"
+   ]
+  },
+  "luna_ci_hi_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ciHiPct"
+   ]
+  },
+  "deepseek_ci_lo_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "ciLoPct"
+   ]
+  },
+  "deepseek_ci_hi_pct": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    0,
+    "ciHiPct"
+   ]
+  }
+ },
+ "floor_survives": {
+  "rerun_tasksb_deepseek_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "rerun",
+    "pct"
+   ]
+  },
+  "rerun_tasksb_luna_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "rerun",
+    "pct"
+   ]
+  },
+  "rerun_batch1_haiku_per_cell_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "perCellPct"
+   ]
+  },
+  "rerun_batch1_haiku_ptc_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "ptc",
+    "solved"
+   ]
+  },
+  "rerun_batch1_haiku_native_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "native",
+    "solved"
+   ]
+  },
+  "tasksb_haiku_per_solved_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "perSolvedPct"
+   ]
+  }
+ },
+ "floor_ratio": {
+  "h1_b1_pooled": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "b1Pooled"
+   ]
+  },
+  "h1_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "h1_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "hi"
+   ]
+  },
+  "secondary_gap_pp": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "secondaryGapPp"
+   ]
+  },
+  "haiku_price_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ratio"
+   ]
+  },
+  "glm_price_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    1,
+    "ratio"
+   ]
+  }
+ },
+ "floor_requests": {
+  "h3_batch1_b1": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "b1Pooled"
+   ]
+  },
+  "h3_batch1_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "h3_batch1_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "hi"
+   ]
+  },
+  "h3_tasksb_b1": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "b1Pooled"
+   ]
+  },
+  "h3_tasksb_ci_lo": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "h3_tasksb_ci_hi": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "hi"
+   ]
+  },
+  "luna_batch1_native_requests_per_run": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "native",
+    "requestsPerCell"
+   ]
+  },
+  "luna_batch1_ptc_requests_per_run": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "ptc",
+    "requestsPerCell"
+   ]
+  }
+ },
+ "floor_retention": {
+  "qwen_diff": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    3,
+    "diff"
+   ]
+  },
+  "qwen_ci_lo": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    3,
+    "ciLo"
+   ]
+  },
+  "qwen_ci_hi": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    3,
+    "ciHi"
+   ]
+  },
+  "haiku_diff": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    4,
+    "diff"
+   ]
+  },
+  "lowest_other_retention_glm_native": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    1,
+    "retentionNative"
+   ]
+  },
+  "highest_other_retention_sonnet_ptc": {
+   "from": "analysis/prefix-retention-ci-2026-10-10.json",
+   "path": [
+    "models",
+    5,
+    "retentionPtc"
+   ]
+  }
+ },
+ "floor_rankings": {
+  "batch1_median_rho": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A1b",
+    "medianRho"
+   ]
+  },
+  "batch1_permutation_p": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A1b",
+    "permutationP"
+   ]
+  },
+  "tasksb_median_rho": {
+   "from": "analysis/panel-analysis-batchb-2026-10-09.json",
+   "path": [
+    "sections",
+    "A1b",
+    "medianRho"
+   ]
+  },
+  "batch1_adjacent_pairs": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "pairs"
+   ]
+  },
+  "batch1_tie_fraction": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "fraction"
+   ]
+  },
+  "tasksb_tie_fraction": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    "raw",
+    "ties",
+    "fraction"
+   ]
+  },
+  "b1_dsh_pairs_native__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc"
+   }
+  },
+  "b1_dsh_ties_native__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:native-opt"
+   }
+  },
+  "b1_dsh_ties_native__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:native-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc-opt"
+   }
+  },
+  "b1_dsh_ties_native__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:native-terse"
+   }
+  },
+  "b1_dsh_ties_native__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:native-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc-terse"
+   }
+  },
+  "b1_dsh_ties_native__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native",
+    "dearer": "dsh:ptc-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native"
+   }
+  },
+  "b1_dsh_ties_ptc__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native-opt"
+   }
+  },
+  "b1_dsh_ties_ptc__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:ptc-opt"
+   }
+  },
+  "b1_dsh_ties_ptc__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:ptc-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native-terse"
+   }
+  },
+  "b1_dsh_ties_ptc__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:native-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:ptc-terse"
+   }
+  },
+  "b1_dsh_ties_ptc__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc",
+    "dearer": "dsh:ptc-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_opt__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:native"
+   }
+  },
+  "b1_dsh_ties_native_opt__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:native",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_opt__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc"
+   }
+  },
+  "b1_dsh_ties_native_opt__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_opt__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc-opt"
+   }
+  },
+  "b1_dsh_ties_native_opt__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_opt__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:native-terse"
+   }
+  },
+  "b1_dsh_ties_native_opt__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:native-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_opt__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc-terse"
+   }
+  },
+  "b1_dsh_ties_native_opt__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-opt",
+    "dearer": "dsh:ptc-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_opt__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native"
+   }
+  },
+  "b1_dsh_ties_ptc_opt__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_opt__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:ptc"
+   }
+  },
+  "b1_dsh_ties_ptc_opt__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:ptc",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_opt__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native-opt"
+   }
+  },
+  "b1_dsh_ties_ptc_opt__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_opt__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native-terse"
+   }
+  },
+  "b1_dsh_ties_ptc_opt__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:native-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_opt__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:ptc-terse"
+   }
+  },
+  "b1_dsh_ties_ptc_opt__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-opt",
+    "dearer": "dsh:ptc-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_terse__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:native"
+   }
+  },
+  "b1_dsh_ties_native_terse__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:native",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_terse__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc"
+   }
+  },
+  "b1_dsh_ties_native_terse__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_terse__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:native-opt"
+   }
+  },
+  "b1_dsh_ties_native_terse__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:native-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_terse__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc-opt"
+   }
+  },
+  "b1_dsh_ties_native_terse__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_native_terse__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc-terse"
+   }
+  },
+  "b1_dsh_ties_native_terse__ptc_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:native-terse",
+    "dearer": "dsh:ptc-terse",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_terse__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native"
+   }
+  },
+  "b1_dsh_ties_ptc_terse__native": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_terse__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:ptc"
+   }
+  },
+  "b1_dsh_ties_ptc_terse__ptc": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:ptc",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_terse__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native-opt"
+   }
+  },
+  "b1_dsh_ties_ptc_terse__native_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_terse__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:ptc-opt"
+   }
+  },
+  "b1_dsh_ties_ptc_terse__ptc_opt": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:ptc-opt",
+    "distinct": false
+   }
+  },
+  "b1_dsh_pairs_ptc_terse__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native-terse"
+   }
+  },
+  "b1_dsh_ties_ptc_terse__native_terse": {
+   "from": "analysis/ranking-adjusted-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "raw",
+    "ties",
+    "details"
+   ],
+   "op": "count",
+   "where": {
+    "cheaper": "dsh:ptc-terse",
+    "dearer": "dsh:native-terse",
+    "distinct": false
+   }
+  }
+ }
+}

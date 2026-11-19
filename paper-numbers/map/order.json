@@ -1,0 +1,1286 @@
+{
+ "order_table5_anthropic": {
+  "ledger_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "ledger",
+    "usd"
+   ]
+  },
+  "haiku_low_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    0,
+    "lowUsd"
+   ]
+  },
+  "haiku_per_run_low_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    0,
+    "perRunLowUsd"
+   ]
+  },
+  "haiku_cells": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    0,
+    "cells"
+   ]
+  },
+  "sonnet_low_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    1,
+    "lowUsd"
+   ]
+  },
+  "sonnet_per_run_low_usd": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    1,
+    "perRunLowUsd"
+   ]
+  },
+  "sonnet_cells": {
+   "from": "analysis/anthropic-cost-bracket-2026-10-10.json",
+   "path": [
+    "models",
+    1,
+    "cells"
+   ]
+  }
+ },
+ "order_table5_solved": {
+  "luna_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "luna-full",
+    "cells"
+   ]
+  },
+  "luna_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "luna-full",
+    "solved": true
+   }
+  },
+  "glm_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "glm-flash",
+    "cells"
+   ]
+  },
+  "glm_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "glm-flash",
+    "solved": true
+   }
+  },
+  "deepseek_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "ds-full",
+    "cells"
+   ]
+  },
+  "deepseek_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "ds-full",
+    "solved": true
+   }
+  },
+  "qwen_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "qwen-full",
+    "cells"
+   ]
+  },
+  "qwen_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "qwen-full",
+    "solved": true
+   }
+  },
+  "sonnet_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "sonnet-full",
+    "cells"
+   ]
+  },
+  "sonnet_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "sonnet-full",
+    "solved": true
+   }
+  },
+  "haiku_analysed_cells": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "meta",
+    "haiku-full",
+    "cells"
+   ]
+  },
+  "haiku_solved": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "count",
+   "where": {
+    "dataset": "haiku-full",
+    "solved": true
+   }
+  }
+ },
+ "order_table5_gateway": {
+  "glm_chat_usd": {
+   "from": "results/cmur3dilf-zai-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/chat/completions",
+    "status": 200
+   }
+  },
+  "glm_messages_usd": {
+   "from": "results/cmur3dilf-zai-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/messages",
+    "status": 200
+   }
+  },
+  "qwen_a_chat_usd": {
+   "from": "results/cmurlrmga-qwen-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/chat/completions",
+    "status": 200
+   }
+  },
+  "qwen_a_messages_usd": {
+   "from": "results/cmurlrmga-qwen-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/messages",
+    "status": 200
+   }
+  },
+  "qwen_b_chat_usd": {
+   "from": "results/cmurygosn-qwen-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/chat/completions",
+    "status": 200
+   }
+  },
+  "qwen_b_messages_usd": {
+   "from": "results/cmurygosn-qwen-gateway.jsonl",
+   "op": "sum",
+   "field": [
+    "cost",
+    "billedUsd"
+   ],
+   "where": {
+    "path": "/v1/messages",
+    "status": 200
+   }
+  }
+ },
+ "order_slot_spread": {
+  "glm_native_slot0_blocks": {
+   "from": "results/glm-flash/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:native",
+    "position": 0
+   }
+  },
+  "glm_native_slot0_long_horizon_webhook_dedup_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "long-horizon-webhook-dedup|dsh:native|2"
+   }
+  },
+  "glm_native_slot0_repo_wide_log_event_migration_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "repo-wide-log-event-migration|dsh:native|2"
+   }
+  },
+  "glm_native_slot0_single_step_csv_quoting_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "single-step-csv-quoting|dsh:native|2"
+   }
+  },
+  "glm_native_slot4_blocks": {
+   "from": "results/glm-flash/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:native",
+    "position": 4
+   }
+  },
+  "glm_native_slot4_fetch_heavy_duration_parse_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "fetch-heavy-duration-parse|dsh:native|2"
+   }
+  },
+  "glm_native_slot4_fetch_heavy_json_pointer_patch_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "fetch-heavy-json-pointer-patch|dsh:native|2"
+   }
+  },
+  "glm_native_slot4_multi_file_config_precedence_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "multi-file-config-precedence|dsh:native|2"
+   }
+  },
+  "glm_native_slot4_repo_wide_log_event_migration_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "repo-wide-log-event-migration|dsh:native|1"
+   }
+  },
+  "glm_native_slot4_single_step_parse_negative_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "glm-flash",
+    "cell": "single-step-parse-negative|dsh:native|1"
+   }
+  },
+  "qwen_native_slot6_blocks": {
+   "from": "results/qwen-full/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:native",
+    "position": 6
+   }
+  },
+  "qwen_native_slot6_example_fix_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "example-fix|dsh:native|2"
+   }
+  },
+  "qwen_native_slot6_long_horizon_pagination_cursor_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "long-horizon-pagination-cursor|dsh:native|2"
+   }
+  },
+  "qwen_native_slot6_repo_wide_error_type_migration_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "repo-wide-error-type-migration|dsh:native|1"
+   }
+  },
+  "qwen_native_slot6_single_step_rate_limit_window_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "single-step-rate-limit-window|dsh:native|1"
+   }
+  },
+  "qwen_native_slot8_blocks": {
+   "from": "results/qwen-full/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:native",
+    "position": 8
+   }
+  },
+  "qwen_native_slot8_multi_file_cache_invalidation_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "multi-file-cache-invalidation|dsh:native|1"
+   }
+  },
+  "qwen_native_slot8_multi_file_discount_stacking_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "multi-file-discount-stacking|dsh:native|2"
+   }
+  },
+  "qwen_native_slot8_multi_file_event_bus_ordering_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "multi-file-event-bus-ordering|dsh:native|1"
+   }
+  },
+  "qwen_native_slot8_multi_file_feature_flags_s1_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "multi-file-feature-flags|dsh:native|1"
+   }
+  },
+  "qwen_native_slot8_repo_wide_config_defaults_sweep_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "repo-wide-config-defaults-sweep|dsh:native|2"
+   }
+  },
+  "qwen_native_slot8_repo_wide_error_type_migration_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "repo-wide-error-type-migration|dsh:native|2"
+   }
+  },
+  "qwen_native_slot8_repo_wide_money_formatting_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "repo-wide-money-formatting|dsh:native|2"
+   }
+  },
+  "qwen_native_slot8_repo_wide_timestamp_normalisation_s2_usd": {
+   "from": "analysis/cost-panel-6model-2026-10-03.json",
+   "path": [
+    "panel"
+   ],
+   "op": "sum",
+   "field": [
+    "costBilled"
+   ],
+   "where": {
+    "dataset": "qwen-full",
+    "cell": "repo-wide-timestamp-normalisation|dsh:native|2"
+   }
+  }
+ },
+ "order_slot_order": {
+  "ptc_first_slot_blocks": {
+   "from": "results/ds-full/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:ptc",
+    "position": 0
+   }
+  },
+  "ptc_blocks": {
+   "from": "results/ds-full/runs.jsonl",
+   "op": "count",
+   "where": {
+    "arm": "dsh:ptc"
+   }
+  }
+ },
+ "order_table6": {
+  "deepseek_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "raw",
+    "pct"
+   ]
+  },
+  "deepseek_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "deepseek_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "deepseek_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "deepseek_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "deepseek_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "deepseek_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "deepseek_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "deepseek_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "glm_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "raw",
+    "pct"
+   ]
+  },
+  "glm_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "glm_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "glm_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "glm_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "glm_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "glm_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "glm_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "glm_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "qwen_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "raw",
+    "pct"
+   ]
+  },
+  "qwen_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "qwen_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "qwen_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "qwen_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "qwen_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "qwen_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "qwen_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "qwen_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "haiku_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "pct"
+   ]
+  },
+  "haiku_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "haiku_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "haiku_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "haiku_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "haiku_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "haiku_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "haiku_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "haiku_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "sonnet_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "raw",
+    "pct"
+   ]
+  },
+  "sonnet_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "sonnet_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "sonnet_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "sonnet_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "sonnet_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "sonnet_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "sonnet_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "sonnet_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    4,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "luna_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "raw",
+    "pct"
+   ]
+  },
+  "luna_raw_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "luna_raw_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "luna_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "luna_adj_log_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "luna_adj_log_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "luna_adj_additive_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedUsd",
+    "pct"
+   ]
+  },
+  "luna_adj_additive_ci_lo_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedUsd",
+    "ciLoPct"
+   ]
+  },
+  "luna_adj_additive_ci_hi_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedUsd",
+    "ciHiPct"
+   ]
+  },
+  "bootstrap_iters": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "iters"
+   ]
+  }
+ },
+ "order_arm_specific": {
+  "min_se_log": {
+   "from": "analysis/common-f-infeasibility-2026-10-10.json",
+   "path": [
+    "summary",
+    "minArmSpecificSeLog"
+   ]
+  },
+  "max_se_log": {
+   "from": "analysis/common-f-infeasibility-2026-10-10.json",
+   "path": [
+    "summary",
+    "maxArmSpecificSeLog"
+   ]
+  }
+ },
+ "order_rerun": {
+  "rerun_b1_ds_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b1-ds-full"
+   }
+  },
+  "rerun_b1_glm_flash_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b1-glm-flash"
+   }
+  },
+  "rerun_b1_qwen_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b1-qwen-full"
+   }
+  },
+  "rerun_b1_luna_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b1-luna-full"
+   }
+  },
+  "rerun_b1_haiku_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b1-haiku-full"
+   }
+  },
+  "rerun_b_ds_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b-ds-full"
+   }
+  },
+  "rerun_b_glm_flash_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b-glm-flash"
+   }
+  },
+  "rerun_b_qwen_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b-qwen-full"
+   }
+  },
+  "rerun_b_luna_full_cells": {
+   "from": "artifact/MANIFEST.json",
+   "path": [
+    "matrices"
+   ],
+   "op": "sum",
+   "field": [
+    "cells"
+   ],
+   "where": {
+    "dataset": "rerun-b-luna-full"
+   }
+  },
+  "q2_rows": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "q2",
+    "rows"
+   ]
+  },
+  "q2_closer_to_adjusted": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "q2",
+    "closerToAdjusted"
+   ]
+  },
+  "glm_b1_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "pct"
+   ]
+  },
+  "haiku_b1_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "glm_b1_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "haiku_b1_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "glm_b1_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "haiku_b1_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  }
+ }
+}

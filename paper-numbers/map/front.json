@@ -1,0 +1,77 @@
+{
+ "front_tasksb_r1": {
+  "deepseek_rel_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 0, "relDiffPct"]},
+  "deepseek_ci_lo_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 0, "ciLoPct"]},
+  "deepseek_ci_hi_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 0, "ciHiPct"]},
+  "luna_rel_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 3, "relDiffPct"]},
+  "luna_ci_lo_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 3, "ciLoPct"]},
+  "luna_ci_hi_pct": {"from": "analysis/panel-analysis-batchb-four-2026-10-09.json", "path": ["sections", "A2", 3, "ciHiPct"]}
+ },
+ "front_tasksb_both_solved": {
+  "deepseek_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 0, "bothSolved", "pct"]},
+  "deepseek_ci_lo_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 0, "bothSolved", "ciLoPct"]},
+  "deepseek_ci_hi_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 0, "bothSolved", "ciHiPct"]},
+  "luna_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 3, "bothSolved", "pct"]},
+  "luna_ci_lo_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 3, "bothSolved", "ciLoPct"]},
+  "luna_ci_hi_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batchb", 3, "bothSolved", "ciHiPct"]}
+ },
+ "front_rerun": {
+  "tasksb_deepseek_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 0, "rerun", "pct"]},
+  "tasksb_deepseek_ci_lo_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 0, "rerun", "ciLoPct"]},
+  "tasksb_deepseek_ci_hi_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 0, "rerun", "ciHiPct"]},
+  "tasksb_luna_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 3, "rerun", "pct"]},
+  "tasksb_luna_ci_lo_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 3, "rerun", "ciLoPct"]},
+  "tasksb_luna_ci_hi_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b", 3, "rerun", "ciHiPct"]},
+  "batch1_rows": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b1"], "op": "len"},
+  "tasksb_rows": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b"], "op": "len"},
+  "batch1_glm_native_drift_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b1", 1, "drift", "pct"]},
+  "batch1_qwen_native_drift_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b1", 2, "drift", "pct"]},
+  "batch1_haiku_ptc_solved": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b1", 4, "quality", "ptc", "solved"]},
+  "batch1_haiku_native_solved": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["suites", "rerun-b1", 4, "quality", "native", "solved"]},
+  "aa_label_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["aa", "label", "pct"]},
+  "aa_label_half_width_pct": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["aa", "label", "halfWidthPct"]},
+  "aa_label_tasks": {"from": "analysis/rerun-compare-2026-10-11.json", "path": ["aa", "label", "tasks"]}
+ },
+ "front_quality_batch1_haiku": {
+  "per_cell_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batch1", 3, "perCellPct"]},
+  "per_solved_pct": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batch1", 3, "perSolvedPct"]},
+  "ptc_solved": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batch1", 3, "ptc", "solved"]},
+  "native_solved": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batch1", 3, "native", "solved"]},
+  "cells_per_arm": {"from": "analysis/quality-guard-2026-10-10.json", "path": ["suites", "batch1", 3, "native", "cells"]}
+ },
+ "front_tool_schemas": {
+  "dsh_native_request_tools": {"from": "results/cmur3dilf-zai-gateway.jsonl", "path": [168, "tools"]},
+  "dsh_ptc_request_tools": {"from": "results/cmur3dilf-zai-gateway.jsonl", "path": [190, "tools"]}
+ },
+ "front_population": {
+  "batch1_models": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2"], "op": "len"},
+  "batch1_tasks": {"from": "artifact/MANIFEST.json", "path": ["matrices", 0, "tasks"]},
+  "batch1_arms": {"from": "artifact/MANIFEST.json", "path": ["matrices", 0, "arms"]},
+  "batch1_seeds": {"from": "artifact/MANIFEST.json", "path": ["matrices", 0, "seeds"], "op": "len"},
+  "tasksb_models": {"from": "analysis/panel-analysis-batchb-2026-10-09.json", "path": ["sections", "A2"], "op": "len"},
+  "tasksb_tasks": {"from": "artifact/MANIFEST.json", "path": ["matrices", 6, "tasks"]},
+  "tasksb_arms": {"from": "artifact/MANIFEST.json", "path": ["matrices", 6, "arms"]},
+  "tasksb_seeds": {"from": "artifact/MANIFEST.json", "path": ["matrices", 6, "seeds"], "op": "len"},
+  "batch1_qwen_records": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "qwen-full", "rows"]},
+  "batch1_deepseek_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "ds-full", "cells"]},
+  "batch1_glm_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "glm-flash", "cells"]},
+  "batch1_qwen_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "qwen-full", "cells"]},
+  "batch1_haiku_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "haiku-full", "cells"]},
+  "batch1_sonnet_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "sonnet-full", "cells"]},
+  "batch1_luna_cells": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["meta", "luna-full", "cells"]},
+  "tasksb_haiku_planned_cells": {"from": "artifact/MANIFEST.json", "path": ["matrices", 10, "cells"]},
+  "tasksb_haiku_cells": {"from": "analysis/panel-analysis-batchb-2026-10-09.json", "path": ["meta", "batchb-haiku", "cells"]},
+  "tasksb_haiku_tasks": {"from": "analysis/panel-analysis-batchb-2026-10-09.json", "path": ["sections", "A2", 3, "tasks"]}
+ },
+ "front_table1": {
+  "deepseek_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 0, "ratio"]},
+  "glm_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 1, "ratio"]},
+  "qwen_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 2, "ratio"]},
+  "haiku_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 3, "ratio"]},
+  "sonnet_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 4, "ratio"]},
+  "luna_out_in": {"from": "analysis/panel-analysis-6model-2026-10-09.json", "path": ["sections", "A2", 5, "ratio"]},
+  "haiku_miss_usd_per_m": {"from": "analysis/retention-pilot-2026-10-10.json", "path": ["card", "miss"]},
+  "haiku_hit_usd_per_m": {"from": "analysis/retention-pilot-2026-10-10.json", "path": ["card", "hit"]},
+  "haiku_out_usd_per_m": {"from": "analysis/retention-pilot-2026-10-10.json", "path": ["card", "out"]}
+ }
+}

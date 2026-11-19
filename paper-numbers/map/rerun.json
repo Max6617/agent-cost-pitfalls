@@ -1,0 +1,1075 @@
+{
+ "rerun_table7": {
+  "b1_deepseek_filed_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "raw",
+    "pct"
+   ]
+  },
+  "b1_deepseek_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b1_deepseek_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b1_deepseek_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b1_deepseek_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b1_deepseek_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b1_deepseek_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b1_deepseek_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    0,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b1_glm_filed_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "raw",
+    "pct"
+   ]
+  },
+  "b1_glm_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b1_glm_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b1_glm_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b1_glm_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b1_glm_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b1_glm_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b1_glm_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b1_qwen_filed_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "raw",
+    "pct"
+   ]
+  },
+  "b1_qwen_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b1_qwen_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b1_qwen_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b1_qwen_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b1_qwen_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b1_qwen_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b1_qwen_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b1_luna_filed_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "raw",
+    "pct"
+   ]
+  },
+  "b1_luna_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b1_luna_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b1_luna_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b1_luna_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b1_luna_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b1_luna_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b1_luna_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    3,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b1_haiku_filed_raw_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "pct"
+   ]
+  },
+  "b1_haiku_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b1_haiku_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b1_haiku_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b1_haiku_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b1_haiku_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b1_haiku_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b1_haiku_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b_deepseek_filed_raw_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "raw",
+    "pct"
+   ]
+  },
+  "b_deepseek_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b_deepseek_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b_deepseek_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b_deepseek_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b_deepseek_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b_deepseek_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b_deepseek_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    0,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b_glm_filed_raw_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "raw",
+    "pct"
+   ]
+  },
+  "b_glm_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b_glm_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b_glm_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b_glm_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b_glm_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b_glm_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b_glm_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b_qwen_filed_raw_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "raw",
+    "pct"
+   ]
+  },
+  "b_qwen_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b_qwen_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b_qwen_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b_qwen_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b_qwen_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b_qwen_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b_qwen_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    2,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "b_luna_filed_raw_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "raw",
+    "pct"
+   ]
+  },
+  "b_luna_filed_adj_log_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "b_luna_rerun_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "rerun",
+    "pct"
+   ]
+  },
+  "b_luna_rerun_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "rerun",
+    "ciLoPct"
+   ]
+  },
+  "b_luna_rerun_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "rerun",
+    "ciHiPct"
+   ]
+  },
+  "b_luna_order_effect_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "orderEffect",
+    "pct"
+   ]
+  },
+  "b_luna_order_effect_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "orderEffect",
+    "ciLoPct"
+   ]
+  },
+  "b_luna_order_effect_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    3,
+    "orderEffect",
+    "ciHiPct"
+   ]
+  },
+  "q2_rows": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "q2",
+    "rows"
+   ]
+  }
+ },
+ "rerun_drift": {
+  "b1_glm_native_drift_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "drift",
+    "pct"
+   ]
+  },
+  "b1_qwen_native_drift_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    2,
+    "drift",
+    "pct"
+   ]
+  }
+ },
+ "rerun_p5_quality_guard": {
+  "b1_haiku_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_haiku_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_haiku_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_haiku_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_haiku_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "b1_haiku_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_haiku_per_cell_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "perCellPct"
+   ]
+  },
+  "b1_haiku_per_solved_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "perSolvedPct"
+   ]
+  },
+  "b1_haiku_both_solved_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_haiku_both_solved_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_haiku_both_solved_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_haiku_both_solved_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_haiku_per_cell_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "perCellPct"
+   ]
+  },
+  "tb_haiku_per_solved_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "perSolvedPct"
+   ]
+  },
+  "tb_haiku_per_task_ci_lo_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "ciLoPct"
+   ]
+  },
+  "tb_haiku_per_task_ci_hi_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "raw",
+    "ciHiPct"
+   ]
+  },
+  "tb_haiku_both_solved_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_haiku_both_solved_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_haiku_both_solved_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  }
+ },
+ "rerun_quality": {
+  "b1_haiku_native_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "native",
+    "solved"
+   ]
+  },
+  "b1_haiku_native_cells": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "native",
+    "cells"
+   ]
+  },
+  "b1_haiku_ptc_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_haiku_native_only": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_haiku_mcnemar_p": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_haiku_per_cell_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "perCellPct"
+   ]
+  },
+  "b1_haiku_per_solved_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "perSolvedPct"
+   ]
+  },
+  "b1_haiku_both_solved_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_haiku_both_solved_ci_lo_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_haiku_both_solved_ci_hi_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_haiku_both_solved_cells": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    4,
+    "quality",
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_glm_native_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "quality",
+    "native",
+    "solved"
+   ]
+  },
+  "tb_glm_ptc_solved": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "quality",
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_glm_mcnemar_p": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b",
+    1,
+    "quality",
+    "mcnemar",
+    "p"
+   ]
+  }
+ }
+}

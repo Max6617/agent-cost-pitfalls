@@ -1,0 +1,1282 @@
+{
+ "quality_table8": {
+  "b1_ds_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_ds_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_ds_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_ds_discordant": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "mcnemar",
+    "n"
+   ]
+  },
+  "b1_ds_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_ds_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_ds_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_ds_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_ds_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_glm_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_glm_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_glm_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_glm_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_glm_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "b1_glm_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_glm_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_glm_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_glm_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_glm_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    1,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_qwen_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_qwen_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_qwen_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_qwen_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_qwen_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "b1_qwen_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_qwen_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_qwen_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_qwen_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_qwen_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    2,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_haiku_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_haiku_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_haiku_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_haiku_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_haiku_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "b1_haiku_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_haiku_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_haiku_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_haiku_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_haiku_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_sonnet_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_sonnet_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_sonnet_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_sonnet_discordant": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "mcnemar",
+    "n"
+   ]
+  },
+  "b1_sonnet_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_sonnet_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_sonnet_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_sonnet_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_sonnet_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    4,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "b1_luna_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "native",
+    "cells"
+   ]
+  },
+  "b1_luna_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "native",
+    "solved"
+   ]
+  },
+  "b1_luna_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "ptc",
+    "solved"
+   ]
+  },
+  "b1_luna_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "b1_luna_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "b1_luna_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "b1_luna_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "b1_luna_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "b1_luna_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "b1_luna_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    5,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_ds_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_ds_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_ds_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_ds_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_ds_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_ds_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_ds_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_ds_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_ds_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_ds_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    0,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_glm_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_glm_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_glm_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_glm_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_glm_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_glm_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_glm_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_glm_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_glm_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_glm_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    1,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_qwen_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_qwen_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_qwen_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_qwen_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_qwen_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_qwen_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_qwen_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_qwen_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_qwen_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_qwen_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    2,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_luna_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_luna_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_luna_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_luna_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_luna_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_luna_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_luna_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_luna_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_luna_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_luna_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    3,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_haiku_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_haiku_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_haiku_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_haiku_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_haiku_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_haiku_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_haiku_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_haiku_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_haiku_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_haiku_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    4,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "tb_sonnet_native_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "native",
+    "cells"
+   ]
+  },
+  "tb_sonnet_native_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "native",
+    "solved"
+   ]
+  },
+  "tb_sonnet_ptc_solved": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "ptc",
+    "solved"
+   ]
+  },
+  "tb_sonnet_native_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "mcnemar",
+    "n01"
+   ]
+  },
+  "tb_sonnet_ptc_only": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "mcnemar",
+    "n10"
+   ]
+  },
+  "tb_sonnet_mcnemar_p": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "mcnemar",
+    "p"
+   ]
+  },
+  "tb_sonnet_both_cells": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "bothSolved",
+    "cells"
+   ]
+  },
+  "tb_sonnet_both_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "bothSolved",
+    "pct"
+   ]
+  },
+  "tb_sonnet_both_ci_lo_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "bothSolved",
+    "ciLoPct"
+   ]
+  },
+  "tb_sonnet_both_ci_hi_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    5,
+    "bothSolved",
+    "ciHiPct"
+   ]
+  },
+  "bootstrap_iters": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    0,
+    "bothSolved",
+    "iters"
+   ]
+  }
+ },
+ "quality_edited_tests": {
+  "luna_b1_analysed_runs": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "meta",
+    "luna-full",
+    "cells"
+   ]
+  },
+  "luna_b1_edited": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "luna-full",
+    "totals",
+    "edited"
+   ]
+  },
+  "haiku_b1_edited": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "haiku-full",
+    "totals",
+    "edited"
+   ]
+  },
+  "glm_b1_edited": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "glm-flash",
+    "totals",
+    "edited"
+   ]
+  },
+  "qwen_b1_edited": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    "qwen-full",
+    "totals",
+    "edited"
+   ]
+  },
+  "luna_b1_solved": {
+   "from": "analysis/test-edit-sensitivity-6model-2026-10-04.json",
+   "path": [
+    "datasets",
+    "luna-full",
+    "asMeasured",
+    "solved"
+   ]
+  },
+  "luna_b1_unedited_solved": {
+   "from": "analysis/test-edit-sensitivity-6model-2026-10-04.json",
+   "path": [
+    "datasets",
+    "luna-full",
+    "s1",
+    "solved"
+   ]
+  },
+  "luna_tb_runs": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    "batchb-luna",
+    "totals",
+    "runs"
+   ]
+  },
+  "luna_tb_edited": {
+   "from": "analysis/test-edit-incidence-2026-10-10.json",
+   "path": [
+    "suites",
+    "batchb",
+    "batchb-luna",
+    "totals",
+    "edited"
+   ]
+  }
+ }
+}

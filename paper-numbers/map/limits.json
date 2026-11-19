@@ -1,0 +1,870 @@
+{
+ "limits_hypotheses": {
+  "h1_n": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "n"
+   ]
+  },
+  "h1_b1": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "b1Pooled"
+   ]
+  },
+  "h1_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "h1_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "ciPooled",
+    "hi"
+   ]
+  },
+  "h2_mean_d": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H2",
+    "meanD"
+   ]
+  },
+  "h2_wilcoxon_p": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H2",
+    "wilcoxon",
+    "p"
+   ]
+  },
+  "h3_b1": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "b1Pooled"
+   ]
+  },
+  "h3_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "lo"
+   ]
+  },
+  "h3_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H3",
+    "ciPooled",
+    "hi"
+   ]
+  },
+  "h4_b_c": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H4",
+    "bC"
+   ]
+  },
+  "h4_ci_lo": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H4",
+    "ciC",
+    "lo"
+   ]
+  },
+  "h4_ci_hi": {
+   "from": "analysis/hypotheses-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "H4",
+    "ciC",
+    "hi"
+   ]
+  }
+ },
+ "limits_prereg": {
+  "tasksb_four_h1_b1": {
+   "from": "analysis/hypotheses-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "H1",
+    "b1Pooled"
+   ]
+  },
+  "filed_family_m": {
+   "from": "analysis/panel-analysis-4model-2026-10-03.json",
+   "path": [
+    "sections",
+    "family",
+    "m"
+   ]
+  },
+  "filed_family_cost_rows": {
+   "from": "analysis/panel-analysis-4model-2026-10-03.json",
+   "path": [
+    "sections",
+    "family",
+    "rows"
+   ],
+   "op": "count",
+   "where": {
+    "block": "A2b"
+   }
+  },
+  "filed_family_solve_rows": {
+   "from": "analysis/panel-analysis-4model-2026-10-03.json",
+   "path": [
+    "sections",
+    "family",
+    "rows"
+   ],
+   "op": "count",
+   "where": {
+    "block": "A4"
+   }
+  },
+  "six_model_family_m": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "m"
+   ]
+  },
+  "haiku_ptc_cost_p": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "rows",
+    0,
+    "p"
+   ]
+  },
+  "haiku_ptc_terse_solve_p": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "rows",
+    1,
+    "p"
+   ]
+  },
+  "qwen_ptc_cost_p": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "rows",
+    2,
+    "p"
+   ]
+  },
+  "tasksb_family_m": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "m"
+   ]
+  },
+  "tasksb_deepseek_cost_p": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "rows",
+    0,
+    "p"
+   ]
+  },
+  "tasksb_luna_cost_p": {
+   "from": "analysis/panel-analysis-batchb-four-2026-10-09.json",
+   "path": [
+    "sections",
+    "family",
+    "rows",
+    1,
+    "p"
+   ]
+  },
+  "rerun_q2_closer_to_adjusted": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "q2",
+    "closerToAdjusted"
+   ]
+  },
+  "rerun_q2_rows": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "q2",
+    "rows"
+   ]
+  }
+ },
+ "limits_text": {
+  "batch1_haiku_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "rerun_b1_glm_native_drift_pct": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1",
+    1,
+    "drift",
+    "pct"
+   ]
+  },
+  "tasksb_haiku_cells": {
+   "from": "analysis/panel-analysis-batchb-2026-10-09.json",
+   "path": [
+    "meta",
+    "batchb-haiku",
+    "cells"
+   ]
+  },
+  "tasksb_haiku_tasks": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    3,
+    "primary",
+    "tasks"
+   ]
+  },
+  "tasksb_tasks": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    0,
+    "primary",
+    "tasks"
+   ]
+  },
+  "coldbilled_models": {
+   "from": "analysis/prefix-retention.json",
+   "path": [
+    "paired"
+   ],
+   "op": "len"
+  },
+  "rerun_b1_rows": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b1"
+   ],
+   "op": "len"
+  },
+  "rerun_b_rows": {
+   "from": "analysis/rerun-compare-2026-10-11.json",
+   "path": [
+    "suites",
+    "rerun-b"
+   ],
+   "op": "len"
+  },
+  "batch1_haiku_per_cell_pct": {
+   "from": "analysis/quality-guard-2026-10-10.json",
+   "path": [
+    "suites",
+    "batch1",
+    3,
+    "perCellPct"
+   ]
+  }
+ },
+ "limits_robust_scale": {
+  "batch1_log_wins": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models"
+   ],
+   "op": "count",
+   "where": {
+    "scaleCheck.preferred": "log"
+   }
+  },
+  "tasksb_log_wins": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models"
+   ],
+   "op": "count",
+   "where": {
+    "scaleCheck.preferred": "log"
+   }
+  },
+  "batch1_models": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models"
+   ],
+   "op": "len"
+  },
+  "tasksb_models": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models"
+   ],
+   "op": "len"
+  },
+  "batch1_glm_rmse_ratio": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "scaleCheck",
+    "ratio"
+   ]
+  }
+ },
+ "limits_robust_arm": {
+  "tasksb_deepseek_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    0,
+    "opt",
+    "pct"
+   ]
+  },
+  "tasksb_glm_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    1,
+    "opt",
+    "pct"
+   ]
+  },
+  "tasksb_qwen_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    2,
+    "opt",
+    "pct"
+   ]
+  },
+  "tasksb_haiku_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    3,
+    "opt",
+    "pct"
+   ]
+  },
+  "tasksb_sonnet_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    4,
+    "opt",
+    "pct"
+   ]
+  },
+  "tasksb_luna_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "tasksB",
+    5,
+    "opt",
+    "pct"
+   ]
+  },
+  "batch1_haiku_primary_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    3,
+    "primary",
+    "pct"
+   ]
+  },
+  "batch1_haiku_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    3,
+    "opt",
+    "pct"
+   ]
+  },
+  "batch1_glm_primary_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    1,
+    "primary",
+    "pct"
+   ]
+  },
+  "batch1_glm_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    1,
+    "opt",
+    "pct"
+   ]
+  },
+  "batch1_deepseek_primary_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    0,
+    "primary",
+    "pct"
+   ]
+  },
+  "batch1_deepseek_opt_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    0,
+    "opt",
+    "pct"
+   ]
+  }
+ },
+ "limits_robust_seeds": {
+  "batch1_qwen_seed1_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed1",
+    "pct"
+   ]
+  },
+  "batch1_qwen_seed1_lo": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed1",
+    "lo"
+   ]
+  },
+  "batch1_qwen_seed1_hi": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed1",
+    "hi"
+   ]
+  },
+  "batch1_qwen_seed2_pct": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed2",
+    "pct"
+   ]
+  },
+  "batch1_qwen_seed2_lo": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed2",
+    "lo"
+   ]
+  },
+  "batch1_qwen_seed2_hi": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "armAndSeed",
+    "batch1",
+    2,
+    "seed2",
+    "hi"
+   ]
+  }
+ },
+ "limits_robust_loo": {
+  "batch1_tie_fraction_min": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:batch-1 (6model)",
+    "excludingEachModel",
+    0,
+    "ties",
+    "fraction"
+   ]
+  },
+  "batch1_tie_fraction_max": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:batch-1 (6model)",
+    "excludingEachModel",
+    5,
+    "ties",
+    "fraction"
+   ]
+  },
+  "tasksb_tie_fraction_min": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:tasks-b",
+    "excludingEachModel",
+    1,
+    "ties",
+    "fraction"
+   ]
+  },
+  "tasksb_tie_fraction_max": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:tasks-b",
+    "excludingEachModel",
+    4,
+    "ties",
+    "fraction"
+   ]
+  },
+  "batch1_median_rho_min": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:batch-1 (6model)",
+    "excludingEachModel",
+    5,
+    "medianRho"
+   ]
+  },
+  "batch1_median_rho_max": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:batch-1 (6model)",
+    "excludingEachModel",
+    1,
+    "medianRho"
+   ]
+  },
+  "tasksb_median_rho_min": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:tasks-b",
+    "excludingEachModel",
+    0,
+    "medianRho"
+   ]
+  },
+  "tasksb_median_rho_max": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "ranking:tasks-b",
+    "excludingEachModel",
+    1,
+    "medianRho"
+   ]
+  },
+  "batch1_h3_drop_deepseek": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "batch1",
+    "dropped",
+    0,
+    "b1"
+   ]
+  },
+  "batch1_h3_drop_haiku": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "batch1",
+    "dropped",
+    4,
+    "b1"
+   ]
+  },
+  "batch1_h3_drop_luna": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "batch1",
+    "dropped",
+    6,
+    "b1"
+   ]
+  },
+  "batch1_h3_drop_luna_lo": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "batch1",
+    "dropped",
+    6,
+    "lo"
+   ]
+  },
+  "batch1_h3_drop_luna_hi": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "batch1",
+    "dropped",
+    6,
+    "hi"
+   ]
+  },
+  "tasksb_h3_drop_luna": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "tasksB",
+    "dropped",
+    3,
+    "b1"
+   ]
+  },
+  "tasksb_h3_drop_qwen": {
+   "from": "analysis/ablations-2026-10-09.json",
+   "path": [
+    "ablations",
+    "h3LeaveOneOut",
+    "tasksB",
+    "dropped",
+    2,
+    "b1"
+   ]
+  }
+ },
+ "limits_fig_penalty": {
+  "tasks": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    3,
+    "adjustedLog",
+    "tasks"
+   ]
+  },
+  "haiku_output_input_price_ratio": {
+   "from": "analysis/panel-analysis-6model-2026-10-09.json",
+   "path": [
+    "sections",
+    "A2",
+    3,
+    "ratio"
+   ]
+  },
+  "glm_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "luna_adjusted_log_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  }
+ },
+ "limits_replication": {
+  "batch1_deepseek_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "batch1_glm_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "batch1_qwen_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "batch1_luna_pct": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "batch1_deepseek_ci_lo": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "batch1_luna_ci_lo": {
+   "from": "analysis/position-adjust-6model-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "ciLoPct"
+   ]
+  },
+  "tasksb_deepseek_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "tasksb_glm_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    1,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "tasksb_qwen_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    2,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "tasksb_luna_pct": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "pct"
+   ]
+  },
+  "tasksb_deepseek_ci_hi": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    0,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  },
+  "tasksb_luna_ci_hi": {
+   "from": "analysis/position-adjust-batchb-2026-10-09.json",
+   "path": [
+    "models",
+    5,
+    "adjustedLog",
+    "ciHiPct"
+   ]
+  }
+ }
+}
