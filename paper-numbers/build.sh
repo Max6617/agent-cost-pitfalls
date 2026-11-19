@@ -24,4 +24,9 @@ for d in ds-full glm-flash haiku-full luna-full qwen-full sonnet-full; do
   derived+=(--input "results/$d/runs.jsonl")
 done
 derived+=(--input results/cmure98qw-openai-gateway.jsonl --input results/cmuquohyu-deepseek-gateway.jsonl)
+for m in cmv2ypvsm-deepseek cmv2yw6al-deepseek cmv2z1xi6-deepseek cmv2z7zqa-deepseek \
+         cmv2zdnws-deepseek cmv3193um-zai cmv34e935-qwen cmv37rgsb-openai cmv45au5r-anthropic \
+         cmv39t2ww-deepseek cmv3efryx-zai cmv3my0fu-qwen cmv3z5ym5-openai cmv42rii8-deepseek; do
+  derived+=(--input "results/$m-gateway.jsonl")
+done
 "$OSAUDIT" run "${derived[@]}" -o paper-numbers/results/derived.json -- python3 paper-numbers/derived.py

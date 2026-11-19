@@ -14,6 +14,10 @@
 - gateway_usd.<dataset>: billed USD summed over a batch-1 gateway log, skipping records the
   gateway could not price (cost null) and, for luna, records at or after the sign-off cut-off
   that tools/study-window.mjs declares (2026-10-04T06:01:57Z, a runaway process).
+- rerun_gateway_usd: billed USD over every gateway log of the counterbalanced re-run, the spend
+  its $70 stop counted (notes/plans/RERUN-PLAN.md): the ten matrices of artifact/MANIFEST.json
+  `matrices` (rerun-b1, rerun-b, rerun-aa), the two smoke matrices (rerun-smoke, rerun-aa-smoke)
+  and the two A/A smoke attempts that stopped at their pilot.
 
     python3 paper-numbers/derived.py
 """
@@ -31,6 +35,11 @@ GATEWAYS = {
     "luna-full": ("results/cmure98qw-openai-gateway.jsonl", "2026-10-04T06:01:57+00:00"),
     "ds-full": ("results/cmuquohyu-deepseek-gateway.jsonl", None),
 }
+RERUN_LOGS = [f"results/{m}-gateway.jsonl" for m in (
+    "cmv2ypvsm-deepseek", "cmv2yw6al-deepseek", "cmv2z1xi6-deepseek", "cmv2z7zqa-deepseek",
+    "cmv2zdnws-deepseek", "cmv3193um-zai", "cmv34e935-qwen", "cmv37rgsb-openai",
+    "cmv45au5r-anthropic", "cmv39t2ww-deepseek", "cmv3efryx-zai", "cmv3my0fu-qwen",
+    "cmv3z5ym5-openai", "cmv42rii8-deepseek")]
 
 
 def gateway_usd(path: str, cutoff: str | None) -> float:
@@ -80,6 +89,7 @@ def main() -> None:
         "order_effect": {"rows": len(rows), "rows_excluding_zero": len(excluding)},
         "cold_cheaper": sum(p["coldDiffPct"] < 0 for p in read_json(PREFIX)["paired"]),
         "gateway_usd": {d: gateway_usd(*g) for d, g in GATEWAYS.items()},
+        "rerun_gateway_usd": sum(gateway_usd(p, None) for p in RERUN_LOGS),
     }, indent=1))
 
 

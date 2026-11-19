@@ -5905,6 +5905,12 @@ expr = "derived.gateway_usd[\"ds-full\"] / front_population.batch1_deepseek_cell
 file = "paper/PAPER.tex"
 line = 440
 
+[[numbers.derive]]
+value = "46.24"
+expr = "derived.rerun_gateway_usd"
+file = "paper/PAPER.tex"
+line = 930
+
 # Table 7 and Table 8 cells that became chance matches once every slice's values were pooled.
 
 [[numbers.derive]]
